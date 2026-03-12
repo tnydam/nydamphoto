@@ -314,7 +314,7 @@
     .hero {
       min-height: 100vh;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.4fr 1fr;
       position: relative;
       overflow: hidden;
     }
@@ -1241,6 +1241,77 @@ font-size: clamp(2rem, 4vw, 3.5rem);
       opacity: 1;
       transform: translateY(0);
     }
+
+    .reviews-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.reviews-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.review-slide {
+  min-width: 100%;
+  padding: 0 0 24px;
+  box-sizing: border-box;
+}
+.review-stars {
+  color: var(--caramel);
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+.review-quote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--espresso);
+  margin: 0 0 16px;
+  quotes: none;
+}
+.review-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.review-name {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--espresso);
+}
+.review-specialty {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--caramel);
+}
+.reviews-dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 28px;
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--caramel);
+  opacity: 0.3;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.dot.active {
+  opacity: 1;
+  transform: scale(1.3);
+}
+    
   </style>
 </head>
 <body>
@@ -1264,8 +1335,7 @@ font-size: clamp(2rem, 4vw, 3.5rem);
     <div class="hero-eyebrow">Austin, Texas · Available Worldwide</div>
     <div class="hero-decorative-line"></div>
     <h1 class="hero-title">
-      You won't remember every detail of<br>
-      <em>this day.</em><br>
+      You won't remember every detail of <em>this day.</em><br>
       The pictures will.
     </h1>
     <p class="hero-sub">
@@ -2079,6 +2149,32 @@ function closeBookIfOutside(e) {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeBookModal();
 });
+
+(function() {
+  var current = 0;
+  var total = 3;
+  var autoTimer;
+  function goToReview(index) {
+    current = index;
+    document.getElementById('reviewsTrack').style.transform = 'translateX(-' + (index * 100) + '%)';
+    document.querySelectorAll('.dot').forEach(function(d, i) {
+      d.classList.toggle('active', i === index);
+    });
+    resetTimer();
+  }
+  function next() { goToReview((current + 1) % total); }
+  function resetTimer() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(next, 5000);
+  }
+  window.goToReview = goToReview;
+  autoTimer = setInterval(next, 5000);
+  var wrapper = document.querySelector('.reviews-track-wrapper');
+  if (wrapper) {
+    wrapper.addEventListener('mouseenter', function() { clearInterval(autoTimer); });
+    wrapper.addEventListener('mouseleave', resetTimer);
+  }
+})();
 </script>
   
 </body>
