@@ -187,6 +187,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
 
   <style>
+
+    .hero-review-strip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 0;
+  opacity: 0.85;
+}
+.hero-review-stars {
+  color: var(--caramel, #b87a4b);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+}
+.hero-review-text {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text, #3d3028);
+  line-height: 1.4;
+}
+    
     :root {
       --cream: #f5f0e8;
       --parchment: #ede4d3;
@@ -1246,16 +1268,22 @@
     <div class="hero-eyebrow">Austin, Texas · Available Worldwide</div>
     <div class="hero-decorative-line"></div>
     <h1 class="hero-title">
-      Moments that<br>
-      <em>matter,</em><br>
-      preserved.
+      You won't remember every detail of<br>
+      <em>this day.</em><br>
+      The pictures will.
     </h1>
     <p class="hero-sub">
       From weddings and family milestones to corporate events, portraits, sports, and Catholic sacraments, we document life’s meaningful moments so they can be remembered, shared, and cherished for years to come.    </p>
-    <div class="hero-actions">
+  <div class="hero-actions">
       <a href="#services" class="btn-primary">View Portfolio →</a>
       <a href="#contact" class="btn-ghost">Contact Us →</a>
     </div>
+
+    <div class="hero-review-strip">
+      <span class="hero-review-stars">★★★★★</span>
+      <span class="hero-review-text" id="heroReviewText">"He has been there to capture some of our most meaningful moments." — Sonya F.</span>
+    </div>
+
     <div class="hero-stats">
       <div>
         <div class="hero-stat-num">5</div>
@@ -1330,21 +1358,21 @@
   </div>
 </section>
 
-<!-- ── INSTAGRAM TICKER ── -->
+<!-- ── PRESS TICKER ── -->
 <div class="instagram-bar">
   <div class="instagram-bar-inner">
-    <span class="ig-item">📸 @austin_photographer_arlen <span class="ig-sep">·</span></span>
-    <span class="ig-item">💒 Austin Wedding Photographer <span class="ig-sep">·</span></span>
-    <span class="ig-item">✝️ @catholic_photographer_austin <span class="ig-sep">·</span></span>
-    <span class="ig-item">⚽ Austin Sports Photographer <span class="ig-sep">·</span></span>
-    <span class="ig-item">🎨 @art_photography_usa <span class="ig-sep">·</span></span>
-    <span class="ig-item">📚 Photography Education · The Photo Pro <span class="ig-sep">·</span></span>
-    <span class="ig-item">📸 @austin_photographer_arlen <span class="ig-sep">·</span></span>
-    <span class="ig-item">💒 Austin Wedding Photographer <span class="ig-sep">·</span></span>
-    <span class="ig-item">✝️ @catholic_photographer_austin <span class="ig-sep">·</span></span>
-    <span class="ig-item">⚽ Austin Sports Photographer <span class="ig-sep">·</span></span>
-    <span class="ig-item">🎨 @art_photography_usa <span class="ig-sep">·</span></span>
-    <span class="ig-item">📚 Photography Education · The Photo Pro <span class="ig-sep">·</span></span>
+    <span class="ig-item">As Featured In <span class="ig-sep">·</span></span>
+    <span class="ig-item">Texas Monthly <span class="ig-sep">·</span></span>
+    <span class="ig-item">Riviera Orange County <span class="ig-sep">·</span></span>
+    <span class="ig-item">Classical Guitar <span class="ig-sep">·</span></span>
+    <span class="ig-item">Austin Family <span class="ig-sep">·</span></span>
+    <span class="ig-item">Austin Monthly <span class="ig-sep">·</span></span>
+    <span class="ig-item">As Featured In <span class="ig-sep">·</span></span>
+    <span class="ig-item">Texas Monthly <span class="ig-sep">·</span></span>
+    <span class="ig-item">Riviera Orange County <span class="ig-sep">·</span></span>
+    <span class="ig-item">Classical Guitar <span class="ig-sep">·</span></span>
+    <span class="ig-item">Austin Family <span class="ig-sep">·</span></span>
+    <span class="ig-item">Austin Monthly <span class="ig-sep">·</span></span>
   </div>
 </div>
 
@@ -1387,14 +1415,14 @@
     </div>
   </div>
 </section>
-
+  
 <!-- ── SERVICES ── -->
 <section class="services-section section-pad" id="services">
   <div class="section-inner">
     <div class="section-label fade-in">What We Do</div>
     <h2 class="section-title fade-in">Photography services<br></h2>
     <p class="section-intro fade-in">
-      Five specialties, each with its own language. Whether your day is sacred, athletic, corporate, or deeply personal, there's a Nydam Photography approach built for it.    </p>
+      Five specialties, each with its own language. Whether your day is <div class="hero-actions">sacred, athletic, corporate, or deeply personal, there's a Nydam Photography approach built for it.    </p>
     <div class="services-grid">
 
       <!-- Wedding -->
@@ -1407,8 +1435,9 @@
 </svg>
         <h3 class="service-name">Wedding Photography</h3>
         <p class="service-desc">
-Your wedding day moves fast. We move with it, documenting every quiet moment, every glance, every burst of joy from the ceremony to the last dance. No interruptions, no stiff posing. Just your story, told honestly. Based in Austin and available to travel worldwide.        </p>
-        <a href="https://austinweddingphotographer.myportfolio.com/" target="_blank" rel="noopener" class="service-link">
+You'll forget the centerpieces. You won't forget the look on his face.
+
+Your wedding day moves fast. We move with it, documenting every quiet moment, every glance, every burst of joy from the ceremony to the last dance. No interruptions, no stiff posing. Just your story, told honestly.        <a href="https://austinweddingphotographer.myportfolio.com/" target="_blank" rel="noopener" class="service-link">
           View Wedding Portfolio <span class="service-arrow">→</span>
         </a>
       </div>
@@ -1423,8 +1452,9 @@ Your wedding day moves fast. We move with it, documenting every quiet moment, ev
 </svg>
         <h3 class="service-name">Corporate & Event Photography</h3>
         <p class="service-desc">
-Your brand deserves images that actually look like you at your best. Clean, confident headshots, team photos, and event coverage delivered promptly and ready for LinkedIn, press kits, and websites. We make the process easy and the results impossible to ignore.        </p>
-        <a href="https://austineventphotographer.myportfolio.com" target="_blank" rel="noopener" class="service-link">
+First impressions close deals. Make yours count.
+
+Your brand deserves images that actually look like you at your best. Clean, confident headshots, team photos, and event coverage delivered promptly and ready for LinkedIn, press kits, and websites.        <a href="https://austineventphotographer.myportfolio.com" target="_blank" rel="noopener" class="service-link">
           View Corporate &amp; Events Portfolio <span class="service-arrow">→</span>
         </a>
       </div>
@@ -1442,8 +1472,9 @@ Your brand deserves images that actually look like you at your best. Clean, conf
 </svg>
         <h3 class="service-name">Sports Team Photography</h3>
         <p class="service-desc">
-Every athlete has a moment worth capturing. Team portraits, action photography, and season packages for youth leagues, competitive clubs, and high school programs across Austin, Round Rock, Hutto, and Pflugerville. Volleyball, soccer, basketball, and more.        </p>
-        <a href="https://austinsportsphotographer.myportfolio.com/" target="_blank" rel="noopener" class="service-link">
+They're only this age once. Make sure you remember it.
+
+Team portraits, action photography, and season packages for youth leagues, competitive clubs, and high school programs across Austin, Round Rock, Hutto, and Pflugerville. Volleyball, soccer, basketball, and more.        <a href="https://austinsportsphotographer.myportfolio.com/" target="_blank" rel="noopener" class="service-link">
           View Sports Portfolio <span class="service-arrow">→</span>
         </a>
       </div>
@@ -1457,8 +1488,9 @@ Every athlete has a moment worth capturing. Team portraits, action photography, 
 </svg>
         <h3 class="service-name">Catholic Wedding & Event Photography</h3>
         <p class="service-desc">
-        Weddings, Baptisms, First Communions, Confirmations, and sacramental celebrations across the Diocese of Austin. A respectful, unobtrusive approach that honors the liturgy and lets the sacred moment breathe.
-        </p>
+Some moments are sacred. They deserve a photographer who understands that.
+
+Weddings, Baptisms, First Communions, Confirmations, and sacramental celebrations across the Diocese of Austin. A respectful, unobtrusive approach that honors the liturgy and lets the sacred moment breathe.        </p>
         <a href="https://austincatholicphotographer.myportfolio.com" target="_blank" rel="noopener" class="service-link">
           View Catholic Portfolio <span class="service-arrow">→</span>
         </a>
@@ -1475,21 +1507,30 @@ Every athlete has a moment worth capturing. Team portraits, action photography, 
 </svg>
         <h3 class="service-name">Lifestyle, Graduation & Family Portraits</h3>
         <p class="service-desc">
-No rushed studio timers. No forced smiles. Just real moments, beautiful light, and a pace that feels entirely your own. In-home sessions, graduation portraits, and family photography in natural Austin settings.        </p>
-        <a href="#contact" class="service-link">
+Not a studio. Not a timer. Just you, real light, and time to breathe.
+
+In-home sessions, graduation portraits, and family photography in natural Austin settings — at a pace that feels entirely your own.
+          <a href="#contact" class="service-link">
           Inquire &amp; Book <span class="service-arrow">→</span>
         </a>
       </div>
 
-      <!-- VIDEOGRAPHY SECTION -->
-<div class="service-card">
-  <div class="service-number">06</div>
-  <div class="service-icon">🎬</div>
- <h2 class="service-name">Videography </h2>
-  <p>Professional video for marketing, social media, weddings, and corporate projects in Austin and Central Texas.</p>
-<span class="service-link" style="pointer-events:none; opacity:0.45; border-color:var(--sage); margin-top:auto;">
-  Coming Soon &rarr;
-</span>
+      <!-- QUINCEAÑERA SECTION -->
+<div class="service-card fade-in">
+  <span class="service-number">06</span>
+  <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="20" cy="10" r="4"/>
+    <path d="M12 22 C12 16 28 16 28 22"/>
+    <path d="M8 38 L12 26 L20 30 L28 26 L32 38"/>
+    <path d="M14 20 L10 28 M26 20 L30 28"/>
+  </svg>
+  <h3 class="service-name">Quinceañera Photography</h3>
+  <p class="service-desc">She's been dreaming of this day her whole life. So have you.
+
+Every detail of a Quinceañera tells a story — the dress, the waltz, the family gathered around her. We document it all with the same care and artistry we bring to weddings: candid emotion, beautiful portraits, and every meaningful moment in between.</p>
+  <a href="https://www.austinquinceaneraphotographer.myportfolio.com" class="service-link" target="_blank">
+    View Quinceañera Portfolio <span class="service-arrow">→</span>
+  </a>
 </div>
 
     </div>
@@ -2046,5 +2087,26 @@ document.addEventListener('keydown', function(e) {
 });
 </script>
 
+<script>
+(function() {
+  var reviews = [
+    '"He has been there to capture some of our most meaningful moments." — Sonya F.',
+    '"The results exceeded our expectations. Top-tier visual content." — Woody R.',
+    '"Arlen knew exactly what to do. You will be very happy with his artistry." — John H.'
+  ];
+  var i = 0;
+  var el = document.getElementById('heroReviewText');
+  if (!el) return;
+  setInterval(function() {
+    el.style.opacity = 0;
+    setTimeout(function() {
+      i = (i + 1) % reviews.length;
+      el.textContent = reviews[i];
+      el.style.opacity = 1;
+    }, 400);
+  }, 4000);
+})();
+</script>
+  
 </body>
 </html>
