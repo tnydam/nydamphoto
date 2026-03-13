@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Austin Bluebonnet Mini Sessions | Nydam Photography</title>
+  <meta name="description" content="Austin bluebonnet mini sessions — March 20 &amp; 22, 4–6 PM, Domain area. 20 minutes, $150. Families and couples welcome. Limited spots with Arlen Nydam Photography." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ivory: #faf7f2;
+      --warm-white: #fffdf9;
+      --gold: #c8973a;
+      --gold-light: #e8c97a;
+      --lavender: #7b6fa0;
+      --lavender-soft: #ede9f5;
+      --charcoal: #2a2520;
+      --brown-mid: #6b5c4e;
+      --brown-light: #a89282;
+      --border: rgba(200, 151, 58, 0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--ivory);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      background: url('2015-04-04-4397.JPEG') center 35% / cover no-repeat;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        rgba(20,14,8,0.72) 0%,
+        rgba(20,14,8,0.45) 45%,
+        rgba(20,14,8,0.1) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 clamp(2rem, 9vw, 8rem);
+      max-width: 700px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1.4rem;
+      opacity: 0;
+      animation: slideIn 0.7s 0.2s ease forwards;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 5.8rem);
+      font-weight: 400;
+      line-height: 1.08;
+      color: #fffdf9;
+      margin-bottom: 1.4rem;
+      opacity: 0;
+      animation: slideIn 0.8s 0.4s ease forwards;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      font-weight: 300;
+      color: rgba(255,253,249,0.78);
+      line-height: 1.75;
+      margin-bottom: 2.4rem;
+      max-width: 460px;
+      opacity: 0;
+      animation: slideIn 0.8s 0.6s ease forwards;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 1.05rem 2.8rem;
+      background: var(--gold);
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.22s, transform 0.18s, box-shadow 0.22s;
+      opacity: 0;
+      animation: slideIn 0.8s 0.8s ease forwards;
+    }
+
+    .btn-primary:hover {
+      background: #b07e28;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(200,151,58,0.35);
+    }
+
+    .hero-urgency {
+      margin-top: 1.1rem;
+      font-size: 0.8rem;
+      color: rgba(255,253,249,0.48);
+      letter-spacing: 0.06em;
+      opacity: 0;
+      animation: slideIn 0.8s 1s ease forwards;
+    }
+
+    .hero-urgency strong { color: var(--gold-light); }
+
+    /* ── PHOTO STRIP ── */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr 1fr;
+      height: clamp(200px, 32vw, 400px);
+    }
+
+    .strip-photo { overflow: hidden; background: #c5bdb5; }
+
+    .strip-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .strip-photo:hover img { transform: scale(1.05); }
+
+    /* ── WHY ── */
+    .why {
+      background: var(--warm-white);
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 7vw, 8rem);
+      align-items: center;
+    }
+
+    @media (max-width: 720px) {
+      .why { grid-template-columns: 1fr; }
+      .why-photo { order: -1; }
+    }
+
+    .why-photo {
+      position: relative;
+    }
+
+    .why-photo img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .why-photo::before {
+      content: '';
+      position: absolute;
+      top: -12px; left: -12px;
+      width: 70px; height: 70px;
+      border-top: 3px solid var(--gold);
+      border-left: 3px solid var(--gold);
+      z-index: 1;
+    }
+
+    .why-photo::after {
+      content: '';
+      position: absolute;
+      bottom: -12px; right: -12px;
+      width: 70px; height: 70px;
+      border-bottom: 3px solid var(--gold);
+      border-right: 3px solid var(--gold);
+    }
+
+    .tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.9rem;
+    }
+
+    .why h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--charcoal);
+      margin-bottom: 1.5rem;
+    }
+
+    .why h2 em { font-style: italic; color: var(--lavender); }
+
+    .why p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--brown-mid);
+      line-height: 1.85;
+      margin-bottom: 1.1rem;
+    }
+
+    /* ── DETAILS ── */
+    .details {
+      background: var(--lavender-soft);
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
+      text-align: center;
+    }
+
+    .details .tag { color: var(--lavender); }
+
+    .details h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 3rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--warm-white);
+      padding: 2.2rem 1.8rem;
+      text-align: left;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+    }
+
+    .card-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: var(--gold);
+      opacity: 0.35;
+      line-height: 1;
+      margin-bottom: 0.8rem;
+    }
+
+    .card-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--lavender);
+      margin-bottom: 0.4rem;
+    }
+
+    .card-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 0.6rem;
+    }
+
+    .card-desc {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--brown-mid);
+      line-height: 1.7;
+    }
+
+    /* ── INVESTMENT ── */
+    .investment {
+      background: var(--charcoal);
+      padding: clamp(3.5rem, 7vw, 6rem) clamp(2rem, 9vw, 8rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .inv-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+
+    .inv-price {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 400;
+      color: var(--warm-white);
+      line-height: 1;
+    }
+
+    .inv-middle {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: rgba(255,253,249,0.6);
+      line-height: 1.9;
+      max-width: 320px;
+    }
+
+    .inv-middle strong {
+      color: rgba(255,253,249,0.9);
+      font-weight: 400;
+    }
+
+    .investment .btn-primary { opacity: 1; animation: none; }
+
+    /* ── TESTIMONIAL ── */
+    .quote-section {
+      background: var(--warm-white);
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: center;
+    }
+
+    @media (max-width: 720px) { .quote-section { grid-template-columns: 1fr; } }
+
+    .quote-section img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .quote-inner .tag { color: var(--gold); }
+
+    blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.65;
+      color: var(--charcoal);
+      margin: 1rem 0 1.5rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid var(--gold);
+    }
+
+    cite {
+      font-style: normal;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+    }
+
+    /* ── FINAL CTA ── */
+    .final {
+      position: relative;
+      background: url('2020-03-24-5063.JPEG') center 25% / cover no-repeat;
+      padding: clamp(6rem, 12vw, 10rem) clamp(2rem, 9vw, 8rem);
+      text-align: center;
+    }
+
+    .final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(20,14,8,0.65);
+    }
+
+    .final-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .final .tag { color: var(--gold-light); margin-bottom: 0.9rem; }
+
+    .final h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 400;
+      color: var(--warm-white);
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+
+    .final h2 em { font-style: italic; color: var(--gold-light); }
+
+    .final p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,253,249,0.7);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .final .btn-primary { opacity: 1; animation: none; padding: 1.1rem 3rem; }
+
+    .final-note {
+      margin-top: 1.4rem;
+      font-size: 0.75rem;
+      color: rgba(255,253,249,0.35);
+      letter-spacing: 0.07em;
+    }
+
+    .final-note strong { color: rgba(232,201,122,0.65); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1a1410;
+      padding: 2rem clamp(2rem, 9vw, 8rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer a {
+      color: rgba(255,253,249,0.4);
+      font-size: 0.8rem;
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--gold); }
+
+    footer span {
+      font-size: 0.75rem;
+      color: rgba(255,253,249,0.2);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay { transition-delay: 0.18s; }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="eyebrow">Nydam Photography · Austin, TX · Spring 2026</span>
+      <h1>Stop time<br>for <em>twenty minutes</em><br>this spring.</h1>
+      <p class="hero-sub">
+        Just you, the people you love, and the bluebonnets. Twenty minutes in the fields. Photos you'll keep forever.
+      </p>
+      <a href="https://calendly.com/arlen-nydam/blubonnet-mini-sessions" class="btn-primary">Reserve your spot</a>
+      <p class="hero-urgency"><strong>Limited spots</strong> &nbsp;·&nbsp; March 20 &amp; 22 · 4–6 PM · Domain area, Austin</p>
+    </div>
+  </section>
+
+
+  <!-- PHOTO STRIP -->
+  <div class="photo-strip">
+    <div class="strip-photo">
+      <img src="2015-04-03-4078.JPEG" alt="Boy in Austin bluebonnets" />
+    </div>
+    <div class="strip-photo">
+      <img src="2015-04-04-4494.JPEG" alt="Baby in Texas wildflowers" loading="lazy" />
+    </div>
+    <div class="strip-photo">
+      <img src="2015-04-04-4436.JPEG" alt="Austin family bluebonnet portrait" loading="lazy" />
+    </div>
+  </div>
+
+
+  <!-- WHY -->
+  <section class="why reveal">
+    <div class="why-text">
+      <p class="tag">The window is short</p>
+      <h2>Texas wildflowers peak <em>fast</em> — and then they're gone.</h2>
+      <p>Bluebonnets bloom for just a few weeks each spring. I scout the best patches every year so we're in the right field at the right moment — when the color is deep and the golden hour light is perfect.</p>
+      <p>You show up. Twenty minutes. I take care of everything else. The result is the kind of photos you'll frame and keep for decades.</p>
+    </div>
+    <div class="why-photo reveal reveal-delay">
+      <img src="2020-03-24-5050-Edit2.JPEG" alt="Family of five in Austin bluebonnets golden hour" loading="lazy" />
+    </div>
+  </section>
+
+
+  <!-- DETAILS -->
+  <section class="details reveal">
+    <p class="tag">What to expect</p>
+    <h2>Simple, relaxed, and done right.</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-num">01</div>
+        <p class="card-label">Dates</p>
+        <p class="card-value">March 20 &amp; 22</p>
+        <p class="card-desc">4–6 PM both days. Golden hour light — the best of the whole year.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">02</div>
+        <p class="card-label">Session Length</p>
+        <p class="card-value">20 Minutes</p>
+        <p class="card-desc">Short, relaxed, and just enough time to capture the real moments — no one gets tired or antsy.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">03</div>
+        <p class="card-label">Location</p>
+        <p class="card-value">Domain area</p>
+        <p class="card-desc">Austin, TX. Exact location shared when you book — scout-selected for peak bloom color.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- INVESTMENT -->
+  <div class="investment reveal">
+    <div>
+      <p class="inv-label">Investment</p>
+      <p class="inv-price">$150</p>
+    </div>
+    <div class="inv-middle">
+      <strong>20-minute session</strong><br>
+      Fully edited gallery images<br>
+      Online gallery — easy download and sharing<br>
+      Domain area, Austin · March 20 or 22 · 4–6 PM
+    </div>
+    <a href="https://calendly.com/arlen-nydam/blubonnet-mini-sessions" class="btn-primary">Book your session →</a>
+  </div>
+
+
+  <!-- TESTIMONIAL -->
+  <section class="quote-section reveal">
+    <img src="2020-03-24-5050-Edit2.JPEG" alt="Austin family bluebonnet golden hour session" loading="lazy" />
+    <div class="quote-inner">
+      <p class="tag">What families say</p>
+      <blockquote>
+        "Arlen has become our family's dedicated photographer and an important part of our lives. His patience, calming presence, keen eye for detail, and complete devotion to both the art and science of his craft truly set him apart."
+      </blockquote>
+      <cite>— Sonya Forster, Austin TX</cite>
+    </div>
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="final-inner">
+      <p class="tag">Limited availability</p>
+      <h2>These spots go<br><em>every single year.</em></h2>
+      <p>Don't let peak bloom pass. Once the dates fill, that's it — bluebonnets don't wait.</p>
+      <a href="https://calendly.com/arlen-nydam/blubonnet-mini-sessions" class="btn-primary">Reserve your spot now</a>
+      <p class="final-note"><strong>Limited spots</strong> &nbsp;·&nbsp; March 20 &amp; 22 · 4–6 PM · Domain area, Austin</p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="https://nydamphoto.com">← Back to Nydam Photography</a>
+    <span>© 2026 Nydam Photography · Austin, TX</span>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.1 }
+    );
+    reveals.forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
