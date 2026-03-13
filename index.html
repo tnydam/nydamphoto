@@ -298,18 +298,41 @@
     }
     .nav-links a:hover { color: var(--caramel); }
     .nav-cta {
-      font-size: 0.78rem;
-      font-weight: 400;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--warm-white);
-      background: var(--espresso);
-      padding: 0.6rem 1.4rem;
-      text-decoration: none;
-      transition: background 0.2s;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--warm-white);
+  background: var(--espresso);
+  padding: 0.6rem 1.4rem;
+  text-decoration: none;
+  transition: background 0.2s, opacity 0.3s;
     }
     .nav-cta:hover { background: var(--mocha); }
-
+ 
+  .nav-book-trigger {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  background: var(--caramel);
+  color: var(--warm-white);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, opacity 0.3s, transform 0.3s;
+  transform: translateY(-100%);
+}
+.nav-book-trigger.visible {
+  transform: translateY(0);
+}
+.nav-book-trigger:hover { background: var(--mocha); }
+    
     /* ── HERO ── */
     .hero {
       min-height: 50vh;
@@ -1327,6 +1350,9 @@ font-size: clamp(2rem, 4vw, 3.5rem);
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-cta btn-book" onclick="openBookModal()" style="font-family:'Jost',sans-serif;">Book a Session</button>
+  <button class="nav-book-trigger" id="navBookTrigger" onclick="openBookModal()">
+  Book ↓
+</button>
 </nav>
 
 <!-- ── HERO ── -->
@@ -1339,7 +1365,7 @@ font-size: clamp(2rem, 4vw, 3.5rem);
       The pictures will.
     </h1>
     <p class="hero-sub">
-      From weddings and family milestones to corporate events, portraits, sports, and Catholic sacraments, we document life's meaningful moments so they can be remembered, shared, and cherished for years to come.
+      From weddings and family milestones to corporate events, portraits, sports, and Catholic sacraments, we preserve life's meaningful moments so they can be remembered, shared, and cherished for years to come.
     </p>
     <div class="hero-actions">
       <a href="#services" class="btn-primary">View Portfolio →</a>
@@ -1477,7 +1503,7 @@ font-size: clamp(2rem, 4vw, 3.5rem);
           <button class="dot" onclick="goToReview(1)" aria-label="Review 2"></button>
           <button class="dot" onclick="goToReview(2)" aria-label="Review 3"></button>
         </div>
-        <p class="about-text">From the first nervous breath to the last toast, from the opening welcome to the closing keynote, from the quiet moments in between to the energy that fills the room, we document every heartfelt emotion as it happens.</p>
+        <p class="about-text">From the first nervous breath to the last toast, from the opening welcome to the closing keynote, from the quiet moments in between to the energy that fills the room, we capture every heartfelt emotion as it happens.</p>
         <p class="about-text">Whether it's the anticipation before you walk down the aisle, the pride on a graduate's face, the raw energy of an athlete at their best, the quiet reverence of a liturgy, or the confidence of a brand stepping into its moment—we are ready.</p>
         <p class="about-text">Each image reflects something real—the love between two people, the connection within a family, the identity of a brand, and the spirit of a celebration.</p>
         <p class="about-text">Every photo is captured with care, authenticity, and nearly two decades of devotion, preserving what time cannot—the raw emotion, the unfiltered beauty, the moments you will want to relive again and again.</p>
@@ -1513,7 +1539,7 @@ font-size: clamp(2rem, 4vw, 3.5rem);
           <path d="M14 10 L14 7 M26 10 L26 7 M17 7 h6"/>
         </svg>
         <h3 class="service-name">Wedding Photography</h3>
-        <p class="service-desc"><em>You'll forget the centerpieces. You won't forget the look on his face.</em><br><br>Your wedding day moves fast. We move with it, documenting every quiet moment, every glance, every burst of joy from the ceremony to the last dance. No interruptions, no stiff posing. Just your story, told honestly.</p>
+        <p class="service-desc"><em>You'll forget the centerpieces. You won't forget the look on his face.</em><br><br>Your wedding day moves fast. We move with it, preserving every quiet moment, every glance, every burst of joy from the ceremony to the last dance. No interruptions, no stiff posing. Just your story, told honestly.</p>
         <a href="https://austinweddingphotographer.myportfolio.com/" target="_blank" rel="noopener" class="service-link">
           View Wedding Portfolio <span class="service-arrow">→</span>
         </a>
@@ -1592,7 +1618,7 @@ font-size: clamp(2rem, 4vw, 3.5rem);
           <path d="M14 20 L10 28 M26 20 L30 28"/>
         </svg>
         <h3 class="service-name">Quinceañera Photography</h3>
-        <p class="service-desc"><em>She's been dreaming of this day her whole life. So have you.</em><br><br>Every detail of a Quinceañera tells a story — the dress, the waltz, the family gathered around her. We document it all with the same care and artistry we bring to weddings: candid emotion, beautiful portraits, and every meaningful moment in between.</p>
+        <p class="service-desc"><em>She's been dreaming of this day her whole life. So have you.</em><br><br>Every detail of a Quinceañera is worth preserving. The dress, the waltz, the family gathered around her. We save it all with the same care and artistry we bring to weddings: candid emotion, beautiful portraits, and every meaningful moment in between.</p>
         <a href="https://www.austinquinceaneraphotographer.myportfolio.com" target="_blank" rel="noopener" class="service-link">
           View Quinceañera Portfolio <span class="service-arrow">→</span>
         </a>
@@ -2059,10 +2085,24 @@ function closeBlogIfOutside(e) {
 
 // Nav scroll effect
 const nav = document.getElementById('main-nav');
+const navCta = document.querySelector('.nav-cta');
+const navBookTrigger = document.getElementById('navBookTrigger');
+
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
-});
 
+  if (window.scrollY > 80) {
+    navCta.style.opacity = '0';
+    navCta.style.pointerEvents = 'none';
+    navBookTrigger.style.display = 'block';
+    setTimeout(() => navBookTrigger.classList.add('visible'), 10);
+  } else {
+    navBookTrigger.classList.remove('visible');
+    setTimeout(() => navBookTrigger.style.display = 'none', 300);
+    navCta.style.opacity = '1';
+    navCta.style.pointerEvents = 'auto';
+  }
+});
 // Intersection observer for fade-in
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
