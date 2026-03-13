@@ -187,7 +187,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
 
   <style>
-
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to right,
+    rgba(30,18,10,0.82) 0%,
+    rgba(30,18,10,0.55) 40%,
+    rgba(30,18,10,0.08) 100%);
+}
     .hero-review-strip {
   display: flex;
   align-items: center;
@@ -335,18 +343,20 @@
     
     /* ── HERO ── */
     .hero {
-      min-height: 50vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      position: relative;
-      overflow: hidden;
-    }
+  position: relative;
+  height: 100svh;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
     .hero-left {
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 10rem 4rem 6rem 8rem;
-      background: var(--cream);
+position: relative;
+z-index: 2;
       position: relative;
     }
     .hero-left::after {
@@ -553,6 +563,7 @@ font-size: clamp(2rem, 4vw, 3.5rem);
       position: relative;
       background: var(--parchment);
       overflow: hidden;
+      display: none;
     }
     .hero-film-strip {
       position: absolute;
@@ -1357,6 +1368,8 @@ font-size: clamp(2rem, 4vw, 3.5rem);
 
 <!-- ── HERO ── -->
 <section class="hero" id="home">
+  <div class="hero-overlay"></div>
+<div class="hero-left">
   <div class="hero-left">
     <div class="hero-eyebrow">Austin, Texas · Available Worldwide</div>
     <div class="hero-decorative-line"></div>
