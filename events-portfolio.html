@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Photography | Nydam Photography | Austin Event Photographer</title>
+<meta name="description" content="Austin event photographer covering corporate galas, conferences, product launches, and community events. Short, half-day, and full-day coverage.">
+<meta name="keywords" content="Austin event photographer, event photography Austin TX, corporate event photographer Austin, conference photographer Austin, gala photographer Austin">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F7F3EE;--linen:#EDE7DC;--parchment:#E5DDD1;--charcoal:#2A2520;--slate:#4A4540;--stone:#8A7E75;--gold:#C4A07A;--gold-dk:#A8835A;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--charcoal);font-family:var(--sans);font-weight:300;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+#nav{position:fixed;top:0;left:0;right:0;z-index:800;display:flex;align-items:center;justify-content:space-between;padding:1.8rem 3.5rem;transition:background .5s,padding .4s,border-color .5s;border-bottom:1px solid transparent}
+#nav.scrolled{background:rgba(247,243,238,.97);backdrop-filter:blur(20px);padding:1.1rem 3.5rem;border-bottom-color:var(--linen)}
+.nav-logo{font-family:var(--serif);font-size:1.1rem;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,.95);transition:color .5s}
+#nav.scrolled .nav-logo{color:var(--charcoal)}
+.nav-back{font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);transition:color .3s}
+#nav.scrolled .nav-back{color:var(--slate)}
+.nav-back:hover{color:var(--gold)}
+.nav-cta{font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;padding:.65rem 1.6rem;border:1px solid rgba(255,255,255,.45);color:rgba(255,255,255,.9);transition:all .3s}
+#nav.scrolled .nav-cta{border-color:var(--charcoal);color:var(--charcoal)}
+.nav-cta:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.hero{position:relative;height:100vh;min-height:640px;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(1.05);animation:kb 10s ease forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(42,37,32,.1) 0%,rgba(42,37,32,0) 35%,rgba(42,37,32,.72) 100%)}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:0 5rem 5rem;text-align:center}
+.hero-eyebrow{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;opacity:0;animation:fu .8s .5s ease forwards}
+.hero-title{font-family:var(--serif);font-weight:300;font-size:clamp(4rem,9vw,9rem);line-height:.9;letter-spacing:-.02em;color:#fff;opacity:0;animation:fu .9s .7s ease forwards}
+.hero-title em{font-style:italic}
+@keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.eyebrow{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:1.2rem;display:block}
+.display{font-family:var(--serif);font-weight:300;line-height:1.05;font-size:clamp(2.4rem,4vw,4rem)}
+.display em{font-style:italic}
+.rule{width:2.5rem;height:1px;background:var(--gold);margin:1.6rem 0}
+.container{max-width:1200px;margin:0 auto;padding:0 3.5rem}
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.fade-up.in{opacity:1;transform:none}
+.btn-gold{display:inline-block;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;padding:1.1rem 2.8rem;background:var(--gold);color:#fff;transition:background .3s}
+.btn-gold:hover{background:var(--gold-dk)}
+.btn-outline{display:inline-block;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;padding:1.1rem 2.8rem;border:1px solid var(--charcoal);color:var(--charcoal);transition:all .3s}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+/* INTRO SPLIT */
+.intro{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.intro-photo{overflow:hidden}
+.intro-photo img{width:100%;height:100%;object-fit:cover}
+.intro-text{background:var(--linen);padding:6rem 5rem;display:flex;flex-direction:column;justify-content:center}
+.intro-body{font-size:.92rem;line-height:2.1;color:var(--slate);margin:2rem 0}
+.intro-body p+p{margin-top:1.2rem}
+/* GALLERY GRID */
+.gallery{padding:6rem 0;background:var(--cream)}
+.gallery-title-wrap{text-align:center;margin-bottom:-2rem;position:relative;z-index:0}
+.gallery-giant{font-family:var(--serif);font-weight:300;letter-spacing:-.02em;font-size:clamp(4rem,10vw,10rem);color:var(--charcoal);line-height:1}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:4rem;position:relative;z-index:1}
+.g-cell{overflow:hidden;aspect-ratio:4/5}
+.g-cell.wide{grid-column:span 2;aspect-ratio:16/9}
+.g-cell.tall{grid-row:span 2;aspect-ratio:auto}
+.g-cell img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.g-cell:hover img{transform:scale(1.05)}
+/* WHAT TO EXPECT */
+.expect{padding:8rem 0;background:var(--linen)}
+.expect-grid{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center}
+.expect-photo{aspect-ratio:4/5;overflow:hidden}
+.expect-photo img{width:100%;height:100%;object-fit:cover}
+.expect-items{display:flex;flex-direction:column;gap:2.5rem;margin:2.5rem 0 3rem}
+.expect-item{display:flex;gap:1.5rem;align-items:flex-start}
+.expect-num{font-family:var(--serif);font-style:italic;font-size:3rem;font-weight:300;color:var(--gold);line-height:1;flex-shrink:0;width:2.5rem}
+.expect-title{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--charcoal);margin-bottom:.4rem}
+.expect-body{font-size:.86rem;line-height:2;color:var(--slate)}
+/* REVIEW */
+.review-band{padding:6rem 3rem;background:var(--parchment);text-align:center}
+.review-mark{font-family:var(--serif);font-size:4rem;color:var(--charcoal);line-height:1;margin-bottom:1.8rem;display:block}
+.review-quote{font-family:var(--serif);font-style:italic;font-size:clamp(1.6rem,2.8vw,2.4rem);font-weight:300;line-height:1.45;max-width:780px;margin:0 auto 1.8rem;color:var(--charcoal)}
+.review-attr{font-size:.63rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dk)}
+/* END CTA */
+.end-cta{padding:8rem 3rem;background:var(--charcoal);text-align:center}
+.end-cta-title{font-family:var(--serif);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:300;color:#fff;margin-bottom:1.5rem;line-height:1.1}
+.end-cta-title em{font-style:italic;color:var(--gold)}
+.end-cta-body{font-size:.9rem;line-height:2;color:rgba(255,255,255,.6);max-width:58ch;margin:0 auto 3rem}
+.end-cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+/* FOOTER */
+.footer-strip{display:grid;grid-template-columns:repeat(5,1fr);height:240px;overflow:hidden}
+.footer-strip-cell{overflow:hidden}
+.footer-strip-cell img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.footer-strip-cell:hover img{transform:scale(1.06)}
+.footer-explore{background:var(--charcoal);text-align:center;padding:1rem;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(247,243,238,.25)}
+footer{background:var(--charcoal);padding:3rem 0 2rem}
+.footer-brand{font-family:var(--serif);font-size:1.3rem;font-weight:300;color:var(--cream);margin-bottom:1rem}
+.footer-row{display:flex;gap:2.5rem;flex-wrap:wrap;margin-bottom:2rem}
+.footer-row a{font-size:.75rem;color:rgba(247,243,238,.28);transition:color .3s}
+.footer-row a:hover{color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;font-size:.62rem;color:rgba(247,243,238,.18)}
+@media(max-width:900px){
+  #nav{padding:1.2rem 1.8rem}#nav.scrolled{padding:.9rem 1.8rem}
+  .intro{grid-template-columns:1fr}.intro-photo{height:50vh}.intro-text{padding:3.5rem 2rem}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .g-cell.tall{grid-row:span 1}.g-cell.wide{grid-column:1/-1}
+  .expect-grid{grid-template-columns:1fr}
+  .footer-strip{grid-template-columns:repeat(3,1fr);height:160px}
+  .footer-strip-cell:nth-child(4),.footer-strip-cell:nth-child(5){display:none}
+  .container{padding:0 1.8rem}
+  .hero-content{padding:0 2rem 3rem}
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="/" class="nav-logo">Nydam Photography</a>
+  <a href="/" class="nav-back">← Home</a>
+  <a href="events.html" class="nav-cta">Book Event Coverage</a>
+</nav>
+<section class="hero">
+  <img src="austin-event-photographer-hero.jpg" alt="Event Photography | Nydam Photography | Austin Event Photographer" loading="eager" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1800&q=88'">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Austin, Texas · Corporate · Community · Celebration</span>
+    <h1 class="hero-title">Event<br><em>Photography</em></h1>
+  </div>
+</section>
+<section class="intro">
+  <div class="intro-photo"><img src="austin-event-photographer.jpg" alt="Event Photography | Nydam Photography | Austin Event Photographer" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1511578314322-379afb476865?w=900&q=80'"></div>
+  <div class="intro-text">
+    <span class="eyebrow fade-up">Our Approach</span>
+    <div class="display fade-up">Every handshake.<br>Every keynote.<br><em>Every moment worth keeping.</em></div>
+    <div class="rule fade-up"></div>
+    <div class="intro-body fade-up"><p>Corporate galas, product launches, conferences, award ceremonies, and community celebrations — the events that represent your organization deserve to be documented with the same care you put into planning them.</p><p>Arlen works efficiently and invisibly, capturing the energy of the room and the moments that matter — from the opening welcome to the final toast. Coverage available by the hour or by the day.</p></div>
+  </div>
+</section>
+<section class="gallery">
+  <div class="container">
+    <div class="gallery-title-wrap fade-up"><div class="gallery-giant">OUR WORK</div></div>
+    <div class="gallery-grid"><div class="g-cell "><img src="austin-event-photographer.jpg" alt="Corporate event Austin" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700'" loading="lazy"></div>
+<div class="g-cell wide"><img src="austin-event-photographer-portfolio.jpg" alt="Conference photography Austin" onerror="this.src='https://images.unsplash.com/photo-1511578314322-379afb476865?w=700'" loading="lazy"></div>
+<div class="g-cell "><img src="austin-corporate-photographer.jpg" alt="Gala photography Austin" onerror="this.src='https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=700'" loading="lazy"></div>
+<div class="g-cell "><img src="austin-event-photographer-hero.jpg" alt="Event coverage Austin" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700'" loading="lazy"></div>
+<div class="g-cell "><img src="austin-corporate-photography-client.jpg" alt="Product launch Austin" onerror="this.src='https://images.unsplash.com/photo-1557804506-669a67965ba0?w=700'" loading="lazy"></div>
+</div>
+  </div>
+</section>
+<section class="expect">
+  <div class="container">
+    <div class="expect-grid">
+      <div class="expect-photo fade-up"><img src="austin-event-photographer-hero.jpg" alt="What to expect" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700'"></div>
+      <div>
+        <span class="eyebrow fade-up">What to Expect</span>
+        <div class="display fade-up">Three coverage options.<br><em>One seamless experience.</em></div>
+        <div class="expect-items"><div class="expect-item fade-up"><span class="expect-num">01</span><div><div class="expect-title">Short Event (up to 2 hours)</div><p class="expect-body">For focused coverage of a keynote, award ceremony, or opening reception. The essential moments, efficiently captured.</p></div></div>
+<div class="expect-item fade-up"><span class="expect-num">02</span><div><div class="expect-title">Half-Day (2 to 4 hours)</div><p class="expect-body">For events with multiple components — arrivals, programming, networking, and key moments through the event arc.</p></div></div>
+<div class="expect-item fade-up"><span class="expect-num">03</span><div><div class="expect-title">Full Day (4 to 6+ hours)</div><p class="expect-body">Complete event documentation from setup through the final moment. Ideal for conferences, galas, and multi-session events.</p></div></div>
+</div>
+        <a href="events.html" class="btn-gold fade-up">View Coverage Options →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="review-band fade-up">
+  <span class="review-mark">&#10077;</span>
+  <p class="review-quote">Arlen's eye for quality helped my company execute an amazing photoshoot. The process was smooth and professional, and the results exceeded our expectations.</p>
+  <p class="review-attr">Woody Robertson, Corporate &amp; Brand Photography</p>
+</div>
+<div class="end-cta">
+  <h2 class="end-cta-title fade-up">Your event.<br><em>Documented the way it deserves.</em></h2>
+  <p class="end-cta-body fade-up">Select your coverage option. We'll confirm within 24 hours and reach out personally before the event.</p>
+  <div class="end-cta-btns fade-up">
+    <a href="events.html" class="btn-gold">View Coverage Options →</a>
+    <a href="/#contact" class="btn-outline" style="border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.8)">Ask a Question First</a>
+  </div>
+</div>
+
+<div class="footer-explore">EXPLORE MORE</div>
+<div class="footer-strip">
+  <div class="footer-strip-cell"><img src="austin-wedding-photographer-1.jpg" alt="Weddings" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?w=500&q=80'" loading="lazy"></div>
+  <div class="footer-strip-cell"><img src="austin-catholic-photographer.jpg" alt="Catholic" onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80'" loading="lazy"></div>
+  <div class="footer-strip-cell"><img src="austin-portrait-photographer.jpg" alt="Portraits" onerror="this.src='https://images.unsplash.com/photo-1511895426328-dc8714191011?w=500&q=80'" loading="lazy"></div>
+  <div class="footer-strip-cell"><img src="austin-corporate-photographer.jpg" alt="Corporate" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80'" loading="lazy"></div>
+  <div class="footer-strip-cell"><img src="austin-event-photographer.jpg" alt="Events" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80'" loading="lazy"></div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-brand">Nydam Photography</div>
+    <div class="footer-row"><a href="/">Home</a><a href="/book.html">All Sessions</a><a href="/corporate-portfolio.html">Corporate Photography</a><a href="/#contact">Contact</a></div>
+    <div class="footer-bottom"><span>© 2026 Nydam Photography · Austin, Texas</span><span style="font-family:var(--serif);font-style:italic">nydamphoto.com</span></div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>70),{passive:true});
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

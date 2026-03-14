@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <title>Wedding Photography Packages | Nydam Photography | Austin Wedding Photographer</title>
+  <meta name="description" content="Austin wedding photographer Arlen Nydam offers three wedding photography collections from $2,500. Documentary storytelling for Austin, Hill Country, and worldwide weddings.">
+  <meta name="keywords" content="Austin wedding photographer, wedding photographer Austin TX, Austin TX wedding photography, Hill Country wedding photographer, wedding photography packages Austin, Austin wedding photography prices">
+  <meta name="author" content="Nydam Photography">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nydamphoto.com/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nydam Photography">
+  <meta property="og:title" content="Wedding Photography Collections | Nydam Photography Austin">
+  <meta property="og:description" content="Three wedding photography collections for Austin couples — Essential $2,500 · Signature $4,500 · Wedding Story $6,500. Documentary storytelling with honesty and heart.">
+  <meta property="og:image" content="https://nydamphoto.com/og-image.jpg">
+  <meta property="og:url" content="https://nydamphoto.com/">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wedding Photography Collections | Nydam Photography Austin">
+  <meta name="twitter:description" content="Three wedding photography collections for Austin couples — Essential $2,500 · Signature $4,500 · Wedding Story $6,500. Documentary storytelling with honesty and heart.">
+  <meta name="twitter:image" content="https://nydamphoto.com/og-image.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<!-- Structured data for AI/search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PhotographyBusiness",
+  "name": "Nydam Photography",
+  "url": "https://nydamphoto.com",
+  "description": "Austin wedding photographer Arlen Nydam offers three wedding photography collections: Essential ($2,500), Signature ($4,500), and Wedding Story ($6,500). Documentary-style storytelling for Austin and worldwide weddings.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Austin", "addressRegion": "TX", "addressCountry": "US" },
+  "priceRange": "$2,500 - $6,500",
+  "areaServed": ["Austin TX", "Round Rock TX", "Georgetown TX", "Texas", "Worldwide"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Wedding Photography Collections",
+    "itemListElement": [
+      { "@type": "Offer", "name": "Essential Collection", "price": "2500", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Signature Collection", "price": "4500", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Wedding Story Collection", "price": "6500", "priceCurrency": "USD" }
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ══════ TOKENS ══════ */
+:root {
+  --cream:     #F7F3EE;
+  --linen:     #EDE7DC;
+  --parchment: #E5DDD1;
+  --charcoal:  #2A2520;
+  --slate:     #4A4540;
+  --stone:     #8A7E75;
+  --gold:      #C4A07A;
+  --gold-dk:   #A8835A;
+  --serif:  'Cormorant Garamond', Georgia, serif;
+  --sans:   'Jost', system-ui, sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--charcoal);font-family:var(--sans);font-weight:300;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+/* ══════ NAV ══════ */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 800;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.8rem 3.5rem;
+  transition: background .5s, padding .4s, border-color .5s;
+  border-bottom: 1px solid transparent;
+}
+#nav.scrolled {
+  background: rgba(247,243,238,.97);
+  backdrop-filter: blur(20px);
+  padding: 1.1rem 3.5rem;
+  border-bottom-color: var(--linen);
+}
+.nav-logo { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; letter-spacing: .06em; color: rgba(255,255,255,.95); transition: color .5s; }
+#nav.scrolled .nav-logo { color: var(--charcoal); }
+.nav-back { font-size: .63rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.7); transition: color .3s; display: flex; align-items: center; gap: .5rem; }
+#nav.scrolled .nav-back { color: var(--slate); }
+.nav-back:hover { color: var(--gold); }
+.nav-cta { font-size: .63rem; letter-spacing: .18em; text-transform: uppercase; padding: .65rem 1.6rem; border: 1px solid rgba(255,255,255,.45); color: rgba(255,255,255,.9); transition: all .3s; }
+#nav.scrolled .nav-cta { border-color: var(--charcoal); color: var(--charcoal); }
+.nav-cta:hover { background: var(--gold); border-color: var(--gold); color: #fff; }
+
+/* ══════ HERO ══════ */
+.hero {
+  position: relative; height: 100vh; min-height: 680px; overflow: hidden;
+}
+.hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; transform: scale(1.05); animation: kenBurns 10s ease forwards; }
+@keyframes kenBurns { to { transform: scale(1); } }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(42,37,32,.2) 0%, rgba(42,37,32,.0) 30%, rgba(42,37,32,.72) 100%); }
+
+/* Giant title breaking over image — Lauren Ashley style */
+.hero-title-wrap {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 0 3.5rem 2.5rem;
+  display: flex; flex-direction: column; align-items: center;
+}
+.hero-eyebrow { font-size: .6rem; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; opacity: 0; animation: fadeUp .8s .5s ease forwards; }
+.hero-giant {
+  font-family: var(--serif); font-weight: 300; line-height: .9;
+  font-size: clamp(5rem, 13vw, 12rem); letter-spacing: -.02em;
+  color: #fff; text-align: center;
+  opacity: 0; animation: fadeUp .9s .7s ease forwards;
+}
+.hero-giant em { font-style: italic; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+
+/* ══════ UTILITIES ══════ */
+.eyebrow { font-size: .6rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold-dk); margin-bottom: 1.2rem; display: block; }
+.display { font-family: var(--serif); font-weight: 300; line-height: 1.05; font-size: clamp(2.4rem, 4vw, 4rem); }
+.display em { font-style: italic; }
+.rule { width: 2.5rem; height: 1px; background: var(--gold); margin: 1.6rem 0; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 3.5rem; }
+.fade-up { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s ease; }
+.fade-up.in { opacity: 1; transform: none; }
+.btn-gold { display: inline-block; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; padding: 1rem 2.5rem; background: var(--gold); color: #fff; transition: background .3s; }
+.btn-gold:hover { background: var(--gold-dk); }
+.btn-outline { display: inline-block; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; padding: 1rem 2.5rem; border: 1px solid var(--charcoal); color: var(--charcoal); transition: all .3s; }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ══════ PHILOSOPHY INTRO ══════ */
+.philosophy {
+  background: var(--linen);
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+}
+.philosophy-img { overflow: hidden; }
+.philosophy-img img { width: 100%; height: 100%; object-fit: cover; }
+.philosophy-text {
+  padding: 6rem 5rem; display: flex; flex-direction: column; justify-content: center;
+}
+.philosophy-body { font-size: .92rem; line-height: 2.1; color: var(--slate); margin: 2rem 0; }
+.philosophy-body p + p { margin-top: 1.2rem; }
+
+/* ══════ COLLECTIONS HEADER ══════ */
+.coll-header { padding: 7rem 3.5rem 0; text-align: center; overflow: hidden; background: var(--cream); }
+.coll-giant { font-family: var(--serif); font-weight: 300; letter-spacing: -.03em; line-height: .9; font-size: clamp(5rem, 13vw, 11rem); color: var(--charcoal); }
+.coll-sub { font-size: .88rem; line-height: 1.9; color: var(--stone); max-width: 56ch; margin: 2.5rem auto 0; }
+
+/* ══════ STICKY COLLECTION CARDS ══════ */
+.coll-stack { padding-top: 4rem; }
+
+.coll-card {
+  position: sticky; top: 0;
+  display: grid; grid-template-columns: 1fr 1fr;
+  height: 100vh; min-height: 620px;
+  overflow: hidden;
+  box-shadow: 0 -16px 50px rgba(42,37,32,.09);
+}
+.coll-card:first-child { box-shadow: none; }
+
+.coll-card--A .coll-photo { order: 1; }
+.coll-card--A .coll-info  { order: 2; }
+.coll-card--B .coll-photo { order: 2; }
+.coll-card--B .coll-info  { order: 1; }
+
+.coll-photo { position: relative; overflow: hidden; }
+.coll-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s ease; }
+.coll-card:hover .coll-photo img { transform: scale(1.04); }
+.coll-photo-badge {
+  position: absolute; bottom: 2rem; left: 2rem;
+  background: rgba(247,243,238,.92); backdrop-filter: blur(8px);
+  padding: .6rem 1.2rem;
+  font-size: .6rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--gold-dk);
+}
+
+.coll-card:nth-child(1) .coll-info { background: var(--cream); }
+.coll-card:nth-child(2) .coll-info { background: var(--linen); }
+.coll-card:nth-child(3) .coll-info { background: var(--parchment); }
+
+.coll-info { display: flex; flex-direction: column; justify-content: center; padding: 4rem 5rem; overflow-y: auto; }
+
+.coll-num { font-family: var(--serif); font-style: italic; font-size: 7rem; font-weight: 300; line-height: 1; color: rgba(42,37,32,.06); margin-bottom: -2.5rem; }
+.coll-name { font-family: var(--serif); font-size: clamp(2rem,3vw,3rem); font-weight: 300; line-height: 1.1; color: var(--charcoal); margin-bottom: .3rem; }
+.coll-name em { font-style: italic; color: var(--gold-dk); }
+.coll-popular { display: inline-block; font-size: .55rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-dk); border: 1px solid var(--gold); padding: .25rem .7rem; margin-bottom: .8rem; }
+.coll-price { font-family: var(--serif); font-size: 2rem; font-weight: 300; color: var(--charcoal); margin: .8rem 0; }
+.coll-price span { font-size: .75rem; font-family: var(--sans); color: var(--stone); font-weight: 300; }
+.coll-desc { font-size: .87rem; line-height: 2; color: var(--slate); margin: 1rem 0 1.6rem; max-width: 50ch; }
+.coll-includes { margin-bottom: 2rem; }
+.coll-includes-label { font-size: .58rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-dk); margin-bottom: .8rem; }
+.coll-include-item { display: flex; align-items: flex-start; gap: .7rem; font-size: .82rem; line-height: 1.7; color: var(--slate); margin-bottom: .4rem; }
+.coll-include-item::before { content: '✦'; color: var(--gold); font-size: .5rem; margin-top: .35rem; flex-shrink: 0; }
+.coll-cta { display: inline-flex; align-items: center; gap: .7rem; font-size: .63rem; letter-spacing: .2em; text-transform: uppercase; color: var(--charcoal); border-bottom: 1px solid var(--charcoal); padding-bottom: .25rem; transition: color .3s, border-color .3s; width: fit-content; }
+.coll-cta:hover { color: var(--gold-dk); border-color: var(--gold-dk); }
+
+/* ══════ BOOKING HOW IT WORKS ══════ */
+.booking-how {
+  background: var(--charcoal); color: var(--cream);
+  padding: 8rem 0;
+}
+.booking-how-inner {
+  display: grid; grid-template-columns: 5fr 6fr; gap: 7rem; align-items: start;
+}
+.booking-how-title { font-family: var(--serif); font-size: clamp(2.5rem,4vw,4rem); font-weight: 300; line-height: 1.1; color: var(--cream); margin-bottom: 1.5rem; }
+.booking-how-title em { font-style: italic; color: var(--gold); }
+.booking-how-body { font-size: .88rem; line-height: 2; color: rgba(247,243,238,.6); margin-bottom: 2.5rem; }
+.booking-how-note {
+  background: rgba(196,160,122,.1); border-left: 2px solid var(--gold);
+  padding: 1.4rem 1.6rem; margin-top: 2rem;
+}
+.booking-how-note p { font-size: .84rem; line-height: 1.9; color: rgba(247,243,238,.7); }
+.booking-how-note strong { color: var(--gold); font-weight: 400; }
+
+.booking-steps { display: flex; flex-direction: column; gap: 0; }
+.booking-step {
+  display: flex; gap: 2rem; align-items: flex-start;
+  padding: 2rem 0; border-bottom: 1px solid rgba(247,243,238,.1);
+}
+.booking-step:first-child { padding-top: 0; }
+.booking-step:last-child { border-bottom: none; }
+.step-num {
+  font-family: var(--serif); font-style: italic; font-size: 3.5rem; font-weight: 300;
+  color: rgba(247,243,238,.12); line-height: 1; flex-shrink: 0; width: 3.5rem;
+}
+.step-content {}
+.step-title { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; color: var(--cream); margin-bottom: .5rem; }
+.step-body { font-size: .84rem; line-height: 1.9; color: rgba(247,243,238,.55); }
+.step-body strong { color: var(--gold); font-weight: 400; }
+
+/* ══════ RETAINER CALLOUT ══════ */
+.retainer-callout {
+  background: var(--linen); padding: 6rem 0;
+}
+.retainer-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+.retainer-text {}
+.retainer-amount {
+  font-family: var(--serif); font-size: clamp(4rem,8vw,7rem); font-weight: 300;
+  line-height: 1; color: var(--charcoal); margin: 1rem 0 .5rem;
+}
+.retainer-amount span { font-size: clamp(1.2rem,2vw,1.8rem); color: var(--stone); }
+.retainer-desc { font-size: .88rem; line-height: 2; color: var(--slate); margin: 1.5rem 0 2.5rem; max-width: 50ch; }
+.retainer-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+.retainer-photo { aspect-ratio: 4/5; overflow: hidden; }
+.retainer-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ══════ PULL QUOTE ══════ */
+.pullquote { padding: 7rem 3rem; display: flex; align-items: center; justify-content: center; background: var(--cream); }
+.pullquote blockquote { font-family: var(--serif); font-style: italic; font-size: clamp(1.7rem,3vw,2.8rem); font-weight: 300; line-height: 1.45; text-align: center; max-width: 880px; color: var(--charcoal); }
+.pullquote cite { display: block; margin-top: 2.2rem; font-family: var(--sans); font-style: normal; font-size: .62rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-dk); }
+
+/* ══════ FAQ ══════ */
+.faq { padding: 8rem 0; background: var(--parchment); }
+.faq-grid { display: grid; grid-template-columns: 4fr 6fr; gap: 7rem; }
+.faq-title { font-family: var(--serif); font-size: clamp(2.5rem,4vw,4rem); font-weight: 300; line-height: 1.1; }
+.faq-title em { font-style: italic; }
+.faq-items { display: flex; flex-direction: column; }
+.faq-item { border-top: 1px solid rgba(42,37,32,.15); }
+.faq-item:last-child { border-bottom: 1px solid rgba(42,37,32,.15); }
+.faq-q {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.5rem 0; cursor: pointer;
+  font-family: var(--serif); font-size: 1.15rem; font-weight: 400;
+  color: var(--charcoal); gap: 1rem;
+  transition: color .3s;
+}
+.faq-q:hover { color: var(--gold-dk); }
+.faq-icon { font-size: 1.2rem; color: var(--gold); flex-shrink: 0; transition: transform .3s; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .5s ease; }
+.faq-item.open .faq-a { max-height: 300px; }
+.faq-a-inner { font-size: .88rem; line-height: 2; color: var(--slate); padding-bottom: 1.5rem; }
+
+/* ══════ FOOTER STRIP ══════ */
+.footer-strip { display: grid; grid-template-columns: repeat(5,1fr); height: 260px; overflow: hidden; }
+.footer-strip-cell { overflow: hidden; }
+.footer-strip-cell img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+.footer-strip-cell:hover img { transform: scale(1.06); }
+.footer-explore { background: var(--charcoal); text-align: center; padding: 1.1rem; font-size: .58rem; letter-spacing: .3em; text-transform: uppercase; color: rgba(247,243,238,.3); }
+
+footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4rem 0 2.5rem; }
+.footer-bottom-row { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(247,243,238,.08); padding-top: 2rem; font-size: .62rem; color: rgba(247,243,238,.2); }
+.footer-links-row { display: flex; gap: 3rem; flex-wrap: wrap; margin-bottom: 3rem; }
+.footer-links-row a { font-size: .75rem; color: rgba(247,243,238,.3); transition: color .3s; }
+.footer-links-row a:hover { color: var(--gold); }
+.footer-brand { font-family: var(--serif); font-size: 1.4rem; font-weight: 300; color: var(--cream); margin-bottom: 1rem; }
+
+/* ══════ PORTFOLIO GALLERY ══════ */
+.pkg-gallery { background: var(--charcoal); padding: 0; }
+.pg-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 320px 280px;
+  gap: 3px;
+}
+.pg-cell { overflow: hidden; }
+.pg-cell img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
+.pg-cell:hover img { transform: scale(1.05); }
+.pg-cell.pg-tall { grid-row: span 2; }
+.pg-cell.pg-wide { grid-column: span 2; }
+.pg-view-link { background: var(--charcoal); text-align: center; padding: 2.5rem; }
+.pg-link { font-size: .63rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(247,243,238,.4); border-bottom: 1px solid rgba(247,243,238,.2); padding-bottom: .25rem; transition: color .3s, border-color .3s; }
+.pg-link:hover { color: var(--gold); border-color: var(--gold); }
+
+/* ══════ RESPONSIVE ══════ */
+@media (max-width:980px) {
+  #nav { padding: 1.2rem 1.8rem; }
+  #nav.scrolled { padding: .9rem 1.8rem; }
+  .hero-giant { font-size: clamp(3.5rem,10vw,7rem); }
+  .pg-inner { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .pg-cell.pg-tall { grid-row: span 1; }
+  .pg-cell.pg-wide { grid-column: 1/-1; }
+  .hero-title-wrap { padding: 0 1.8rem 2rem; }
+  .philosophy { grid-template-columns: 1fr; }
+  .philosophy-img { height: 50vh; }
+  .philosophy-text { padding: 3.5rem 2rem; }
+  .coll-card { grid-template-columns: 1fr; height: auto; min-height: 100vh; }
+  .coll-card--B .coll-photo { order: 1; }
+  .coll-card--B .coll-info { order: 2; }
+  .coll-photo { aspect-ratio: 4/3; }
+  .coll-info { padding: 3rem 2rem; }
+  .booking-how-inner { grid-template-columns: 1fr; gap: 3.5rem; }
+  .retainer-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .faq-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .container { padding: 0 1.8rem; }
+  .footer-strip { grid-template-columns: repeat(3,1fr); height: 180px; }
+  .footer-strip-cell:nth-child(4), .footer-strip-cell:nth-child(5) { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════ NAV ══════ -->
+<nav id="nav">
+  <a href="/" class="nav-logo">Nydam Photography</a>
+  <a href="/" class="nav-back">← Back to Home</a>
+  <a href="https://calendly.com/arlen-nydam/wedding-photography-order" target="_blank" class="nav-cta">Reserve Your Date</a>
+</nav>
+
+<!-- ══════ HERO ══════ -->
+<section class="hero">
+  <img class="hero-img"
+    src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1800&q=88&auto=format&fit=crop"
+    alt="Austin wedding photography by Arlen Nydam"
+    loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-title-wrap">
+    <span class="hero-eyebrow">Austin, Texas · Available Worldwide</span>
+    <h1 class="hero-giant">Wedding<br><em>Photography</em></h1>
+  </div>
+</section>
+
+<!-- ══════ PORTFOLIO GALLERY ══════ -->
+<section class="pkg-gallery">
+  <div class="pg-inner">
+    <div class="pg-cell pg-tall">
+      <img src="austin-wedding-photographer-1.jpg" alt="Austin wedding photography"
+        onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80&auto=format&fit=crop'" loading="lazy">
+    </div>
+    <div class="pg-cell">
+      <img src="austin-wedding-photographer-2.jpg" alt="Austin wedding ceremony"
+        onerror="this.src='https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=700&q=80&auto=format&fit=crop'" loading="lazy">
+    </div>
+    <div class="pg-cell">
+      <img src="austin-wedding-photographer-3.jpg" alt="Wedding couple"
+        onerror="this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=700&q=80&auto=format&fit=crop'" loading="lazy">
+    </div>
+    <div class="pg-cell pg-wide">
+      <img src="austin-wedding-photographer-4.jpg" alt="Wedding reception Austin"
+        onerror="this.src='https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=1200&q=80&auto=format&fit=crop'" loading="lazy">
+    </div>
+    <div class="pg-cell">
+      <img src="austin-wedding-photographer-5.jpg" alt="Wedding portraits"
+        onerror="this.src='https://images.unsplash.com/photo-1491841573634-28140fc7ced7?w=700&q=80&auto=format&fit=crop'" loading="lazy">
+    </div>
+    <div class="pg-cell">
+      <img src="austin-wedding-photography-approach.jpg" alt="Austin Hill Country wedding"
+        onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=700&q=80&auto=format&fit=crop'" loading="lazy">
+    </div>
+  </div>
+  <div class="pg-view-link fade-up">
+    <a href="wedding-portfolio.html" class="pg-link">View Full Wedding Portfolio →</a>
+  </div>
+</section>
+
+<!-- ══════ PHILOSOPHY ══════ -->
+<section class="philosophy">
+  <div class="philosophy-img">
+    <img
+      src="https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=900&q=80&auto=format&fit=crop"
+      alt="Wedding ceremony documentary photography Austin"
+      loading="lazy">
+  </div>
+  <div class="philosophy-text">
+    <span class="eyebrow fade-up">Our Approach</span>
+    <div class="display fade-up">Every story is unique.<br><em>And deserves to be told.</em></div>
+    <div class="rule fade-up"></div>
+    <div class="philosophy-body fade-up">
+      <p>We believe every wedding day is a story unlike any other, and it deserves to be documented with honesty and heart.</p>
+      <p>Our approach is rooted in storytelling — not directing, not interrupting, but being present for the moments that matter. From the quiet anticipation before you walk down the aisle to the last song of the night, we are there to capture every emotion as it naturally unfolds.</p>
+      <p>To make planning simple, we offer three wedding photography collections, thoughtfully designed to fit different wedding days and levels of investment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ COLLECTIONS HEADER ══════ -->
+<div class="coll-header">
+  <div class="coll-giant fade-up">COLLECTIONS</div>
+  <p class="coll-sub fade-up">Three thoughtfully designed collections.<br>Each one built around a different kind of day.</p>
+</div>
+
+<!-- ══════ STICKY COLLECTION STACK ══════ -->
+<div class="coll-stack">
+
+  <!-- 01 ESSENTIAL -->
+  <div class="coll-card coll-card--A" style="z-index:1">
+    <div class="coll-photo">
+      <img
+        src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop"
+        alt="Intimate wedding ceremony photography Austin"
+        loading="lazy">
+      <div class="coll-photo-badge">Essential Collection</div>
+    </div>
+    <div class="coll-info">
+      <div class="coll-num">01</div>
+      <h2 class="coll-name">Essential<br><em>Collection</em></h2>
+      <div class="coll-price">$2,500 <span>+ tax</span></div>
+      <p class="coll-desc">For intimate ceremonies, elopements, and courthouse weddings where the focus is on the moments that matter most. We document the ceremony and take time for a portrait session with the couple and close family — unhurried and personal.</p>
+      <div class="coll-includes">
+        <div class="coll-includes-label">What's Included</div>
+        <div class="coll-include-item">Ceremony coverage</div>
+        <div class="coll-include-item">Couple &amp; close family portrait session</div>
+        <div class="coll-include-item">Unhurried, personal pace</div>
+        <div class="coll-include-item">Fine art prints &amp; wall art available</div>
+        <div class="coll-include-item">Online gallery for downloading &amp; sharing</div>
+      </div>
+      <a href="https://calendly.com/arlen-nydam/wedding-photography-order" target="_blank" rel="noopener" class="coll-cta">Reserve This Collection →</a>
+    </div>
+  </div>
+
+  <!-- 02 SIGNATURE -->
+  <div class="coll-card coll-card--B" style="z-index:2">
+    <div class="coll-photo">
+      <img
+        src="https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=900&q=80&auto=format&fit=crop"
+        alt="Full wedding day photography Austin"
+        loading="lazy">
+      <div class="coll-photo-badge">Most Popular</div>
+    </div>
+    <div class="coll-info">
+      <div class="coll-num">02</div>
+      <div class="coll-popular">Most Popular</div>
+      <h2 class="coll-name">Signature<br><em>Collection</em></h2>
+      <div class="coll-price">$4,500 <span>+ tax</span></div>
+      <p class="coll-desc">Your wedding day deserves to be documented from the first embrace to the last dance — every quiet moment, every burst of joy, every connection that makes your story yours. We move through your day with intention, capturing the ceremony, family portraits, couple portraits, and the celebration as it naturally unfolds.</p>
+      <div class="coll-includes">
+        <div class="coll-includes-label">What's Included</div>
+        <div class="coll-include-item">Full wedding day coverage</div>
+        <div class="coll-include-item">Ceremony, family portraits &amp; couple portraits</div>
+        <div class="coll-include-item">Complimentary engagement session</div>
+        <div class="coll-include-item">Professionally designed lay-flat heirloom album</div>
+        <div class="coll-include-item">Fine art prints &amp; wall art available</div>
+        <div class="coll-include-item">Online gallery for downloading &amp; sharing</div>
+      </div>
+      <a href="https://calendly.com/arlen-nydam/wedding-photography-order" target="_blank" rel="noopener" class="coll-cta">Reserve This Collection →</a>
+    </div>
+  </div>
+
+  <!-- 03 WEDDING STORY -->
+  <div class="coll-card coll-card--A" style="z-index:3">
+    <div class="coll-photo">
+      <img
+        src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=900&q=80&auto=format&fit=crop"
+        alt="Full story wedding photography Austin Texas"
+        loading="lazy">
+      <div class="coll-photo-badge">Wedding Story Collection</div>
+    </div>
+    <div class="coll-info">
+      <div class="coll-num">03</div>
+      <h2 class="coll-name">Wedding Story<br><em>Collection</em></h2>
+      <div class="coll-price">$6,500 <span>+ tax</span></div>
+      <p class="coll-desc">Full-day storytelling from the first moments of getting ready through the final celebration — every chapter documented as it happens. The evening before, we join your rehearsal dinner. The morning after, a day-after session gives you the portraits you never quite had time for — relaxed, pressure-free, and completely your own.</p>
+      <div class="coll-includes">
+        <div class="coll-includes-label">What's Included</div>
+        <div class="coll-include-item">Getting-ready through final celebration</div>
+        <div class="coll-include-item">Rehearsal dinner coverage (evening prior)</div>
+        <div class="coll-include-item">Day-after portrait session</div>
+        <div class="coll-include-item">Complimentary engagement session</div>
+        <div class="coll-include-item">Complimentary bridal portrait session</div>
+        <div class="coll-include-item">Professionally designed lay-flat heirloom album</div>
+        <div class="coll-include-item">Fine art prints &amp; wall art available</div>
+        <div class="coll-include-item">Online gallery for downloading &amp; sharing</div>
+      </div>
+      <a href="https://calendly.com/arlen-nydam/wedding-photography-order" target="_blank" rel="noopener" class="coll-cta">Reserve This Collection →</a>
+    </div>
+  </div>
+
+</div><!-- /coll-stack -->
+
+<!-- ══════ PULL QUOTE ══════ -->
+<div class="pullquote">
+  <blockquote class="fade-up">
+    "Arlen has become our family's dedicated photographer and an important part of our lives. From engagement photos to our wedding day — he was there for every meaningful moment."
+    <cite>— Sonya Forster · Austin, Texas</cite>
+  </blockquote>
+</div>
+
+<!-- ══════ HOW BOOKING WORKS ══════ -->
+<section class="booking-how">
+  <div class="container">
+    <div class="booking-how-inner">
+      <div>
+        <span class="eyebrow fade-up" style="color:var(--gold)">How Booking Works</span>
+        <h2 class="booking-how-title fade-up">Simple.<br><em>Personal.</em><br>No surprises.</h2>
+        <p class="booking-how-body fade-up">We keep the process as easy as your day should feel. Select your collection, choose your date, and we take it from there.</p>
+        <div class="booking-how-note fade-up">
+          <p><strong>Within 24 hours of your booking request,</strong> we'll reach out personally — by phone or email — to hear about your wedding and walk you through everything available to make your day unforgettable.</p>
+        </div>
+      </div>
+      <div class="booking-steps">
+        <div class="booking-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <div class="step-title">Select your collection</div>
+            <p class="step-body">Choose the collection that feels right for your day and click Reserve. You'll be taken to our booking calendar to choose your wedding date and time.</p>
+          </div>
+        </div>
+        <div class="booking-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <div class="step-title">Receive your contract &amp; invoice</div>
+            <p class="step-body">Within 24 hours you'll receive a contract and invoice to officially secure your date. Everything is in writing — no ambiguity.</p>
+          </div>
+        </div>
+        <div class="booking-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <div class="step-title">Confirm with your retainer</div>
+            <p class="step-body">A non-refundable retainer of <strong>$1,082.50 ($1,000 + tax)</strong> confirms your booking and holds your date. The remaining balance is due 30 days before your wedding.</p>
+          </div>
+        </div>
+        <div class="booking-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <div class="step-title">We reach out personally</div>
+            <p class="step-body">We call or email within 24 hours to hear about your day and make sure every detail is right. Planning your wedding should feel as good as the day itself.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ RETAINER CTA ══════ -->
+<section class="retainer-callout">
+  <div class="container">
+    <div class="retainer-inner">
+      <div>
+        <span class="eyebrow fade-up">Ready to Reserve?</span>
+        <div class="retainer-amount fade-up">$1,082.50 <span>retainer to hold your date</span></div>
+        <p class="retainer-desc fade-up">A non-refundable retainer of $1,000 + tax secures your wedding date and starts the process. The remaining balance is due 30 days before your day. No surprises, no hidden fees.</p>
+        <div class="retainer-ctas fade-up">
+          <a href="https://calendly.com/arlen-nydam/wedding-photography-order" target="_blank" rel="noopener" class="btn-gold">Reserve Your Wedding Date</a>
+          <a href="/#contact" class="btn-outline">Ask a Question First</a>
+        </div>
+      </div>
+      <div class="retainer-photo">
+        <img
+          src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=700&q=80&auto=format&fit=crop"
+          alt="Wedding photography Austin Texas Nydam"
+          loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FAQ ══════ -->
+<section class="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="fade-up">
+        <span class="eyebrow">Questions</span>
+        <h2 class="faq-title">Frequently<br><em>Asked</em></h2>
+      </div>
+      <div class="faq-items">
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            How far in advance should we book?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Popular Austin wedding dates — especially spring and fall weekends — book 12–18 months in advance. If your date is sooner, reach out anyway. We'll let you know our availability and make it work if we can.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Do you travel outside Austin?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Yes — we're based in Austin and available worldwide. Destination wedding travel fees are discussed and agreed upon before booking. We love shooting across the Hill Country, the Texas coast, and beyond.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            When will we receive our photos?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Edited images are delivered to a private online gallery within 4–6 weeks of your wedding day. You'll be able to download, share, and order prints directly from the gallery.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Can we customize a collection?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Absolutely. Every wedding day is different. If none of the three collections feel exactly right, reach out and we'll put together something tailored to your day, your venue, and your vision.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What is your payment structure?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">A non-refundable retainer of $1,082.50 ($1,000 + tax) is due at signing to hold your date. The remaining balance is due 30 days before your wedding. We accept all major payment methods.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Is the engagement session really complimentary?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            <div class="faq-a-inner">Yes, included in the Signature and Wedding Story collections. The engagement session matters — it's how you get comfortable in front of the camera so your wedding portraits feel natural, not forced.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FOOTER STRIP ══════ -->
+<div class="footer-explore">EXPLORE MORE</div>
+<div class="footer-strip">
+  <div class="footer-strip-cell"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500&q=80&auto=format&fit=crop" alt="Wedding" loading="lazy"></div>
+  <div class="footer-strip-cell"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80&auto=format&fit=crop" alt="Catholic" loading="lazy"></div>
+  <div class="footer-strip-cell"><img src="https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=500&q=80&auto=format&fit=crop" alt="Portraits" loading="lazy"></div>
+  <div class="footer-strip-cell"><img src="https://images.unsplash.com/photo-1547941126-3d5322b218b0?w=500&q=80&auto=format&fit=crop" alt="Sports" loading="lazy"></div>
+  <div class="footer-strip-cell"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80&auto=format&fit=crop" alt="Events" loading="lazy"></div>
+</div>
+
+<!-- ══════ FOOTER ══════ -->
+<footer>
+  <div class="container">
+    <div class="footer-brand">Nydam Photography</div>
+    <div class="footer-links-row">
+      <a href="/">Home</a>
+      <a href="/#about">About Arlen</a>
+      <a href="/#sessions">All Sessions</a>
+      <a href="/#work">Portfolio</a>
+      <a href="/#process">How It Works</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://austinweddingphotographer.myportfolio.com/" target="_blank">Wedding Portfolio</a>
+      <a href="https://www.instagram.com/austin_photographer_arlen/" target="_blank">Instagram</a>
+    </div>
+    <div class="footer-bottom-row">
+      <span>© 2026 Nydam Photography · Austin, Texas · All rights reserved</span>
+      <span>nydamphoto.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* NAV */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 70);
+}, { passive: true });
+
+/* FADE UP */
+const io = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
+  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+);
+document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+/* FAQ */
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>

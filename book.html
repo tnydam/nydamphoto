@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <title>Book a Session | Nydam Photography | Austin Photographer</title>
+  <meta name="description" content="Book a photography session with Arlen Nydam — Austin wedding, portrait, corporate, Catholic, event, and sports photographer. Available worldwide.">
+  <meta name="keywords" content="book Austin photographer, Austin wedding photographer booking, Austin portrait photographer booking, nydamphoto.com">
+  <meta name="author" content="Nydam Photography">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nydamphoto.com/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nydam Photography">
+  <meta property="og:title" content="Book a Session | Nydam Photography Austin">
+  <meta property="og:description" content="Book your photography session with Arlen Nydam — Austin wedding, portrait, corporate, Catholic, event, and sports photographer.">
+  <meta property="og:image" content="https://nydamphoto.com/og-image.jpg">
+  <meta property="og:url" content="https://nydamphoto.com/">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Book a Session | Nydam Photography Austin">
+  <meta name="twitter:description" content="Book your photography session with Arlen Nydam — Austin wedding, portrait, corporate, Catholic, event, and sports photographer.">
+  <meta name="twitter:image" content="https://nydamphoto.com/og-image.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream:   #F7F3EE;
+  --linen:   #EDE7DC;
+  --charcoal:#2A2520;
+  --slate:   #4A4540;
+  --stone:   #8A7E75;
+  --gold:    #C4A07A;
+  --gold-dk: #A8835A;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'Jost', system-ui, sans-serif;
+}
+
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { height: 100%; }
+
+body {
+  min-height: 100%;
+  font-family: var(--sans);
+  font-weight: 300;
+  background: var(--cream);
+  color: var(--charcoal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 4rem;
+}
+
+/* ── HEADER PHOTO ── */
+.hero-strip {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.hero-strip img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 35%;
+}
+.hero-strip::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(42,37,32,.1) 0%, rgba(42,37,32,.55) 100%);
+}
+.hero-logo {
+  position: absolute; bottom: 1.5rem; left: 0; right: 0;
+  text-align: center; z-index: 1;
+  font-family: var(--serif); font-size: 1.5rem; font-weight: 500;
+  letter-spacing: .08em; color: #fff;
+}
+
+/* ── PROFILE SECTION ── */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+}
+.profile-tagline {
+  font-family: var(--serif); font-style: italic;
+  font-size: 1.15rem; font-weight: 300;
+  color: var(--charcoal); margin-bottom: .4rem;
+  line-height: 1.4;
+}
+.profile-sub {
+  font-size: .72rem; letter-spacing: .15em; text-transform: uppercase;
+  color: var(--stone); margin-bottom: 1.5rem;
+}
+.profile-chips {
+  display: flex; gap: .5rem; flex-wrap: wrap; justify-content: center;
+  margin-bottom: .5rem;
+}
+.chip {
+  font-size: .6rem; letter-spacing: .12em; text-transform: uppercase;
+  padding: .3rem .8rem; border: 1px solid var(--linen);
+  color: var(--stone); border-radius: 2px;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  width: 100%; max-width: 420px;
+  border: none; border-top: 1px solid var(--linen);
+  margin: 1rem 0;
+}
+
+/* ── SECTION LABEL ── */
+.section-label {
+  width: 100%; max-width: 420px;
+  padding: 0 1.5rem .8rem;
+  font-size: .58rem; letter-spacing: .24em; text-transform: uppercase;
+  color: var(--gold-dk);
+}
+
+/* ── LINK BUTTONS ── */
+.links {
+  display: flex; flex-direction: column;
+  gap: .55rem;
+  width: 100%; max-width: 420px;
+  padding: 0 1.5rem;
+}
+
+.link-btn {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 1.2rem;
+  background: var(--cream);
+  border: 1px solid var(--linen);
+  color: var(--charcoal);
+  text-decoration: none;
+  transition: border-color .25s, background .25s, transform .2s;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.link-btn:active { transform: scale(.98); }
+.link-btn:hover { border-color: var(--gold); background: rgba(196,160,122,.04); }
+
+/* Primary gold button */
+.link-btn--primary {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+.link-btn--primary:hover { background: var(--gold-dk); border-color: var(--gold-dk); }
+
+/* Charcoal dark button */
+.link-btn--dark {
+  background: var(--charcoal);
+  border-color: var(--charcoal);
+  color: var(--cream);
+}
+.link-btn--dark:hover { background: #3a3530; border-color: #3a3530; }
+
+.link-btn-left {
+  display: flex; align-items: center; gap: .9rem;
+}
+.link-btn-icon {
+  font-size: 1rem; width: 1.4rem; text-align: center; flex-shrink: 0;
+}
+.link-btn-text {}
+.link-btn-name {
+  font-size: .83rem; letter-spacing: .02em;
+  display: block; margin-bottom: .1rem;
+}
+.link-btn-desc {
+  font-size: .68rem; color: var(--stone); display: block;
+}
+.link-btn--primary .link-btn-desc,
+.link-btn--dark .link-btn-desc {
+  color: rgba(255,255,255,.65);
+}
+.link-btn-arrow {
+  font-size: .85rem; opacity: .5; flex-shrink: 0;
+}
+
+/* ── EVENT MODAL ── */
+.modal-bg {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(42,37,32,.6);
+  backdrop-filter: blur(8px);
+  display: flex; align-items: flex-end; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity .3s;
+}
+.modal-bg.open { opacity: 1; pointer-events: all; }
+.modal-sheet {
+  background: var(--cream);
+  width: 100%; max-width: 480px;
+  padding: 2rem 1.5rem 3rem;
+  border-radius: 12px 12px 0 0;
+  transform: translateY(100%);
+  transition: transform .4s cubic-bezier(.32,.72,0,1);
+}
+.modal-bg.open .modal-sheet { transform: none; }
+.modal-handle { width: 3rem; height: 4px; background: var(--linen); border-radius: 2px; margin: 0 auto 1.5rem; }
+.modal-eyebrow { font-size: .58rem; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-dk); margin-bottom: .5rem; }
+.modal-title { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; line-height: 1.1; margin-bottom: .4rem; }
+.modal-title em { font-style: italic; }
+.modal-body { font-size: .8rem; line-height: 1.8; color: var(--stone); margin-bottom: 1.5rem; }
+.modal-close-btn {
+  position: absolute; top: 1rem; right: 1.2rem;
+  font-size: 1.4rem; color: var(--stone); cursor: pointer;
+}
+.modal-sheet { position: relative; }
+
+/* ── SOCIALS ROW ── */
+.socials {
+  display: flex; gap: .8rem; justify-content: center;
+  width: 100%; max-width: 420px;
+  padding: 0 1.5rem;
+  flex-wrap: wrap;
+}
+.social-btn {
+  display: flex; align-items: center; gap: .5rem;
+  font-size: .7rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--stone); padding: .5rem .9rem;
+  border: 1px solid var(--linen); transition: all .25s;
+  text-decoration: none;
+}
+.social-btn:hover { color: var(--gold-dk); border-color: var(--gold); }
+
+/* ── FOOTER ── */
+.page-footer {
+  margin-top: 2.5rem;
+  font-size: .65rem; letter-spacing: .1em;
+  color: rgba(42,37,32,.3);
+  text-align: center;
+}
+.page-footer a { color: var(--gold-dk); }
+</style>
+</head>
+<body>
+
+<!-- HERO STRIP -->
+<div class="hero-strip">
+  <img
+    src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80&auto=format&fit=crop"
+    alt="Nydam Photography Austin"
+    loading="eager">
+  <div class="hero-logo">Nydam Photography</div>
+</div>
+
+<!-- PROFILE -->
+<div class="profile">
+  <p class="profile-tagline">Austin photographer.<br>Telling your story with honesty &amp; heart.</p>
+  <p class="profile-sub">Austin, Texas · Est. 2008 · Available Worldwide</p>
+  <div class="profile-chips">
+    <span class="chip">Weddings</span>
+    <span class="chip">Catholic</span>
+    <span class="chip">Corporate</span>
+    <span class="chip">Portraits</span>
+    <span class="chip">Sports</span>
+    <span class="chip">Quinceañera</span>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- BOOKING LINKS -->
+<div class="section-label">📅 Book a Session</div>
+<div class="links">
+
+  <a href="wedding-packages.html" class="link-btn link-btn--primary">
+    <div class="link-btn-left">
+      <span class="link-btn-icon">💍</span>
+      <span class="link-btn-text">
+        <span class="link-btn-name">Wedding Photography</span>
+        <span class="link-btn-desc">View packages · from $2,500</span>
+      </span>
+    </div>
+    <span class="link-btn-arrow">→</span>
+  </a>
+
+  <a href="/catholic.html" target="_blank" rel="noopener" class="link-btn">
+    <div class="link-btn-left">
+      <span class="link-btn-icon">✝️</span>
+      <span class="link-btn-text">
+        <span class="link-btn-name">Catholic &amp; Sacramental</span>
+        <span class="link-btn-desc">Baptisms, communions, confirmations</span>
+      </span>
+    </div>
+    <span class="link-btn-arrow">→</span>
+  </a>
+
+  <a href="/corporate.html" target="_blank" rel="noopener" class="link-btn">
+    <div class="link-btn-left">
+      <span class="link-btn-icon">💼</span>
+      <span class="link-btn-text">
+        <span class="link-btn-name">Corporate Portraits &amp; Headshots</span>
+        <span class="link-btn-desc">LinkedIn, press kits &amp; brand photography</span>
+      </span>
+    </div>
+    <span class="link-btn-arrow">→</span>
+  </a>
+
+  <a href="/events.html" class="link-btn">
+    <div class="link-btn-left">
+      <span class="link-btn-icon">🎉</span>
+      <span class="link-btn-text">
+        <span class="link-btn-name">Event Photography</span>
+        <span class="link-btn-desc">Short, half-day, or full-day coverage</span>
+      </span>
+    </div>
+    <span class="link-btn-arrow">→</span>
+  </a>
+
+  <a href="/sports.html" target="_blank" rel="noopener" class="link-btn">
+    <div class="link-btn-left">
+      <span class="link-btn-icon">⚽</span>
+      <span class="link-btn-text">
+        <span class="link-btn-name">Sports Team Photography</span>
+        <span class="link-btn-desc">Youth leagues, clubs &amp; school programs</span>
+      </span>
+    </div>
+    <span class="link-btn-arrow">→</span>
+  </a>
+
+  <a href="/portraits.html" target="_blank" rel="noopener" class="link-btn">
+    <div class="link-btn-left">
+      <span class="link-btn-icon">🌿</span>
+      <span class="link-btn-text">
+        <span class="link-btn-name">Portrait Session</span>
+        <span class="link-btn-desc">Family, graduation &amp; lifestyle portraits</span>
+      </span>
+    </div>
+    <span class="link-btn-arrow">→</span>
+  </a>
+
+  <a href="https://calendly.com/arlen-nydam/photo-event" target="_blank" rel="noopener" class="link-btn link-btn--dark">
+    <div class="link-btn-left">
+      <span class="link-btn-icon">💬</span>
+      <span class="link-btn-text">
+        <span class="link-btn-name">Not sure? Let's Talk First</span>
+        <span class="link-btn-desc">Schedule a free 15-min call with Arlen</span>
+      </span>
+    </div>
+    <span class="link-btn-arrow">→</span>
+  </a>
+
+</div>
+
+<hr class="divider">
+
+<!-- PORTFOLIO LINKS -->
+<div class="section-label">📸 View Our Work</div>
+<div class="links">
+
+  <a href="https://austinweddingphotographer.myportfolio.com/" target="_blank" rel="noopener" class="link-btn">
+    <div class="link-btn-left">
+      <span class="link-btn-icon">💐</span>
+      <span class="link-btn-text">
+        <span class="link-btn-name">Wedding Portfolio</span>
+      </span>
+    </div>
+    <span class="link-btn-arrow">→</span>
+  </a>
+
+  <a href="https://austincatholicphotographer.myportfolio.com" target="_blank" rel="noopener" class="link-btn">
+    <div class="link-btn-left">
+      <span class="link-btn-icon">⛪</span>
+      <span class="link-btn-text">
+        <span class="link-btn-name">Catholic Portfolio</span>
+      </span>
+    </div>
+    <span class="link-btn-arrow">→</span>
+  </a>
+
+  <a href="https://austineventphotographer.myportfolio.com" target="_blank" rel="noopener" class="link-btn">
+    <div class="link-btn-left">
+      <span class="link-btn-icon">🏢</span>
+      <span class="link-btn-text">
+        <span class="link-btn-name">Corporate &amp; Events Portfolio</span>
+      </span>
+    </div>
+    <span class="link-btn-arrow">→</span>
+  </a>
+
+  <a href="https://austinsportsphotographer.myportfolio.com/" target="_blank" rel="noopener" class="link-btn">
+    <div class="link-btn-left">
+      <span class="link-btn-icon">🏆</span>
+      <span class="link-btn-text">
+        <span class="link-btn-name">Sports Portfolio</span>
+      </span>
+    </div>
+    <span class="link-btn-arrow">→</span>
+  </a>
+
+  <a href="/quinceanera.html" target="_blank" rel="noopener" class="link-btn">
+    <div class="link-btn-left">
+      <span class="link-btn-icon">🌸</span>
+      <span class="link-btn-text">
+        <span class="link-btn-name">Quinceañera Portfolio</span>
+      </span>
+    </div>
+    <span class="link-btn-arrow">→</span>
+  </a>
+
+  <a href="https://nydamphoto.com" target="_blank" rel="noopener" class="link-btn">
+    <div class="link-btn-left">
+      <span class="link-btn-icon">🌐</span>
+      <span class="link-btn-text">
+        <span class="link-btn-name">Visit Our Website</span>
+        <span class="link-btn-desc">nydamphoto.com</span>
+      </span>
+    </div>
+    <span class="link-btn-arrow">→</span>
+  </a>
+
+</div>
+
+<hr class="divider">
+
+<!-- SOCIALS -->
+<div class="section-label">✨ Follow Along</div>
+<div class="socials">
+  <a href="https://www.instagram.com/austin_photographer_arlen/" target="_blank" rel="noopener" class="social-btn">
+    📷 @austin_photographer_arlen
+  </a>
+  <a href="https://www.instagram.com/catholic_photographer_austin/" target="_blank" rel="noopener" class="social-btn">
+    ✝️ @catholic_photographer_austin
+  </a>
+  <a href="https://www.facebook.com/nydamphoto/" target="_blank" rel="noopener" class="social-btn">
+    👍 Facebook
+  </a>
+  <a href="https://www.meetup.com/the-photo-pro/" target="_blank" rel="noopener" class="social-btn">
+    📚 The Photo Pro Community
+  </a>
+</div>
+
+<p class="page-footer">
+  © 2026 Nydam Photography · Austin, Texas<br>
+  <a href="https://nydamphoto.com">nydamphoto.com</a>
+</p>
+
+<!-- EVENT MODAL (bottom sheet on mobile) -->
+<div class="modal-bg" id="eventModal" onclick="handleModalBgClick(event)">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <span class="modal-close-btn" onclick="closeModal()">&times;</span>
+    <p class="modal-eyebrow">Event Photography</p>
+    <h3 class="modal-title">Choose Your<br><em>Coverage</em></h3>
+    <p class="modal-body">Select the option that fits your event. You'll be taken to Arlen's calendar to pick your date and confirm.</p>
+    <div class="links" style="padding:0">
+      <a href="https://calendly.com/arlen-nydam/event-photography" target="_blank" rel="noopener" class="link-btn">
+        <div class="link-btn-left">
+          <span class="link-btn-text">
+            <span class="link-btn-name">Short Event</span>
+            <span class="link-btn-desc">Up to 2 hours</span>
+          </span>
+        </div>
+        <span class="link-btn-arrow">→</span>
+      </a>
+      <a href="https://calendly.com/arlen-nydam/short-event-2-to-4-hours-300-tax-clone" target="_blank" rel="noopener" class="link-btn">
+        <div class="link-btn-left">
+          <span class="link-btn-text">
+            <span class="link-btn-name">Half-Day Event</span>
+            <span class="link-btn-desc">2–4 hours</span>
+          </span>
+        </div>
+        <span class="link-btn-arrow">→</span>
+      </a>
+      <a href="https://calendly.com/arlen-nydam/half-day-event-4-to-6-hours-900-tax-clone" target="_blank" rel="noopener" class="link-btn">
+        <div class="link-btn-left">
+          <span class="link-btn-text">
+            <span class="link-btn-name">Full-Day Event</span>
+            <span class="link-btn-desc">4–6+ hours</span>
+          </span>
+        </div>
+        <span class="link-btn-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('eventModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('eventModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function handleModalBgClick(e) {
+  if (e.target === document.getElementById('eventModal')) closeModal();
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+
+</body>
+</html>
