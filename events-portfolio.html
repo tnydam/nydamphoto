@@ -107,13 +107,56 @@ footer{background:var(--charcoal);padding:3rem 0 2rem}
   .container{padding:0 1.8rem}
   .hero-content{padding:0 2rem 3rem}
 }
+
+/* Event booking options */
+.event-options{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;max-width:860px;margin:0 auto 1rem;}
+.ev-opt{background:rgba(255,255,255,.06);padding:3rem 2rem;text-align:center;}
+.ev-opt--mid{background:rgba(196,160,122,.15);}
+.ev-opt-name{font-family:var(--serif);font-style:italic;font-size:1.8rem;font-weight:300;color:#fff;margin-bottom:.4rem;}
+.ev-opt-dur{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:1.2rem;}
+.ev-opt-price{font-size:1.5rem;font-family:var(--serif);color:var(--gold);margin-bottom:1.8rem;}
+.ev-opt-link{display:inline-block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;padding:.9rem 2rem;background:var(--gold);color:#fff;transition:background .3s;}
+.ev-opt-link:hover{background:var(--gold-dk);}
+@media(max-width:680px){.event-options{grid-template-columns:1fr;gap:2px;}}
+/* ── Collection / package cards (wedding-style sticky) ── */
+.coll-header{padding:8rem 3rem 4rem;text-align:center;background:var(--cream)}
+.coll-giant{font-family:var(--serif);font-size:clamp(4rem,10vw,9rem);font-weight:300;line-height:.85;letter-spacing:-.03em;color:var(--charcoal);opacity:.07;margin-bottom:-2.5rem}
+.coll-sub{font-size:.88rem;line-height:2;color:var(--stone);max-width:52ch;margin:0 auto}
+.coll-stack{position:relative}
+.c-card{position:sticky;top:0;display:grid;grid-template-columns:1fr 1fr;height:100vh;min-height:600px;overflow:hidden;box-shadow:0 -16px 50px rgba(42,37,32,.09)}
+.c-card--A .c-photo{order:1}.c-card--A .c-info{order:2}
+.c-card--B .c-photo{order:2}.c-card--B .c-info{order:1}
+.c-photo{overflow:hidden}
+.c-photo img{width:100%;height:100%;object-fit:cover;transition:transform 8s ease}
+.c-card:hover .c-photo img{transform:scale(1.04)}
+.c-info{display:flex;flex-direction:column;justify-content:center;padding:4rem 5rem;overflow-y:auto;background:var(--cream)}
+.c-card--B .c-info{background:var(--linen)}
+.c-num{font-family:var(--serif);font-size:5rem;font-weight:300;line-height:1;color:var(--charcoal);opacity:.07;margin-bottom:-.5rem}
+.c-badge{display:inline-block;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dk);border:1px solid var(--gold);padding:.25rem .8rem;margin-bottom:.8rem;width:fit-content}
+.c-name{font-family:var(--serif);font-size:clamp(2.2rem,3.5vw,3.5rem);font-weight:300;line-height:1.05;margin-bottom:.8rem}
+.c-name em{font-style:italic}
+.c-price{font-family:var(--serif);font-size:2rem;font-weight:300;margin-bottom:1.5rem;color:var(--charcoal)}
+.c-price span{font-size:.9rem;font-family:var(--sans);color:var(--stone);margin-left:.3rem}
+.c-desc{font-size:.88rem;line-height:2;color:var(--slate);margin-bottom:1.8rem}
+.c-includes{margin-bottom:2rem}
+.c-includes-label{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);margin-bottom:.8rem}
+.c-item{display:flex;align-items:flex-start;gap:.6rem;font-size:.82rem;line-height:1.7;color:var(--slate);margin-bottom:.35rem}
+.c-item::before{content:'✦';font-size:.45rem;color:var(--gold);margin-top:.45rem;flex-shrink:0}
+.c-cta{display:inline-flex;align-items:center;gap:.7rem;font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;color:var(--charcoal);border-bottom:1px solid var(--charcoal);padding-bottom:.25rem;width:fit-content;transition:color .3s,border-color .3s}
+.c-cta:hover{color:var(--gold);border-color:var(--gold);text-decoration:none}
+@media(max-width:980px){
+  .c-card{grid-template-columns:1fr;height:auto;min-height:auto;position:relative!important;top:auto!important}
+  .c-card--B .c-photo{order:1}.c-card--B .c-info{order:2}
+  .c-photo{aspect-ratio:5/4}
+  .c-info{padding:2.5rem 1.8rem 3rem}
+}
 </style>
 </head>
 <body>
 <nav id="nav">
   <a href="/" class="nav-logo">Nydam Photography</a>
   <a href="/" class="nav-back">← Home</a>
-  <a href="events.html" class="nav-cta">Book Event Photography</a>
+  <a href="#book-event" class="nav-cta">Book Event Photography</a>
 </nav>
 <section class="hero">
   <img src="austin-event-photographer-hero.jpg" alt="Event Photography | Nydam Photography | Austin Event Photographer" loading="eager" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1800&q=88'">
@@ -129,7 +172,11 @@ footer{background:var(--charcoal);padding:3rem 0 2rem}
     <span class="eyebrow fade-up">Our Approach</span>
     <div class="display fade-up">Every handshake.<br>Every keynote.<br><em>Every moment worth keeping.</em></div>
     <div class="rule fade-up"></div>
-    <div class="intro-body fade-up"><p>Corporate galas, product launches, conferences, award ceremonies, and community celebrations — the events that represent your organization deserve to be documented with the same care you put into planning them.</p><p>Arlen works efficiently and invisibly, capturing the energy of the room and the moments that matter — from the opening welcome to the final toast. Coverage available by the hour or by the day.</p></div>
+    <div class="intro-body fade-up">
+      <p>Every event your organization hosts has a story. The energy in the room before the keynote starts. The handshakes after the deal is announced. The moment an award recipient realizes their name was called. These are the images your team will use for years — on your website, in your annual report, across every channel that represents who you are.</p>
+      <p>We work quietly and efficiently, without disrupting the flow of your event. By the time it's over, we have the room, the people, the moments, and the details — everything you need, ready to go.</p>
+      <p>Based in Austin. Available across Texas and nationwide.</p>
+    </div>
   </div>
 </section>
 <section class="gallery">
@@ -143,34 +190,101 @@ footer{background:var(--charcoal);padding:3rem 0 2rem}
 </div>
   </div>
 </section>
-<section class="expect">
-  <div class="container">
-    <div class="expect-grid">
-      <div class="expect-photo fade-up"><img src="austin-event-photographer-1.jpg" alt="What to expect" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700'"></div>
-      <div>
-        <span class="eyebrow fade-up">What to Expect</span>
-        <div class="display fade-up">Three session options.<br><em>One seamless experience.</em></div>
-        <div class="expect-items"><div class="expect-item fade-up"><span class="expect-num">01</span><div><div class="expect-title">Short Event (up to 2 hours)</div><p class="expect-body">For focused documentation of a keynote, award ceremony, or opening reception. The essential moments, efficiently captured.</p></div></div>
-<div class="expect-item fade-up"><span class="expect-num">02</span><div><div class="expect-title">Half-Day (2 to 4 hours)</div><p class="expect-body">For events with multiple components — arrivals, programming, networking, and key moments through the event arc.</p></div></div>
-<div class="expect-item fade-up"><span class="expect-num">03</span><div><div class="expect-title">Full Day (4 to 6+ hours)</div><p class="expect-body">Complete event documentation from setup through the final moment. Ideal for conferences, galas, and multi-session events.</p></div></div>
+<div class="coll-header">
+  <div class="coll-giant fade-up">OPTIONS</div>
+  <p class="coll-sub fade-up">Three coverage options built around different kinds of events.<br>Choose the one that fits your day.</p>
 </div>
-        <a href="events.html" class="btn-gold fade-up">Book Event Photography →</a>
+
+<div class="coll-stack">
+
+  <div class="c-card c-card--A" style="z-index:1">
+    <div class="c-photo"><img src="austin-event-photographer-2.jpg" alt="Short event photography Austin" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1511578314322-379afb476865?w=900&q=80'"></div>
+    <div class="c-info">
+      <div class="c-num">01</div>
+      <h2 class="c-name">Short Event<br><em>Photography</em></h2>
+      <div class="c-price">$500 <span>+ tax</span></div>
+      <p class="c-desc">For focused events where the key moments happen in a concentrated window of time. Keynote speeches, award presentations, ribbon cuttings, product announcements, and intimate corporate gatherings. You get the highlights — every meaningful moment, efficiently captured and promptly delivered.</p>
+      <div class="c-includes">
+        <div class="c-includes-label">What to Expect</div>
+        <div class="c-item">2 to 4 hours of documentation</div>
+        <div class="c-item">Key moments, speakers &amp; attendees</div>
+        <div class="c-item">Online gallery for downloading &amp; sharing</div>
+        <div class="c-item">Delivered within 5 business days</div>
       </div>
+      <a href="https://calendly.com/arlen-nydam/event-photography" target="_blank" rel="noopener" class="c-cta">Book Short Event →</a>
     </div>
   </div>
-</section>
+
+  <div class="c-card c-card--B" style="z-index:2">
+    <div class="c-photo"><img src="austin-event-photographer-3.jpg" alt="Half-day event photography Austin" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=900&q=80'"></div>
+    <div class="c-info">
+      <div class="c-num">02</div>
+      <div class="c-badge">Most Requested</div>
+      <h2 class="c-name">Half-Day<br><em>Photography</em></h2>
+      <div class="c-price">$900 <span>+ tax</span></div>
+      <p class="c-desc">The right fit for conferences, receptions, corporate dinners, networking events, and multi-session mornings or afternoons. Enough time to document the full arc of your event — the setup energy, the programming, the connections being made in the room, and the moments that no one else sees coming.</p>
+      <div class="c-includes">
+        <div class="c-includes-label">What to Expect</div>
+        <div class="c-item">4 to 6 hours of documentation</div>
+        <div class="c-item">Full event arc — arrivals through conclusion</div>
+        <div class="c-item">Speakers, crowd energy &amp; candid moments</div>
+        <div class="c-item">Online gallery for downloading &amp; sharing</div>
+        <div class="c-item">Delivered within 5 business days</div>
+      </div>
+      <a href="https://calendly.com/arlen-nydam/short-event-2-to-4-hours-300-tax-clone" target="_blank" rel="noopener" class="c-cta">Book Half-Day →</a>
+    </div>
+  </div>
+
+  <div class="c-card c-card--A" style="z-index:3">
+    <div class="c-photo"><img src="austin-event-photographer-4.jpg" alt="Full-day event photography Austin" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80'"></div>
+    <div class="c-info">
+      <div class="c-num">03</div>
+      <h2 class="c-name">Full Day<br><em>Photography</em></h2>
+      <div class="c-price">$1,400 <span>+ tax</span></div>
+      <p class="c-desc">For galas, multi-session conferences, large-scale corporate events, and any day that deserves comprehensive documentation from start to finish. We move through your event from the first setup to the final goodbye — capturing every chapter as it happens, so nothing is missed and nothing is left to memory.</p>
+      <div class="c-includes">
+        <div class="c-includes-label">What to Expect</div>
+        <div class="c-item">8 to 12 hours of documentation</div>
+        <div class="c-item">Setup through final moment — complete coverage</div>
+        <div class="c-item">Speakers, attendees, details &amp; candid moments</div>
+        <div class="c-item">Online gallery for downloading &amp; sharing</div>
+        <div class="c-item">Delivered within 5 business days</div>
+        <div class="c-item">Suitable for press, social &amp; annual reports</div>
+      </div>
+      <a href="https://calendly.com/arlen-nydam/half-day-event-4-to-6-hours-900-tax-clone" target="_blank" rel="noopener" class="c-cta">Book Full Day →</a>
+    </div>
+  </div>
+
+</div>
 <div class="review-band fade-up">
   <span class="review-mark">&#10077;</span>
   <p class="review-quote">Arlen's eye for quality helped my company execute an amazing photoshoot. The process was smooth and professional, and the results exceeded our expectations.</p>
   <p class="review-attr">Woody Robertson, Corporate &amp; Brand Photography</p>
 </div>
-<div class="end-cta">
+<div class="end-cta" id="book-event">
   <h2 class="end-cta-title fade-up">Your event.<br><em>Documented the way it deserves.</em></h2>
-  <p class="end-cta-body fade-up">Select the option that fits your event. We'll confirm within 24 hours and reach out personally before the event.</p>
-  <div class="end-cta-btns fade-up">
-    <a href="events.html" class="btn-gold">Book Event Photography →</a>
-    <a href="/#contact" class="btn-outline" style="border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.8)">Ask a Question First</a>
+  <p class="end-cta-body fade-up">Choose the option that fits your event. Not sure? Reach out and we'll figure it out together.</p>
+  <div class="event-options fade-up">
+    <div class="ev-opt">
+      <div class="ev-opt-name">Short Event</div>
+      <div class="ev-opt-dur">2 to 4 hours</div>
+      <div class="ev-opt-price">$500 + tax</div>
+      <a href="https://calendly.com/arlen-nydam/event-photography" target="_blank" rel="noopener" class="ev-opt-link">Book Now &rarr;</a>
+    </div>
+    <div class="ev-opt ev-opt--mid">
+      <div class="ev-opt-name">Half-Day</div>
+      <div class="ev-opt-dur">4 to 6 hours</div>
+      <div class="ev-opt-price">$900 + tax</div>
+      <a href="https://calendly.com/arlen-nydam/short-event-2-to-4-hours-300-tax-clone" target="_blank" rel="noopener" class="ev-opt-link">Book Now &rarr;</a>
+    </div>
+    <div class="ev-opt">
+      <div class="ev-opt-name">Full Day</div>
+      <div class="ev-opt-dur">8 to 12 hours</div>
+      <div class="ev-opt-price">$1,400 + tax</div>
+      <a href="https://calendly.com/arlen-nydam/half-day-event-4-to-6-hours-900-tax-clone" target="_blank" rel="noopener" class="ev-opt-link">Book Now &rarr;</a>
+    </div>
   </div>
+  <p class="end-cta-body fade-up" style="margin-top:1.5rem;font-size:.82rem;">Not sure which fits? <a href="https://calendly.com/arlen-nydam/photo-event" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Schedule a quick call &rarr;</a></p>
 </div>
 
 <div class="footer-explore">EXPLORE MORE</div>
