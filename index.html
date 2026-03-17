@@ -498,6 +498,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit}
 }
 .blog-see-all:hover { color: var(--charcoal); border-color: var(--charcoal); }
 .blog-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3px; }
+.blog-row2 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 3px; margin-top: 3px; }
 .blog-card { background: var(--cream); }
 .blog-card:nth-child(2), .blog-card:nth-child(3) { background: var(--parchment); }
 .blog-img { overflow: hidden; }
@@ -956,6 +957,7 @@ footer { background: var(--charcoal); }
   .as-seen-in { gap: 1.5rem; padding: 2rem 1.8rem; }
   .asi-logos { gap: 1.2rem; }
   .blog-grid { grid-template-columns: 1fr; }
+  .blog-row2 { grid-template-columns: 1fr 1fr; }
   .rv-photos { height: 220px; }
   .rvp--left { left: 1%; width: 28%; }
   .rvp--center { width: 44%; }
@@ -1121,7 +1123,7 @@ footer { background: var(--charcoal); }
       <div class="team-member">
         <div class="team-photo">
           <img
-            src="https://nydamphoto.com/austin-photographer-behind-the-scenes.jpg"
+            src="arlen-nydam-austin-photographer.jpg"
             alt="Arlen Nydam, Lead Photographer, Austin"
             loading="lazy"
             onerror="this.src='https://images.unsplash.com/photo-1552168324-d612d77725e3?w=600&q=80&auto=format&fit=crop'">
@@ -1136,8 +1138,7 @@ footer { background: var(--charcoal); }
       <!-- TANYA -->
       <div class="team-member">
         <div class="team-photo">
-          <!-- Replace src with Tanya's actual photo when available -->
-          <div class="team-photo-placeholder">Photo coming soon</div>
+          <img src="tanya-nydam-austin-photographer.jpg" alt="Tanya Nydam, Co-Founder, Nydam Photography" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=80&auto=format&fit=crop'">
         </div>
         <div class="team-info">
           <h3 class="team-name"><em>Tanya</em> Nydam</h3>
@@ -1185,7 +1186,7 @@ footer { background: var(--charcoal); }
   <!-- 01 WEDDING -->
   <div class="s-card s-card--A" style="z-index:1">
     <div class="s-photo">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80&auto=format&fit=crop" alt="Wedding photography Austin" loading="lazy">
+      <img src="austin-wedding-photography-essential.jpg" alt="Wedding photography Austin" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80&auto=format&fit=crop'" loading="lazy">
     </div>
     <div class="s-info">
       <div class="s-num">01</div>
@@ -1198,7 +1199,7 @@ footer { background: var(--charcoal); }
   <!-- 02 CATHOLIC -->
   <div class="s-card s-card--B" style="z-index:2">
     <div class="s-photo">
-      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop" alt="Catholic sacramental photography" loading="lazy">
+      <img src="austin-catholic-photographer.jpg" alt="Catholic sacramental photography" onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop'" loading="lazy">
     </div>
     <div class="s-info">
       <div class="s-num">02</div>
@@ -1211,7 +1212,7 @@ footer { background: var(--charcoal); }
   <!-- 03 CORPORATE PORTRAITS & HEADSHOTS -->
   <div class="s-card s-card--A" style="z-index:3">
     <div class="s-photo">
-      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80&auto=format&fit=crop" alt="Corporate portraits and headshots Austin" loading="lazy">
+      <img src="austin-corporate-photographer.jpg" alt="Corporate portraits and headshots Austin" onerror="this.src='https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80&auto=format&fit=crop'" loading="lazy">
     </div>
     <div class="s-info">
       <div class="s-num">03</div>
@@ -1224,7 +1225,7 @@ footer { background: var(--charcoal); }
   <!-- 04 EVENT PHOTOGRAPHY -->
   <div class="s-card s-card--B" style="z-index:4">
     <div class="s-photo">
-      <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80&auto=format&fit=crop" alt="Event photography Austin" loading="lazy">
+      <img src="austin-event-photographer.jpg" alt="Event photography Austin" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80&auto=format&fit=crop'" loading="lazy">
     </div>
     <div class="s-info">
       <div class="s-num">04</div>
@@ -1251,7 +1252,7 @@ footer { background: var(--charcoal); }
   <!-- 06 PORTRAITS / FAMILY / GRADUATION -->
   <div class="s-card s-card--B" style="z-index:6">
     <div class="s-photo">
-      <img src="https://images.unsplash.com/photo-1511895426328-dc8714191011?w=900&q=80&auto=format&fit=crop" alt="Family and graduation portraits Austin" loading="lazy">
+      <img src="austin-portrait-photographer.jpg" alt="Family and graduation portraits Austin" onerror="this.src='https://images.unsplash.com/photo-1511895426328-dc8714191011?w=900&q=80&auto=format&fit=crop'" loading="lazy">
     </div>
     <div class="s-info">
       <div class="s-num">06</div>
@@ -1264,7 +1265,7 @@ footer { background: var(--charcoal); }
   <!-- 07 QUINCEAÑERA -->
   <div class="s-card s-card--A" style="z-index:7">
     <div class="s-photo">
-      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=900&q=80&auto=format&fit=crop" alt="Quinceañera photography Austin" loading="lazy">
+      <img src="austin-quinceanera-photographer.jpg" alt="Quinceañera photography Austin" onerror="this.src='https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=900&q=80&auto=format&fit=crop'" loading="lazy">
     </div>
     <div class="s-info">
       <div class="s-num">07</div>
@@ -1413,7 +1414,7 @@ footer { background: var(--charcoal); }
       </div>
       <div>
         <div class="book-photo">
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=700&q=80&auto=format&fit=crop" alt="Nydam Photography session" loading="lazy">
+          <img src="austin-wedding-photographer-portfolio-1.jpg" alt="Nydam Photography session" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?w=700&q=80&auto=format&fit=crop'" loading="lazy">
         </div>
         <p class="book-note">
           <strong>Not sure which session fits?</strong><br>
@@ -1549,7 +1550,56 @@ footer { background: var(--charcoal); }
         </div>
       </a>
 
-    </div>
+    </div><!-- /blog-grid -->
+
+    <div class="blog-row2">
+
+      <a href="blog/what-to-wear-family-photos.html" class="blog-card">
+        <div class="blog-img">
+          <img src="austin-portrait-photographer.jpg" alt="What to wear for family photos Austin"
+            onerror="this.src='https://images.unsplash.com/photo-1511895426328-dc8714191011?w=500&q=80&auto=format&fit=crop'" loading="lazy">
+        </div>
+        <div class="blog-meta">
+          <span class="blog-tag">Family Photos · Style Guide</span>
+          <h3 class="blog-title">What to Wear for Family Photos: The Complete Guide</h3>
+        </div>
+      </a>
+
+      <a href="blog/how-far-in-advance-book-wedding-photographer.html" class="blog-card">
+        <div class="blog-img">
+          <img src="austin-wedding-photography-signature.jpg" alt="How far in advance to book a wedding photographer"
+            onerror="this.src='https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=500&q=80&auto=format&fit=crop'" loading="lazy">
+        </div>
+        <div class="blog-meta">
+          <span class="blog-tag">Wedding Planning</span>
+          <h3 class="blog-title">How Far in Advance Should You Book Your Wedding Photographer?</h3>
+        </div>
+      </a>
+
+      <a href="blog/how-to-prepare-for-headshots.html" class="blog-card">
+        <div class="blog-img">
+          <img src="austin-corporate-photographer.jpg" alt="How to prepare for professional headshots"
+            onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80&auto=format&fit=crop'" loading="lazy">
+        </div>
+        <div class="blog-meta">
+          <span class="blog-tag">Corporate · Headshots</span>
+          <h3 class="blog-title">How to Prepare for Professional Headshots: 10 Things That Make a Difference</h3>
+        </div>
+      </a>
+
+      <a href="blog/catholic-wedding-photographer-austin.html" class="blog-card">
+        <div class="blog-img">
+          <img src="austin-catholic-photographer.jpg" alt="Catholic wedding photographer Austin"
+            onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80&auto=format&fit=crop'" loading="lazy">
+        </div>
+        <div class="blog-meta">
+          <span class="blog-tag">Catholic · Weddings</span>
+          <h3 class="blog-title">Catholic Wedding Photographer in Austin: What You Need to Know</h3>
+        </div>
+      </a>
+
+    </div><!-- /blog-row2 -->
+
   </div>
 </section>
 
@@ -1557,15 +1607,15 @@ footer { background: var(--charcoal); }
 <div class="footer-explore">EXPLORE MORE</div>
 <div class="footer-strip">
   <div class="footer-strip-cell">
-    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500&q=80&auto=format&fit=crop" alt="Weddings" loading="lazy">
+    <img src="austin-photographer-weddings.jpg" alt="Weddings" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?w=500&q=80&auto=format&fit=crop'" loading="lazy">
     <div class="footer-strip-label">Weddings</div>
   </div>
   <div class="footer-strip-cell">
-    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80&auto=format&fit=crop" alt="Catholic" loading="lazy">
+    <img src="austin-catholic-photographer.jpg" alt="Catholic" onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80&auto=format&fit=crop'" loading="lazy">
     <div class="footer-strip-label">Catholic</div>
   </div>
   <div class="footer-strip-cell">
-    <img src="https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=500&q=80&auto=format&fit=crop" alt="Austin wedding portraits" loading="lazy">
+    <img src="austin-portrait-photographer.jpg" alt="Portraits" onerror="this.src='https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=500&q=80&auto=format&fit=crop'" loading="lazy">
     <div class="footer-strip-label">Portraits</div>
   </div>
   <div class="footer-strip-cell">
@@ -1574,7 +1624,7 @@ footer { background: var(--charcoal); }
     <div class="footer-strip-label">Sports</div>
   </div>
   <div class="footer-strip-cell">
-    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80&auto=format&fit=crop" alt="Events" loading="lazy">
+    <img src="austin-event-photographer.jpg" alt="Events" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80&auto=format&fit=crop'" loading="lazy">
     <div class="footer-strip-label">Events</div>
   </div>
 </div>
@@ -1765,9 +1815,13 @@ setInterval(() => setReview((currentReview + 1) % 2), 6000);
 /* RESOURCE DOWNLOAD FORM */
 function handleResource(e) {
   e.preventDefault();
+  e.stopPropagation();
   const btn = document.getElementById('fr-btn');
+  const scrollY = window.scrollY;
   btn.textContent = 'Check your email! ✓';
   btn.style.background = 'var(--gold-dk)';
+  btn.blur();
+  window.scrollTo({ top: scrollY, behavior: 'instant' });
   setTimeout(() => { btn.textContent = 'Send Me the Guide →'; btn.style.background = ''; e.target.reset(); }, 5000);
 }
 </script>
