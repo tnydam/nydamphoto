@@ -153,6 +153,7 @@ a{text-decoration:none;color:inherit}
 
 /* ══════ STICKY COLLECTION CARDS ══════ */
 .coll-stack { padding-top: 4rem; }
+.coll-spacer { height: 50vh; background: var(--cream); }
 
 .coll-card {
   position: sticky; top: 0;
@@ -184,7 +185,7 @@ a{text-decoration:none;color:inherit}
 .coll-card:nth-child(2) .coll-info { background: var(--linen); }
 .coll-card:nth-child(3) .coll-info { background: var(--parchment); }
 
-.coll-info { display: flex; flex-direction: column; justify-content: center; padding: 4rem 5rem; overflow-y: auto; }
+.coll-info { display: flex; flex-direction: column; justify-content: flex-start; padding: 4rem 5rem; overflow-y: auto; padding-top: 5vh; }
 
 .coll-num { font-family: var(--serif); font-style: italic; font-size: 7rem; font-weight: 300; line-height: 1; color: rgba(42,37,32,.06); margin-bottom: -2.5rem; }
 .coll-name { font-family: var(--serif); font-size: clamp(2rem,3vw,3rem); font-weight: 300; line-height: 1.1; color: var(--charcoal); margin-bottom: .3rem; overflow: visible; }
@@ -301,7 +302,7 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
   gap: 3px;
 }
 .pg-cell { overflow: hidden; }
-.pg-cell img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
+.pg-cell img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; transition: transform .8s ease; }
 .pg-cell:hover img { transform: scale(1.05); }
 .pg-cell.pg-tall { grid-row: span 2; }
 .pg-cell.pg-wide { grid-column: span 2; }
@@ -407,8 +408,9 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
 <section class="philosophy">
   <div class="philosophy-img">
     <img
-      src="https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=900&q=80&auto=format&fit=crop"
-      alt="Wedding ceremony documentary photography Austin"
+      src="austin-wedding-photographer-portfolio-1.jpg"
+      alt="Austin wedding photography"
+      onerror="this.src='https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=900&q=80&auto=format&fit=crop'"
       loading="lazy">
   </div>
   <div class="philosophy-text">
@@ -462,6 +464,8 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
     </div>
   </div>
 
+  <div class="coll-spacer"></div>
+
   <!-- 02 SIGNATURE -->
   <div class="coll-card coll-card--B" style="z-index:2">
     <div class="coll-photo">
@@ -493,6 +497,8 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
       <a href="https://calendly.com/arlen-nydam/wedding-photography-order" target="_blank" rel="noopener" class="coll-cta">Reserve Your Date →</a>
     </div>
   </div>
+
+  <div class="coll-spacer"></div>
 
   <!-- 03 WEDDING STORY -->
   <div class="coll-card coll-card--A" style="z-index:3">
