@@ -169,7 +169,7 @@ a{text-decoration:none;color:inherit}
 .coll-card--B .coll-info  { order: 1; }
 
 .coll-photo { position: relative; overflow: hidden; }
-.coll-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s ease; }
+.coll-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: transform 1s ease; }
 .coll-card:hover .coll-photo img { transform: scale(1.04); }
 .coll-photo-badge {
   position: absolute; bottom: 2rem; left: 2rem;
@@ -422,8 +422,9 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
   <div class="coll-card coll-card--A" style="z-index:1">
     <div class="coll-photo">
       <img
-        src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop"
+        src="austin-wedding-photography-essential.jpg"
         alt="Intimate wedding ceremony photography Austin"
+        onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop'"
         loading="lazy">
       <div class="coll-photo-badge">Essential Collection</div>
     </div>
@@ -451,8 +452,9 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
   <div class="coll-card coll-card--B" style="z-index:2">
     <div class="coll-photo">
       <img
-        src="https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=900&q=80&auto=format&fit=crop"
+        src="austin-wedding-photography-signature.jpg"
         alt="Full wedding day photography Austin"
+        onerror="this.src='https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=900&q=80&auto=format&fit=crop'"
         loading="lazy">
       <div class="coll-photo-badge">Most Popular</div>
     </div>
@@ -482,8 +484,9 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
   <div class="coll-card coll-card--A" style="z-index:3">
     <div class="coll-photo">
       <img
-        src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=900&q=80&auto=format&fit=crop"
+        src="austin-wedding-photography-story.jpg"
         alt="Full story wedding photography Austin Texas"
+        onerror="this.src='https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=900&q=80&auto=format&fit=crop'"
         loading="lazy">
       <div class="coll-photo-badge">Wedding Story Collection</div>
     </div>
@@ -667,11 +670,11 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
 <!-- ══════ FOOTER STRIP ══════ -->
 <div class="footer-explore">EXPLORE MORE</div>
 <div class="footer-strip">
-  <div class="footer-strip-cell"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500&q=80&auto=format&fit=crop" alt="Wedding" loading="lazy"></div>
-  <div class="footer-strip-cell"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80&auto=format&fit=crop" alt="Catholic" loading="lazy"></div>
-  <div class="footer-strip-cell"><img src="https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=500&q=80&auto=format&fit=crop" alt="Austin wedding portraits" loading="lazy"></div>
-  <div class="footer-strip-cell"><img src="https://images.unsplash.com/photo-1547941126-3d5322b218b0?w=500&q=80&auto=format&fit=crop" alt="Sports" loading="lazy"></div>
-  <div class="footer-strip-cell"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80&auto=format&fit=crop" alt="Events" loading="lazy"></div>
+  <div class="footer-strip-cell"><img src="austin-photographer-weddings.jpg" alt="Wedding" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?w=500&q=80&auto=format&fit=crop'" loading="lazy"></div>
+  <div class="footer-strip-cell"><img src="austin-catholic-photographer.jpg" alt="Catholic" onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80&auto=format&fit=crop'" loading="lazy"></div>
+  <div class="footer-strip-cell"><img src="austin-portrait-photographer.jpg" alt="Portraits" onerror="this.src='https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=500&q=80&auto=format&fit=crop'" loading="lazy"></div>
+  <div class="footer-strip-cell"><img src="austin-photographer-sports.jpg" alt="Sports" onerror="this.src='https://images.unsplash.com/photo-1547941126-3d5322b218b0?w=500&q=80&auto=format&fit=crop'" loading="lazy"></div>
+  <div class="footer-strip-cell"><img src="austin-event-photographer.jpg" alt="Events" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80&auto=format&fit=crop'" loading="lazy"></div>
 </div>
 
 <!-- ══════ FOOTER ══════ -->
