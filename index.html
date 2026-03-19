@@ -1516,7 +1516,7 @@ footer { background: var(--charcoal); }
     <div class="blog-grid">
 
       <!-- Feature post -->
-      <a href="blog/bluebonnet-portrait-session-texas.html" class="blog-card">
+      <a href="bluebonnet-portrait-session-texas.html" class="blog-card">
         <div class="blog-img">
           <img src="austin-family-photographer-3.jpg" alt="Bluebonnet portrait session Texas"
             onerror="this.src='https://images.unsplash.com/photo-1518895312237-a9e23508077d?w=800&q=80&auto=format&fit=crop'" loading="lazy">
@@ -1529,7 +1529,7 @@ footer { background: var(--charcoal); }
       </a>
 
       <!-- Post 2 -->
-      <a href="blog/senior-portrait-session-ideas-austin.html" class="blog-card">
+      <a href="senior-portrait-session-ideas-austin.html" class="blog-card">
         <div class="blog-img">
           <img src="austin-graduation-photographer.jpg" alt="Senior portrait session ideas Austin"
             onerror="this.src='https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&q=80&auto=format&fit=crop'" loading="lazy">
@@ -1542,7 +1542,7 @@ footer { background: var(--charcoal); }
       </a>
 
       <!-- Post 3 -->
-      <a href="blog/quinceanera-photography-austin.html" class="blog-card">
+      <a href="quinceanera-photography-austin.html" class="blog-card">
         <div class="blog-img">
           <img src="austin-quinceanera-photographer-1.jpg" alt="Quinceañera photography Austin Texas"
             onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80&auto=format&fit=crop'" loading="lazy">
@@ -1558,7 +1558,7 @@ footer { background: var(--charcoal); }
 
     <div class="blog-row2">
 
-      <a href="blog/what-to-wear-family-photos.html" class="blog-card">
+      <a href="what-to-wear-family-photos.html" class="blog-card">
         <div class="blog-img">
           <img src="austin-portrait-photographer.jpg" alt="What to wear for family photos Austin"
             onerror="this.src='https://images.unsplash.com/photo-1511895426328-dc8714191011?w=500&q=80&auto=format&fit=crop'" loading="lazy">
@@ -1569,7 +1569,7 @@ footer { background: var(--charcoal); }
         </div>
       </a>
 
-      <a href="blog/how-far-in-advance-book-wedding-photographer.html" class="blog-card">
+      <a href="how-far-in-advance-book-wedding-photographer.html" class="blog-card">
         <div class="blog-img">
           <img src="austin-wedding-photography-signature.jpg" alt="How far in advance to book a wedding photographer"
             onerror="this.src='https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=500&q=80&auto=format&fit=crop'" loading="lazy">
@@ -1580,7 +1580,7 @@ footer { background: var(--charcoal); }
         </div>
       </a>
 
-      <a href="blog/how-to-prepare-for-headshots.html" class="blog-card">
+      <a href="how-to-prepare-for-headshots.html" class="blog-card">
         <div class="blog-img">
           <img src="austin-corporate-photographer.jpg" alt="How to prepare for professional headshots"
             onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80&auto=format&fit=crop'" loading="lazy">
@@ -1591,7 +1591,7 @@ footer { background: var(--charcoal); }
         </div>
       </a>
 
-      <a href="blog/catholic-wedding-photographer-austin.html" class="blog-card">
+      <a href="catholic-wedding-photographer-austin.html" class="blog-card">
         <div class="blog-img">
           <img src="austin-catholic-photographer.jpg" alt="Catholic wedding photographer Austin"
             onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80&auto=format&fit=crop'" loading="lazy">
@@ -1741,11 +1741,18 @@ document.querySelectorAll('.philosophy-words').forEach(el => pwIO.observe(el));
   let current = 0;
   // Preload all images
   slides.forEach(s => { const img = s.querySelector('img'); if (img && img.dataset.src) img.src = img.dataset.src; });
-  setInterval(() => {
+  // First slide shorter (1.5s) — loads fast, moves on quickly
+  setTimeout(() => {
     slides[current].classList.remove('active');
     current = (current + 1) % slides.length;
     slides[current].classList.add('active');
-  }, 4000); // 4 seconds per slide
+    // Then regular pace
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000);
+  }, 1500);
 })();
 
 /* FADE UP */
