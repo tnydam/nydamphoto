@@ -153,13 +153,12 @@ a{text-decoration:none;color:inherit}
 
 /* ══════ STICKY COLLECTION CARDS ══════ */
 .coll-stack { padding-top: 4rem; }
-.coll-spacer { height: 50vh; background: var(--cream); }
 
 .coll-card {
   position: sticky; top: 0;
   display: grid; grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
-  overflow: visible;
+  height: 100vh;
+  overflow: hidden;
   box-shadow: 0 -16px 50px rgba(42,37,32,.09);
 }
 .coll-card:first-child { box-shadow: none; }
@@ -181,11 +180,11 @@ a{text-decoration:none;color:inherit}
   color: var(--gold-dk);
 }
 
-.coll-card:nth-child(1) .coll-info { background: var(--cream); }
-.coll-card:nth-child(2) .coll-info { background: var(--linen); }
-.coll-card:nth-child(3) .coll-info { background: var(--parchment); }
+.coll-card--essential .coll-info { background: var(--cream); }
+.coll-card--signature .coll-info { background: var(--linen); }
+.coll-card--story .coll-info { background: var(--parchment); }
 
-.coll-info { display: flex; flex-direction: column; justify-content: flex-start; padding: 4rem 5rem; overflow-y: auto; padding-top: 5vh; }
+.coll-info { display: flex; flex-direction: column; justify-content: flex-start; padding: 5vh 5rem 4rem; overflow-y: auto; height: 100vh; box-sizing: border-box; }
 
 .coll-num { font-family: var(--serif); font-style: italic; font-size: 7rem; font-weight: 300; line-height: 1; color: rgba(42,37,32,.06); margin-bottom: -2.5rem; }
 .coll-name { font-family: var(--serif); font-size: clamp(2rem,3vw,3rem); font-weight: 300; line-height: 1.1; color: var(--charcoal); margin-bottom: .3rem; overflow: visible; }
@@ -306,7 +305,7 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
 .pg-cell:hover img { transform: scale(1.05); }
 .pg-cell.pg-tall { grid-row: span 2; }
 .pg-cell.pg-wide { grid-column: span 2; }
-.pg-view-link { background: var(--charcoal); text-align: center; padding: 2.5rem; }
+.pg-view-link { background: var(--charcoal); text-align: center; padding: 3rem; }
 .pg-link { font-size: .63rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(247,243,238,.4); border-bottom: 1px solid rgba(247,243,238,.2); padding-bottom: .25rem; transition: color .3s, border-color .3s; }
 .pg-link:hover { color: var(--gold); border-color: var(--gold); }
 
@@ -400,7 +399,7 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
     </div>
   </div>
   <div class="pg-view-link fade-up">
-    <a href="wedding-portfolio.html" class="pg-link">View Full Wedding Portfolio →</a>
+    <a href="wedding-portfolio.html" class="pg-link">View Our Portfolio →</a>
   </div>
 </section>
 
@@ -435,7 +434,7 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
 <div class="coll-stack">
 
   <!-- 01 ESSENTIAL -->
-  <div class="coll-card coll-card--A" style="z-index:1">
+  <div class="coll-card coll-card--A coll-card--essential" style="z-index:1">
     <div class="coll-photo">
       <img
         src="austin-wedding-photography-essential.jpg"
@@ -464,10 +463,8 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
     </div>
   </div>
 
-  <div class="coll-spacer"></div>
-
   <!-- 02 SIGNATURE -->
-  <div class="coll-card coll-card--B" style="z-index:2">
+  <div class="coll-card coll-card--B coll-card--signature" style="z-index:2">
     <div class="coll-photo">
       <img
         src="austin-wedding-photography-signature.jpg"
@@ -498,10 +495,8 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
     </div>
   </div>
 
-  <div class="coll-spacer"></div>
-
   <!-- 03 WEDDING STORY -->
-  <div class="coll-card coll-card--A" style="z-index:3">
+  <div class="coll-card coll-card--A coll-card--story" style="z-index:3">
     <div class="coll-photo">
       <img
         src="austin-wedding-photography-story.jpg"
