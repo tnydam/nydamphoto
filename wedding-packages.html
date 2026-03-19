@@ -184,7 +184,25 @@ a{text-decoration:none;color:inherit}
 .coll-card--signature .coll-info { background: var(--linen); }
 .coll-card--story .coll-info { background: var(--parchment); }
 
-.coll-info { display: flex; flex-direction: column; justify-content: flex-start; padding: 5vh 5rem 4rem; overflow-y: auto; height: 100vh; box-sizing: border-box; }
+.coll-info {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0;
+}
+.coll-info-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 5vh 5rem 2rem;
+  box-sizing: border-box;
+}
+.coll-info-footer {
+  flex-shrink: 0;
+  padding: 1.5rem 5rem 2rem;
+  border-top: 1px solid rgba(42,37,32,.08);
+}
 
 .coll-num { font-family: var(--serif); font-style: italic; font-size: 7rem; font-weight: 300; line-height: 1; color: rgba(42,37,32,.06); margin-bottom: -2.5rem; }
 .coll-name { font-family: var(--serif); font-size: clamp(2rem,3vw,3rem); font-weight: 300; line-height: 1.1; color: var(--charcoal); margin-bottom: .3rem; overflow: visible; }
@@ -335,7 +353,9 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
   .coll-card--B .coll-photo { order: 1; }
   .coll-card--B .coll-info { order: 2; }
   .coll-photo { aspect-ratio: 4/3; overflow: hidden; min-height: auto; max-height: 70vw; }
-  .coll-info { padding: 2.5rem 1.8rem 3rem; overflow: visible; }
+  .coll-info { height: auto; overflow: visible; }
+  .coll-info-scroll { overflow: visible; padding: 2.5rem 1.8rem 1.5rem; flex: none; }
+  .coll-info-footer { padding: 0 1.8rem 2.5rem; border-top: none; }
   .coll-name { font-size: clamp(2rem,8vw,2.8rem); overflow: visible; }
   .coll-giant { font-size: clamp(3rem,18vw,7rem); }
   .coll-header { overflow: visible; padding: 4rem 1.8rem 0; }
@@ -436,95 +456,95 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
   <!-- 01 ESSENTIAL -->
   <div class="coll-card coll-card--A coll-card--essential" style="z-index:1">
     <div class="coll-photo">
-      <img
-        src="austin-wedding-photography-essential.jpg"
-        alt="Intimate wedding ceremony photography Austin"
-        onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop'"
-        loading="lazy">
+      <img src="austin-wedding-photography-essential.jpg" alt="Intimate wedding ceremony photography Austin" onerror="this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&auto=format&fit=crop'" loading="lazy">
       <div class="coll-photo-badge">Essential Collection</div>
     </div>
     <div class="coll-info">
-      <div class="coll-num">01</div>
-      <h2 class="coll-name">Essential<br><em>Collection</em></h2>
-      <div class="coll-price">$2,500 <span>+ tax</span></div>
-      <p class="coll-mood">You're focused on the main event and want beautiful documentation of those key moments.</p>
-      <p class="coll-desc">For intimate ceremonies, elopements, and courthouse weddings where the focus is on the moments that matter most. We document the ceremony and take time for a portrait session with the couple and close family, unhurried and personal. Your favorite images are available as fine art prints and wall art, so the moments you love most can live in your home for years to come.</p>
-      <div class="coll-includes">
-        <div class="coll-includes-label">What to Expect</div>
-        <div class="coll-include-item">Ceremony documentation</div>
-        <div class="coll-include-item">Couple &amp; close family portrait session</div>
-        <div class="coll-include-item">Unhurried, personal pace</div>
-        <div class="coll-include-item">Sneak peek of 10 to 15 images within 48 hours</div>
-        <div class="coll-include-item">Full online gallery delivered within 4 to 6 weeks</div>
-        <div class="coll-include-item">Download, share &amp; order prints from your gallery</div>
-        <div class="coll-include-item">Fine art wall prints &amp; canvas available</div>
+      <div class="coll-info-scroll">
+        <div class="coll-num">01</div>
+        <h2 class="coll-name">Essential<br><em>Collection</em></h2>
+        <div class="coll-price">$2,500 <span>+ tax</span></div>
+        <p class="coll-mood">You're focused on the main event and want beautiful documentation of those key moments.</p>
+        <p class="coll-desc">For intimate ceremonies, elopements, and courthouse weddings where the focus is on the moments that matter most. We document the ceremony and take time for a portrait session with the couple and close family, unhurried and personal. Your favorite images are available as fine art prints and wall art, so the moments you love most can live in your home for years to come.</p>
+        <div class="coll-includes">
+          <div class="coll-includes-label">What to Expect</div>
+          <div class="coll-include-item">Ceremony documentation</div>
+          <div class="coll-include-item">Couple &amp; close family portrait session</div>
+          <div class="coll-include-item">Unhurried, personal pace</div>
+          <div class="coll-include-item">Sneak peek of 10 to 15 images within 48 hours</div>
+          <div class="coll-include-item">Full online gallery delivered within 4 to 6 weeks</div>
+          <div class="coll-include-item">Download, share &amp; order prints from your gallery</div>
+          <div class="coll-include-item">Fine art wall prints &amp; canvas available</div>
+        </div>
       </div>
-      <a href="https://calendly.com/arlen-nydam/wedding-photography-order" target="_blank" rel="noopener" class="coll-cta">Reserve Your Date →</a>
+      <div class="coll-info-footer">
+        <a href="https://calendly.com/arlen-nydam/wedding-photography-order" target="_blank" rel="noopener" class="coll-cta">Reserve Your Date →</a>
+      </div>
     </div>
   </div>
 
   <!-- 02 SIGNATURE -->
   <div class="coll-card coll-card--B coll-card--signature" style="z-index:2">
     <div class="coll-photo">
-      <img
-        src="austin-wedding-photography-signature.jpg"
-        alt="Full wedding day photography Austin"
-        onerror="this.src='https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=900&q=80&auto=format&fit=crop'"
-        loading="lazy">
+      <img src="austin-wedding-photography-signature.jpg" alt="Full wedding day photography Austin" onerror="this.src='https://images.unsplash.com/photo-1606216794079-73b3fd4e5898?w=900&q=80&auto=format&fit=crop'" loading="lazy">
       <div class="coll-photo-badge">Most Popular</div>
     </div>
     <div class="coll-info">
-      <div class="coll-num">02</div>
-      <div class="coll-popular">★ Most Popular Collection</div>
-      <h2 class="coll-name">Signature<br><em>Collection</em></h2>
-      <div class="coll-price">$4,500 <span>+ tax</span></div>
-      <p class="coll-mood">For couples who feel like their wedding day is the event of the weekend. From getting ready to the last dance of the night, you want every part of this day captured in full.</p>
-      <p class="coll-desc">We move through your day with intention — the ceremony, family portraits, couple portraits, and the celebration as it naturally unfolds. Before your wedding, a complimentary engagement session ensures your portraits feel natural and relaxed when the day arrives. Your best images are preserved in a professionally designed lay-flat heirloom album built to be passed down for generations.</p>
-      <div class="coll-includes">
-        <div class="coll-includes-label">What to Expect</div>
-        <div class="coll-include-item">Full wedding day documentation</div>
-        <div class="coll-include-item">Ceremony, family portraits &amp; couple portraits</div>
-        <div class="coll-include-item">Complimentary engagement session</div>
-        <div class="coll-include-item">Professionally designed lay-flat heirloom album</div>
-        <div class="coll-include-item">Sneak peek of 10 to 15 images within 48 hours</div>
-        <div class="coll-include-item">Full online gallery delivered within 4 to 6 weeks</div>
-        <div class="coll-include-item">Download, share &amp; order prints from your gallery</div>
-        <div class="coll-include-item">Fine art wall prints &amp; canvas available</div>
+      <div class="coll-info-scroll">
+        <div class="coll-num">02</div>
+        <div class="coll-popular">★ Most Popular Collection</div>
+        <h2 class="coll-name">Signature<br><em>Collection</em></h2>
+        <div class="coll-price">$4,500 <span>+ tax</span></div>
+        <p class="coll-mood">For couples who feel like their wedding day is the event of the weekend. From getting ready to the last dance of the night, you want every part of this day captured in full.</p>
+        <p class="coll-desc">We move through your day with intention — the ceremony, family portraits, couple portraits, and the celebration as it naturally unfolds. Before your wedding, a complimentary engagement session ensures your portraits feel natural and relaxed when the day arrives. Your best images are preserved in a professionally designed lay-flat heirloom album built to be passed down for generations.</p>
+        <div class="coll-includes">
+          <div class="coll-includes-label">What to Expect</div>
+          <div class="coll-include-item">Full wedding day documentation</div>
+          <div class="coll-include-item">Ceremony, family portraits &amp; couple portraits</div>
+          <div class="coll-include-item">Complimentary engagement session</div>
+          <div class="coll-include-item">Professionally designed lay-flat heirloom album</div>
+          <div class="coll-include-item">Sneak peek of 10 to 15 images within 48 hours</div>
+          <div class="coll-include-item">Full online gallery delivered within 4 to 6 weeks</div>
+          <div class="coll-include-item">Download, share &amp; order prints from your gallery</div>
+          <div class="coll-include-item">Fine art wall prints &amp; canvas available</div>
+        </div>
       </div>
-      <a href="https://calendly.com/arlen-nydam/wedding-photography-order" target="_blank" rel="noopener" class="coll-cta">Reserve Your Date →</a>
+      <div class="coll-info-footer">
+        <a href="https://calendly.com/arlen-nydam/wedding-photography-order" target="_blank" rel="noopener" class="coll-cta">Reserve Your Date →</a>
+      </div>
     </div>
   </div>
 
   <!-- 03 WEDDING STORY -->
   <div class="coll-card coll-card--A coll-card--story" style="z-index:3">
     <div class="coll-photo">
-      <img
-        src="austin-wedding-photography-story.jpg"
-        alt="Full story wedding photography Austin Texas"
-        onerror="this.src='https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=900&q=80&auto=format&fit=crop'"
-        loading="lazy">
+      <img src="austin-wedding-photography-story.jpg" alt="Full story wedding photography Austin Texas" onerror="this.src='https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=900&q=80&auto=format&fit=crop'" loading="lazy">
       <div class="coll-photo-badge">Wedding Story Collection</div>
     </div>
     <div class="coll-info">
-      <div class="coll-num">03</div>
-      <h2 class="coll-name">Wedding Story<br><em>Collection</em></h2>
-      <div class="coll-price">$6,500 <span>+ tax</span></div>
-      <p class="coll-mood">For couples who believe no moment of your wedding weekend is too small to remember. The welcome dinner with your families, all the in-between moments that make this weekend yours. May even include the morning-after brunch.</p>
-      <p class="coll-desc">Full-day storytelling from the first moments of getting ready through the final celebration, every chapter documented as it happens. Before your wedding day, we spend time together in a complimentary engagement session and a bridal portrait session that is entirely unhurried and yours. The evening before, we join your rehearsal dinner to capture the laughter, the toasts, and the family gathered together for the first time. The morning after, a day-after session gives you the portraits you never quite had time for, relaxed, pressure-free, and completely your own. Everything is preserved in a professionally designed heirloom album, and your favorite images are available as fine art prints and wall art to live in your home for years to come.</p>
-      <div class="coll-includes">
-        <div class="coll-includes-label">What to Expect</div>
-        <div class="coll-include-item">Getting ready through final celebration</div>
-        <div class="coll-include-item">Rehearsal dinner documentation (evening prior)</div>
-        <div class="coll-include-item">Complimentary engagement session</div>
-        <div class="coll-include-item">Complimentary bridal portrait session</div>
-        <div class="coll-include-item">Day-after portrait session</div>
-        <div class="coll-include-item">Professionally designed lay-flat heirloom album</div>
-        <div class="coll-include-item">Sneak peek of 10 to 15 images within 48 hours</div>
-        <div class="coll-include-item">Full online gallery delivered within 4 to 6 weeks</div>
-        <div class="coll-include-item">Download, share &amp; order prints from your gallery</div>
-        <div class="coll-include-item">Fine art wall prints &amp; canvas available</div>
+      <div class="coll-info-scroll">
+        <div class="coll-num">03</div>
+        <h2 class="coll-name">Wedding Story<br><em>Collection</em></h2>
+        <div class="coll-price">$6,500 <span>+ tax</span></div>
+        <p class="coll-mood">For couples who believe no moment of your wedding weekend is too small to remember. The welcome dinner with your families, all the in-between moments that make this weekend yours. May even include the morning-after brunch.</p>
+        <p class="coll-desc">Full-day storytelling from the first moments of getting ready through the final celebration, every chapter documented as it happens. Before your wedding day, we spend time together in a complimentary engagement session and a bridal portrait session that is entirely unhurried and yours. The evening before, we join your rehearsal dinner to capture the laughter, the toasts, and the family gathered together for the first time. The morning after, a day-after session gives you the portraits you never quite had time for, relaxed, pressure-free, and completely your own. Everything is preserved in a professionally designed heirloom album, and your favorite images are available as fine art prints and wall art to live in your home for years to come.</p>
+        <div class="coll-includes">
+          <div class="coll-includes-label">What to Expect</div>
+          <div class="coll-include-item">Getting ready through final celebration</div>
+          <div class="coll-include-item">Rehearsal dinner documentation (evening prior)</div>
+          <div class="coll-include-item">Complimentary engagement session</div>
+          <div class="coll-include-item">Complimentary bridal portrait session</div>
+          <div class="coll-include-item">Day-after portrait session</div>
+          <div class="coll-include-item">Professionally designed lay-flat heirloom album</div>
+          <div class="coll-include-item">Sneak peek of 10 to 15 images within 48 hours</div>
+          <div class="coll-include-item">Full online gallery delivered within 4 to 6 weeks</div>
+          <div class="coll-include-item">Download, share &amp; order prints from your gallery</div>
+          <div class="coll-include-item">Fine art wall prints &amp; canvas available</div>
+        </div>
       </div>
-      <a href="https://calendly.com/arlen-nydam/wedding-photography-order" target="_blank" rel="noopener" class="coll-cta">Reserve Your Date →</a>
+      <div class="coll-info-footer">
+        <a href="https://calendly.com/arlen-nydam/wedding-photography-order" target="_blank" rel="noopener" class="coll-cta">Reserve Your Date →</a>
+      </div>
     </div>
   </div>
 
