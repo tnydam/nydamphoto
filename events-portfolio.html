@@ -150,6 +150,18 @@ footer{background:var(--charcoal);padding:3rem 0 2rem}
   .c-photo{aspect-ratio:5/4}
   .c-info{padding:2.5rem 1.8rem 3rem}
 }
+
+/* Gallery view more */
+.gallery-more { text-align: center; padding: 3rem 0 0; }
+.gallery-more-link {
+  display: inline-block;
+  font-size: .65rem; letter-spacing: .2em; text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--charcoal);
+  color: var(--charcoal);
+  transition: all .3s;
+}
+.gallery-more-link:hover { background: var(--gold); border-color: var(--gold); color: #fff; text-decoration: none; }
 </style>
 </head>
 <body>
@@ -189,6 +201,12 @@ footer{background:var(--charcoal);padding:3rem 0 2rem}
 <div class="g-cell "><img src="austin-event-photographer-5.jpg" alt="Product launch Austin" onerror="this.src='https://images.unsplash.com/photo-1557804506-669a67965ba0?w=700'" loading="lazy"></div>
 </div>
   </div>
+
+<div class="gallery-more fade-up" style="background:var(--cream);padding-bottom:4rem;">
+  <a href="https://austineventphotographer.myportfolio.com" target="_blank" rel="noopener" class="gallery-more-link">
+    View Full Event Portfolio →
+  </a>
+</div>
 </section>
 <div class="coll-header">
   <div class="coll-giant fade-up">OPTIONS</div>

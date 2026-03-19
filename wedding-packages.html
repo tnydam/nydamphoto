@@ -147,7 +147,7 @@ a{text-decoration:none;color:inherit}
 .philosophy-body p + p { margin-top: 1.2rem; }
 
 /* ══════ COLLECTIONS HEADER ══════ */
-.coll-header { padding: 7rem 3.5rem 0; text-align: center; overflow: hidden; background: var(--cream); }
+.coll-header { padding: 7rem 3.5rem 0; text-align: center; overflow: visible; background: var(--cream); }
 .coll-giant { font-family: var(--serif); font-weight: 300; letter-spacing: -.03em; line-height: .9; font-size: clamp(5rem, 13vw, 11rem); color: var(--charcoal); }
 .coll-sub { font-size: .88rem; line-height: 1.9; color: var(--stone); max-width: 56ch; margin: 2.5rem auto 0; }
 
@@ -168,7 +168,7 @@ a{text-decoration:none;color:inherit}
 .coll-card--B .coll-photo { order: 2; }
 .coll-card--B .coll-info  { order: 1; }
 
-.coll-photo { position: relative; overflow: hidden; min-height: 100vh; }
+.coll-photo { position: relative; overflow: hidden; }
 .coll-info { overflow: visible; }
 .coll-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 1s ease; }
 .coll-card:hover .coll-photo img { transform: scale(1.04); }
@@ -334,9 +334,11 @@ footer { background: var(--charcoal); color: rgba(247,243,238,.35); padding: 4re
   }
   .coll-card--B .coll-photo { order: 1; }
   .coll-card--B .coll-info { order: 2; }
-  .coll-photo { aspect-ratio: 4/3; overflow: hidden; }
+  .coll-photo { aspect-ratio: 4/3; overflow: hidden; min-height: auto; max-height: 70vw; }
   .coll-info { padding: 2.5rem 1.8rem 3rem; overflow: visible; }
   .coll-name { font-size: clamp(2rem,8vw,2.8rem); overflow: visible; }
+  .coll-giant { font-size: clamp(3rem,18vw,7rem); }
+  .coll-header { overflow: visible; padding: 4rem 1.8rem 0; }
   .booking-how-inner { grid-template-columns: 1fr; gap: 3.5rem; }
   .retainer-inner { grid-template-columns: 1fr; gap: 3rem; }
   .faq-grid { grid-template-columns: 1fr; gap: 3rem; }
