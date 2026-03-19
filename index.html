@@ -941,21 +941,20 @@ footer { background: var(--charcoal); }
   .s-link:hover { background: var(--gold-dk); color: #fff !important; }
 
   /* ── TEAM MOBILE ── */
-  .team-grid { grid-template-columns: 1fr; gap: 1px; }
+  .team-grid { grid-template-columns: 1fr; gap: 0; }
   .team-member {
-    display: grid;
-    grid-template-columns: 130px 1fr;
-    gap: 0;
-    align-items: start;
+    display: block;
     border-bottom: 1px solid var(--linen);
-    overflow: visible;
   }
-  .team-photo { aspect-ratio: 3/4; height: 100%; min-height: 170px; overflow: hidden; }
-  .team-info { padding: 1.5rem 1.2rem; overflow: visible; }
-  .team-name { font-size: 1.3rem; margin-bottom: .2rem; }
-  .team-role { font-size: .58rem; margin-bottom: .6rem; }
-  .team-bio { font-size: .78rem; line-height: 1.8; color: var(--slate); }
-  .team-photo-placeholder { height: 170px; font-size: .65rem; }
+  .team-photo { aspect-ratio: 4/3; width: 100%; height: auto; min-height: auto; overflow: hidden; position: relative; }
+  .team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+  .team-info { padding: 1.8rem 1.5rem 2rem; background: var(--cream); }
+  .team-member:nth-child(2) .team-info { background: var(--linen); }
+  .team-member:nth-child(3) .team-info { background: var(--parchment); }
+  .team-name { font-size: 1.6rem; margin-bottom: .3rem; }
+  .team-role { font-size: .6rem; margin-bottom: .8rem; }
+  .team-bio { font-size: .85rem; line-height: 1.9; }
+  .team-photo-placeholder { height: 220px; }
 
   .book-grid,.contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
