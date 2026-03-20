@@ -1357,10 +1357,10 @@ footer { background: var(--charcoal); }
         <p class="fr-desc">Poses that actually work, what to wear, how to prepare for your session, what to expect before and after — everything that makes the difference between photos you love and photos that just exist.</p>
         <form class="fr-form" action="https://formspree.io/f/xeerpwll" method="POST" onsubmit="handleResource(event)">
           <div class="fr-row">
-            <input class="fr-input" type="text" placeholder="First Name" required>
-            <input class="fr-input" type="text" placeholder="Last Name" required>
+            <input class="fr-input" type="text" name="first_name" placeholder="First Name" required>
+            <input class="fr-input" type="text" name="last_name" placeholder="Last Name" required>
           </div>
-          <input class="fr-input" type="email" placeholder="Email Address" required>
+          <input class="fr-input" type="email" name="email" placeholder="Email Address" required>
           <button class="fr-submit" type="submit" id="fr-btn">Send Me the Guide →</button>
         </form>
       </div>
@@ -1442,20 +1442,20 @@ footer { background: var(--charcoal); }
         <div class="f-row">
           <div class="f-group">
             <label class="f-label" for="fn">First Name</label>
-            <input class="f-input" type="text" id="fn" placeholder="Jane" required>
+            <input class="f-input" type="text" id="fn" name="first_name" placeholder="Jane" required>
           </div>
           <div class="f-group">
             <label class="f-label" for="ln">Last Name</label>
-            <input class="f-input" type="text" id="ln" placeholder="Smith" required>
+            <input class="f-input" type="text" id="ln" name="last_name" placeholder="Smith" required>
           </div>
         </div>
         <div class="f-group">
           <label class="f-label" for="em">Email Address</label>
-          <input class="f-input" type="email" id="em" placeholder="jane@email.com" required>
+          <input class="f-input" type="email" id="em" name="email" placeholder="jane@email.com" required>
         </div>
         <div class="f-group">
           <label class="f-label" for="svc">Photography Service</label>
-          <select class="f-select" id="svc">
+          <select class="f-select" id="svc" name="service">
             <option value="">Select a service…</option>
             <option>Wedding Photography</option>
             <option>Catholic Wedding &amp; Event Photography</option>
@@ -1469,11 +1469,11 @@ footer { background: var(--charcoal); }
         </div>
         <div class="f-group">
           <label class="f-label" for="dt">Event or Session Date</label>
-          <input class="f-input" type="date" id="dt">
+          <input class="f-input" type="date" id="dt" name="event_date">
         </div>
         <div class="f-group">
           <label class="f-label" for="msg">Tell Us About Your Day</label>
-          <textarea class="f-textarea" id="msg" placeholder="Location, venue, number of guests, your vision…"></textarea>
+          <textarea class="f-textarea" id="msg" name="message" placeholder="Location, venue, number of guests, your vision…"></textarea>
         </div>
         <button class="f-submit" type="submit" id="form-btn">Send Message</button>
       </form>
