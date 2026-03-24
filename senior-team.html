@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NP Senior Team 2027 | Nydam Photography</title>
-  <meta name="description" content="Applications open for the NP Senior Team Class of 2027 — an exclusive ambassador program for rising seniors in the Austin area. 10 spots. Apply by April 15." />
+  <title>NP Seniors 2027 | Nydam Photography Austin</title>
+  <meta name="description" content="NP Seniors 2027 — an exclusive senior portrait experience for 10 rising seniors in Austin, Round Rock, Cedar Park, Hutto & Georgetown. Professional stylist, MUA, hair, unlimited locations. Applications close April 15." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -18,734 +18,489 @@
       --charcoal: #2a2520;
       --brown-mid: #6b5c4e;
       --brown-light: #a89282;
-      --border: rgba(200, 151, 58, 0.18);
+      --border: rgba(200,151,58,0.18);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; background: var(--ivory); color: var(--charcoal); overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
 
-    body {
-      font-family: 'Lato', sans-serif;
-      background: var(--ivory);
-      color: var(--charcoal);
-      overflow-x: hidden;
-    }
-
-    /* ── STICKY HEADER ── */
-    .site-header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    /* ── STICKY NAV ── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
       padding: 0 clamp(1.5rem, 5vw, 4rem);
       height: 56px;
-      background: rgba(20, 14, 8, 0.82);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(200, 151, 58, 0.15);
+      background: rgba(20,14,8,0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
-
-    .header-logo {
+    .nav-logo {
       font-family: 'Playfair Display', serif;
-      font-size: 0.95rem;
-      font-weight: 400;
-      color: rgba(255,253,249,0.75);
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      transition: color 0.2s;
+      font-size: 0.95rem; color: rgba(255,253,249,0.75);
+      text-decoration: none; letter-spacing: 0.04em;
     }
-
-    .header-logo:hover { color: var(--gold-light); }
-
-    .header-cta {
+    .nav-cta {
       display: inline-block;
-      padding: 0.55rem 1.6rem;
-      background: var(--gold);
-      color: #fff;
-      font-family: 'Lato', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+      padding: 0.5rem 1.4rem;
+      background: var(--gold); color: #fff;
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
       text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
+      transition: background 0.2s;
     }
+    .nav-cta:hover { background: #b07e28; }
 
-    .header-cta:hover {
-      background: #b07e28;
-      transform: translateY(-1px);
-    }
-
-    /* ── HERO ── */
+    /* ── STAGE 1: HERO — STOP THE SCROLL ── */
     .hero {
       position: relative;
-      height: 100svh;
-      min-height: 580px;
-      display: flex;
-      align-items: center;
+      height: 100svh; min-height: 600px;
+      display: flex; align-items: center;
       overflow: hidden;
     }
-
-    /* carousel */
-    .hero-carousel {
-      position: absolute;
-      inset: 0;
-    }
-
+    .hero-slides { position: absolute; inset: 0; }
     .hero-slide {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center 20%;
-      opacity: 0;
-      transition: opacity 1.2s ease;
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center top;
+      opacity: 0; transition: opacity 1.2s ease;
     }
-
     .hero-slide.active { opacity: 1; }
-
-    .hero-slide:nth-child(1) { background-image: url('senior-3.jpg'); }
-    .hero-slide:nth-child(2) { background-image: url('senior-1.jpg'); background-position: center top; }
+    .hero-slide:nth-child(1) { background-image: url('senior-2.jpg'); background-position: center 20%; }
+    .hero-slide:nth-child(2) { background-image: url('senior-1.jpg'); background-position: center 15%; }
     .hero-slide:nth-child(3) { background-image: url('senior-hero.jpg'); background-position: center top; }
     .hero-slide:nth-child(4) { background-image: url('senior-6.jpg'); background-position: center top; }
-
-    /* carousel dots */
-    .hero-dots {
-      position: absolute;
-      bottom: 2rem;
-      left: clamp(2rem, 9vw, 8rem);
-      display: flex;
-      gap: 8px;
-      z-index: 3;
-    }
-
-    .hero-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: rgba(255,253,249,0.3);
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      transition: background 0.3s, transform 0.3s;
-    }
-
-    .hero-dot.active {
-      background: var(--gold);
-      transform: scale(1.3);
-    }
-
     .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        105deg,
-        rgba(20,14,8,0.78) 0%,
-        rgba(20,14,8,0.50) 45%,
-        rgba(20,14,8,0.15) 100%
-      );
-      z-index: 1;
+      position: absolute; inset: 0;
+      background: linear-gradient(110deg, rgba(20,14,8,0.75) 0%, rgba(20,14,8,0.4) 55%, rgba(20,14,8,0.1) 100%);
     }
-
     .hero-content {
-      position: relative;
-      z-index: 2;
+      position: relative; z-index: 2;
       padding: 0 clamp(2rem, 9vw, 8rem);
       padding-top: 56px;
-      max-width: 620px;
+      max-width: 680px;
     }
-
-    .hero-left { width: 100%; }
-
-    .hero-bridge {
-      font-family: 'Lato', sans-serif;
-      font-size: clamp(0.95rem, 1.4vw, 1.1rem);
-      font-weight: 300;
-      color: rgba(255,253,249,0.65);
-      letter-spacing: 0.04em;
-      margin-bottom: 1rem;
-      opacity: 0;
-      animation: slideIn 0.8s 0.6s ease forwards;
-    }
-
-    .hero-desc {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1rem, 1.8vw, 1.25rem);
-      font-style: italic;
-      font-weight: 400;
-      color: rgba(255,253,249,0.82);
-      line-height: 1.65;
-      max-width: 500px;
-      margin-bottom: clamp(1.4rem, 3vh, 2.4rem);
-      opacity: 0;
-      animation: slideIn 0.8s 0.75s ease forwards;
-    }
-
     .eyebrow {
       display: inline-block;
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--gold-light);
-      margin-bottom: clamp(0.6rem, 1.5vh, 1.2rem);
-      opacity: 0;
-      animation: slideIn 0.7s 0.2s ease forwards;
+      font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold-light); margin-bottom: 1.2rem;
+      opacity: 0; animation: slideIn 0.7s 0.2s ease forwards;
     }
-
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.2rem, 5vw, 4.4rem);
-      font-weight: 400;
-      line-height: 1.08;
-      color: #fffdf9;
-      margin-bottom: clamp(1.2rem, 2.5vh, 2rem);
-      opacity: 0;
-      animation: slideIn 0.8s 0.4s ease forwards;
+      font-size: clamp(1.8rem, 3.8vw, 3.2rem);
+      font-weight: 400; line-height: 1.15;
+      color: #fffdf9; margin-bottom: 1rem;
+      opacity: 0; animation: slideIn 0.8s 0.4s ease forwards;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-sub {
+      font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+      font-weight: 300; color: rgba(255,253,249,0.75);
+      line-height: 1.75; margin-bottom: 0.6rem;
+      max-width: 480px;
+      opacity: 0; animation: slideIn 0.8s 0.6s ease forwards;
+    }
+    .hero-scroll {
+      margin-top: 2.5rem;
+      font-size: 0.72rem; font-weight: 300;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,253,249,0.4);
+      opacity: 0; animation: slideIn 0.8s 1s ease forwards;
+    }
+    .hero-dots {
+      position: absolute; bottom: 2rem;
+      left: clamp(2rem, 9vw, 8rem);
+      display: flex; gap: 8px; z-index: 3;
+    }
+    .hero-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(255,253,249,0.3);
+      border: none; cursor: pointer; padding: 0;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .hero-dot.active { background: var(--gold); transform: scale(1.3); }
+
+    /* ── STAGE 2: THE EXPERIENCE ── */
+    .experience {
+      background: var(--warm-white);
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
+    }
+    .experience-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 7vw, 7rem);
+      align-items: center;
+    }
+    @media (max-width: 760px) { .experience-inner { grid-template-columns: 1fr; } }
+    .experience-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 8px;
+    }
+    .exp-photo { overflow: hidden; }
+    .exp-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .exp-photo:hover img { transform: scale(1.04); }
+    .exp-photo:nth-child(1) { grid-row: 1 / 3; }
+    .exp-photo:nth-child(1) img { aspect-ratio: 2/3; min-height: 100%; }
+    .exp-photo:nth-child(2) img,
+    .exp-photo:nth-child(3) img { aspect-ratio: 4/3; }
+    .tag {
+      font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.9rem;
+    }
+    .experience-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+      font-weight: 400; line-height: 1.2;
+      color: var(--charcoal); margin-bottom: 1.4rem;
+    }
+    .experience-text h2 em { font-style: italic; color: var(--gold); }
+    .experience-text p {
+      font-size: 1rem; font-weight: 300;
+      color: var(--brown-mid); line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+    .experience-highlights {
+      margin-top: 1.6rem;
+      display: flex; flex-direction: column; gap: 0.8rem;
+    }
+    .highlight {
+      display: flex; align-items: baseline; gap: 0.75rem;
+    }
+    .highlight-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0;
+      margin-top: 0.45rem;
+    }
+    .highlight span {
+      font-size: 0.95rem; font-weight: 300;
+      color: var(--brown-mid); line-height: 1.6;
+    }
+    .highlight strong { font-weight: 700; color: var(--charcoal); }
+
+    /* ── STAGE 3: PROOF ── */
+    .proof {
+      background: var(--charcoal);
+      padding: clamp(4rem, 8vw, 6rem) clamp(2rem, 9vw, 8rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: center;
+    }
+    @media (max-width: 760px) { .proof { grid-template-columns: 1fr; } }
+    .proof-photo { position: relative; }
+    .proof-photo img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover; object-position: center top;
+    }
+    .proof-photo::before {
+      content: '';
+      position: absolute; top: -10px; left: -10px;
+      width: 60px; height: 60px;
+      border-top: 2px solid var(--gold);
+      border-left: 2px solid var(--gold);
+      z-index: 1;
+    }
+    .proof-text .tag { color: var(--gold-light); }
+    blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.15rem, 2vw, 1.55rem);
+      font-style: italic; font-weight: 400;
+      line-height: 1.65; color: rgba(255,253,249,0.9);
+      margin: 1rem 0 1.5rem;
+      padding-left: 1.4rem;
+      border-left: 3px solid var(--gold);
+    }
+    cite {
+      font-style: normal; font-size: 0.78rem;
+      font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--brown-light);
     }
 
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold-light);
+    /* ── STAGE 4: THE OFFER ── */
+    .offer {
+      background: var(--ivory);
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
+      text-align: center;
+    }
+    .offer h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+      font-weight: 400; color: var(--charcoal);
+      margin-bottom: 0.6rem;
+    }
+    .offer h2 em { font-style: italic; color: var(--gold); }
+    .offer-intro {
+      font-size: 1rem; font-weight: 300;
+      color: var(--brown-mid); line-height: 1.75;
+      max-width: 560px; margin: 0 auto 3rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px; margin: 0 auto;
+      text-align: left;
+    }
+    @media (max-width: 760px) { .cards { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--warm-white);
+      overflow: hidden;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.07);
+    }
+    .card-photo {
+      width: 100%; aspect-ratio: 3/2;
+      object-fit: cover; object-position: center top;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .card:hover .card-photo { transform: scale(1.04); }
+    .card-body { padding: 1.6rem 1.6rem 1.8rem; }
+    .card-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem; font-weight: 400;
+      color: var(--gold); opacity: 0.3;
+      line-height: 1; margin-bottom: 0.6rem;
+    }
+    .card-label {
+      font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--brown-light); margin-bottom: 0.3rem;
+    }
+    .card-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; font-weight: 400;
+      color: var(--charcoal); margin-bottom: 0.5rem;
+    }
+    .card-desc {
+      font-size: 0.87rem; font-weight: 300;
+      color: var(--brown-mid); line-height: 1.75;
     }
 
-    .hero-bridge {
-      font-family: 'Lato', sans-serif;
-      font-size: clamp(0.95rem, 1.4vw, 1.1rem);
-      font-weight: 300;
-      color: rgba(255,253,249,0.65);
-      letter-spacing: 0.04em;
-      margin-bottom: clamp(1.2rem, 2.5vh, 2rem);
-      opacity: 0;
-      animation: slideIn 0.8s 0.6s ease forwards;
+    /* ── BELIEF BREAK ── */
+    .belief {
+      position: relative;
+      background: url('senior-3.jpg') center 30% / cover no-repeat;
+      padding: clamp(5rem, 10vw, 8rem) clamp(2rem, 9vw, 8rem);
+      text-align: center; overflow: hidden;
+    }
+    .belief::before {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(20,14,8,0.65);
+    }
+    .belief-inner {
+      position: relative; z-index: 2;
+      max-width: 680px; margin: 0 auto;
+    }
+    .belief-inner p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+      font-style: italic; font-weight: 400;
+      color: rgba(255,253,249,0.95); line-height: 1.5;
+    }
+    .belief-inner em { color: var(--gold-light); font-style: normal; }
+
+    /* ── STAGE 5: THE TRADE ── */
+    .trade {
+      background: var(--warm-white);
+      padding: clamp(4rem, 8vw, 6rem) clamp(2rem, 9vw, 8rem);
+    }
+    .trade h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+      font-weight: 400; color: var(--charcoal);
+      margin-bottom: 0.5rem; text-align: center;
+    }
+    .trade h2 em { font-style: italic; color: var(--gold); }
+    .trade-intro {
+      text-align: center;
+      font-size: 1rem; font-weight: 300;
+      color: var(--brown-mid); line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+    .trade-items {
+      max-width: 620px; margin: 0 auto;
+    }
+    .trade-item {
+      display: flex; gap: 1.2rem;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .trade-item:last-child { border-bottom: none; }
+    .trade-arrow {
+      font-size: 1.1rem; color: var(--gold);
+      opacity: 0.7; min-width: 24px; padding-top: 1px;
+    }
+    .trade-title {
+      font-size: 0.95rem; font-weight: 700;
+      color: var(--charcoal); margin-bottom: 0.25rem;
+    }
+    .trade-desc {
+      font-size: 0.88rem; font-weight: 300;
+      color: var(--brown-mid); line-height: 1.7;
+    }
+    .canvas-badge {
+      display: inline-block;
+      margin-top: 0.4rem;
+      background: var(--gold);
+      color: #fff; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.2rem 0.7rem;
     }
 
+    /* ── STAGE 6: INVESTMENT ── */
+    .investment {
+      background: var(--charcoal);
+      padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 9vw, 8rem);
+      display: flex; justify-content: space-between;
+      align-items: center; gap: 2rem; flex-wrap: wrap;
+    }
+    .inv-label {
+      font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.4rem;
+    }
+    .inv-price {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 400; color: var(--warm-white); line-height: 1;
+    }
+    .inv-price-sub {
+      font-size: 0.8rem; font-weight: 300;
+      color: rgba(255,253,249,0.4); margin-top: 0.4rem;
+      letter-spacing: 0.06em;
+    }
+    .inv-middle {
+      font-size: 0.95rem; font-weight: 300;
+      color: rgba(255,253,249,0.6); line-height: 1.9;
+      max-width: 340px;
+    }
+    .inv-middle strong { color: rgba(255,253,249,0.9); font-weight: 400; }
+    .inv-middle .parent-note {
+      display: block; margin-top: 0.8rem;
+      font-size: 0.82rem; color: rgba(255,253,249,0.35);
+      line-height: 1.6;
+    }
     .btn-primary {
       display: inline-block;
-      padding: 0.9rem 2.4rem;
-      background: var(--gold);
-      color: #fff;
-      font-family: 'Lato', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+      padding: 1.05rem 2.8rem;
+      background: var(--gold); color: #fff;
+      font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
       text-decoration: none;
       transition: background 0.22s, transform 0.18s, box-shadow 0.22s;
-      opacity: 0;
-      animation: slideIn 0.8s 0.7s ease forwards;
     }
-
     .btn-primary:hover {
       background: #b07e28;
       transform: translateY(-3px);
       box-shadow: 0 10px 30px rgba(200,151,58,0.35);
     }
 
-    .hero-urgency {
-      margin-top: 0.9rem;
-      font-size: 0.75rem;
-      color: rgba(255,253,249,0.42);
-      letter-spacing: 0.06em;
-      opacity: 0;
-      animation: slideIn 0.8s 0.85s ease forwards;
-    }
-
-    .hero-urgency strong { color: var(--gold-light); }
-
-    /* ── MANIFESTO ── */
-    .manifesto {
-      position: relative;
-      background: url('senior-4.jpg') center 30% / cover no-repeat;
-      padding: clamp(6rem, 12vw, 10rem) clamp(2rem, 9vw, 8rem);
-      text-align: left;
-      overflow: hidden;
-    }
-
-    .manifesto::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        105deg,
-        rgba(20,14,8,0.82) 0%,
-        rgba(20,14,8,0.55) 50%,
-        rgba(20,14,8,0.2) 100%
-      );
-    }
-
-    .manifesto-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 680px;
-    }
-
-    .manifesto-bridge {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 5.5vw, 4.8rem);
-      font-weight: 400;
-      color: #fffdf9;
-      line-height: 1.08;
-      margin-bottom: 1.4rem;
-    }
-
-    .manifesto-bridge em {
-      font-style: italic;
-      color: var(--gold-light);
-    }
-
-    .manifesto-desc {
-      font-size: clamp(1rem, 1.6vw, 1.15rem);
-      font-weight: 300;
-      color: rgba(255,253,249,0.78);
-      line-height: 1.85;
-      max-width: 520px;
-      margin-bottom: 2.4rem;
-    }
-
-    .manifesto .btn-primary {
-      opacity: 1;
-      animation: none;
-    }
-
-    /* ── PHOTO STRIP ── */
-    .photo-strip {
-      display: grid;
-      grid-template-columns: 1fr 1.3fr 1fr;
-      height: clamp(200px, 32vw, 400px);
-    }
-
-    .strip-photo { overflow: hidden; background: #c5bdb5; }
-
-    .strip-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      transition: transform 0.6s ease;
-    }
-
-    .strip-photo:hover img { transform: scale(1.05); }
-
-    /* ── WHY ── */
-    .why {
-      background: var(--warm-white);
-      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(3rem, 7vw, 8rem);
-      align-items: center;
-    }
-
-    @media (max-width: 720px) {
-      .why { grid-template-columns: 1fr; }
-      .why-photo { order: -1; }
-    }
-
-    .why-photo { position: relative; }
-
-    .why-photo img {
-      width: 100%;
-      aspect-ratio: 4/5;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-
-    .why-photo::before {
-      content: '';
-      position: absolute;
-      top: -12px; left: -12px;
-      width: 70px; height: 70px;
-      border-top: 3px solid var(--gold);
-      border-left: 3px solid var(--gold);
-      z-index: 1;
-    }
-
-    .why-photo::after {
-      content: '';
-      position: absolute;
-      bottom: -12px; right: -12px;
-      width: 70px; height: 70px;
-      border-bottom: 3px solid var(--gold);
-      border-right: 3px solid var(--gold);
-    }
-
-    .tag {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.9rem;
-    }
-
-    .why h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.9rem, 3.5vw, 2.9rem);
-      font-weight: 400;
-      line-height: 1.2;
-      color: var(--charcoal);
-      margin-bottom: 1.5rem;
-    }
-
-    .why h2 em { font-style: italic; color: var(--gold); }
-
-    .why p {
-      font-size: 1rem;
-      font-weight: 300;
-      color: var(--brown-mid);
-      line-height: 1.85;
-      margin-bottom: 1.1rem;
-    }
-
-    /* ── DETAILS / CARDS ── */
-    .details {
-      background: var(--ivory);
-      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
-      text-align: center;
-    }
-
-    .details h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
-      font-weight: 400;
-      color: var(--charcoal);
-      margin-bottom: 3rem;
-    }
-
-    .details h2 em { font-style: italic; color: var(--gold); }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 700px) { .cards { grid-template-columns: 1fr; } }
-
-    .card {
-      background: var(--warm-white);
-      padding: 2.2rem 1.8rem;
-      text-align: left;
-      border-bottom: 3px solid transparent;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-    }
-
-    .card:hover {
-      border-color: var(--gold);
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.07);
-    }
-
-    .card-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      font-weight: 400;
-      color: var(--gold);
-      opacity: 0.35;
-      line-height: 1;
-      margin-bottom: 0.8rem;
-    }
-
-    .card-label {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--brown-light);
-      margin-bottom: 0.4rem;
-    }
-
-    .card-value {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-weight: 400;
-      color: var(--charcoal);
-      margin-bottom: 0.6rem;
-      line-height: 1.3;
-    }
-
-    .card-desc {
-      font-size: 0.88rem;
-      font-weight: 300;
-      color: var(--brown-mid);
-      line-height: 1.75;
-    }
-
-    /* ── EXCHANGE (get / give) ── */
-    .exchange {
-      background: var(--warm-white);
-      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
-    }
-
-    .exchange h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
-      font-weight: 400;
-      color: var(--charcoal);
-      margin-bottom: 3rem;
-      text-align: center;
-    }
-
-    .exchange h2 em { font-style: italic; color: var(--gold); }
-
-    .exchange-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 700px) { .exchange-grid { grid-template-columns: 1fr; } }
-
-    .exchange-col-head {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--gold);
-      padding-bottom: 1rem;
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .ex-item {
-      display: flex;
-      gap: 1rem;
-      padding: 1.2rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .ex-item:last-child { border-bottom: none; }
-
-    .ex-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      color: var(--gold);
-      opacity: 0.5;
-      min-width: 28px;
-      padding-top: 2px;
-    }
-
-    .ex-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--charcoal);
-      margin-bottom: 0.3rem;
-      letter-spacing: 0.02em;
-    }
-
-    .ex-body {
-      font-size: 0.88rem;
-      font-weight: 300;
-      color: var(--brown-mid);
-      line-height: 1.75;
-    }
-
-    /* ── INVESTMENT BAR ── */
-    .investment {
-      background: var(--charcoal);
-      padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 9vw, 8rem);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .inv-label {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.4rem;
-    }
-
-    .inv-price {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 6vw, 5rem);
-      font-weight: 400;
-      color: var(--warm-white);
-      line-height: 1;
-    }
-
-    .inv-price-sub {
-      font-size: 0.8rem;
-      font-weight: 300;
-      color: rgba(255,253,249,0.4);
-      margin-top: 0.4rem;
-      letter-spacing: 0.06em;
-    }
-
-    .inv-middle {
-      font-size: 0.95rem;
-      font-weight: 300;
-      color: rgba(255,253,249,0.6);
-      line-height: 1.9;
-      max-width: 360px;
-    }
-
-    .inv-middle strong { color: rgba(255,253,249,0.9); font-weight: 400; }
-
-    .investment .btn-primary { opacity: 1; animation: none; }
-
-    /* ── TESTIMONIAL ── */
-    .quote-section {
-      background: var(--warm-white);
-      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(3rem, 6vw, 7rem);
-      align-items: center;
-    }
-
-    @media (max-width: 720px) { .quote-section { grid-template-columns: 1fr; } }
-
-    .quote-section img {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-
-    .quote-inner .tag { color: var(--gold); }
-
-    blockquote {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.2rem, 2.2vw, 1.7rem);
-      font-style: italic;
-      font-weight: 400;
-      line-height: 1.65;
-      color: var(--charcoal);
-      margin: 1rem 0 1.5rem;
-      padding-left: 1.5rem;
-      border-left: 3px solid var(--gold);
-    }
-
-    cite {
-      font-style: normal;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--brown-light);
-    }
-
-    /* ── FINAL CTA ── */
-    .final {
+    /* ── STAGE 7: CLOSE ── */
+    .close-section {
       position: relative;
       background: url('senior-7.jpg') center 40% / cover no-repeat;
       padding: clamp(6rem, 12vw, 10rem) clamp(2rem, 9vw, 8rem);
       text-align: center;
     }
-
-    .final::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(20,14,8,0.68);
+    .close-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(20,14,8,0.7);
     }
-
-    .final-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 600px;
-      margin: 0 auto;
+    .close-inner {
+      position: relative; z-index: 2;
+      max-width: 600px; margin: 0 auto;
     }
-
-    .final .tag { color: var(--gold-light); margin-bottom: 0.9rem; }
-
-    .final h2 {
+    .close-tag {
+      font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold-light); margin-bottom: 1rem;
+    }
+    .close-section h2 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.2rem, 5vw, 4rem);
-      font-weight: 400;
-      color: var(--warm-white);
-      line-height: 1.15;
-      margin-bottom: 1.2rem;
+      font-weight: 400; color: var(--warm-white);
+      line-height: 1.15; margin-bottom: 1.2rem;
     }
-
-    .final h2 em { font-style: italic; color: var(--gold-light); }
-
-    .final p {
-      font-size: 1rem;
-      font-weight: 300;
-      color: rgba(255,253,249,0.7);
-      line-height: 1.8;
-      margin-bottom: 2.5rem;
+    .close-section h2 em { font-style: italic; color: var(--gold-light); }
+    .close-section p {
+      font-size: 1rem; font-weight: 300;
+      color: rgba(255,253,249,0.65); line-height: 1.8;
+      margin-bottom: 2.4rem;
     }
-
-    .final .btn-primary { opacity: 1; animation: none; padding: 1.1rem 3rem; }
-
-    .final-note {
+    .close-section .btn-primary { padding: 1.1rem 3rem; }
+    .close-note {
       margin-top: 1.4rem;
-      font-size: 0.75rem;
-      color: rgba(255,253,249,0.35);
+      font-size: 0.75rem; color: rgba(255,253,249,0.35);
       letter-spacing: 0.07em;
     }
-
-    .final-note strong { color: rgba(232,201,122,0.65); }
+    .close-note strong { color: rgba(232,201,122,0.6); }
 
     /* ── FOOTER ── */
     footer {
       background: #1a1410;
       padding: 2rem clamp(2rem, 9vw, 8rem);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1rem;
     }
-
     footer a {
-      color: rgba(255,253,249,0.4);
-      font-size: 0.8rem;
-      text-decoration: none;
-      letter-spacing: 0.08em;
+      color: rgba(255,253,249,0.4); font-size: 0.8rem;
+      text-decoration: none; letter-spacing: 0.08em;
       transition: color 0.2s;
     }
-
     footer a:hover { color: var(--gold); }
-
     footer span {
-      font-size: 0.75rem;
-      color: rgba(255,253,249,0.2);
+      font-size: 0.75rem; color: rgba(255,253,249,0.2);
       letter-spacing: 0.05em;
     }
 
     /* ── ANIMATIONS ── */
     @keyframes slideIn {
       from { opacity: 0; transform: translateY(22px); }
-      to   { opacity: 1; transform: translateY(0); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
     .reveal {
-      opacity: 0;
-      transform: translateY(30px);
+      opacity: 0; transform: translateY(30px);
       transition: opacity 0.75s ease, transform 0.75s ease;
     }
-
     .reveal.visible { opacity: 1; transform: none; }
     .reveal-delay { transition-delay: 0.18s; }
+
+    @media (max-width: 640px) {
+      .proof { grid-template-columns: 1fr; }
+      .investment { flex-direction: column; text-align: center; }
+      footer { flex-direction: column; text-align: center; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- STICKY HEADER -->
-  <header class="site-header">
-    <a href="https://nydamphoto.com" class="header-logo">Nydam Photography</a>
-    <a href="https://forms.gle/VQgsq6oCm2PVrDKw5" class="header-cta">Apply for a Spot</a>
-  </header>
+  <!-- STICKY NAV -->
+  <nav class="nav">
+    <a href="https://nydamphoto.com" class="nav-logo">Nydam Photography</a>
+    <a href="https://forms.gle/VQgsq6oCm2PVrDKw5" class="nav-cta" target="_blank">Apply for a Spot</a>
+  </nav>
 
-  <!-- HERO -->
+
+  <!-- ══ STAGE 1: STOP THE SCROLL ══ -->
   <section class="hero">
-    <div class="hero-carousel">
+    <div class="hero-slides">
       <div class="hero-slide active"></div>
       <div class="hero-slide"></div>
       <div class="hero-slide"></div>
@@ -753,12 +508,8 @@
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-left">
-        <span class="eyebrow">NP Senior Team · Class of 2027</span>
-        <h1>Your senior year<br>deserves <em>more than<br>one afternoon.</em></h1>
-        <a href="https://forms.gle/VQgsq6oCm2PVrDKw5" class="btn-primary">Apply for a spot</a>
-        <p class="hero-urgency"><strong>10 spots only</strong> &nbsp;·&nbsp; Applications close April 15, 2026</p>
-      </div>
+      <span class="eyebrow">This is NP Seniors 2027</span>
+      <h1>You deserve the best. <em>Because this moment is worth it.</em></h1>
     </div>
     <div class="hero-dots">
       <button class="hero-dot active" data-index="0"></button>
@@ -769,152 +520,45 @@
   </section>
 
 
-  <!-- PHOTO STRIP -->
-  <div class="photo-strip">
-    <div class="strip-photo">
-      <img src="senior-4.jpg" alt="Senior portrait by Nydam Photography, Austin TX" />
-    </div>
-    <div class="strip-photo">
-      <img src="senior-2.jpg" alt="Senior portrait by Nydam Photography, Georgetown TX" loading="lazy" />
-    </div>
-    <div class="strip-photo">
-      <img src="senior-5.jpg" alt="Senior portrait by Nydam Photography, Round Rock TX" loading="lazy" />
-    </div>
-  </div>
-
-  <!-- MANIFESTO -->
-  <section class="manifesto reveal">
-    <div class="manifesto-inner">
-      <h2 class="manifesto-bridge">So we built the <em>NP Senior Team.</em></h2>
-      <p class="manifesto-desc">An exclusive group of ten rising seniors who get free photo sessions, build confidence and real experience in front of the camera and walk into photos they'll love forever.</p>
-      <a href="https://forms.gle/VQgsq6oCm2PVrDKw5" class="btn-primary">Apply for a spot</a>
-    </div>
-  </section>
-
-
-  <!-- WHY -->
-  <section class="why reveal">
-    <div class="why-text">
-      <p class="tag">More than a session</p>
-      <h2>Not just senior photos. <em>A season of them.</em></h2>
-      <p>Most photographers book you, shoot you, deliver your gallery. One afternoon, done. We do something different — a group kickoff shoot in May, a style consultation before your main session, and a guaranteed spot on the calendar before it opens to anyone else.</p>
-      <p>By the time you show up for your official portraits in September or October, you've already been in front of Arlen's camera once. You know what works. You show up confident. You get photos you'll love forever.</p>
-    </div>
-    <div class="why-photo reveal reveal-delay">
-      <img src="senior-hero.jpg" alt="Senior portrait by Arlen Nydam, Austin Texas" loading="lazy" />
-    </div>
-  </section>
-
-
-  <!-- DETAILS -->
-  <section class="details reveal">
-    <p class="tag">What's included</p>
-    <h2>Simple, intentional, <em>done right.</em></h2>
-    <div class="cards">
-      <div class="card">
-        <div class="card-num">01</div>
-        <p class="card-label">Team Kickoff Shoot</p>
-        <p class="card-value">April – May 2026</p>
-        <p class="card-desc">The whole team together for the first time. Group and individual shots at a location Arlen scouts for the 2027 cohort.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">02</div>
-        <p class="card-label">Mother's Day Shoot</p>
-        <p class="card-value">May 2026</p>
-        <p class="card-desc">You and your mom, photographed together. One of the most meaningful sessions of the whole season — and one of the most shared.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">03</div>
-        <p class="card-label">Individual Shoot</p>
-        <p class="card-value">June – July 2026</p>
-        <p class="card-desc">Your own 30–45 minute shoot before school starts. Images ready to post the moment you see them — and your friends will notice.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">04</div>
-        <p class="card-label">Official Senior Portraits</p>
-        <p class="card-value">September – October 2026</p>
-        <p class="card-desc">The full experience. Professional stylist, MUA, and hair — plus unlimited locations and outfits. About a week later, your Gallery Reveal: you see every image for the first time and choose your prints and albums together with Arlen.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">05</div>
-        <p class="card-label">Priority Calendar</p>
-        <p class="card-value">First pick of dates</p>
-        <p class="card-desc">Your senior session is guaranteed before the calendar opens to anyone else. Georgetown, Round Rock, Hutto, Cedar Park & Austin.</p>
-      </div>
-      <div class="card">
-        <div class="card-num">06</div>
-        <p class="card-label">Featured on NP Social</p>
-        <p class="card-value">Instagram & Website</p>
-        <p class="card-desc">Your images go on our Instagram, Facebook, and portfolio — with full credit and tagging throughout the season.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- EXCHANGE -->
-  <section class="exchange reveal">
-    <p class="tag" style="text-align:center;">The commitment</p>
-    <h2>What you receive. <em>What we ask in return.</em></h2>
-    <div class="exchange-grid">
-      <div>
-        <p class="exchange-col-head">What You Receive</p>
-        <div class="ex-item">
-          <span class="ex-num">01</span>
-          <div>
-            <p class="ex-title">Team Kickoff Shoot</p>
-            <p class="ex-body">Group + individual shots in April or May — great images and a first taste of what the season holds.</p>
-          </div>
+  <!-- ══ STAGE 2: THE EXPERIENCE ══ -->
+  <section class="experience reveal">
+    <div class="experience-inner">
+      <div class="experience-photos">
+        <div class="exp-photo">
+          <img src="senior-2.jpg" alt="Gone to Texas senior portrait Austin" />
         </div>
-        <div class="ex-item">
-          <span class="ex-num">02</span>
-          <div>
-            <p class="ex-title">Mother's Day Shoot — May</p>
-            <p class="ex-body">You and your mom, photographed together. One of the most meaningful sessions of the season.</p>
-          </div>
+        <div class="exp-photo">
+          <img src="senior-4.jpg" alt="Senior portrait Nydam Photography" loading="lazy" />
         </div>
-        <div class="ex-item">
-          <span class="ex-num">03</span>
-          <div>
-            <p class="ex-title">Individual Shoot — June/July</p>
-            <p class="ex-body">30–45 minutes before school starts. Images ready to post, timed perfectly for back-to-school buzz.</p>
-          </div>
-        </div>
-        <div class="ex-item">
-          <span class="ex-num">04</span>
-          <div>
-            <p class="ex-title">Priority Calendar + Full Senior Session</p>
-            <p class="ex-body">First pick of dates before the calendar opens publicly. Your session includes stylist, MUA, hair, unlimited locations and outfits.</p>
-          </div>
+        <div class="exp-photo">
+          <img src="senior-5.jpg" alt="Senior portrait Nydam Photography Austin" loading="lazy" />
         </div>
       </div>
-      <div>
-        <p class="exchange-col-head">What We Ask</p>
-        <div class="ex-item">
-          <span class="ex-num">→</span>
-          <div>
-            <p class="ex-title">Show up for all the shoots</p>
-            <p class="ex-body">The kickoff, Mother's Day, and individual session are all part of the program.</p>
+      <div class="experience-text">
+        <p class="tag">The experience</p>
+        <h2>Not just photos.<br><em>A full season<br>of them.</em></h2>
+        <p>Most photographers give you one afternoon. We give you multiple shoots, a professional stylist, MUA and hair, unlimited locations — and portraits at the end that look like nothing you've ever seen of yourself.</p>
+        <p>By the time your official session arrives, you've already been in front of Arlen's camera. You know what works. You show up confident.</p>
+        <div class="experience-highlights">
+          <div class="highlight">
+            <div class="highlight-dot"></div>
+            <span><strong>3 shoots</strong> — group kickoff, Mother's Day with mom, individual before school</span>
           </div>
-        </div>
-        <div class="ex-item">
-          <span class="ex-num">→</span>
-          <div>
-            <p class="ex-title">Book your full senior session with Arlen</p>
-            <p class="ex-body">The complete experience — professional stylist, MUA, hair, unlimited locations and outfits.</p>
+          <div class="highlight">
+            <div class="highlight-dot"></div>
+            <span><strong>Professional stylist, MUA & hair</strong> included in your main session</span>
           </div>
-        </div>
-        <div class="ex-item">
-          <span class="ex-num">→</span>
-          <div>
-            <p class="ex-title">Share your experience</p>
-            <p class="ex-body">Stories, posts, reels — no scripts, no quotas. Just you, doing what you already do.</p>
+          <div class="highlight">
+            <div class="highlight-dot"></div>
+            <span><strong>Unlimited locations & outfits</strong> — 2 to 3 hours, no rushing</span>
           </div>
-        </div>
-        <div class="ex-item">
-          <span class="ex-num">✦</span>
-          <div>
-            <p class="ex-title">Refer a friend, earn a canvas</p>
-            <p class="ex-body">1 friend who books and completes their session → free 8x10 canvas print. 2 friends → free 16x20 canvas. A real piece of wall art, yours.</p>
+          <div class="highlight">
+            <div class="highlight-dot"></div>
+            <span><strong>Gallery Reveal</strong> — see every image for the first time, in person, with Arlen</span>
+          </div>
+          <div class="highlight">
+            <div class="highlight-dot"></div>
+            <span>Austin · Round Rock · Cedar Park · Hutto · Georgetown</span>
           </div>
         </div>
       </div>
@@ -922,29 +566,13 @@
   </section>
 
 
-  <!-- INVESTMENT -->
-  <div class="investment reveal">
-    <div>
-      <p class="inv-label">All-inclusive senior session · 2–3 hours</p>
-      <p class="inv-price">$700</p>
-      <p class="inv-price-sub">everything included · no add-ons · no surprises</p>
+  <!-- ══ STAGE 3: PROOF ══ -->
+  <section class="proof reveal">
+    <div class="proof-photo reveal reveal-delay">
+      <img src="senior-3.jpg" alt="Senior portrait by Arlen Nydam Austin Texas" loading="lazy" />
     </div>
-    <div class="inv-middle">
-      Professional stylist, MUA & hair<br>
-      Unlimited locations & outfit changes<br>
-      Gallery Reveal<br>
-      <strong>Secure your spot with a $150 deposit — applied to your session</strong><br>
-      <span style="font-size:0.82rem;color:rgba(255,253,249,0.4);display:block;margin-top:0.6rem;">Your daughter's first shoot is on us. If she chooses to book her main session, the $150 applies toward it.</span>
-    </div>
-    <a href="https://forms.gle/VQgsq6oCm2PVrDKw5" class="btn-primary">Apply now →</a>
-  </div>
-
-
-  <!-- TESTIMONIAL -->
-  <section class="quote-section reveal">
-    <img src="senior-6.jpg" alt="Senior portrait by Arlen Nydam, Nydam Photography Austin" loading="lazy" />
-    <div class="quote-inner">
-      <p class="tag">What parents say</p>
+    <div class="proof-text">
+      <p class="tag">What families say</p>
       <blockquote>
         "Arlen has become our family's dedicated photographer and an important part of our lives. From prom to senior portraits, college milestones, and our wedding — he has been there for every meaningful moment."
       </blockquote>
@@ -953,14 +581,142 @@
   </section>
 
 
-  <!-- FINAL CTA -->
-  <section class="final">
-    <div class="final-inner">
-      <p class="tag">10 spots · applications close April 15</p>
-      <h2>You deserve the best. <em>Because this moment is worth it.</em></h2>
-      <p>Once the ten spots are filled, we open a waitlist for the Class of 2028. Don't let your junior year end without a plan.</p>
-      <a href="https://forms.gle/VQgsq6oCm2PVrDKw5" class="btn-primary">Apply for NP Seniors 27</a>
-      <p class="final-note"><strong>10 spots only</strong> &nbsp;·&nbsp; Applications close April 15, 2026 &nbsp;·&nbsp; Questions? arlen.nydam@gmail.com</p>
+  <!-- ══ STAGE 4: THE OFFER ══ -->
+  <section class="offer reveal">
+    <p class="tag">What's included</p>
+    <h2>This is <em>NP Seniors 2027.</em></h2>
+    <p class="offer-intro">An exclusive group of 10 rising seniors who get free shoots, build real experience in front of the camera, and walk into their main session ready.</p>
+    <div class="cards">
+      <div class="card">
+        <img class="card-photo" src="senior-2.jpg" alt="Team kickoff shoot NP Seniors 2027" loading="lazy" />
+        <div class="card-body">
+          <div class="card-num">01</div>
+          <p class="card-label">Team Kickoff Shoot</p>
+          <p class="card-value">April – May 2026</p>
+          <p class="card-desc">All 10 together at a scouted Austin-area location. Group and individual shots. Your first content of the season.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-photo" src="senior-5.jpg" alt="Mother's Day shoot Nydam Photography" loading="lazy" />
+        <div class="card-body">
+          <div class="card-num">02</div>
+          <p class="card-label">Mother's Day Shoot</p>
+          <p class="card-value">May 2026</p>
+          <p class="card-desc">You and your mom, photographed together. One of the most meaningful sessions of the whole season — and the most shared.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-photo" src="senior-6.jpg" alt="Individual senior session Austin" loading="lazy" />
+        <div class="card-body">
+          <div class="card-num">03</div>
+          <p class="card-label">Individual Shoot</p>
+          <p class="card-value">June – July 2026</p>
+          <p class="card-desc">Your own session before school starts. Images ready to post — timed perfectly for back-to-school. Your friends will notice.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-photo" src="senior-hero.jpg" alt="Official senior portraits Nydam Photography" loading="lazy" />
+        <div class="card-body">
+          <div class="card-num">04</div>
+          <p class="card-label">Official Senior Portraits</p>
+          <p class="card-value">September – October 2026</p>
+          <p class="card-desc">The full experience. Professional stylist, MUA, and hair. Unlimited locations and outfits. Followed by your Gallery Reveal — you see every image for the first time, in person, with Arlen.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-photo" src="senior-1.jpg" alt="Priority calendar NP Seniors 2027" loading="lazy" />
+        <div class="card-body">
+          <div class="card-num">05</div>
+          <p class="card-label">Priority Calendar</p>
+          <p class="card-value">First pick of dates</p>
+          <p class="card-desc">Your session is guaranteed before the calendar opens to the public. First choice of dates and locations across Austin, Round Rock, Cedar Park, Hutto & Georgetown.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-photo" src="senior-4.jpg" alt="Featured on Nydam Photography social" loading="lazy" />
+        <div class="card-body">
+          <div class="card-num">06</div>
+          <p class="card-label">Featured on NP Social</p>
+          <p class="card-value">Instagram & Website</p>
+          <p class="card-desc">Your images go on our Instagram, Facebook, and portfolio — with full credit and tagging throughout the season.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── BELIEF BREAK ── -->
+  <div class="belief reveal">
+    <div class="belief-inner">
+      <p>I believe you deserve a senior session<br>that feels like <em>nothing else.</em></p>
+    </div>
+  </div>
+
+
+  <!-- ══ STAGE 5: THE TRADE ══ -->
+  <section class="trade reveal">
+    <p class="tag" style="text-align:center;">The commitment</p>
+    <h2>Simple. <em>Honest. Yours.</em></h2>
+    <p class="trade-intro">Here's everything we ask in return for everything above.</p>
+    <div class="trade-items">
+      <div class="trade-item">
+        <span class="trade-arrow">→</span>
+        <div>
+          <p class="trade-title">Show up for all three shoots</p>
+          <p class="trade-desc">Kickoff, Mother's Day, and individual session — all part of the program.</p>
+        </div>
+      </div>
+      <div class="trade-item">
+        <span class="trade-arrow">→</span>
+        <div>
+          <p class="trade-title">Book your official senior session with Arlen</p>
+          <p class="trade-desc">The main event — stylist, MUA, hair, unlimited locations and outfits, Gallery Reveal. All-inclusive, no surprises.</p>
+        </div>
+      </div>
+      <div class="trade-item">
+        <span class="trade-arrow">→</span>
+        <div>
+          <p class="trade-title">Share your experience — if you love it</p>
+          <p class="trade-desc">Stories, posts, reels. No scripts, no quotas. Just you, doing what you already do.</p>
+        </div>
+      </div>
+      <div class="trade-item">
+        <span class="trade-arrow">✦</span>
+        <div>
+          <p class="trade-title">Refer a friend — earn a canvas</p>
+          <p class="trade-desc">1 friend who completes their session → free 8x10 canvas print. 2 friends → free 16x20 canvas. Real wall art, yours to keep.</p>
+          <span class="canvas-badge">Bonus reward</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ STAGE 6: INVESTMENT ══ -->
+  <div class="investment reveal">
+    <div>
+      <p class="inv-label">All-inclusive senior session</p>
+      <p class="inv-price">$700</p>
+      <p class="inv-price-sub">stylist · MUA · hair · unlimited locations & outfits</p>
+    </div>
+    <div class="inv-middle">
+      <strong>Everything included. No add-ons. No surprises.</strong><br>
+      Gallery Reveal included<br>
+      Secure your spot with a $150 deposit — applied to your session<br>
+      <span class="parent-note">Your daughter's first shoots are on us. The $150 deposit applies toward her session if she chooses to book.</span>
+    </div>
+    <a href="https://forms.gle/VQgsq6oCm2PVrDKw5" class="btn-primary" target="_blank">Apply now →</a>
+  </div>
+
+
+  <!-- ══ STAGE 7: CLOSE ══ -->
+  <section class="close-section">
+    <div class="close-inner">
+      <p class="close-tag">10 spots · applications close April 15</p>
+      <h2>Ten spots.<br><em>One season.<br>Photos they'll love forever.</em></h2>
+      <p>Once the spots are filled, we open a waitlist for Class of 2028. Austin · Round Rock · Cedar Park · Hutto · Georgetown</p>
+      <a href="https://forms.gle/VQgsq6oCm2PVrDKw5" class="btn-primary" target="_blank">Apply for NP Seniors 2027</a>
+      <p class="close-note"><strong>10 spots only</strong> &nbsp;·&nbsp; April 15, 2026 &nbsp;·&nbsp; arlen.nydam@gmail.com</p>
     </div>
   </section>
 
@@ -971,44 +727,29 @@
     <span>© 2026 Nydam Photography · Austin, Texas · nydamphoto.com</span>
   </footer>
 
+
   <script>
     // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver(
       entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-      { threshold: 0.1 }
+      { threshold: 0.08 }
     );
-    reveals.forEach(el => obs.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
     // Hero carousel
     const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.hero-dot');
-    let current = 0;
-    let timer;
-
+    let cur = 0, timer;
     function goTo(n) {
-      slides[current].classList.remove('active');
-      dots[current].classList.remove('active');
-      current = (n + slides.length) % slides.length;
-      slides[current].classList.add('active');
-      dots[current].classList.add('active');
+      slides[cur].classList.remove('active');
+      dots[cur].classList.remove('active');
+      cur = (n + slides.length) % slides.length;
+      slides[cur].classList.add('active');
+      dots[cur].classList.add('active');
     }
-
-    function next() { goTo(current + 1); }
-
-    function startTimer() {
-      clearInterval(timer);
-      timer = setInterval(next, 4500);
-    }
-
-    dots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        goTo(parseInt(dot.dataset.index));
-        startTimer();
-      });
-    });
-
-    startTimer();
+    function start() { clearInterval(timer); timer = setInterval(() => goTo(cur + 1), 4500); }
+    dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.index); start(); }));
+    start();
   </script>
 
 </body>
