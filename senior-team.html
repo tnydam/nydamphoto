@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NP Senior Team 2027 | Nydam Photography</title>
+  <meta name="description" content="Applications open for the NP Senior Team Class of 2027 — an exclusive ambassador program for rising seniors in the Austin area. 10 spots. Apply by April 15." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ivory: #faf7f2;
+      --warm-white: #fffdf9;
+      --gold: #c8973a;
+      --gold-light: #e8c97a;
+      --charcoal: #2a2520;
+      --brown-mid: #6b5c4e;
+      --brown-light: #a89282;
+      --border: rgba(200, 151, 58, 0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--ivory);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    /* ── STICKY HEADER ── */
+    .site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      height: 56px;
+      background: rgba(20, 14, 8, 0.82);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(200, 151, 58, 0.15);
+    }
+
+    .header-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: rgba(255,253,249,0.75);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .header-logo:hover { color: var(--gold-light); }
+
+    .header-cta {
+      display: inline-block;
+      padding: 0.55rem 1.6rem;
+      background: var(--gold);
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .header-cta:hover {
+      background: #b07e28;
+      transform: translateY(-1px);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* carousel */
+    .hero-carousel {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center 20%;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+    }
+
+    .hero-slide.active { opacity: 1; }
+
+    .hero-slide:nth-child(1) { background-image: url('senior-3.jpg'); }
+    .hero-slide:nth-child(2) { background-image: url('senior-1.jpg'); background-position: center top; }
+    .hero-slide:nth-child(3) { background-image: url('senior-hero.jpg'); background-position: center top; }
+    .hero-slide:nth-child(4) { background-image: url('senior-6.jpg'); background-position: center top; }
+
+    /* carousel dots */
+    .hero-dots {
+      position: absolute;
+      bottom: 2rem;
+      left: clamp(2rem, 9vw, 8rem);
+      display: flex;
+      gap: 8px;
+      z-index: 3;
+    }
+
+    .hero-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(255,253,249,0.3);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .hero-dot.active {
+      background: var(--gold);
+      transform: scale(1.3);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        rgba(20,14,8,0.78) 0%,
+        rgba(20,14,8,0.50) 45%,
+        rgba(20,14,8,0.15) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 clamp(2rem, 9vw, 8rem);
+      padding-top: 56px;
+      max-width: 620px;
+    }
+
+    .hero-left { width: 100%; }
+
+    .hero-bridge {
+      font-family: 'Lato', sans-serif;
+      font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+      font-weight: 300;
+      color: rgba(255,253,249,0.65);
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: slideIn 0.8s 0.6s ease forwards;
+    }
+
+    .hero-desc {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-style: italic;
+      font-weight: 400;
+      color: rgba(255,253,249,0.82);
+      line-height: 1.65;
+      max-width: 500px;
+      margin-bottom: clamp(1.4rem, 3vh, 2.4rem);
+      opacity: 0;
+      animation: slideIn 0.8s 0.75s ease forwards;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: clamp(0.6rem, 1.5vh, 1.2rem);
+      opacity: 0;
+      animation: slideIn 0.7s 0.2s ease forwards;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      font-weight: 400;
+      line-height: 1.08;
+      color: #fffdf9;
+      margin-bottom: clamp(1.2rem, 2.5vh, 2rem);
+      opacity: 0;
+      animation: slideIn 0.8s 0.4s ease forwards;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-bridge {
+      font-family: 'Lato', sans-serif;
+      font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+      font-weight: 300;
+      color: rgba(255,253,249,0.65);
+      letter-spacing: 0.04em;
+      margin-bottom: clamp(1.2rem, 2.5vh, 2rem);
+      opacity: 0;
+      animation: slideIn 0.8s 0.6s ease forwards;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.9rem 2.4rem;
+      background: var(--gold);
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.22s, transform 0.18s, box-shadow 0.22s;
+      opacity: 0;
+      animation: slideIn 0.8s 0.7s ease forwards;
+    }
+
+    .btn-primary:hover {
+      background: #b07e28;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(200,151,58,0.35);
+    }
+
+    .hero-urgency {
+      margin-top: 0.9rem;
+      font-size: 0.75rem;
+      color: rgba(255,253,249,0.42);
+      letter-spacing: 0.06em;
+      opacity: 0;
+      animation: slideIn 0.8s 0.85s ease forwards;
+    }
+
+    .hero-urgency strong { color: var(--gold-light); }
+
+    /* ── MANIFESTO ── */
+    .manifesto {
+      position: relative;
+      background: url('senior-4.jpg') center 30% / cover no-repeat;
+      padding: clamp(6rem, 12vw, 10rem) clamp(2rem, 9vw, 8rem);
+      text-align: left;
+      overflow: hidden;
+    }
+
+    .manifesto::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        rgba(20,14,8,0.82) 0%,
+        rgba(20,14,8,0.55) 50%,
+        rgba(20,14,8,0.2) 100%
+      );
+    }
+
+    .manifesto-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+    }
+
+    .manifesto-bridge {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+      font-weight: 400;
+      color: #fffdf9;
+      line-height: 1.08;
+      margin-bottom: 1.4rem;
+    }
+
+    .manifesto-bridge em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .manifesto-desc {
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      font-weight: 300;
+      color: rgba(255,253,249,0.78);
+      line-height: 1.85;
+      max-width: 520px;
+      margin-bottom: 2.4rem;
+    }
+
+    .manifesto .btn-primary {
+      opacity: 1;
+      animation: none;
+    }
+
+    /* ── PHOTO STRIP ── */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr 1fr;
+      height: clamp(200px, 32vw, 400px);
+    }
+
+    .strip-photo { overflow: hidden; background: #c5bdb5; }
+
+    .strip-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .strip-photo:hover img { transform: scale(1.05); }
+
+    /* ── WHY ── */
+    .why {
+      background: var(--warm-white);
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 7vw, 8rem);
+      align-items: center;
+    }
+
+    @media (max-width: 720px) {
+      .why { grid-template-columns: 1fr; }
+      .why-photo { order: -1; }
+    }
+
+    .why-photo { position: relative; }
+
+    .why-photo img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .why-photo::before {
+      content: '';
+      position: absolute;
+      top: -12px; left: -12px;
+      width: 70px; height: 70px;
+      border-top: 3px solid var(--gold);
+      border-left: 3px solid var(--gold);
+      z-index: 1;
+    }
+
+    .why-photo::after {
+      content: '';
+      position: absolute;
+      bottom: -12px; right: -12px;
+      width: 70px; height: 70px;
+      border-bottom: 3px solid var(--gold);
+      border-right: 3px solid var(--gold);
+    }
+
+    .tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.9rem;
+    }
+
+    .why h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--charcoal);
+      margin-bottom: 1.5rem;
+    }
+
+    .why h2 em { font-style: italic; color: var(--gold); }
+
+    .why p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--brown-mid);
+      line-height: 1.85;
+      margin-bottom: 1.1rem;
+    }
+
+    /* ── DETAILS / CARDS ── */
+    .details {
+      background: var(--ivory);
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
+      text-align: center;
+    }
+
+    .details h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 3rem;
+    }
+
+    .details h2 em { font-style: italic; color: var(--gold); }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 700px) { .cards { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--warm-white);
+      padding: 2.2rem 1.8rem;
+      text-align: left;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+    }
+
+    .card-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: var(--gold);
+      opacity: 0.35;
+      line-height: 1;
+      margin-bottom: 0.8rem;
+    }
+
+    .card-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 0.4rem;
+    }
+
+    .card-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
+
+    .card-desc {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--brown-mid);
+      line-height: 1.75;
+    }
+
+    /* ── EXCHANGE (get / give) ── */
+    .exchange {
+      background: var(--warm-white);
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
+    }
+
+    .exchange h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .exchange h2 em { font-style: italic; color: var(--gold); }
+
+    .exchange-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 700px) { .exchange-grid { grid-template-columns: 1fr; } }
+
+    .exchange-col-head {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ex-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ex-item:last-child { border-bottom: none; }
+
+    .ex-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--gold);
+      opacity: 0.5;
+      min-width: 28px;
+      padding-top: 2px;
+    }
+
+    .ex-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.02em;
+    }
+
+    .ex-body {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--brown-mid);
+      line-height: 1.75;
+    }
+
+    /* ── INVESTMENT BAR ── */
+    .investment {
+      background: var(--charcoal);
+      padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 9vw, 8rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .inv-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+
+    .inv-price {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 400;
+      color: var(--warm-white);
+      line-height: 1;
+    }
+
+    .inv-price-sub {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: rgba(255,253,249,0.4);
+      margin-top: 0.4rem;
+      letter-spacing: 0.06em;
+    }
+
+    .inv-middle {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: rgba(255,253,249,0.6);
+      line-height: 1.9;
+      max-width: 360px;
+    }
+
+    .inv-middle strong { color: rgba(255,253,249,0.9); font-weight: 400; }
+
+    .investment .btn-primary { opacity: 1; animation: none; }
+
+    /* ── TESTIMONIAL ── */
+    .quote-section {
+      background: var(--warm-white);
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: center;
+    }
+
+    @media (max-width: 720px) { .quote-section { grid-template-columns: 1fr; } }
+
+    .quote-section img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .quote-inner .tag { color: var(--gold); }
+
+    blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.65;
+      color: var(--charcoal);
+      margin: 1rem 0 1.5rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid var(--gold);
+    }
+
+    cite {
+      font-style: normal;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+    }
+
+    /* ── FINAL CTA ── */
+    .final {
+      position: relative;
+      background: url('senior-7.jpg') center 40% / cover no-repeat;
+      padding: clamp(6rem, 12vw, 10rem) clamp(2rem, 9vw, 8rem);
+      text-align: center;
+    }
+
+    .final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(20,14,8,0.68);
+    }
+
+    .final-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .final .tag { color: var(--gold-light); margin-bottom: 0.9rem; }
+
+    .final h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 400;
+      color: var(--warm-white);
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+
+    .final h2 em { font-style: italic; color: var(--gold-light); }
+
+    .final p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,253,249,0.7);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .final .btn-primary { opacity: 1; animation: none; padding: 1.1rem 3rem; }
+
+    .final-note {
+      margin-top: 1.4rem;
+      font-size: 0.75rem;
+      color: rgba(255,253,249,0.35);
+      letter-spacing: 0.07em;
+    }
+
+    .final-note strong { color: rgba(232,201,122,0.65); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1a1410;
+      padding: 2rem clamp(2rem, 9vw, 8rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer a {
+      color: rgba(255,253,249,0.4);
+      font-size: 0.8rem;
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--gold); }
+
+    footer span {
+      font-size: 0.75rem;
+      color: rgba(255,253,249,0.2);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay { transition-delay: 0.18s; }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY HEADER -->
+  <header class="site-header">
+    <a href="https://nydamphoto.com" class="header-logo">Nydam Photography</a>
+    <a href="https://forms.gle/VQgsq6oCm2PVrDKw5" class="header-cta">Apply for a Spot</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-carousel">
+      <div class="hero-slide active"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <span class="eyebrow">NP Senior Team · Class of 2027</span>
+        <h1>Your senior year<br>deserves <em>more than<br>one afternoon.</em></h1>
+        <a href="https://forms.gle/VQgsq6oCm2PVrDKw5" class="btn-primary">Apply for a spot</a>
+        <p class="hero-urgency"><strong>10 spots only</strong> &nbsp;·&nbsp; Applications close April 15, 2026</p>
+      </div>
+    </div>
+    <div class="hero-dots">
+      <button class="hero-dot active" data-index="0"></button>
+      <button class="hero-dot" data-index="1"></button>
+      <button class="hero-dot" data-index="2"></button>
+      <button class="hero-dot" data-index="3"></button>
+    </div>
+  </section>
+
+
+  <!-- PHOTO STRIP -->
+  <div class="photo-strip">
+    <div class="strip-photo">
+      <img src="senior-4.jpg" alt="Senior portrait by Nydam Photography, Austin TX" />
+    </div>
+    <div class="strip-photo">
+      <img src="senior-2.jpg" alt="Senior portrait by Nydam Photography, Georgetown TX" loading="lazy" />
+    </div>
+    <div class="strip-photo">
+      <img src="senior-5.jpg" alt="Senior portrait by Nydam Photography, Round Rock TX" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto reveal">
+    <div class="manifesto-inner">
+      <h2 class="manifesto-bridge">So we built the <em>NP Senior Team.</em></h2>
+      <p class="manifesto-desc">An exclusive group of ten rising seniors who get free photo sessions, build confidence and real experience in front of the camera and walk into photos they'll love forever.</p>
+      <a href="https://forms.gle/VQgsq6oCm2PVrDKw5" class="btn-primary">Apply for a spot</a>
+    </div>
+  </section>
+
+
+  <!-- WHY -->
+  <section class="why reveal">
+    <div class="why-text">
+      <p class="tag">More than a session</p>
+      <h2>Not just senior photos. <em>A season of them.</em></h2>
+      <p>Most photographers book you, shoot you, deliver your gallery. One afternoon, done. We do something different — a group kickoff shoot in May, a style consultation before your main session, and a guaranteed spot on the calendar before it opens to anyone else.</p>
+      <p>By the time you show up for your official portraits in September or October, you've already been in front of Arlen's camera once. You know what works. You show up confident. You get photos you'll love forever.</p>
+    </div>
+    <div class="why-photo reveal reveal-delay">
+      <img src="senior-hero.jpg" alt="Senior portrait by Arlen Nydam, Austin Texas" loading="lazy" />
+    </div>
+  </section>
+
+
+  <!-- DETAILS -->
+  <section class="details reveal">
+    <p class="tag">What's included</p>
+    <h2>Simple, intentional, <em>done right.</em></h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-num">01</div>
+        <p class="card-label">Team Kickoff Shoot</p>
+        <p class="card-value">April – May 2026</p>
+        <p class="card-desc">The whole team together for the first time. Group and individual shots at a location Arlen scouts for the 2027 cohort.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">02</div>
+        <p class="card-label">Mother's Day Shoot</p>
+        <p class="card-value">May 2026</p>
+        <p class="card-desc">You and your mom, photographed together. One of the most meaningful sessions of the whole season — and one of the most shared.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">03</div>
+        <p class="card-label">Individual Shoot</p>
+        <p class="card-value">June – July 2026</p>
+        <p class="card-desc">Your own 30–45 minute shoot before school starts. Images ready to post the moment you see them — and your friends will notice.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">04</div>
+        <p class="card-label">Official Senior Portraits</p>
+        <p class="card-value">September – October 2026</p>
+        <p class="card-desc">The full experience. Professional stylist, MUA, and hair — plus unlimited locations and outfits. About a week later, your Gallery Reveal: you see every image for the first time and choose your prints and albums together with Arlen.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">05</div>
+        <p class="card-label">Priority Calendar</p>
+        <p class="card-value">First pick of dates</p>
+        <p class="card-desc">Your senior session is guaranteed before the calendar opens to anyone else. Georgetown, Round Rock, Hutto, Cedar Park & Austin.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">06</div>
+        <p class="card-label">Featured on NP Social</p>
+        <p class="card-value">Instagram & Website</p>
+        <p class="card-desc">Your images go on our Instagram, Facebook, and portfolio — with full credit and tagging throughout the season.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EXCHANGE -->
+  <section class="exchange reveal">
+    <p class="tag" style="text-align:center;">The commitment</p>
+    <h2>What you receive. <em>What we ask in return.</em></h2>
+    <div class="exchange-grid">
+      <div>
+        <p class="exchange-col-head">What You Receive</p>
+        <div class="ex-item">
+          <span class="ex-num">01</span>
+          <div>
+            <p class="ex-title">Team Kickoff Shoot</p>
+            <p class="ex-body">Group + individual shots in April or May — great images and a first taste of what the season holds.</p>
+          </div>
+        </div>
+        <div class="ex-item">
+          <span class="ex-num">02</span>
+          <div>
+            <p class="ex-title">Mother's Day Shoot — May</p>
+            <p class="ex-body">You and your mom, photographed together. One of the most meaningful sessions of the season.</p>
+          </div>
+        </div>
+        <div class="ex-item">
+          <span class="ex-num">03</span>
+          <div>
+            <p class="ex-title">Individual Shoot — June/July</p>
+            <p class="ex-body">30–45 minutes before school starts. Images ready to post, timed perfectly for back-to-school buzz.</p>
+          </div>
+        </div>
+        <div class="ex-item">
+          <span class="ex-num">04</span>
+          <div>
+            <p class="ex-title">Priority Calendar + Full Senior Session</p>
+            <p class="ex-body">First pick of dates before the calendar opens publicly. Your session includes stylist, MUA, hair, unlimited locations and outfits.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="exchange-col-head">What We Ask</p>
+        <div class="ex-item">
+          <span class="ex-num">→</span>
+          <div>
+            <p class="ex-title">Show up for all the shoots</p>
+            <p class="ex-body">The kickoff, Mother's Day, and individual session are all part of the program.</p>
+          </div>
+        </div>
+        <div class="ex-item">
+          <span class="ex-num">→</span>
+          <div>
+            <p class="ex-title">Book your full senior session with Arlen</p>
+            <p class="ex-body">The complete experience — professional stylist, MUA, hair, unlimited locations and outfits.</p>
+          </div>
+        </div>
+        <div class="ex-item">
+          <span class="ex-num">→</span>
+          <div>
+            <p class="ex-title">Share your experience</p>
+            <p class="ex-body">Stories, posts, reels — no scripts, no quotas. Just you, doing what you already do.</p>
+          </div>
+        </div>
+        <div class="ex-item">
+          <span class="ex-num">✦</span>
+          <div>
+            <p class="ex-title">Refer a friend, earn a canvas</p>
+            <p class="ex-body">1 friend who books and completes their session → free 8x10 canvas print. 2 friends → free 16x20 canvas. A real piece of wall art, yours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- INVESTMENT -->
+  <div class="investment reveal">
+    <div>
+      <p class="inv-label">All-inclusive senior session · 2–3 hours</p>
+      <p class="inv-price">$700</p>
+      <p class="inv-price-sub">everything included · no add-ons · no surprises</p>
+    </div>
+    <div class="inv-middle">
+      Professional stylist, MUA & hair<br>
+      Unlimited locations & outfit changes<br>
+      Gallery Reveal<br>
+      <strong>Secure your spot with a $150 deposit — applied to your session</strong><br>
+      <span style="font-size:0.82rem;color:rgba(255,253,249,0.4);display:block;margin-top:0.6rem;">Your daughter's first shoot is on us. If she chooses to book her main session, the $150 applies toward it.</span>
+    </div>
+    <a href="https://forms.gle/VQgsq6oCm2PVrDKw5" class="btn-primary">Apply now →</a>
+  </div>
+
+
+  <!-- TESTIMONIAL -->
+  <section class="quote-section reveal">
+    <img src="senior-6.jpg" alt="Senior portrait by Arlen Nydam, Nydam Photography Austin" loading="lazy" />
+    <div class="quote-inner">
+      <p class="tag">What parents say</p>
+      <blockquote>
+        "Arlen has become our family's dedicated photographer and an important part of our lives. From prom to senior portraits, college milestones, and our wedding — he has been there for every meaningful moment."
+      </blockquote>
+      <cite>— Sonya Forster, Austin TX</cite>
+    </div>
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="final-inner">
+      <p class="tag">10 spots · applications close April 15</p>
+      <h2>You deserve the best. <em>Because this moment is worth it.</em></h2>
+      <p>Once the ten spots are filled, we open a waitlist for the Class of 2028. Don't let your junior year end without a plan.</p>
+      <a href="https://forms.gle/VQgsq6oCm2PVrDKw5" class="btn-primary">Apply for NP Seniors 27</a>
+      <p class="final-note"><strong>10 spots only</strong> &nbsp;·&nbsp; Applications close April 15, 2026 &nbsp;·&nbsp; Questions? arlen.nydam@gmail.com</p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="https://nydamphoto.com">← Back to Nydam Photography</a>
+    <span>© 2026 Nydam Photography · Austin, Texas · nydamphoto.com</span>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.1 }
+    );
+    reveals.forEach(el => obs.observe(el));
+
+    // Hero carousel
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    let current = 0;
+    let timer;
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    function next() { goTo(current + 1); }
+
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(next, 4500);
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        goTo(parseInt(dot.dataset.index));
+        startTimer();
+      });
+    });
+
+    startTimer();
+  </script>
+
+</body>
+</html>
