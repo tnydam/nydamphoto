@@ -219,7 +219,7 @@
 
   <nav class="nav">
     <a href="https://nydamphoto.com" class="nav-logo">Nydam Photography</a>
-    <a href="https://forms.gle/kvwMgHjncDwqQa5R7" class="nav-cta" target="_blank">I'm Interested</a>
+    <a href="np-seniors-apply.html" class="nav-cta" target="_blank">I'm Interested</a>
   </nav>
 
 
@@ -422,7 +422,7 @@
       Secure your spot with a <strong>$150 deposit</strong> — applied to your session.
       <span class="parent-note">Your daughter's shoots before the main session are on us. The $150 applies toward her session when she books.</span>
     </div>
-    <a href="https://forms.gle/kvwMgHjncDwqQa5R7" class="btn-primary" target="_blank">I'm Interested →</a>
+    <a href="np-seniors-apply.html" class="btn-primary" target="_blank">I'm Interested →</a>
   </div>
 
 
@@ -445,7 +445,7 @@
   <section class="close-section">
     <div class="close-inner">
       <h2>Your moment.<br><em>Your portraits.<br>Your season.</em></h2>
-      <a href="https://forms.gle/kvwMgHjncDwqQa5R7" class="btn-primary" target="_blank">I'm Interested →</a>
+      <a href="np-seniors-apply.html" class="btn-primary" target="_blank">I'm Interested →</a>
     </div>
   </section>
 
@@ -473,4 +473,10 @@
       slides[cur].classList.add('active');
       dots[cur].classList.add('active');
     }
- 
+    function startTimer() { timer = setInterval(() => goTo(cur + 1), 5000); }
+    function resetTimer() { clearInterval(timer); startTimer(); }
+    dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.index); resetTimer(); }));
+    startTimer();
+  </script>
+</body>
+</html>
