@@ -540,7 +540,7 @@
     </div>
 
     <div class="submit-wrap">
-      <button type="submit" class="submit-btn">I'm Interested →</button>
+      <button type="submit" class="submit-btn">Send My Application →</button>
       <p class="submit-note">We'll be in touch within 48 hours.</p>
     </div>
 
@@ -548,7 +548,7 @@
 
   <div class="success" id="successMsg">
     <h2>Application <em>received.</em></h2>
-    <p>Thank you — we'll review your application and reach out within 48 hours.<br><br>We can't wait to meet her.</p>
+    <p>Thank you — we'll review your application and reach out within 48 hours.<br><br>We can't wait to meet them.</p>
   </div>
 
 </main>
@@ -663,13 +663,13 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
         btn.disabled = false;
-        btn.textContent = "I'm Interested →";
+        btn.textContent = "Send My Application →";
         alert('Something went wrong. Please try again or email us at arlen.nydam@gmail.com');
       }
     })
     .catch(() => {
       btn.disabled = false;
-      btn.textContent = "I'm Interested →";
+      btn.textContent = "Send My Application →";
       alert('Something went wrong. Please try again or email us at arlen.nydam@gmail.com');
     });
   });
