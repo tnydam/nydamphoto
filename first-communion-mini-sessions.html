@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>First Communion Mini Sessions | Nydam Photography</title>
-  <meta name="description" content="First Communion portrait mini-sessions at Emmaus Catholic Parish — 15 minutes, guided, elegant. Indoor and outdoor. Austin, TX. Book with Arlen Nydam Photography." />
+  <meta name="description" content="First Communion portrait mini-sessions in Austin, TX — 15 minutes, guided, elegant. Indoor and outdoor church settings. Book with Arlen Nydam Photography." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -808,6 +808,126 @@
       letter-spacing: 0.05em;
     }
 
+    /* ── CHURCH SELECTOR ── */
+    .church-select {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 0.2rem;
+    }
+
+    .church-select-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(232,201,122,0.6);
+      margin-bottom: 0.1rem;
+      opacity: 0;
+      animation: slideIn 0.8s 0.8s ease forwards;
+    }
+
+    .btn-church {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1.6rem;
+      background: rgba(200,151,58,0.12);
+      border: 1.5px solid rgba(200,151,58,0.4);
+      color: var(--warm-white);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.22s, border-color 0.22s, transform 0.18s;
+      opacity: 0;
+      animation: slideIn 0.8s ease forwards;
+      max-width: 420px;
+    }
+
+    .btn-church:hover {
+      background: rgba(200,151,58,0.28);
+      border-color: var(--gold);
+      transform: translateX(5px);
+    }
+
+    .btn-church span { color: var(--gold-light); font-size: 1rem; }
+
+    .btn-church-1 { animation-delay: 0.85s; }
+    .btn-church-2 { animation-delay: 1s; }
+
+    /* inline (not hero) church buttons */
+    .church-select-inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .btn-church-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.9rem 1.8rem;
+      background: transparent;
+      border: 1.5px solid var(--gold-muted);
+      color: var(--charcoal);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.22s, border-color 0.22s, transform 0.18s, box-shadow 0.22s;
+    }
+
+    .btn-church-inline:hover {
+      background: var(--parchment);
+      border-color: var(--gold);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(200,151,58,0.15);
+    }
+
+    .btn-church-inline span { color: var(--gold); }
+
+    /* dark bg version (final CTA) */
+    .church-select-dark {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 0;
+    }
+
+    .btn-church-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.9rem 1.8rem;
+      background: rgba(200,151,58,0.12);
+      border: 1.5px solid rgba(200,151,58,0.4);
+      color: var(--warm-white);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.22s, border-color 0.22s, transform 0.18s;
+    }
+
+    .btn-church-dark:hover {
+      background: rgba(200,151,58,0.28);
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    .btn-church-dark span { color: var(--gold-light); }
+
     /* ── ANIMATIONS ── */
     @keyframes slideIn {
       from { opacity: 0; transform: translateY(22px); }
@@ -835,13 +955,18 @@
     <div class="hero-img"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <span class="eyebrow">Nydam Photography · Emmaus Catholic Parish · Austin, TX</span>
+      <span class="eyebrow">Nydam Photography · Austin, TX · Catholic Parishes</span>
       <h1>This sacred day<br>deserves portraits<br>that are <em>timeless.</em></h1>
       <p class="hero-sub">
         Fifteen minutes. Gentle direction. Indoor and outdoor church settings. Photographs you will frame and keep for a lifetime.
       </p>
-      <a href="https://calendly.com/arlen-nydam/first-communion-mini-session" class="btn-primary">Reserve your session</a>
-      <p class="hero-urgency"><strong>Limited spots available</strong> &nbsp;·&nbsp; $50 retainer holds your time</p>
+      <p class="church-select-label">Select your parish to book</p>
+      <div class="church-select">
+        <a href="https://calendly.com/arlen-nydam/first-communion-mini-session-at-emmaus-catholic-clone" class="btn-church btn-church-1">St. Mary Cathedral <span>→</span></a>
+        <a href="https://calendly.com/arlen-nydam/first-communion-mini-session-at-st-mary-cathed-clone" class="btn-church btn-church-2">St. Mary's (Taylor) <span>→</span></a>
+        <a href="#" class="btn-church btn-church-2" style="animation-delay:1.15s;">Emmaus Catholic Parish <span>→</span></a>
+      </div>
+      <p class="hero-urgency"><strong>Limited spots available</strong> &nbsp;·&nbsp; $50 retainer holds your time · Two Austin locations</p>
     </div>
   </section>
 
@@ -892,7 +1017,7 @@
         <div class="card-num">02</div>
         <p class="card-label">Locations</p>
         <p class="card-value">Indoor &amp; Outdoor</p>
-        <p class="card-desc">Arlen photographs in multiple settings at Emmaus Catholic Parish — inside the church and in the beautiful surrounding outdoor spaces.</p>
+        <p class="card-desc">Arlen photographs in multiple settings at your parish — inside the church and in the beautiful surrounding outdoor spaces.</p>
       </div>
       <div class="card">
         <div class="card-num">03</div>
@@ -918,7 +1043,7 @@
       <div class="step">
         <div class="step-num">2</div>
         <p class="step-title">Your Session</p>
-        <p class="step-desc">Arlen meets you at Emmaus Catholic Parish. <strong>Indoor and outdoor</strong> locations, gentle posing direction — relaxed and done in 15 minutes.</p>
+        <p class="step-desc">Arlen meets you at your parish. <strong>Indoor and outdoor</strong> locations, gentle posing direction — relaxed and done in 15 minutes.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
@@ -1014,7 +1139,12 @@
 
     </div>
 
-    <a href="https://calendly.com/arlen-nydam/first-communion-mini-session" class="btn-primary" style="opacity:1;animation:none;">Reserve your session →</a>
+    <p class="tag" style="margin-top:1rem;">Select your parish to book</p>
+    <div class="church-select-inline">
+      <a href="https://calendly.com/arlen-nydam/first-communion-mini-session-at-emmaus-catholic-clone" class="btn-church-inline">St. Mary Cathedral <span>→</span></a>
+      <a href="https://calendly.com/arlen-nydam/first-communion-mini-session-at-st-mary-cathed-clone" class="btn-church-inline">St. Mary's (Taylor) <span>→</span></a>
+      <a href="#" class="btn-church-inline">Emmaus Catholic Parish <span>→</span></a>
+    </div>
   </section>
 
 
@@ -1103,8 +1233,12 @@
       <h2>Reserve your child's<br><em>time slot.</em></h2>
       <p>These sessions fill quickly. A $50 retainer holds your spot and applies toward any collection you choose.</p>
       <div class="final-btns">
-        <a href="https://calendly.com/arlen-nydam/first-communion-mini-session" class="btn-primary">Book your session</a>
-        <a href="/cdn-cgi/l/email-protection#ddbcafb1b8b3f3b3a4b9bcb09dbab0bcb4b1f3beb2b0" class="btn-outline">Ask a question</a>
+        <div class="church-select-dark">
+          <a href="https://calendly.com/arlen-nydam/first-communion-mini-session-at-emmaus-catholic-clone" class="btn-church-dark">St. Mary Cathedral <span>→</span></a>
+          <a href="https://calendly.com/arlen-nydam/first-communion-mini-session-at-st-mary-cathed-clone" class="btn-church-dark">St. Mary's (Taylor) <span>→</span></a>
+          <a href="#" class="btn-church-dark">Emmaus Catholic Parish <span>→</span></a>
+        </div>
+        <a href="mailto:arlen.nydam@gmail.com" class="btn-outline">Ask a question</a>
       </div>
       <p class="final-note"><strong>(512) 921-3182</strong> &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb8a99878e85c585928f8a86ab8c868a8287c5888486">[email&#160;protected]</a> &nbsp;·&nbsp; nydamphoto.com</p>
     </div>
