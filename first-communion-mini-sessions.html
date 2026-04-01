@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First Communion Mini Sessions | Nydam Photography</title>
+  <meta name="description" content="First Communion portrait mini-sessions at Emmaus Catholic Parish — 15 minutes, guided, elegant. Indoor and outdoor. Austin, TX. Book with Arlen Nydam Photography." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ivory:        #faf7f2;
+      --warm-white:   #fffdf9;
+      --gold:         #c8973a;
+      --gold-light:   #e8c97a;
+      --gold-muted:   rgba(200,151,58,0.18);
+      --charcoal:     #2a2520;
+      --brown-mid:    #6b5c4e;
+      --brown-light:  #a89282;
+      --parchment:    #f3ede2;
+      --dark-bg:      #1a1410;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--ivory);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-img::before,
+    .hero-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation: heroFade 10s ease-in-out infinite;
+    }
+
+    .hero-img::before {
+      background-image: url('1775071887199_austin-portrait-photographer-hero.jpg');
+      background-position: center 20%;
+    }
+
+    .hero-img::after {
+      background-image: url('Inside_the_church_kids.jpg');
+      background-position: center 25%;
+      animation-delay: 5s;
+    }
+
+    @keyframes heroFade {
+      0%, 40%  { opacity: 1; }
+      50%, 90% { opacity: 0; }
+      100%     { opacity: 1; }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        110deg,
+        rgba(20,14,8,0.80) 0%,
+        rgba(20,14,8,0.52) 48%,
+        rgba(20,14,8,0.12) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 clamp(2rem, 9vw, 8rem);
+      max-width: 680px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1.4rem;
+      opacity: 0;
+      animation: slideIn 0.7s 0.2s ease forwards;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 5.6rem);
+      font-weight: 400;
+      line-height: 1.08;
+      color: var(--warm-white);
+      margin-bottom: 1.4rem;
+      opacity: 0;
+      animation: slideIn 0.8s 0.4s ease forwards;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      font-weight: 300;
+      color: rgba(255,253,249,0.76);
+      line-height: 1.78;
+      margin-bottom: 2.4rem;
+      max-width: 460px;
+      opacity: 0;
+      animation: slideIn 0.8s 0.6s ease forwards;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 1.05rem 2.8rem;
+      background: var(--gold);
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.22s, transform 0.18s, box-shadow 0.22s;
+      opacity: 0;
+      animation: slideIn 0.8s 0.8s ease forwards;
+    }
+
+    .btn-primary:hover {
+      background: #b07e28;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(200,151,58,0.38);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 1.05rem 2.8rem;
+      background: transparent;
+      color: var(--warm-white);
+      border: 1.5px solid rgba(232,201,122,0.55);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.22s, border-color 0.22s, color 0.22s, transform 0.18s;
+    }
+
+    .btn-outline:hover {
+      background: var(--gold-muted);
+      border-color: var(--gold);
+      color: var(--gold-light);
+      transform: translateY(-3px);
+    }
+
+    .hero-urgency {
+      margin-top: 1.1rem;
+      font-size: 0.8rem;
+      color: rgba(255,253,249,0.45);
+      letter-spacing: 0.06em;
+      opacity: 0;
+      animation: slideIn 0.8s 1s ease forwards;
+    }
+
+    .hero-urgency strong { color: var(--gold-light); }
+
+    /* ── PHOTO STRIP ── */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr 1fr 1.25fr;
+      height: clamp(180px, 28vw, 360px);
+    }
+
+    .strip-photo { overflow: hidden; background: #c5bdb5; }
+
+    .strip-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.65s ease;
+    }
+
+    .strip-photo:hover img { transform: scale(1.06); }
+
+    /* ── TAG ── */
+    .tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.9rem;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      background: var(--warm-white);
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 7vw, 8rem);
+      align-items: center;
+    }
+
+    @media (max-width: 720px) {
+      .about { grid-template-columns: 1fr; }
+      .about-photo { order: -1; }
+    }
+
+    .about-photo {
+      position: relative;
+    }
+
+    .about-photo img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .about-photo::before {
+      content: '';
+      position: absolute;
+      top: -12px; left: -12px;
+      width: 70px; height: 70px;
+      border-top: 3px solid var(--gold);
+      border-left: 3px solid var(--gold);
+      z-index: 1;
+    }
+
+    .about-photo::after {
+      content: '';
+      position: absolute;
+      bottom: -12px; right: -12px;
+      width: 70px; height: 70px;
+      border-bottom: 3px solid var(--gold);
+      border-right: 3px solid var(--gold);
+    }
+
+    .about h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--charcoal);
+      margin-bottom: 1.5rem;
+    }
+
+    .about h2 em { font-style: italic; color: var(--brown-mid); }
+
+    .about p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--brown-mid);
+      line-height: 1.88;
+      margin-bottom: 1.1rem;
+    }
+
+    /* ── WHAT TO EXPECT ── */
+    .expect {
+      background: var(--parchment);
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
+      text-align: center;
+    }
+
+    .expect h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 3rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--warm-white);
+      padding: 2.2rem 1.8rem;
+      text-align: left;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+    }
+
+    .card:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+    }
+
+    .card-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: var(--gold);
+      opacity: 0.35;
+      line-height: 1;
+      margin-bottom: 0.8rem;
+    }
+
+    .card-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 0.4rem;
+    }
+
+    .card-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 0.6rem;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--brown-mid);
+      line-height: 1.75;
+    }
+
+    /* ── RETAINER BANNER ── */
+    .retainer-banner {
+      background: var(--gold);
+      padding: 1.5rem clamp(2rem, 9vw, 8rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .retainer-banner p {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .retainer-banner span {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.72);
+      font-weight: 400;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── COLLECTIONS ── */
+    .collections {
+      background: var(--warm-white);
+      padding: clamp(4.5rem, 9vw, 8rem) clamp(2rem, 9vw, 8rem);
+      text-align: center;
+    }
+
+    .collections h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 0.6rem;
+    }
+
+    .collections .intro {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--brown-mid);
+      max-width: 500px;
+      margin: 0 auto 3.5rem;
+      line-height: 1.75;
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto 3.5rem;
+    }
+
+    @media (max-width: 1060px) { .collection-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .collection-grid { grid-template-columns: 1fr; } }
+
+    .collection-card {
+      border: 1.5px solid var(--gold-muted);
+      padding: 2.4rem 1.6rem 2rem;
+      text-align: center;
+      position: relative;
+      transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+      background: var(--ivory);
+    }
+
+    .collection-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-6px);
+      box-shadow: 0 18px 48px rgba(0,0,0,0.08);
+    }
+
+    .collection-card.featured {
+      border-color: var(--gold);
+      background: var(--warm-white);
+    }
+
+    .collection-card.featured::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: -1px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: #fff;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.28rem 1rem;
+    }
+
+    .coll-name {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.9rem;
+    }
+
+    .coll-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      line-height: 1;
+      margin-bottom: 1.4rem;
+    }
+
+    .coll-price sup {
+      font-size: 1.4rem;
+      vertical-align: super;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+    }
+
+    .coll-divider {
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.45;
+      margin: 0 auto 1.4rem;
+    }
+
+    .coll-items {
+      list-style: none;
+      text-align: left;
+    }
+
+    .coll-items li {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--brown-mid);
+      line-height: 1.6;
+      padding: 0.38rem 0;
+      border-bottom: 1px solid rgba(200,151,58,0.10);
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+    }
+
+    .coll-items li::before {
+      content: '—';
+      color: var(--gold);
+      opacity: 0.55;
+      flex-shrink: 0;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .workflow {
+      background: var(--dark-bg);
+      padding: clamp(4.5rem, 9vw, 8rem) clamp(2rem, 9vw, 8rem);
+      text-align: center;
+    }
+
+    .workflow .tag { color: var(--gold-light); }
+
+    .workflow h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      color: var(--warm-white);
+      margin-bottom: 0.6rem;
+    }
+
+    .workflow .intro {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: rgba(255,253,249,0.5);
+      margin-bottom: 3.5rem;
+      line-height: 1.7;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    @media (max-width: 860px) { .steps { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+    @media (max-width: 480px) { .steps { grid-template-columns: 1fr; } }
+
+    .steps::before {
+      content: '';
+      position: absolute;
+      top: 2.2rem;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+      opacity: 0.2;
+    }
+
+    @media (max-width: 860px) { .steps::before { display: none; } }
+
+    .step { padding: 0 1.2rem; text-align: center; }
+
+    .step-num {
+      width: 4.4rem;
+      height: 4.4rem;
+      border: 1.5px solid rgba(200,151,58,0.35);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.4rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--gold);
+      position: relative;
+      z-index: 1;
+      background: var(--dark-bg);
+      transition: border-color 0.22s, background 0.22s;
+    }
+
+    .step:hover .step-num {
+      border-color: var(--gold);
+      background: rgba(200,151,58,0.08);
+    }
+
+    .step-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 0.7rem;
+    }
+
+    .step-desc {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: rgba(255,253,249,0.55);
+      line-height: 1.75;
+    }
+
+    .step-desc strong { color: rgba(255,253,249,0.85); font-weight: 400; }
+
+    /* ── INDIVIDUAL PRINTS ── */
+    .prints {
+      background: var(--parchment);
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
+      text-align: center;
+    }
+
+    .prints h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .prints .intro {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--brown-mid);
+      margin-bottom: 2.8rem;
+      line-height: 1.7;
+    }
+
+    .prints-table-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+
+    .prints-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .prints-table th {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      padding: 0 1.2rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--gold-muted);
+    }
+
+    .prints-table td {
+      padding: 0.9rem 1.2rem;
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--brown-mid);
+      border-bottom: 1px solid rgba(200,151,58,0.08);
+      text-align: left;
+    }
+
+    .prints-table tr:last-child td { border-bottom: none; }
+
+    .prints-table .price-col {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      text-align: right;
+    }
+
+    .prints-table .price-col.alt { color: var(--brown-mid); font-size: 0.88rem; }
+
+    .prints-table tr:hover td { background: rgba(200,151,58,0.04); }
+
+    .prints-note {
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--brown-light);
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    /* ── QUOTE ── */
+    .quote-section {
+      background: var(--warm-white);
+      padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 9vw, 8rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: center;
+    }
+
+    @media (max-width: 720px) { .quote-section { grid-template-columns: 1fr; } }
+
+    .quote-section img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .quote-inner .tag { color: var(--gold); }
+
+    blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.15rem, 2.1vw, 1.65rem);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.68;
+      color: var(--charcoal);
+      margin: 1rem 0 1.5rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid var(--gold);
+    }
+
+    cite {
+      font-style: normal;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+    }
+
+    /* ── FINAL CTA ── */
+    .final {
+      position: relative;
+      background: url('51cfc5d4-d783-4c74-9a24-e8c34100e465_rw_1200.jpg') center 20% / cover no-repeat;
+      padding: clamp(6rem, 12vw, 10rem) clamp(2rem, 9vw, 8rem);
+      text-align: center;
+    }
+
+    .final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(20,14,8,0.72);
+    }
+
+    .final-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .final .tag { color: var(--gold-light); margin-bottom: 0.9rem; }
+
+    .final h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 400;
+      color: var(--warm-white);
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+
+    .final h2 em { font-style: italic; color: var(--gold-light); }
+
+    .final p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,253,249,0.7);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .final-btns {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .final .btn-primary { opacity: 1; animation: none; padding: 1.1rem 3rem; }
+
+    .final-note {
+      margin-top: 1.6rem;
+      font-size: 0.75rem;
+      color: rgba(255,253,249,0.35);
+      letter-spacing: 0.07em;
+    }
+
+    .final-note strong { color: rgba(232,201,122,0.65); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark-bg);
+      padding: 2rem clamp(2rem, 9vw, 8rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer a {
+      color: rgba(255,253,249,0.4);
+      font-size: 0.8rem;
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--gold); }
+
+    footer span {
+      font-size: 0.75rem;
+      color: rgba(255,253,249,0.2);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.will-animate {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .reveal.will-animate.visible { opacity: 1; transform: none; }
+    .reveal-delay  { transition-delay: 0.18s; }
+    .reveal-delay2 { transition-delay: 0.34s; }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="eyebrow">Nydam Photography · Emmaus Catholic Parish · Austin, TX</span>
+      <h1>This sacred day<br>deserves portraits<br>that are <em>timeless.</em></h1>
+      <p class="hero-sub">
+        Fifteen minutes. Gentle direction. Indoor and outdoor church settings. Photographs you will frame and keep for a lifetime.
+      </p>
+      <a href="https://calendly.com/arlen-nydam/first-communion-mini-session" class="btn-primary">Reserve your session</a>
+      <p class="hero-urgency"><strong>Limited spots available</strong> &nbsp;·&nbsp; $50 retainer holds your time</p>
+    </div>
+  </section>
+
+
+  <!-- PHOTO STRIP -->
+  <div class="photo-strip">
+    <div class="strip-photo">
+      <img src="04f7731a-3e8b-4578-8414-c50f711efc0e_rw_1200.jpg" alt="Boy lighting candles at First Communion" />
+    </div>
+    <div class="strip-photo">
+      <img src="e12f845b-d778-469f-ad8a-007d4c6c673f_rw_1200.jpg" alt="First Communion girl in garden" loading="lazy" />
+    </div>
+    <div class="strip-photo">
+      <img src="51cfc5d4-d783-4c74-9a24-e8c34100e465_rw_1200.jpg" alt="First Communion girl at Hail Mary statue" loading="lazy" />
+    </div>
+    <div class="strip-photo">
+      <img src="4514df62-f51d-48f4-bf87-38354661556b_rw_600.jpg" alt="First Communion boy portrait" loading="lazy" />
+    </div>
+  </div>
+
+
+  <!-- ABOUT -->
+  <section class="about reveal">
+    <div class="about-text">
+      <p class="tag">First Communion Mini Sessions</p>
+      <h2>Portrait sessions made for this <em>sacred milestone.</em></h2>
+      <p>First Communion is one of the most meaningful moments in a child's faith journey. These mini sessions are designed specifically for this day — unhurried, beautifully lit, and guided so your child feels relaxed and confident in front of the camera.</p>
+      <p>Arlen photographs inside the church and in the surrounding outdoor spaces, giving you a variety of settings in one short session. The result is a gallery of images that truly captures who your child is on this day.</p>
+    </div>
+    <div class="about-photo reveal reveal-delay">
+      <img src="Inside_the_church_kids.jpg" alt="Brother and sister inside church at First Communion" loading="lazy" />
+    </div>
+  </section>
+
+
+  <!-- WHAT TO EXPECT -->
+  <section class="expect reveal">
+    <p class="tag">What to Expect</p>
+    <h2>Simple. Relaxed. Done right.</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-num">01</div>
+        <p class="card-label">Session Length</p>
+        <p class="card-value">15 Minutes</p>
+        <p class="card-desc">Short and focused — just enough time to capture genuine, relaxed portraits without tiring your child out before the ceremony.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">02</div>
+        <p class="card-label">Locations</p>
+        <p class="card-value">Indoor &amp; Outdoor</p>
+        <p class="card-desc">Arlen photographs in multiple settings at Emmaus Catholic Parish — inside the church and in the beautiful surrounding outdoor spaces.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">03</div>
+        <p class="card-label">Direction</p>
+        <p class="card-value">Gently Guided</p>
+        <p class="card-desc">No stiff posing. Arlen uses natural, gentle posing direction so the portraits feel authentic, not forced.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+  <section class="workflow reveal">
+    <p class="tag">How It Works</p>
+    <h2>From booking to beautiful portraits — five easy steps.</h2>
+    <p class="intro">No decisions to make ahead of time. You'll see all the images first, then choose what you love.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <p class="step-title">Book</p>
+        <p class="step-desc">Reserve your 15-minute slot online. A <strong>$50 retainer</strong> holds your time and applies toward your order.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <p class="step-title">Your Session</p>
+        <p class="step-desc">Arlen meets you at Emmaus Catholic Parish. <strong>Indoor and outdoor</strong> locations, gentle posing direction — relaxed and done in 15 minutes.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <p class="step-title">Private Gallery</p>
+        <p class="step-desc">Within 1–2 weeks you receive a link to your <strong>private online gallery</strong>. Browse every edited portrait, mark your favorites, share with family.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <p class="step-title">Choose &amp; Order</p>
+        <p class="step-desc">Pick a collection or order à la carte — <strong>prints, wall art, canvas, or digitals</strong>. Your $50 retainer comes off the total.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <p class="step-title">Delivered</p>
+        <p class="step-desc">Fine-art prints arrive ready to frame. Digital files download instantly — <strong>full resolution</strong> with reproduction rights included.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- RETAINER BANNER -->
+  <div class="retainer-banner reveal">
+    <p>$50 Retainer</p>
+    <span>·</span>
+    <span>Collected at booking &nbsp;·&nbsp; Applied toward your final order</span>
+  </div>
+
+
+  <!-- COLLECTIONS -->
+  <section class="collections reveal">
+    <p class="tag">Collections</p>
+    <h2>Choose what you love from your gallery.</h2>
+    <p class="intro">After your session, browse your private gallery and order what speaks to you. All prints are produced on archival fine-art paper or canvas. Your $50 retainer applies to any collection.</p>
+
+    <div class="collection-grid">
+
+      <div class="collection-card">
+        <p class="coll-name">Keepsake</p>
+        <p class="coll-price"><sup>$</sup>65</p>
+        <div class="coll-divider"></div>
+        <ul class="coll-items">
+          <li>Two 5×7 or 4×6 prints</li>
+          <li>8 wallet prints</li>
+          <li>Archival 300gsm luster paper</li>
+        </ul>
+      </div>
+
+      <div class="collection-card">
+        <p class="coll-name">Cherished</p>
+        <p class="coll-price"><sup>$</sup>125</p>
+        <div class="coll-divider"></div>
+        <ul class="coll-items">
+          <li>One 8×10 print</li>
+          <li>Four 5×7 or 4×6 prints</li>
+          <li>Archival 300gsm luster paper</li>
+        </ul>
+      </div>
+
+      <div class="collection-card featured">
+        <p class="coll-name">Heirloom</p>
+        <p class="coll-price"><sup>$</sup>225</p>
+        <div class="coll-divider"></div>
+        <ul class="coll-items">
+          <li>One 11×14 print</li>
+          <li>Two 8×10 prints</li>
+          <li>Two 5×7 or 4×6 prints</li>
+          <li>Archival fine-art paper</li>
+        </ul>
+      </div>
+
+      <div class="collection-card">
+        <p class="coll-name">Legacy</p>
+        <p class="coll-price"><sup>$</sup>350</p>
+        <div class="coll-divider"></div>
+        <ul class="coll-items">
+          <li>6 full-resolution digital images</li>
+          <li>Full print release</li>
+          <li>Download &amp; share freely</li>
+          <li>Print anywhere, forever</li>
+        </ul>
+      </div>
+
+      <div class="collection-card">
+        <p class="coll-name">Signature</p>
+        <p class="coll-price"><sup>$</sup>75</p>
+        <div class="coll-divider"></div>
+        <ul class="coll-items">
+          <li>1 full-resolution digital image</li>
+          <li>Full print release</li>
+          <li>Your favorite image, yours forever</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <a href="https://calendly.com/arlen-nydam/first-communion-mini-session" class="btn-primary" style="opacity:1;animation:none;">Reserve your session →</a>
+  </section>
+
+
+  <!-- INDIVIDUAL PRINTS -->
+  <section class="prints reveal">
+    <p class="tag">À La Carte Prints &amp; Wall Art</p>
+    <h2>Order anything from your gallery.</h2>
+    <p class="intro">Don't need a full collection? Order individual prints, wall art, or canvas straight from your private gallery. Everything is produced on archival, museum-quality materials.</p>
+    <div class="prints-table-wrap">
+      <table class="prints-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Details</th>
+            <th style="text-align:right;">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5×7 or 4×6</td>
+            <td>On 300gsm luster paper</td>
+            <td class="price-col">$25</td>
+          </tr>
+          <tr>
+            <td>8×10</td>
+            <td>On 300gsm luster paper</td>
+            <td class="price-col">$40</td>
+          </tr>
+          <tr>
+            <td>10 wallets</td>
+            <td>On 300gsm luster paper</td>
+            <td class="price-col">$25</td>
+          </tr>
+          <tr>
+            <td>11×14</td>
+            <td>Mounted print / stretched canvas</td>
+            <td class="price-col">$80 <span class="alt">/ $150</span></td>
+          </tr>
+          <tr>
+            <td>16×20</td>
+            <td>Mounted print / stretched canvas</td>
+            <td class="price-col">$150 <span class="alt">/ $230</span></td>
+          </tr>
+          <tr>
+            <td>12×12</td>
+            <td>Archival fine-art paper / canvas</td>
+            <td class="price-col">$80 <span class="alt">/ $165</span></td>
+          </tr>
+          <tr>
+            <td>Single digital image</td>
+            <td>Full resolution + reproduction release</td>
+            <td class="price-col">$75</td>
+          </tr>
+          <tr>
+            <td>Custom wall art</td>
+            <td>Any size · fine-art paper or canvas</td>
+            <td class="price-col">From $0.50/sq in</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="prints-note">
+      Prices apply to private mini-sessions only. Photos taken on the day of the sacrament are governed by a separate discounted price list.<br>
+      All prints are produced on archival, museum-quality materials.
+    </p>
+  </section>
+
+
+  <!-- TESTIMONIAL -->
+  <section class="quote-section reveal">
+    <img src="e12f845b-d778-469f-ad8a-007d4c6c673f_rw_1200.jpg" alt="First Communion girl in white dress outdoors" loading="lazy" />
+    <div class="quote-inner">
+      <p class="tag">What families say</p>
+      <blockquote>
+        "Arlen has become our family's dedicated photographer and an important part of our lives. His patience, calming presence, keen eye for detail, and complete devotion to both the art and science of his craft truly set him apart."
+      </blockquote>
+      <cite>— Sonya Forster, Austin TX</cite>
+    </div>
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="final-inner">
+      <p class="tag">Spots are limited</p>
+      <h2>Reserve your child's<br><em>time slot.</em></h2>
+      <p>These sessions fill quickly. A $50 retainer holds your spot and applies toward any collection you choose.</p>
+      <div class="final-btns">
+        <a href="https://calendly.com/arlen-nydam/first-communion-mini-session" class="btn-primary">Book your session</a>
+        <a href="/cdn-cgi/l/email-protection#ddbcafb1b8b3f3b3a4b9bcb09dbab0bcb4b1f3beb2b0" class="btn-outline">Ask a question</a>
+      </div>
+      <p class="final-note"><strong>(512) 921-3182</strong> &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb8a99878e85c585928f8a86ab8c868a8287c5888486">[email&#160;protected]</a> &nbsp;·&nbsp; nydamphoto.com</p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="https://nydamphoto.com">← Back to Nydam Photography</a>
+    <span>© 2026 Nydam Photography · Austin, TX</span>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    // Only hide elements if JS is running — prevents blank page if observer fails
+    reveals.forEach(el => el.classList.add('will-animate'));
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0, rootMargin: '0px 0px -40px 0px' }
+    );
+    reveals.forEach(el => obs.observe(el));
+    // Hard fallback: show everything after 1.5s no matter what
+    setTimeout(() => reveals.forEach(el => el.classList.add('visible')), 1500);
+  </script>
+</body>
+</html>
