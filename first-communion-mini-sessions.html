@@ -1049,7 +1049,7 @@
         <div class="card-num">01</div>
         <p class="card-label">Session Length</p>
         <p class="card-value">15 Minutes</p>
-        <p class="card-desc">Short and focused — just enough time to capture genuine, relaxed portraits without tiring your child out.</p>
+        <p class="card-desc">Short and focused — just enough time to capture genuine, relaxed portraits without tiring your child out before the ceremony.</p>
       </div>
       <div class="card">
         <div class="card-num">02</div>
@@ -1111,7 +1111,7 @@
 
 
   <!-- COLLECTIONS -->
-  <section class="collections reveal" id="book">
+  <section class="collections reveal">
     <p class="tag">Collections</p>
     <h2>Choose what you love from your gallery.</h2>
     <p class="intro">After your session, browse your private gallery and order what speaks to you. All prints are produced on archival fine-art paper or canvas. Your $50 retainer applies to any collection.</p>
@@ -1265,7 +1265,7 @@
 
 
   <!-- FINAL CTA -->
-  <section class="final">
+  <section class="final" id="book">
     <div class="final-inner">
       <p class="tag">Spots are limited</p>
       <h2>Reserve your child's<br><em>time slot.</em></h2>
@@ -1276,9 +1276,9 @@
           <a href="https://calendly.com/arlen-nydam/first-communion-mini-session-at-st-mary-cathed-clone" class="btn-church-dark">St. Mary's (Taylor) <span>→</span></a>
           <a href="https://calendly.com/arlen-nydam/first-communion-mini-session" class="btn-church-dark">Emmaus Catholic Parish <span>→</span></a>
         </div>
-        <a href="/cdn-cgi/l/email-protection#5233203e373c7c3c2b36333f12353f333b3e7c313d3f" class="btn-outline">Ask a question</a>
+        <a href="/cdn-cgi/l/email-protection#9ffeedf3faf1b1f1e6fbfef2dff8f2fef6f3b1fcf0f2" class="btn-outline">Ask a question</a>
       </div>
-      <p class="final-note"><strong>(512) 921-3182</strong> &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb8a99878e85c585928f8a86ab8c868a8287c5888486">[email&#160;protected]</a> &nbsp;·&nbsp; nydamphoto.com</p>
+      <p class="final-note"><strong>(512) 921-3182</strong> &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7213001e171c5c1c0b16131f32151f131b1e5c111d1f">[email&#160;protected]</a> &nbsp;·&nbsp; nydamphoto.com</p>
     </div>
   </section>
 
@@ -1289,7 +1289,7 @@
     <span>© 2026 Nydam Photography · Austin, TX</span>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const reveals = document.querySelectorAll('.reveal');
     // Only hide elements if JS is running — prevents blank page if observer fails
     reveals.forEach(el => el.classList.add('will-animate'));
@@ -1303,12 +1303,4 @@
 
     // Sticky reserve button — appears when photo strip enters view
     const strip = document.querySelector('.photo-strip');
-    const stickyBtn = document.getElementById('stickyReserve');
-    const stripObs = new IntersectionObserver(
-      ([entry]) => stickyBtn.classList.toggle('visible', entry.isIntersecting),
-      { threshold: 0.1 }
-    );
-    if (strip) stripObs.observe(strip);
-  </script>
-</body>
-</html>
+    const stick
