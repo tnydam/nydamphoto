@@ -928,6 +928,45 @@
 
     .btn-church-dark span { color: var(--gold-light); }
 
+    /* ── STICKY RESERVE BUTTON ── */
+    .sticky-reserve {
+      position: fixed;
+      top: 1.2rem;
+      right: 1.5rem;
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-8px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .sticky-reserve.visible {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0);
+    }
+
+    .sticky-reserve a {
+      display: inline-block;
+      padding: 0.7rem 1.6rem;
+      background: var(--gold);
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      transition: background 0.2s, transform 0.18s, box-shadow 0.2s;
+    }
+
+    .sticky-reserve a:hover {
+      background: #b07e28;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(200,151,58,0.4);
+    }
+
     /* ── ANIMATIONS ── */
     @keyframes slideIn {
       from { opacity: 0; transform: translateY(22px); }
@@ -950,6 +989,11 @@
 </head>
 <body>
 
+  <!-- STICKY RESERVE BUTTON -->
+  <div class="sticky-reserve" id="stickyReserve" style="opacity:1;pointer-events:all;transform:none;">
+    <a href="#book">Reserve your session</a>
+  </div>
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-img"></div>
@@ -960,13 +1004,7 @@
       <p class="hero-sub">
         Fifteen minutes. Gentle direction. Indoor and outdoor church settings. Photographs you will frame and keep for a lifetime.
       </p>
-      <p class="church-select-label">Select your parish to book</p>
-      <div class="church-select">
-        <a href="https://calendly.com/arlen-nydam/first-communion-mini-session-at-emmaus-catholic-clone" class="btn-church btn-church-1">St. Mary Cathedral <span>→</span></a>
-        <a href="https://calendly.com/arlen-nydam/first-communion-mini-session-at-st-mary-cathed-clone" class="btn-church btn-church-2">St. Mary's (Taylor) <span>→</span></a>
-        <a href="https://calendly.com/arlen-nydam/first-communion-mini-session" class="btn-church btn-church-2" style="animation-delay:1.15s;">Emmaus Catholic Parish <span>→</span></a>
-      </div>
-      <p class="hero-urgency"><strong>Limited spots available</strong> &nbsp;·&nbsp; $50 retainer holds your time · Two Austin locations</p>
+      <p class="hero-urgency"><strong>Limited spots available</strong> &nbsp;·&nbsp; $50 retainer holds your time &nbsp;·&nbsp; Three Austin-area parishes</p>
     </div>
   </section>
 
@@ -1073,7 +1111,7 @@
 
 
   <!-- COLLECTIONS -->
-  <section class="collections reveal">
+  <section class="collections reveal" id="book">
     <p class="tag">Collections</p>
     <h2>Choose what you love from your gallery.</h2>
     <p class="intro">After your session, browse your private gallery and order what speaks to you. All prints are produced on archival fine-art paper or canvas. Your $50 retainer applies to any collection.</p>
@@ -1260,4 +1298,17 @@
       { threshold: 0, rootMargin: '0px 0px -40px 0px' }
     );
     reveals.forEach(el => obs.observe(el));
-    // Hard fallbac
+    // Hard fallback: show everything after 1.5s no matter what
+    setTimeout(() => reveals.forEach(el => el.classList.add('visible')), 1500);
+
+    // Sticky reserve button — appears when photo strip enters view
+    const strip = document.querySelector('.photo-strip');
+    const stickyBtn = document.getElementById('stickyReserve');
+    const stripObs = new IntersectionObserver(
+      ([entry]) => stickyBtn.classList.toggle('visible', entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    if (strip) stripObs.observe(strip);
+  </script>
+</body>
+</html>
