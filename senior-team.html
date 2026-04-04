@@ -25,9 +25,23 @@
     body { font-family: 'Jost', sans-serif; background: var(--ivory); color: var(--charcoal); overflow-x: hidden; }
     img { display: block; max-width: 100%; }
 
+    /* URGENCY BANNER */
+    .urgency-banner {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 201;
+      background: var(--gold);
+      color: var(--dark);
+      text-align: center;
+      padding: 8px 20px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .urgency-banner .sep { margin: 0 10px; opacity: 0.45; }
+
     /* NAV */
     .nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      position: fixed; top: 36px; left: 0; right: 0; z-index: 200;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 clamp(1.5rem, 5vw, 4rem); height: 58px;
       background: rgba(20,14,8,0.9);
@@ -38,7 +52,7 @@
     .nav-cta:hover { background: #a87a28; }
 
     /* HERO */
-    .hero { position: relative; height: 100svh; min-height: 580px; overflow: hidden; }
+    .hero { position: relative; height: 100svh; min-height: 580px; overflow: hidden; margin-top: 94px; }
     .hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.4s ease; }
     .hero-slide.active { opacity: 1; }
     .hero-slide img { width: 100%; height: 100%; object-fit: cover; }
@@ -217,9 +231,15 @@
 </head>
 <body>
 
+  <div class="urgency-banner">
+    <span>7 spots left</span>
+    <span class="sep">·</span>
+    First Kickoff in <span id="countdown">21</span> days — April 24
+  </div>
+
   <nav class="nav">
     <a href="https://nydamphoto.com" class="nav-logo">Nydam Photography</a>
-    <a href="np-seniors-apply.html" class="nav-cta" target="_blank">Join</a>
+    <a href="https://calendly.com/arlen-nydam/np-seniors-2027-kickoff" class="nav-cta" target="_blank">Reserve My Spot</a>
   </nav>
 
 
@@ -390,10 +410,10 @@
       <p class="inv-price-sub">everything included · no add-ons · no surprises</p>
     </div>
     <div class="inv-middle">
-      Secure your spot with a <strong>$150 deposit</strong> — applied to your session.
-      <span class="parent-note">The shoots before the main session are on us. The $150 applies toward the session when they book.</span>
+      Reserve your spot with a <strong>$150 deposit</strong> — applied to your session.
+      <span class="parent-note">The group and Mother's Day shoots are on us. Your $150 deposit goes toward the Official Senior Session at the close of the program.</span>
     </div>
-    <a href="np-seniors-apply.html" class="btn-primary" target="_blank">Join →</a>
+    <a href="https://calendly.com/arlen-nydam/np-seniors-2027-kickoff" class="btn-primary" target="_blank">Reserve My Spot →</a>
   </div>
 
 
@@ -416,7 +436,7 @@
   <section class="close-section">
     <div class="close-inner">
       <h2>Your moment.<br><em>Your portraits.<br>Your season.</em></h2>
-      <a href="np-seniors-apply.html" class="btn-primary" target="_blank">Join →</a>
+      <a href="https://calendly.com/arlen-nydam/np-seniors-2027-kickoff" class="btn-primary" target="_blank">Reserve My Spot →</a>
     </div>
   </section>
 
@@ -448,6 +468,17 @@
     function resetTimer() { clearInterval(timer); startTimer(); }
     dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.index); resetTimer(); }));
     startTimer();
+  </script>
+  <script>
+    // Countdown to April 24, 2026
+    (function() {
+      const kickoff = new Date('2026-04-24T00:00:00');
+      const today = new Date();
+      today.setHours(0,0,0,0);
+      const days = Math.ceil((kickoff - today) / (1000 * 60 * 60 * 24));
+      const el = document.getElementById('countdown');
+      if (el) el.textContent = days > 0 ? days : '0';
+    })();
   </script>
 </body>
 </html>
