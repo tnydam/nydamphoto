@@ -1726,6 +1726,8 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 70);
   floatBtn.classList.toggle('visible', past);
 }, { passive: true });
+nav.classList.toggle('scrolled', window.scrollY > 70);
+floatBtn.classList.toggle('visible', window.scrollY > 300);
 
 /* PHILOSOPHY WORDS, stagger in on scroll */
 const pwIO = new IntersectionObserver(entries => {
