@@ -67,18 +67,6 @@
     letter-spacing: 0.05em;
   }
 
-  /* Urgency bar */
-  .urgency {
-    background: var(--gold);
-    color: var(--dark);
-    text-align: center;
-    padding: 0.65rem 1rem;
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
   /* Main layout */
   .main {
     max-width: 640px;
@@ -475,7 +463,7 @@
 
     <!-- Q3: Schedule -->
     <div class="form-group">
-      <label>NP Seniors includes three shoots — group kickoff, Mother's Day, and individual session this spring & summer. Does that work for your family? <span class="required">*</span></label>
+      <label>NP Seniors includes three shoots across the season — a group kickoff, a shoot with your mom, and your individual session. Does that work for your family? <span class="required">*</span></label>
       <div class="radio-group" id="scheduleGroup">
         <label class="radio-item" onclick="selectRadio(this, 'scheduleGroup')">
           <input type="radio" name="schedule" value="yes">
@@ -497,24 +485,6 @@
     <div class="form-group">
       <label>Their Instagram <span class="optional">(optional)</span></label>
       <input type="text" id="instagram" placeholder="@handle">
-    </div>
-
-    <!-- Q5: Budget -->
-    <div class="form-group">
-      <label>The official senior session is $950, all-inclusive. Is that within your budget? <span class="required">*</span></label>
-      <div class="radio-group" id="budgetGroup">
-        <label class="radio-item" onclick="selectRadio(this, 'budgetGroup')">
-          <input type="radio" name="budget" value="yes">
-          <span class="radio-dot"></span>
-          <span class="radio-text">Yes</span>
-        </label>
-        <label class="radio-item" onclick="selectRadio(this, 'budgetGroup')">
-          <input type="radio" name="budget" value="no">
-          <span class="radio-dot"></span>
-          <span class="radio-text">Not right now</span>
-        </label>
-      </div>
-      <div class="field-error" id="err-budget">Please select one</div>
     </div>
 
     <hr class="divider">
@@ -541,14 +511,14 @@
 
     <div class="submit-wrap">
       <button type="submit" class="submit-btn">Send My Application →</button>
-      <p class="submit-note">We'll be in touch within 48 hours.</p>
+      <p class="submit-note">We'll be in touch within 24 hours.</p>
     </div>
 
   </form>
 
   <div class="success" id="successMsg">
     <h2>Application <em>received.</em></h2>
-    <p>Thank you — we'll review your application and reach out within 48 hours.<br><br>This is going to be an incredible season.</p>
+    <p>Thank you — we'll review your application and reach out within 24 hours.<br><br>This is going to be an incredible season.</p>
   </div>
 
 </main>
@@ -607,10 +577,6 @@
     const schedule = document.querySelector('input[name="schedule"]:checked');
     if (!schedule) { showError('schedule'); valid = false; } else hideError('schedule');
 
-    // Budget
-    const budget = document.querySelector('input[name="budget"]:checked');
-    if (!budget) { showError('budget'); valid = false; } else hideError('budget');
-
     // Parent name
     const parentName = document.getElementById('parentName').value.trim();
     if (!parentName) { showError('parentName'); valid = false; } else hideError('parentName');
@@ -630,7 +596,6 @@
       daughterName, school,
       priorities: priorityValues,
       schedule: schedule.value,
-      budget: budget.value,
       instagram,
       parentName, phone, email,
       submittedAt: new Date().toISOString()
@@ -649,7 +614,6 @@
         'School': school,
         'Priorities': priorityValues.join(', '),
         'Schedule works': schedule.value,
-        'Budget ok': budget.value,
         'Instagram': instagram || '—',
         'Contact name': parentName,
         'Phone': phone || '—',

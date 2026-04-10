@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NP Seniors 2027 | Class of 2027</title>
-  <meta name="description" content="NP Seniors 2027 — an exclusive senior portrait experience for 10 rising seniors. Multiple shoots, professional stylist, MUA & hair. 10 spots only. Applications close April 15." />
+  <meta name="description" content="NP Seniors — an exclusive senior portrait experience for a small, handpicked group of Austin seniors. Multiple shoots, professional stylist, MUA & hair included." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -25,38 +25,20 @@
     body { font-family: 'Jost', sans-serif; background: var(--ivory); color: var(--charcoal); overflow-x: hidden; }
     img { display: block; max-width: 100%; }
 
-    /* URGENCY BANNER */
-    .urgency-banner {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 201;
-      background: var(--gold);
-      color: var(--dark);
-      text-align: center;
-      padding: 8px 20px;
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
-    .urgency-banner .sep { margin: 0 10px; opacity: 0.45; }
-
     /* NAV */
     .nav {
-      position: fixed; top: 36px; left: 0; right: 0; z-index: 200;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 clamp(1.5rem, 5vw, 4rem); height: 58px;
       background: rgba(20,14,8,0.9);
       backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
     }
     .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 400; letter-spacing: 0.08em; color: rgba(255,253,249,0.7); text-decoration: none; }
-    .nav-right { display: flex; align-items: center; gap: 1.2rem; }
-    .nav-guide { font-size: 0.62rem; font-weight: 300; letter-spacing: 0.12em; color: rgba(232,201,122,0.55); text-decoration: none; border-bottom: 1px solid rgba(232,201,122,0.2); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; white-space: nowrap; }
-    .nav-guide:hover { color: var(--gold-light); border-color: var(--gold-light); }
     .nav-cta { display: inline-block; padding: 0.48rem 1.4rem; background: var(--gold); color: #fff; font-family: 'Jost', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
     .nav-cta:hover { background: #a87a28; }
-    @media (max-width: 600px) { .nav-guide { display: none; } }
 
     /* HERO */
-    .hero { position: relative; height: 100svh; min-height: 580px; overflow: hidden; margin-top: 94px; }
+    .hero { position: relative; height: 100svh; min-height: 580px; overflow: hidden; margin-top: 58px; }
     .hero-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.4s ease; }
     .hero-slide.active { opacity: 1; }
     .hero-slide img { width: 100%; height: 100%; object-fit: cover; }
@@ -218,102 +200,6 @@
     footer a:hover { color: var(--gold); }
     footer span { font-size: 0.72rem; color: rgba(255,253,249,0.15); letter-spacing: 0.04em; }
 
-    /* GUIDE CTA */
-    .guide-cta {
-      margin-top: 1.2rem;
-      font-size: 0.72rem;
-      font-weight: 300;
-      color: rgba(255,253,249,0.35);
-      letter-spacing: 0.06em;
-      line-height: 2;
-    }
-    .guide-cta a {
-      color: rgba(232,201,122,0.55);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(232,201,122,0.2);
-      padding-bottom: 1px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .guide-cta a:hover {
-      color: var(--gold-light);
-      border-color: var(--gold-light);
-    }
-    /* Guide modal */
-    .guide-modal-overlay {
-      display: none;
-      position: fixed; inset: 0; z-index: 1000;
-      background: rgba(20,14,8,0.88);
-      align-items: center; justify-content: center;
-      padding: 2rem;
-    }
-    .guide-modal-overlay.open { display: flex; }
-    .guide-modal {
-      background: var(--ivory);
-      max-width: 480px; width: 100%;
-      padding: 3rem 2.5rem;
-      position: relative;
-    }
-    .guide-modal-close {
-      position: absolute; top: 1rem; right: 1.2rem;
-      background: none; border: none;
-      font-size: 1.2rem; color: var(--light);
-      cursor: pointer; line-height: 1;
-    }
-    .guide-modal-tag {
-      font-size: 0.6rem; font-weight: 600;
-      letter-spacing: 0.3em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 0.8rem;
-    }
-    .guide-modal h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem; font-weight: 400;
-      color: var(--charcoal); margin-bottom: 0.5rem;
-      line-height: 1.2;
-    }
-    .guide-modal h3 em { font-style: italic; color: var(--gold); }
-    .guide-modal p {
-      font-size: 0.88rem; font-weight: 300;
-      color: var(--mid); line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-    .guide-modal input[type="text"],
-    .guide-modal input[type="email"] {
-      width: 100%; padding: 0.85rem 1rem;
-      border: 1px solid var(--border);
-      background: var(--warm);
-      font-family: 'Jost', sans-serif;
-      font-size: 0.88rem; font-weight: 300;
-      color: var(--charcoal);
-      margin-bottom: 0.8rem;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .guide-modal input:focus { border-color: var(--gold); }
-    .guide-modal input::placeholder { color: var(--light); }
-    .guide-modal-submit {
-      width: 100%; padding: 1rem;
-      background: var(--gold); color: #fff; border: none;
-      font-family: 'Jost', sans-serif;
-      font-size: 0.72rem; font-weight: 600;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      cursor: pointer; transition: background 0.2s;
-    }
-    .guide-modal-submit:hover { background: #a87a28; }
-    .guide-modal-note {
-      font-size: 0.72rem; font-weight: 300;
-      color: var(--light); text-align: center;
-      margin-top: 0.8rem; line-height: 1.7;
-    }
-    .guide-modal-success { text-align: center; padding: 1rem 0; }
-    .guide-modal-success h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem; font-style: italic;
-      color: var(--charcoal); margin-bottom: 0.5rem;
-    }
-    .guide-modal-success p {
-      font-size: 0.85rem; color: var(--mid); margin-bottom: 0;
-    }
-
     /* ANIMATIONS */
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
     .reveal.visible { opacity: 1; transform: none; }
@@ -331,18 +217,9 @@
 </head>
 <body>
 
-  <div class="urgency-banner">
-    <span>7 spots left</span>
-    <span class="sep">·</span>
-    First Kickoff in <span id="countdown">21</span> days — April 24
-  </div>
-
   <nav class="nav">
     <a href="https://nydamphoto.com" class="nav-logo">Nydam Photography</a>
-    <div class="nav-right">
-      <a href="#" class="nav-guide" onclick="openGuideModal(event)">Free Portrait Guide</a>
-      <a href="https://calendly.com/arlen-nydam/np-seniors-2027-kickoff" class="nav-cta" target="_blank">Reserve My Spot</a>
-    </div>
+    <a href="https://nydamphoto.com/apply" class="nav-cta">Reserve My Spot</a>
   </nav>
 
 
@@ -375,7 +252,7 @@
     <p class="manifesto-class">Class of 2027 · Nydam Photography · Austin, TX</p>
     <p class="manifesto-belief">We believe you deserve a senior session<br>that feels like <em>nothing else.</em></p>
     <h2 class="manifesto-title">So we built <em>NP Seniors 2027.</em></h2>
-    <p class="manifesto-desc">A small, handpicked group of seniors who shoot together, support each other, and walk away with portraits — and memories — they'll never forget.<br><br>You'll shoot with us multiple times across the season — a group kickoff, an individual session before school, and something truly special: a shoot with your mom on Mother's Day. For your main session, a professional stylist, MUA, and hair are included, so you show up feeling exactly how you want to look. Guys get professional photoshoot grooming — so you look sharp on camera, not like you're wearing makeup. Bring your best friend, your pet, your favorite playlist — whatever makes you feel most like yourself. Unlimited locations, unlimited outfit changes. It feels nothing like a photoshoot.<br><br>And when it's all over — fine art prints of your best images. Portraits you'll love forever.</p>
+    <p class="manifesto-desc">A small, handpicked group of seniors who shoot together, support each other, and walk away with portraits — and memories — they'll never forget.<br><br>You'll shoot with us multiple times across the season — a group kickoff, an individual session before school, and something truly special: a shoot with your mom. For your main session, a professional stylist, MUA, and hair are included, so you show up feeling exactly how you want to look. Guys get professional photoshoot grooming — so you look sharp on camera, not like you're wearing makeup. Bring your best friend, your pet, your favorite playlist — whatever makes you feel most like yourself. Unlimited locations, unlimited outfit changes. It feels nothing like a photoshoot.<br><br>And when it's all over — fine art prints of your best images. Portraits you'll love forever.</p>
   </section>
 
 
@@ -415,7 +292,7 @@
         <div class="card-body">
           <div class="card-num">01</div>
           <p class="card-label">Group Kickoff Shoot</p>
-          <p class="card-value">April – May 2026</p>
+          <p class="card-value">Early in the season</p>
           <p class="card-desc">A scouted Austin-area location. Group and individual shots. Your first content of the season.</p>
         </div>
       </div>
@@ -423,8 +300,8 @@
         <img class="card-photo" src="card-mom.jpg" alt="Mother's Day shoot Nydam Photography" loading="lazy" />
         <div class="card-body">
           <div class="card-num">02</div>
-          <p class="card-label">Mother's Day Shoot</p>
-          <p class="card-value">May 2026</p>
+          <p class="card-label">A Shoot With Mom</p>
+          <p class="card-value">Mid-season</p>
           <p class="card-desc">You and your mom, photographed together. One of the most meaningful sessions of the whole season — and the most shared.</p>
         </div>
       </div>
@@ -433,7 +310,7 @@
         <div class="card-body">
           <div class="card-num">03</div>
           <p class="card-label">Individual Shoot</p>
-          <p class="card-value">June – July 2026</p>
+          <p class="card-value">Before school starts</p>
           <p class="card-desc">Your own session before school starts. Images ready to post — timed perfectly for back-to-school. Your friends will notice.</p>
         </div>
       </div>
@@ -442,7 +319,7 @@
         <div class="card-body">
           <div class="card-num">04</div>
           <p class="card-label">Official Senior Portraits</p>
-          <p class="card-value">September – October 2026</p>
+          <p class="card-value">The full experience</p>
           <p class="card-desc">The full experience. 2 to 3 hours, unlimited locations and outfits. A week later — your Gallery Reveal, in person with Arlen.</p>
         </div>
       </div>
@@ -509,17 +386,14 @@
   <div class="investment reveal">
     <div>
       <p class="inv-label">All-inclusive senior session</p>
-      <p class="inv-price">$950</p>
+      <p class="inv-price">$750</p>
       <p class="inv-price-sub">everything included · no add-ons · no surprises</p>
     </div>
     <div class="inv-middle">
       Reserve your spot with a <strong>$150 deposit</strong> — applied to your session.
-      <span class="parent-note">The group and Mother's Day shoots are on us. Your $150 deposit goes toward the Official Senior Session at the close of the program.</span>
+      <span class="parent-note">The group and mom-and-senior shoots are on us. Your $150 deposit goes toward the Official Senior Session at the close of the program.</span>
     </div>
-    <div>
-      <a href="https://calendly.com/arlen-nydam/np-seniors-2027-kickoff" class="btn-primary" target="_blank">Reserve My Spot →</a>
-      <p class="guide-cta">Not ready yet? <a href="#" onclick="openGuideModal(event)">Download the free Senior Portrait Guide →</a></p>
-    </div>
+    <a href="https://nydamphoto.com/apply" class="btn-primary">Reserve My Spot →</a>
   </div>
 
 
@@ -542,90 +416,16 @@
   <section class="close-section">
     <div class="close-inner">
       <h2>Your moment.<br><em>Your portraits.<br>Your season.</em></h2>
-      <a href="https://calendly.com/arlen-nydam/np-seniors-2027-kickoff" class="btn-primary" target="_blank">Reserve My Spot →</a>
-      <p class="guide-cta" style="color:rgba(255,253,249,0.25);">Not ready yet? <a href="#" onclick="openGuideModal(event)" style="color:rgba(232,201,122,0.45);border-color:rgba(232,201,122,0.15);">Download the free Senior Portrait Guide →</a></p>
+      <a href="https://nydamphoto.com/apply" class="btn-primary">Reserve My Spot →</a>
     </div>
   </section>
 
-
-  <!-- GUIDE MODAL -->
-  <div class="guide-modal-overlay" id="guideModal" onclick="closeGuideModalOutside(event)">
-    <div class="guide-modal">
-      <button class="guide-modal-close" onclick="closeGuideModal()">×</button>
-      <div id="guide-form-content">
-        <p class="guide-modal-tag">Free Download</p>
-        <h3>Before You Book Anyone:<br><em>The Senior Portrait Guide</em></h3>
-        <p>Everything you need to know about outfits, hair, makeup, posing, and how to get portraits that actually feel like you. We'll send it straight to your inbox.</p>
-        <input type="text" id="guide-name" placeholder="Your name" />
-        <input type="email" id="guide-email" placeholder="Your email address" />
-        <button class="guide-modal-submit" onclick="submitGuideForm()">Send Me the Guide →</button>
-        <p class="guide-modal-note">We'll send it within minutes.<br>No spam. Just the guide.</p>
-      </div>
-      <div id="guide-success-content" style="display:none">
-        <div class="guide-modal-success">
-          <h4>Check your inbox.</h4>
-          <p>Your Senior Portrait Guide is on its way.<br>We'll be in touch soon.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <footer>
     <a href="https://nydamphoto.com">← Back to Nydam Photography</a>
     <span>© 2026 Nydam Photography · Austin, Texas · nydamphoto.com</span>
   </footer>
 
-
-  <script>
-    // Guide modal
-    function openGuideModal(e) {
-      e.preventDefault();
-      document.getElementById('guideModal').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeGuideModal() {
-      document.getElementById('guideModal').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    function closeGuideModalOutside(e) {
-      if (e.target === document.getElementById('guideModal')) closeGuideModal();
-    }
-    function submitGuideForm() {
-      const name = document.getElementById('guide-name').value.trim();
-      const email = document.getElementById('guide-email').value.trim();
-      if (!name || !email) { alert('Please enter your name and email.'); return; }
-
-      const btn = document.querySelector('.guide-modal-submit');
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-
-      fetch('https://formspree.io/f/mqegwlzn', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          _subject: 'Senior Portrait Guide Request — ' + name,
-          message: 'Please send the Senior Portrait Guide to: ' + email
-        })
-      })
-      .then(r => r.json())
-      .then(data => {
-        document.getElementById('guide-form-content').style.display = 'none';
-        document.getElementById('guide-success-content').style.display = 'block';
-        setTimeout(closeGuideModal, 4000);
-      })
-      .catch(() => {
-        // Fallback — still show success, log manually
-        document.getElementById('guide-form-content').style.display = 'none';
-        document.getElementById('guide-success-content').style.display = 'block';
-        setTimeout(closeGuideModal, 4000);
-      });
-    }
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeGuideModal();
-    });
-  </script>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const obs = new IntersectionObserver(
@@ -649,16 +449,6 @@
     dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.index); resetTimer(); }));
     startTimer();
   </script>
-  <script>
-    // Countdown to April 24, 2026
-    (function() {
-      const kickoff = new Date('2026-04-24T00:00:00');
-      const today = new Date();
-      today.setHours(0,0,0,0);
-      const days = Math.ceil((kickoff - today) / (1000 * 60 * 60 * 24));
-      const el = document.getElementById('countdown');
-      if (el) el.textContent = days > 0 ? days : '0';
-    })();
-  </script>
+
 </body>
 </html>
