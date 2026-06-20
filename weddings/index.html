@@ -152,7 +152,7 @@
 
   .authority{position:relative;overflow:hidden;background:var(--dark);padding:120px 0}
   .authority-bg{position:absolute;inset:0;z-index:0}
-  .authority-bg img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+  .authority-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;color:transparent;font-size:0}
   .authority-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,13,.62),rgba(20,17,13,.8))}
   .authority .wrap{position:relative;z-index:1}
   .authority .eyebrow{color:var(--gold-light);text-shadow:0 1px 8px rgba(0,0,0,.6)}
@@ -173,11 +173,20 @@
   .coll-link:hover{color:var(--gold)}
   .coll-retainer{max-width:620px;margin:36px auto 0;text-align:center;color:var(--muted);font-style:italic;font-size:18px}
   .collections-cta{text-align:center;margin-top:36px}
-  .approach-preview{background:var(--dark);color:var(--ivory)}
-  .approach-preview .section-head h2{color:var(--ivory)}
-  .approach-preview .section-head p{color:#CFC4B2}
+
+  .coll-band{position:relative;height:34vh;min-height:260px;max-height:380px;overflow:hidden;background:var(--dark)}
+  .coll-band img{width:100%;height:100%;object-fit:cover;object-position:center 35%;color:transparent;font-size:0}
+  .coll-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,13,.15),rgba(20,17,13,.55))}
+  .approach-preview{position:relative;overflow:hidden;background:var(--dark);color:var(--ivory);padding:120px 0}
+  .approach-bg{position:absolute;inset:0;z-index:0}
+  .approach-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;color:transparent;font-size:0}
+  .approach-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,13,.6),rgba(20,17,13,.82))}
+  .approach-preview .wrap{position:relative;z-index:1}
+  .approach-preview .eyebrow{color:var(--gold-light);text-shadow:0 1px 8px rgba(0,0,0,.6)}
+  .approach-preview .section-head h2{color:var(--ivory);text-shadow:0 2px 14px rgba(0,0,0,.6)}
+  .approach-preview .section-head p{color:#CFC4B2;text-shadow:0 1px 10px rgba(0,0,0,.5)}
   .approach-pillars{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
-  .approach-pillar{font-family:var(--sans);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#E7DECE;border:1px solid rgba(255,255,255,.25);padding:10px 20px}
+  .approach-pillar{font-family:var(--sans);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#E7DECE;border:1px solid rgba(255,255,255,.25);padding:10px 20px;background:rgba(20,17,13,.45);text-shadow:0 1px 6px rgba(0,0,0,.5)}
   .approach-preview .btn-outline{color:var(--ivory);border-color:var(--ivory);display:block;width:max-content;margin:0 auto}
   .approach-preview .btn-outline:hover{background:var(--ivory);color:var(--dark)}
   .guides-preview{background:var(--cream)}
@@ -224,7 +233,9 @@
     .w-hero-ctas{flex-direction:column;align-items:stretch}
     .flow-step{grid-template-columns:1fr;gap:8px}
     .photo-break{height:36vh;min-height:260px}
+    .coll-band{height:24vh;min-height:180px}
     .authority{padding:80px 0}
+    .approach-preview{padding:80px 0}
     .footer-grid{grid-template-columns:1fr}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
@@ -370,6 +381,9 @@
     <p class="authority-close">Every wedding is different. The goal is always the same: <strong>preserve the people and moments that matter most.</strong></p>
   </div>
 </section>
+<div class="coll-band">
+  <img src="/weddings-collections-band.jpg" alt="Garden wedding ceremony, Santa Ana, California, Nydam Photography" loading="lazy">
+</div>
 <section class="section" id="collections" aria-labelledby="coll-h2">
   <div class="wrap">
     <div class="section-head">
@@ -403,6 +417,9 @@
   </div>
 </section>
 <section class="section approach-preview" aria-labelledby="approach-h2">
+  <div class="approach-bg">
+    <img src="/weddings-approach-bg.jpg" alt="Editorial wedding photography, Nydam Photography approach" loading="lazy">
+  </div>
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Our Approach</span>
