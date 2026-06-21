@@ -146,7 +146,7 @@
   /* Portfolio Galleries */
   .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
   .gallery-card{background:#fff;border:1px solid var(--line)}
-  .gallery-strip{display:grid;grid-template-columns:repeat(3,1fr);aspect-ratio:3/1;background:var(--cream);overflow:hidden}
+  .gallery-strip{aspect-ratio:4/3;background:var(--cream);overflow:hidden}
   .gallery-strip img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
   .gallery-card-body{padding:24px}
   .gallery-card h3{font-family:var(--display);font-weight:400;font-size:21px;color:var(--dark);margin-bottom:8px}
@@ -155,12 +155,16 @@
   .gallery-card:hover .gallery-card-link{color:var(--gold)}
 
   /* Wedding / Senior preview bands */
-  .preview-band{background:var(--dark);color:var(--ivory)}
-  .preview-band .eyebrow{color:var(--gold-light)}
-  .preview-band h2{font-family:var(--display);font-weight:400;font-size:clamp(24px,3.2vw,32px);color:var(--ivory);margin:14px 0 18px}
-  .preview-band p{color:#CFC4B2;font-size:18px;max-width:620px;margin-bottom:28px}
+  .preview-band{position:relative;overflow:hidden;background:var(--dark);color:var(--ivory)}
+  .preview-bg{position:absolute;inset:0;z-index:0}
+  .preview-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;color:transparent;font-size:0}
+  .preview-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,13,.6),rgba(20,17,13,.82))}
+  .preview-band .wrap{position:relative;z-index:1}
+  .preview-band .eyebrow{color:var(--gold-light);text-shadow:0 1px 8px rgba(0,0,0,.6)}
+  .preview-band h2{font-family:var(--display);font-weight:400;font-size:clamp(24px,3.2vw,32px);color:var(--ivory);margin:14px 0 18px;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+  .preview-band p{color:#CFC4B2;font-size:18px;max-width:620px;margin-bottom:28px;text-shadow:0 1px 10px rgba(0,0,0,.5)}
   .preview-links{display:flex;flex-wrap:wrap;gap:14px}
-  .preview-links a{font-family:var(--sans);font-size:13px;letter-spacing:.06em;color:var(--ivory);border:1px solid rgba(255,255,255,.35);padding:11px 22px}
+  .preview-links a{font-family:var(--sans);font-size:13px;letter-spacing:.06em;color:var(--ivory);border:1px solid rgba(255,255,255,.35);padding:11px 22px;background:rgba(20,17,13,.45);text-shadow:0 1px 6px rgba(0,0,0,.5)}
   .preview-links a:hover{border-color:var(--gold-light);color:var(--gold-light)}
 
   /* Final CTA */
@@ -235,27 +239,6 @@
   </div>
 </section>
 
-<!-- BROWSE BY SESSION TYPE -->
-<section class="section" aria-labelledby="browse-h2">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Find Your Session</span>
-      <h2 id="browse-h2">Browse by Session Type</h2>
-      <p>Nine ways we work with clients across Austin and Central Texas.</p>
-    </div>
-    <div class="browse-grid">
-      <a href="/weddings/" class="browse-card"><h3>Weddings</h3><span>Editorial Coverage</span></a>
-      <a href="/seniors/" class="browse-card"><h3>Senior Portraits</h3><span>Editorial &amp; Dance-Inspired</span></a>
-      <a href="/engagements/" class="browse-card"><h3>Engagements</h3><span>Before the Wedding</span></a>
-      <a href="/families/" class="browse-card"><h3>Families</h3><span>Generational Portraits</span></a>
-      <a href="/quinceanera/" class="browse-card"><h3>Quinceañera</h3><span>A Milestone Celebration</span></a>
-      <a href="/sacraments/" class="browse-card"><h3>Catholic Sacraments</h3><span>Baptisms &amp; Communions</span></a>
-      <a href="/corporate/" class="browse-card"><h3>Corporate &amp; Branding</h3><span>Headshots &amp; Brand Photography</span></a>
-      <a href="/sports/" class="browse-card"><h3>Sports</h3><span>Team &amp; Individual Portraits</span></a>
-      <a href="/events/" class="browse-card"><h3>Events</h3><span>Celebrations of Every Kind</span></a>
-    </div>
-  </div>
-</section>
 
 <!-- FULL STORIES -->
 <section class="section stories-sub" id="stories" aria-labelledby="full-stories-h2">
@@ -276,7 +259,7 @@
         <a href="/portfolio/stories/st-mary-cathedral-charles-johnson-house-laura-joseph/" class="story-chip"><h4>Laura &amp; Joseph</h4><span>Live Story</span></a>
         <a href="/portfolio/stories/st-mary-cathedral-royal-sonesta-michael-hannah/" class="story-chip"><h4>Michael &amp; Hannah</h4><span>Live Story</span></a>
         <a href="/portfolio/stories/the-hacienda-santa-ana-jim-anna/" class="story-chip"><h4>Jim &amp; Anna</h4><span>Live Story</span></a>
-        <div class="story-chip is-soon"><h4>Alexandra &amp; Matt</h4><span>Coming Soon</span></div>
+        <a href="/portfolio/stories/st-mary-cathedral-four-seasons-alexandra-matt/" class="story-chip"><h4>Alexandra &amp; Matt</h4><span>Live Story</span></a>
       </div>
     </div>
 
@@ -310,8 +293,6 @@
       <article class="gallery-card">
         <div class="gallery-strip">
           <img src="/austin-corporate-branding.jpg" alt="Corporate and branding photography" loading="lazy">
-          <img src="/austin-corporate-branding.jpg" alt="Corporate headshot photography" loading="lazy">
-          <img src="/austin-corporate-branding.jpg" alt="Brand photography session" loading="lazy">
         </div>
         <div class="gallery-card-body">
           <h3>Corporate &amp; Branding</h3>
@@ -323,8 +304,6 @@
       <article class="gallery-card">
         <div class="gallery-strip">
           <img src="/austin-event-photography.jpg" alt="Event photography" loading="lazy">
-          <img src="/austin-event-photography.jpg" alt="Celebration photography" loading="lazy">
-          <img src="/austin-event-photography.jpg" alt="Austin event coverage" loading="lazy">
         </div>
         <div class="gallery-card-body">
           <h3>Events</h3>
@@ -336,8 +315,6 @@
       <article class="gallery-card">
         <div class="gallery-strip">
           <img src="/austin-sports-photography.jpg" alt="Sports portrait photography" loading="lazy">
-          <img src="/austin-sports-photography.jpg" alt="Team sports photography" loading="lazy">
-          <img src="/austin-sports-photography.jpg" alt="Individual athlete portraits" loading="lazy">
         </div>
         <div class="gallery-card-body">
           <h3>Sports</h3>
@@ -349,8 +326,6 @@
       <article class="gallery-card">
         <div class="gallery-strip">
           <img src="/austin-catholic-photography.jpg" alt="Catholic sacramental photography" loading="lazy">
-          <img src="/austin-catholic-photography.jpg" alt="Baptism photography" loading="lazy">
-          <img src="/austin-catholic-photography.jpg" alt="First Communion photography" loading="lazy">
         </div>
         <div class="gallery-card-body">
           <h3>Catholic Sacraments</h3>
@@ -362,8 +337,6 @@
       <article class="gallery-card">
         <div class="gallery-strip">
           <img src="/austin-family-photography.jpg" alt="Family portrait photography" loading="lazy">
-          <img src="/austin-family-photography.jpg" alt="Generational family portraits" loading="lazy">
-          <img src="/austin-family-photography.jpg" alt="Austin family photography" loading="lazy">
         </div>
         <div class="gallery-card-body">
           <h3>Family Portraits</h3>
@@ -375,8 +348,6 @@
       <article class="gallery-card">
         <div class="gallery-strip">
           <img src="/austin-quinceanera-photography.jpg" alt="Quinceañera photography" loading="lazy">
-          <img src="/austin-quinceanera-photography.jpg" alt="Quinceañera celebration photography" loading="lazy">
-          <img src="/austin-quinceanera-photography.jpg" alt="Austin Quinceañera photographer" loading="lazy">
         </div>
         <div class="gallery-card-body">
           <h3>Quinceañera</h3>
@@ -388,9 +359,33 @@
     </div>
   </div>
 </section>
+<!-- BROWSE BY SESSION TYPE -->
+<section class="section" aria-labelledby="browse-h2">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Find Your Session</span>
+      <h2 id="browse-h2">Browse by Session Type</h2>
+      <p>Nine ways we work with clients across Austin and Central Texas.</p>
+    </div>
+    <div class="browse-grid">
+      <a href="/weddings/" class="browse-card"><h3>Weddings</h3><span>Editorial Coverage</span></a>
+      <a href="/seniors/" class="browse-card"><h3>Senior Portraits</h3><span>Editorial &amp; Dance-Inspired</span></a>
+      <a href="/engagements/" class="browse-card"><h3>Engagements</h3><span>Before the Wedding</span></a>
+      <a href="/families/" class="browse-card"><h3>Families</h3><span>Generational Portraits</span></a>
+      <a href="/quinceanera/" class="browse-card"><h3>Quinceañera</h3><span>A Milestone Celebration</span></a>
+      <a href="/sacraments/" class="browse-card"><h3>Catholic Sacraments</h3><span>Baptisms &amp; Communions</span></a>
+      <a href="/corporate/" class="browse-card"><h3>Corporate &amp; Branding</h3><span>Headshots &amp; Brand Photography</span></a>
+      <a href="/sports/" class="browse-card"><h3>Sports</h3><span>Team &amp; Individual Portraits</span></a>
+      <a href="/events/" class="browse-card"><h3>Events</h3><span>Celebrations of Every Kind</span></a>
+    </div>
+  </div>
+</section>
 
 <!-- WEDDING PORTFOLIO PREVIEW -->
 <section class="section preview-band" aria-labelledby="wed-preview-h2">
+  <div class="preview-bg">
+    <img src="/austin-wedding-feature.jpg" alt="Austin wedding photography by Nydam Photography" loading="lazy">
+  </div>
   <div class="wrap">
     <span class="eyebrow">Weddings</span>
     <h2 id="wed-preview-h2">Austin Wedding Photography</h2>
@@ -405,7 +400,10 @@
 </section>
 
 <!-- SENIOR PORTFOLIO PREVIEW -->
-<section class="section preview-band" style="background:#171310" aria-labelledby="sen-preview-h2">
+<section class="section preview-band" aria-labelledby="sen-preview-h2">
+  <div class="preview-bg">
+    <img src="/austin-senior-feature.jpg" alt="Austin senior portraits by Nydam Photography" loading="lazy">
+  </div>
   <div class="wrap">
     <span class="eyebrow">Senior Portraits</span>
     <h2 id="sen-preview-h2">Austin Senior Portraits</h2>
