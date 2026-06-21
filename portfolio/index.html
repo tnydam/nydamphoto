@@ -136,12 +136,17 @@
   .stories-row-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:30px;flex-wrap:wrap;gap:10px}
   .stories-row-head h3{font-family:var(--display);font-weight:400;font-size:26px;color:var(--dark)}
   .stories-list{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-  .story-chip{background:#fff;border:1px solid var(--line);padding:20px 16px;text-align:center;transition:.2s}
+  .story-chip{background:#fff;border:1px solid var(--line);transition:.2s;display:flex;flex-direction:column;overflow:hidden}
   .story-chip:hover{border-color:var(--gold)}
+  .story-chip-img{aspect-ratio:4/3;background:var(--cream)}
+  .story-chip-img img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+  .story-chip-body{padding:18px 16px;text-align:center}
   .story-chip h4{font-family:var(--display);font-weight:400;font-size:17px;color:var(--dark);margin-bottom:6px}
   .story-chip span{font-family:var(--sans);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
-  .story-chip.is-soon{opacity:.6}
+  .story-chip.is-soon{opacity:.7}
   .story-chip.is-soon span{color:var(--muted)}
+  .story-chip.is-soon .story-chip-img{display:flex;align-items:center;justify-content:center}
+  .story-chip.is-soon .story-chip-img::after{content:"Coming Soon";font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
   /* Portfolio Galleries */
   .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
@@ -255,11 +260,26 @@
         <a href="/weddings/" class="feat-card-link" style="border-bottom:1px solid var(--gold);font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase">Explore Wedding Photography →</a>
       </div>
       <div class="stories-list">
-        <a href="/portfolio/stories/westlake-church-eberly-sonya-mark/" class="story-chip"><h4>Sonya &amp; Mark</h4><span>Live Story</span></a>
-        <a href="/portfolio/stories/st-mary-cathedral-charles-johnson-house-laura-joseph/" class="story-chip"><h4>Laura &amp; Joseph</h4><span>Live Story</span></a>
-        <a href="/portfolio/stories/st-mary-cathedral-royal-sonesta-michael-hannah/" class="story-chip"><h4>Michael &amp; Hannah</h4><span>Live Story</span></a>
-        <a href="/portfolio/stories/the-hacienda-santa-ana-jim-anna/" class="story-chip"><h4>Jim &amp; Anna</h4><span>Live Story</span></a>
-        <a href="/portfolio/stories/st-mary-cathedral-four-seasons-alexandra-matt/" class="story-chip"><h4>Alexandra &amp; Matt</h4><span>Live Story</span></a>
+        <a href="/portfolio/stories/westlake-church-eberly-sonya-mark/" class="story-chip">
+          <div class="story-chip-img"><img src="/story-eberly-austin.jpg" alt="Sonya and Mark's wedding" loading="lazy"></div>
+          <div class="story-chip-body"><h4>Sonya &amp; Mark</h4><span>Live Story</span></div>
+        </a>
+        <a href="/portfolio/stories/st-mary-cathedral-charles-johnson-house-laura-joseph/" class="story-chip">
+          <div class="story-chip-img"><img src="/story-laura-joseph-cathedral.jpg" alt="Laura and Joseph's wedding" loading="lazy"></div>
+          <div class="story-chip-body"><h4>Laura &amp; Joseph</h4><span>Live Story</span></div>
+        </a>
+        <a href="/portfolio/stories/st-mary-cathedral-royal-sonesta-michael-hannah/" class="story-chip">
+          <div class="story-chip-img"><img src="/story-michael-hannah-cathedral.jpg" alt="Michael and Hannah's wedding" loading="lazy"></div>
+          <div class="story-chip-body"><h4>Michael &amp; Hannah</h4><span>Live Story</span></div>
+        </a>
+        <a href="/portfolio/stories/the-hacienda-santa-ana-jim-anna/" class="story-chip">
+          <div class="story-chip-img"><img src="/story-jim-anna-santa-ana.jpg" alt="Jim and Anna's wedding" loading="lazy"></div>
+          <div class="story-chip-body"><h4>Jim &amp; Anna</h4><span>Live Story</span></div>
+        </a>
+        <a href="/portfolio/stories/st-mary-cathedral-four-seasons-alexandra-matt/" class="story-chip">
+          <div class="story-chip-img"><img src="/story-alexandra-matt-four-seasons.jpg" alt="Alexandra and Matt's wedding" loading="lazy"></div>
+          <div class="story-chip-body"><h4>Alexandra &amp; Matt</h4><span>Live Story</span></div>
+        </a>
       </div>
     </div>
 
@@ -269,11 +289,26 @@
         <a href="/seniors/" class="feat-card-link" style="border-bottom:1px solid var(--gold);font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase">Explore Senior Portraits →</a>
       </div>
       <div class="stories-list">
-        <a href="/portfolio/stories/brynley-2027-domain/" class="story-chip"><h4>Brynley</h4><span>Live Story</span></a>
-        <div class="story-chip is-soon"><h4>Carley</h4><span>Coming Soon</span></div>
-        <div class="story-chip is-soon"><h4>Zach</h4><span>Coming Soon</span></div>
-        <div class="story-chip is-soon"><h4>Bella</h4><span>Coming Soon</span></div>
-        <div class="story-chip is-soon"><h4>Gabi</h4><span>Coming Soon</span></div>
+        <a href="/portfolio/stories/brynley-2027-domain/" class="story-chip">
+          <div class="story-chip-img"><img src="/story-brynley-senior.jpg" alt="Brynley's senior portrait session at The Domain" loading="lazy"></div>
+          <div class="story-chip-body"><h4>Brynley</h4><span>Live Story</span></div>
+        </a>
+        <div class="story-chip is-soon">
+          <div class="story-chip-img"></div>
+          <div class="story-chip-body"><h4>Carley</h4><span>Coming Soon</span></div>
+        </div>
+        <div class="story-chip is-soon">
+          <div class="story-chip-img"></div>
+          <div class="story-chip-body"><h4>Zach</h4><span>Coming Soon</span></div>
+        </div>
+        <div class="story-chip is-soon">
+          <div class="story-chip-img"></div>
+          <div class="story-chip-body"><h4>Bella</h4><span>Coming Soon</span></div>
+        </div>
+        <div class="story-chip is-soon">
+          <div class="story-chip-img"></div>
+          <div class="story-chip-body"><h4>Gabi</h4><span>Coming Soon</span></div>
+        </div>
       </div>
     </div>
 
