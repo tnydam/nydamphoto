@@ -137,6 +137,8 @@
   .feature-row.reverse{grid-template-columns:1.1fr 1fr}
   .feature-row.reverse .feature-img{order:2}
   .feature-img{aspect-ratio:4/5;background:var(--cream);overflow:hidden}
+  .feature-img.tall{aspect-ratio:9/16;max-width:480px}
+  .feature-row.tall-layout{grid-template-columns:.85fr 1.15fr}
   .feature-img img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
   .feature-text h2{font-family:var(--display);font-weight:400;font-size:clamp(24px,3.2vw,32px);color:var(--dark);margin-bottom:18px}
   .feature-text p{color:var(--muted);font-size:19px;margin-bottom:18px}
@@ -205,8 +207,9 @@
 
   @media(max-width:920px){
     .balance-grid,.related-grid{grid-template-columns:1fr}
-    .feature-row,.feature-row.reverse{grid-template-columns:1fr;gap:30px}
+    .feature-row,.feature-row.reverse,.feature-row.tall-layout{grid-template-columns:1fr;gap:30px}
     .feature-row.reverse .feature-img{order:0}
+    .feature-img.tall{max-width:320px;margin:0 auto}
     .steps-grid{grid-template-columns:repeat(2,1fr)}
     .footer-grid{grid-template-columns:1fr 1fr}
   }
@@ -256,7 +259,7 @@
     <h1>Wedding Photography That Feels Like the Day Itself</h1>
     <p>A wedding day is not a photoshoot. It is a living story — emotional, unpredictable, fast-moving, and full of moments you may not notice until you see them again.</p>
     <div class="a-hero-ctas">
-      <a href="/portfolio/#weddings" class="btn btn-gold">See Real Wedding Stories</a>
+      <a href="/portfolio/stories/weddings/" class="btn btn-gold">See Real Wedding Stories</a>
       <a href="/weddings/collections/" class="btn btn-outline">View Wedding Collections</a>
     </div>
   </div>
@@ -315,8 +318,8 @@
 <!-- EDITORIAL PORTRAITS -->
 <section class="section" aria-labelledby="portraits-h2">
   <div class="wrap">
-    <div class="feature-row">
-      <div class="feature-img"><img src="/weddings-photo-break-bridal-portrait.jpg" alt="Editorial wedding portrait, Nydam Photography" loading="lazy"></div>
+    <div class="feature-row tall-layout">
+      <div class="feature-img tall"><img src="/weddings-photo-break-bridal-portrait.jpg" alt="Editorial wedding portrait, Nydam Photography" loading="lazy"></div>
       <div class="feature-text">
         <span class="eyebrow">Editorial Portraits</span>
         <h2 id="portraits-h2">Portraits With Intention</h2>
@@ -409,21 +412,21 @@
         </div>
       </article>
       <article class="related-card">
-        <div class="related-card-img"><img src="/story-michael-hannah-cathedral.jpg" alt="Michael and Hannah's wedding, St Mary Cathedral" loading="lazy"></div>
+        <div class="related-card-img"><img src="/story-alexandra-matt-four-seasons.jpg" alt="Alexandra and Matt's wedding, St Mary Cathedral and Four Seasons" loading="lazy"></div>
         <div class="related-card-body">
-          <span class="related-card-meta">St Mary Cathedral &amp; Royal Sonesta</span>
-          <h4>Michael &amp; Hannah</h4>
-          <p>A full Nuptial Mass, followed by a celebration downtown.</p>
-          <a href="/portfolio/stories/st-mary-cathedral-royal-sonesta-michael-hannah/" class="related-card-link">View the Story →</a>
+          <span class="related-card-meta">St Mary Cathedral &amp; Four Seasons</span>
+          <h4>Alexandra &amp; Matt</h4>
+          <p>A Catholic ceremony, followed by an elegant reception downtown.</p>
+          <a href="/portfolio/stories/st-mary-cathedral-four-seasons-alexandra-matt/" class="related-card-link">View the Story →</a>
         </div>
       </article>
       <article class="related-card">
-        <div class="related-card-img"><img src="/story-jim-anna-santa-ana.jpg" alt="Jim and Anna's wedding at The Hacienda, Santa Ana" loading="lazy"></div>
+        <div class="related-card-img"><img src="/story-laura-joseph-cathedral.jpg" alt="Laura and Joseph's wedding, St Mary Cathedral" loading="lazy"></div>
         <div class="related-card-body">
-          <span class="related-card-meta">The Hacienda · Santa Ana, California</span>
-          <h4>Jim &amp; Anna</h4>
-          <p>A garden ceremony, ribbon wands, and a celebration that followed.</p>
-          <a href="/portfolio/stories/the-hacienda-santa-ana-jim-anna/" class="related-card-link">View the Story →</a>
+          <span class="related-card-meta">St Mary Cathedral &amp; Charles Johnson House</span>
+          <h4>Laura &amp; Joseph</h4>
+          <p>A full Nuptial Mass, followed by a reception at the Charles Johnson House American Legion.</p>
+          <a href="/portfolio/stories/st-mary-cathedral-charles-johnson-house-laura-joseph/" class="related-card-link">View the Story →</a>
         </div>
       </article>
     </div>
@@ -474,7 +477,7 @@
     <h2 id="cta-h2">Looking for Wedding Photography That Feels Like You?</h2>
     <div class="a-cta-paths">
       <a href="/weddings/collections/" class="btn btn-gold">View Wedding Collections</a>
-      <a href="/portfolio/#weddings" class="btn btn-outline">See Real Wedding Stories</a>
+      <a href="/portfolio/stories/weddings/" class="btn btn-outline">See Real Wedding Stories</a>
       <a href="/book/" class="btn btn-outline">Check Availability</a>
       <a href="/#contact" class="btn btn-outline">Send a Message</a>
     </div>
@@ -508,7 +511,7 @@
         <h4>Weddings</h4>
         <ul>
           <li><a href="/weddings/collections/">Collections</a></li>
-          <li><a href="/portfolio/#weddings">Real Weddings</a></li>
+          <li><a href="/portfolio/stories/weddings/">Real Weddings</a></li>
           <li><a href="/weddings/guides/">Wedding Guides</a></li>
           <li><a href="/weddings/our-approach/">Our Approach</a></li>
         </ul>
