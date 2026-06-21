@@ -151,9 +151,17 @@
   .example-result{font-family:var(--display);font-size:22px;color:var(--dark)}
 
   /* Section 4 — frequently added */
+  .added-section{position:relative;overflow:hidden;background:var(--dark);padding:120px 0}
+  .added-bg{position:absolute;inset:0;z-index:0}
+  .added-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;color:transparent;font-size:0}
+  .added-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,13,.55),rgba(20,17,13,.78))}
+  .added-section .wrap{position:relative;z-index:1}
+  .added-section .eyebrow{color:var(--gold-light);text-shadow:0 1px 8px rgba(0,0,0,.6)}
+  .added-section .section-head h2{color:var(--ivory);text-shadow:0 2px 14px rgba(0,0,0,.6)}
+  .added-section .section-head p{color:#CFC4B2;text-shadow:0 1px 10px rgba(0,0,0,.5)}
   .added-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;max-width:880px;margin:0 auto}
-  .added-card h3{font-family:var(--display);font-weight:400;font-size:21px;color:var(--dark);margin-bottom:10px}
-  .added-card p{color:var(--muted);font-size:18px}
+  .added-card h3{font-family:var(--display);font-weight:400;font-size:21px;color:var(--ivory);margin-bottom:10px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+  .added-card p{color:#CFC4B2;font-size:18px;text-shadow:0 1px 8px rgba(0,0,0,.45)}
 
   /* Section 5 — real weddings */
   .stories{background:var(--cream)}
@@ -173,6 +181,18 @@
   .moments-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1200px;margin:0 auto}
   .moments-grid img{aspect-ratio:1;width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
   .moments-label{text-align:center;margin-bottom:30px}
+
+  .why-block{position:relative;overflow:hidden;background:var(--dark);color:var(--ivory);padding:120px 0}
+  .why-bg{position:absolute;inset:0;z-index:0}
+  .why-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;color:transparent;font-size:0}
+  .why-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,13,.62),rgba(20,17,13,.82))}
+  .why-block .wrap{position:relative;z-index:1}
+  .why-block .section-head h2{color:var(--ivory);text-shadow:0 2px 14px rgba(0,0,0,.6)}
+  .why-block .section-head p{color:#CFC4B2;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+  .why-block .eyebrow{color:var(--gold-light);text-shadow:0 1px 8px rgba(0,0,0,.6)}
+  .why-list{max-width:760px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:18px 32px}
+  .why-item{display:flex;align-items:flex-start;gap:14px;font-family:var(--sans);font-size:16px;color:#E7DECE;letter-spacing:.01em;text-shadow:0 1px 6px rgba(0,0,0,.55)}
+  .why-item::before{content:"—";color:var(--gold);flex-shrink:0}
 
   .coll-photo-band{position:relative;height:34vh;min-height:260px;max-height:380px;overflow:hidden;background:var(--dark)}
   .coll-photo-band img{width:100%;height:100%;object-fit:cover;object-position:center 35%;color:transparent;font-size:0}
@@ -224,6 +244,9 @@
     .c-hero-ctas{flex-direction:column;align-items:stretch}
     .coll-photo-band{height:22vh;min-height:180px}
     .moments-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+    .why-list{grid-template-columns:1fr}
+    .why-block{padding:80px 0}
+    .added-section{padding:80px 0}
     .footer-grid{grid-template-columns:1fr}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
@@ -258,11 +281,17 @@
     <h1>Choose the Collection That Fits Your Wedding Story</h1>
     <p>Every wedding is different. Whether you're planning an intimate ceremony, a full wedding day, or a multi-event celebration, we'll help you choose the coverage that fits naturally.</p>
     <div class="c-hero-ctas">
-      <a href="/book/" class="btn btn-gold">Check Availability</a>
-      <a href="/weddings/stories/" class="btn btn-outline">See Real Wedding Stories</a>
+      <a href="/book/" class="btn btn-gold">Reserve Your Wedding Date</a>
+      <a href="/portfolio/stories/" class="btn btn-outline">See Real Wedding Stories</a>
     </div>
   </div>
 </section>
+
+<!-- IMAGE RULE: wide, short box (object-fit:cover). DO NOT use a tight face/portrait
+     close-up here — use a WIDE shot with real depth and any faces small in frame. -->
+<div class="coll-photo-band">
+  <img src="/weddings-collections-hero-band.jpg" alt="Austin wedding photography by Nydam Photography" loading="lazy">
+</div>
 
 <!-- SECTION 1: HOW COUPLES DECIDE -->
 <section class="section decide" aria-labelledby="decide-h2">
@@ -303,7 +332,7 @@
         <p class="coll-body">The Essential Collection is designed for celebrations where every guest matters and every moment feels personal. Whether you're planning an intimate Hill Country wedding, a private ceremony, or a thoughtfully curated gathering with your closest family and friends, this collection focuses on preserving what matters most.</p>
         <p class="coll-feel">You'll receive the same care, attention, and storytelling approach we bring to every wedding — capturing the emotion, the relationships, and the moments you'll return to for years to come.</p>
         <div class="coll-price-row"><span class="coll-price">$2,500 + tax</span></div>
-        <a href="/book/" class="btn btn-outline coll-cta">Check Availability</a>
+        <a href="https://calendly.com/nydamphotography/wedding-photography-order" target="_blank" rel="noopener" class="btn btn-outline coll-cta">Check Availability</a>
         <details class="coll-details">
           <summary>Collection Includes</summary>
           <div class="coll-details-body">
@@ -322,10 +351,10 @@
         <span class="coll-block-badge">The Collection Most Couples Choose</span>
         <div class="coll-block-kicker">For couples who want their wedding day remembered exactly as it felt.</div>
         <h3>Signature Collection</h3>
-        <p class="coll-body">From the anticipation of getting ready to the final moments of celebration, the Signature Collection is built for a complete wedding-day story. It offers the flexibility to document the day naturally, without constantly watching the clock or rushing through moments that deserve space to unfold.</p>
+        <p class="coll-body">The Signature Collection is designed for couples who want to experience their wedding day without feeling rushed by it. There is time for the anticipation, time for the portraits, time for the celebration, and time for the unexpected moments that become the photographs people remember most.</p>
         <p class="coll-feel">This collection includes a second photographer and a complimentary engagement session, giving us the opportunity to work together before the wedding day and helping your portraits feel effortless and genuinely you.</p>
         <div class="coll-price-row"><span class="coll-price">$5,000 + tax</span></div>
-        <a href="/book/" class="btn btn-outline coll-cta">Check Availability</a>
+        <a href="https://calendly.com/nydamphotography/wedding-photography-signature-collection" target="_blank" rel="noopener" class="btn btn-outline coll-cta">Check Availability</a>
         <details class="coll-details">
           <summary>Collection Includes</summary>
           <div class="coll-details-body">
@@ -346,9 +375,9 @@
         <div class="coll-block-kicker">For extraordinary celebrations, wedding weekends, and once-in-a-lifetime gatherings.</div>
         <h3>Wedding Story Collection</h3>
         <p class="coll-body">Some weddings are more than a single day. They bring together family and friends from across the country, span multiple events, and deserve a level of coverage that allows every chapter of the story to be preserved.</p>
-        <p class="coll-feel">The Wedding Story Collection is our most comprehensive experience. With extended coverage, a second photographer, album design, and the flexibility to document every meaningful part of the celebration, it is designed for couples who want nothing missed and nothing rushed. Because decades from now, the photographs won't simply remind you what happened. They'll remind you how it felt.</p>
+        <p class="coll-feel">The Wedding Story Collection is our most comprehensive experience. With extended coverage, a second photographer, album design, and the flexibility to document every meaningful part of the celebration, it is designed for couples who want nothing missed and nothing rushed. Because decades from now, the photographs won't simply remind you what happened. They'll remind you how it felt. Some celebrations deserve more than coverage. They deserve a legacy.</p>
         <div class="coll-price-row"><span class="coll-price">$6,500 + tax</span></div>
-        <a href="/book/" class="btn btn-outline coll-cta">Check Availability</a>
+        <a href="https://calendly.com/nydamphotography/wedding-photography-weddingstory-collection" target="_blank" rel="noopener" class="btn btn-outline coll-cta">Check Availability</a>
         <details class="coll-details">
           <summary>Collection Includes</summary>
           <div class="coll-details-body">
@@ -382,7 +411,7 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">A Few Examples</span>
-      <h2 id="examples-h2">Which Collection Is Right for You?</h2>
+      <h2 id="examples-h2">How Couples Typically Choose</h2>
       <p>A quick way to see how other couples have chosen.</p>
     </div>
     <div class="examples-grid">
@@ -409,7 +438,12 @@
 </section>
 
 <!-- SECTION 4: FREQUENTLY ADDED EXPERIENCES -->
-<section class="section" aria-labelledby="added-h2">
+<!-- IMAGE RULE: wide, short box (object-fit:cover). DO NOT use a tight face/portrait
+     close-up here — use a WIDE shot with real depth and any faces small in frame. -->
+<section class="section added-section" aria-labelledby="added-h2">
+  <div class="added-bg">
+    <img src="/weddings-collections-added-bg.jpg" alt="Austin wedding photography, Nydam Photography" loading="lazy">
+  </div>
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Frequently Added</span>
@@ -460,7 +494,7 @@
           <span class="story-card-meta">Wedding Story Collection · St Mary Cathedral &amp; Hotel</span>
           <h3>Michael &amp; Hannah</h3>
           <p>A full Nuptial Mass and hotel reception, covered comprehensively from the cathedral to the dance floor.</p>
-          <a href="/weddings/stories/" class="story-card-link">View the Story →</a>
+          <a href="/portfolio/stories/" class="story-card-link">View the Story →</a>
         </div>
       </article>
       <article class="story-card">
@@ -469,11 +503,11 @@
           <span class="story-card-meta">Signature Collection · Garden Ceremony, Santa Ana</span>
           <h3>Jim &amp; Anna</h3>
           <p>A sunlit courtyard ceremony and a recessional full of ribbon wands and laughter.</p>
-          <a href="/weddings/stories/" class="story-card-link">View the Story →</a>
+          <a href="/portfolio/stories/" class="story-card-link">View the Story →</a>
         </div>
       </article>
     </div>
-    <div class="stories-cta"><a href="/weddings/stories/" class="btn btn-outline">See All Wedding Stories →</a></div>
+    <div class="stories-cta"><a href="/portfolio/stories/" class="btn btn-outline">See All Wedding Stories →</a></div>
   </div>
 </section>
 
@@ -485,6 +519,30 @@
       <img src="/moment-michael-hannah-bridesmaids.jpg" alt="Hannah and her bridesmaids celebrating after the ceremony" loading="lazy">
       <img src="/moment-groom-getting-ready.jpg" alt="A groom getting ready before his wedding" loading="lazy">
       <img src="/moment-couple-balcony.jpg" alt="A couple on a balcony at their wedding venue" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE RULE: wide, short box (object-fit:cover). DO NOT use a tight face/portrait
+     close-up here — it will blow up into an oversized cropped face with no context.
+     Use a WIDE shot with real depth: a ceremony, a reception room, a courtyard,
+     a landscape — something where any face is small relative to the whole frame. -->
+<section class="section why-block" aria-labelledby="why-h2">
+  <div class="why-bg">
+    <img src="/weddings-collections-why-bg.jpg" alt="Editorial wedding photography, Nydam Photography" loading="lazy">
+  </div>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why Nydam Photography</span>
+      <h2 id="why-h2">Why Couples Choose Nydam Photography</h2>
+    </div>
+    <div class="why-list">
+      <div class="why-item">Eighteen years photographing weddings and milestones</div>
+      <div class="why-item">Editorial portraits with photojournalistic storytelling</div>
+      <div class="why-item">Natural light and refined flash expertise</div>
+      <div class="why-item">Online booking available</div>
+      <div class="why-item">Fully insured</div>
+      <div class="why-item">Austin-based, available for travel</div>
     </div>
   </div>
 </section>
@@ -516,7 +574,7 @@
     <div class="c-cta-paths">
       <a href="/book/" class="btn btn-gold">Check Availability</a>
       <a href="https://calendly.com/nydamphotography/photo-event" target="_blank" rel="noopener" class="btn btn-outline">Meet Nydam Photography</a>
-      <a href="/weddings/stories/" class="btn btn-outline">View Real Weddings</a>
+      <a href="/portfolio/stories/" class="btn btn-outline">View Real Weddings</a>
     </div>
   </div>
 </section>
@@ -548,7 +606,7 @@
         <h4>Weddings</h4>
         <ul>
           <li><a href="/weddings/">Wedding Photography</a></li>
-          <li><a href="/weddings/stories/">Real Weddings</a></li>
+          <li><a href="/portfolio/stories/">Real Weddings</a></li>
           <li><a href="/weddings/guides/">Wedding Guides</a></li>
           <li><a href="/weddings/our-approach/">Our Approach</a></li>
         </ul>
