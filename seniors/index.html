@@ -117,6 +117,17 @@
   .prose p{font-size:20px;margin-bottom:22px;color:var(--text)}
   .prose p:last-child{margin-bottom:0}
 
+  .v-feature{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center;max-width:1080px;margin:0 auto 40px}
+  .v-feature.reverse{grid-template-columns:1.1fr .9fr}
+  .v-feature.reverse .v-feature-img{order:2}
+  .v-feature-img{aspect-ratio:3/4;background:var(--cream);overflow:hidden;max-width:380px}
+  .v-feature.reverse .v-feature-img{margin-left:auto}
+  .v-feature-img img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+  .v-feature-text p{font-size:20px;margin-bottom:22px;color:var(--text)}
+  .v-feature-text p:last-child{margin-bottom:0}
+  .v-feature-full{max-width:760px;margin:0 auto;text-align:center}
+  .v-feature-full p{font-size:19px;color:var(--muted)}
+
   /* Why senior portraits matter — photo background */
   .matters{position:relative;overflow:hidden;background:var(--dark);color:var(--ivory);padding:110px 0}
   .matters-bg{position:absolute;inset:0;z-index:0}
@@ -131,7 +142,10 @@
   /* Experience steps */
   .steps{background:var(--cream)}
   .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  .step-card{background:#fff;border:1px solid var(--line);padding:32px 26px}
+  .step-card{background:#fff;border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+  .step-card-img{aspect-ratio:3/4;background:var(--cream)}
+  .step-card-img img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+  .step-card-body{padding:28px 24px}
   .step-num{font-family:var(--display);font-size:14px;color:var(--gold);letter-spacing:.1em;margin-bottom:14px}
   .step-card h3{font-family:var(--display);font-weight:400;font-size:21px;color:var(--dark);margin-bottom:12px}
   .step-card p{color:var(--muted);font-size:17px}
@@ -211,6 +225,9 @@
     .steps-grid,.coll-preview-grid{grid-template-columns:repeat(2,1fr)}
     .guide-cards-grid{grid-template-columns:repeat(2,1fr)}
     .feat-story-card{grid-template-columns:1fr;gap:30px}
+    .v-feature,.v-feature.reverse{grid-template-columns:1fr;gap:24px}
+    .v-feature.reverse .v-feature-img{order:0;margin-left:0}
+    .v-feature-img{max-width:280px;margin:0 auto}
     .why-list{grid-template-columns:1fr}
     .footer-grid{grid-template-columns:1fr 1fr}
   }
@@ -274,9 +291,14 @@
       <span class="eyebrow">Senior Portraits, Done Differently</span>
       <h2 id="positioning-h2">Not School Pictures. Not Stiff Posing.</h2>
     </div>
-    <div class="prose">
-      <p>Senior portraits should feel personal, not generic — and a lot of seniors feel genuinely awkward in front of a camera, no matter how confident they are everywhere else. Parents want images that feel polished, but still true to who their senior actually is.</p>
-      <p>We guide the entire session from start to finish, so no one is left guessing what to do with their hands or how to stand. The result is portraits that feel confident and editorial, while still looking unmistakably like your senior — not a template, and not a performance.</p>
+    <div class="v-feature">
+      <div class="v-feature-img"><img src="/seniors-positioning.jpg" alt="Editorial senior portrait by Nydam Photography" loading="lazy"></div>
+      <div class="v-feature-text">
+        <p>Senior portraits should feel personal, not generic — and a lot of seniors feel genuinely awkward in front of a camera, no matter how confident they are everywhere else. Parents want images that feel polished, but still true to who their senior actually is.</p>
+        <p>We guide the entire session from start to finish, so no one is left guessing what to do with their hands or how to stand. The result is portraits that feel confident and editorial, while still looking unmistakably like your senior — not a template, and not a performance.</p>
+      </div>
+    </div>
+    <div class="v-feature-full">
       <p>We work with senior families throughout Austin and the surrounding area, including Round Rock, Georgetown, Cedar Park, Hutto, Pflugerville, Leander, Westlake, and Bee Cave.</p>
     </div>
   </div>
@@ -304,24 +326,36 @@
     </div>
     <div class="steps-grid">
       <div class="step-card">
-        <div class="step-num">01</div>
-        <h3>Planning</h3>
-        <p>Wardrobe, locations, style, personality, and goals — all worked out before the session, not figured out on the spot.</p>
+        <div class="step-card-img"><img src="/seniors-step-planning.jpg" alt="Senior portrait session planning, Nydam Photography" loading="lazy"></div>
+        <div class="step-card-body">
+          <div class="step-num">01</div>
+          <h3>Planning</h3>
+          <p>Wardrobe, locations, style, personality, and goals — all worked out before the session, not figured out on the spot.</p>
+        </div>
       </div>
       <div class="step-card">
-        <div class="step-num">02</div>
-        <h3>Session Direction</h3>
-        <p>Natural posing, movement, and expression, with guidance throughout so there's never any guessing about what to do.</p>
+        <div class="step-card-img"><img src="/seniors-step-direction.jpg" alt="Guided senior portrait session, Nydam Photography" loading="lazy"></div>
+        <div class="step-card-body">
+          <div class="step-num">02</div>
+          <h3>Session Direction</h3>
+          <p>Natural posing, movement, and expression, with guidance throughout so there's never any guessing about what to do.</p>
+        </div>
       </div>
       <div class="step-card">
-        <div class="step-num">03</div>
-        <h3>Portrait Variety</h3>
-        <p>Closeups, full-body portraits, editorial images, relaxed moments, and personality-driven shots that actually look like your senior.</p>
+        <div class="step-card-img"><img src="/seniors-step-variety.jpg" alt="Editorial senior portrait variety, Nydam Photography" loading="lazy"></div>
+        <div class="step-card-body">
+          <div class="step-num">03</div>
+          <h3>Portrait Variety</h3>
+          <p>Closeups, full-body portraits, editorial images, relaxed moments, and personality-driven shots that actually look like your senior.</p>
+        </div>
       </div>
       <div class="step-card">
-        <div class="step-num">04</div>
-        <h3>Gallery Delivery</h3>
-        <p>A private online gallery with downloads, plus prints, albums, and wall art options for the images you want to keep.</p>
+        <div class="step-card-img"><img src="/seniors-step-gallery.jpg" alt="Senior portrait gallery delivery, Nydam Photography" loading="lazy"></div>
+        <div class="step-card-body">
+          <div class="step-num">04</div>
+          <h3>Gallery Delivery</h3>
+          <p>A private online gallery with downloads, plus prints, albums, and wall art options for the images you want to keep.</p>
+        </div>
       </div>
     </div>
   </div>
