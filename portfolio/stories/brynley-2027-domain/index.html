@@ -134,9 +134,9 @@
   .chapter-head .eyebrow{margin-bottom:10px}
   .chapter-head h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,3vw,32px);color:var(--dark);margin-bottom:14px}
   .chapter-head p{color:var(--muted);font-size:19px}
-  .chapter-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .chapter-grid img{width:100%;height:100%;aspect-ratio:1;object-fit:cover;background:var(--cream);color:transparent;font-size:0}
-  .chapter-grid .wide{grid-column:span 2;aspect-ratio:2/1}
+  .chapter-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-flow:dense;gap:14px}
+  .chapter-grid img{width:100%;height:100%;aspect-ratio:9/16;object-fit:cover;background:var(--cream);color:transparent;font-size:0}
+  .chapter-grid .landscape{grid-column:span 2;aspect-ratio:16/9}
 
   .venue-notes{background:var(--cream)}
   .venue-notes-body{max-width:780px;margin:0 auto}
@@ -191,8 +191,7 @@
 
   @media(max-width:920px){
     .guide-cards-grid,.related-grid{grid-template-columns:repeat(2,1fr)}
-    .chapter-grid{grid-template-columns:repeat(2,1fr)}
-    .chapter-grid .wide{grid-column:span 2}
+    .chapter-grid{grid-template-columns:repeat(3,1fr)}
     .footer-grid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:640px){
@@ -287,10 +286,10 @@
       <p>The first frames of any session are about ease, not perfection — settling in, finding a rhythm, and letting the stiffness fall away before the real portraits begin.</p>
     </div>
     <div class="chapter-grid">
-      <img class="wide" src="/portfolio/stories/brynley-2027-domain/starting-01.jpg" alt="Brynley settling into her senior portrait session at The Domain" loading="lazy">
+      <img src="/portfolio/stories/brynley-2027-domain/starting-01.jpg" alt="Brynley settling into her senior portrait session at The Domain" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/starting-02.jpg" alt="Early candid moment, Class of 2027 senior portraits" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/starting-03.jpg" alt="Brynley laughing at the start of her senior session" loading="lazy">
-      <img src="/portfolio/stories/brynley-2027-domain/starting-04.jpg" alt="Senior portrait session beginning at The Domain, Austin" loading="lazy">
+      <img class="landscape" src="/portfolio/stories/brynley-2027-domain/starting-04.jpg" alt="Senior portrait session beginning at The Domain, Austin" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/starting-05.jpg" alt="Relaxed first portraits, Austin senior session" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/starting-06.jpg" alt="Brynley finding her ease at the start of the session" loading="lazy">
     </div>
@@ -305,11 +304,11 @@
       <p>The fashion-magazine feel of the session — crossing the street with intention, city movement, and Vogue-style posing that gave the whole session its editorial backbone.</p>
     </div>
     <div class="chapter-grid">
-      <img class="wide" src="/portfolio/stories/brynley-2027-domain/editorial-01.jpg" alt="Brynley crossing the street, Vogue-style senior portrait at The Domain" loading="lazy">
+      <img src="/portfolio/stories/brynley-2027-domain/editorial-01.jpg" alt="Brynley crossing the street, Vogue-style senior portrait at The Domain" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/editorial-02.jpg" alt="Editorial senior portrait, The Domain, Austin" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/editorial-03.jpg" alt="Fashion-inspired senior portrait pose" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/editorial-04.jpg" alt="City movement, Class of 2027 senior portraits" loading="lazy">
-      <img class="wide" src="/portfolio/stories/brynley-2027-domain/editorial-05.jpg" alt="Editorial senior session, street crossing at The Domain" loading="lazy">
+      <img src="/portfolio/stories/brynley-2027-domain/editorial-05.jpg" alt="Editorial senior session, street crossing at The Domain" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/editorial-06.jpg" alt="Confident senior portrait pose, Austin" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/editorial-07.jpg" alt="Brynley posing like a fashion model at The Domain" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/editorial-08.jpg" alt="Editorial senior portrait, Austin, Texas" loading="lazy">
@@ -325,11 +324,11 @@
       <p>Brynley's love of dance, brought into the session itself — putting on her dancing shoes, wearing them, and letting real movement shape the portraits.</p>
     </div>
     <div class="chapter-grid">
-      <img class="wide" src="/portfolio/stories/brynley-2027-domain/dance-01.jpg" alt="Brynley putting on her dancing shoes during her senior session" loading="lazy">
+      <img src="/portfolio/stories/brynley-2027-domain/dance-01.jpg" alt="Brynley putting on her dancing shoes during her senior session" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/dance-02.jpg" alt="Dance-inspired senior portrait, Austin" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/dance-03.jpg" alt="Brynley wearing her dancing shoes, Class of 2027 portraits" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/dance-04.jpg" alt="Movement portrait, dance-inspired senior session" loading="lazy">
-      <img class="wide" src="/portfolio/stories/brynley-2027-domain/dance-05.jpg" alt="Brynley mid-movement, dance-inspired senior portrait" loading="lazy">
+      <img src="/portfolio/stories/brynley-2027-domain/dance-05.jpg" alt="Brynley mid-movement, dance-inspired senior portrait" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/dance-06.jpg" alt="Pointe shoes detail, senior portrait session" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/dance-07.jpg" alt="Dance-inspired portrait at The Domain, Austin" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/dance-08.jpg" alt="Brynley's senior portraits, dance movement detail" loading="lazy">
@@ -345,7 +344,7 @@
       <p>A wall of green leaves gave this part of the session its own color and texture — Vogue-style portraits with a quieter, more confident register.</p>
     </div>
     <div class="chapter-grid">
-      <img class="wide" src="/portfolio/stories/brynley-2027-domain/green-wall-01.jpg" alt="Brynley's senior portrait against the green leaves wall at The Domain" loading="lazy">
+      <img src="/portfolio/stories/brynley-2027-domain/green-wall-01.jpg" alt="Brynley's senior portrait against the green leaves wall at The Domain" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/green-wall-02.jpg" alt="Editorial senior portrait, green wall, Austin" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/green-wall-03.jpg" alt="Confident senior portrait against greenery" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/green-wall-04.jpg" alt="Class of 2027 senior portrait, green wall backdrop" loading="lazy">
@@ -363,14 +362,14 @@
       <p>The closing chapter — closeups, a quiet moment sitting with her shoes and pointe shoes beside her, and the softer portraits that became the favorites of the day.</p>
     </div>
     <div class="chapter-grid">
-      <img class="wide" src="/portfolio/stories/brynley-2027-domain/favorites-01.jpg" alt="Brynley sitting with her shoes and pointe shoes beside her" loading="lazy">
+      <img class="landscape" src="/portfolio/stories/brynley-2027-domain/favorites-01.jpg" alt="Brynley sitting with her shoes and pointe shoes beside her" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/favorites-02.jpg" alt="Quiet closeup, senior portrait session" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/favorites-03.jpg" alt="Softer senior portrait, Class of 2027, Austin" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/favorites-04.jpg" alt="Brynley's senior portrait closeup, The Domain" loading="lazy">
-      <img src="/portfolio/stories/brynley-2027-domain/favorites-05.jpg" alt="Final favorite, senior portrait session" loading="lazy">
+      <img class="landscape" src="/portfolio/stories/brynley-2027-domain/favorites-05.jpg" alt="Final favorite, senior portrait session" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/favorites-06.jpg" alt="Quiet senior portrait moment, Austin" loading="lazy">
       <img src="/portfolio/stories/brynley-2027-domain/favorites-07.jpg" alt="Senior session closeup, Class of 2027" loading="lazy">
-      <img class="wide" src="/portfolio/stories/brynley-2027-domain/favorites-08.jpg" alt="Brynley's final senior portrait favorites, The Domain" loading="lazy">
+      <img src="/portfolio/stories/brynley-2027-domain/favorites-08.jpg" alt="Brynley's final senior portrait favorites, The Domain" loading="lazy">
     </div>
   </div>
 </section>
