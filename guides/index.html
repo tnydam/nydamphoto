@@ -103,7 +103,9 @@
   /* Start here featured guide */
   .start-here{background:var(--cream)}
   .start-card{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;max-width:880px;margin:0 auto;background:#fff;border:1px solid var(--line);padding:40px}
-  .start-card-badge{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:8px 18px;white-space:nowrap}
+  .start-card-img{width:160px;aspect-ratio:3/4;background:var(--cream);overflow:hidden;flex-shrink:0}
+  .start-card-img img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+  .start-card-badge{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:8px 18px;white-space:nowrap;display:inline-block;margin-bottom:14px}
   .start-card h3{font-family:var(--display);font-weight:400;font-size:26px;color:var(--dark);margin-bottom:14px}
   .start-card p{color:var(--muted);font-size:18px;margin-bottom:22px}
   .start-card-ctas{display:flex;gap:16px;flex-wrap:wrap}
@@ -160,6 +162,7 @@
 
   @media(max-width:920px){
     .start-card{grid-template-columns:1fr;text-align:center}
+    .start-card-img{width:140px;margin:0 auto}
     .start-card-ctas{justify-content:center}
     .cat-grid,.popular-grid{grid-template-columns:1fr}
     .footer-grid{grid-template-columns:1fr 1fr}
@@ -229,8 +232,9 @@
       <h2 id="start-h2">Start Here</h2>
     </div>
     <div class="start-card">
-      <span class="start-card-badge">Universal Guide</span>
+      <div class="start-card-img"><img src="/guides-universal-cover.jpg" alt="How to Prepare for Your Photography Session" loading="lazy"></div>
       <div>
+        <span class="start-card-badge">Universal Guide</span>
         <h3>How to Prepare for Your Photography Session</h3>
         <p>Our universal session preparation guide covers what to wear, how to prepare, what to expect, natural posing, and how we help you feel comfortable in front of the camera. It's the best place to begin if you're new to Nydam Photography.</p>
         <div class="start-card-ctas">
