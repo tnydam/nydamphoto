@@ -164,6 +164,12 @@
   .included{background:var(--cream)}
   .included-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:980px;margin:0 auto}
   .included-item{background:#fff;border:1px solid var(--line);padding:22px 20px;font-family:var(--sans);font-size:16px;color:var(--text);display:flex;align-items:flex-start;gap:10px}
+  .coll-details{margin-top:0}
+  .coll-details summary{font-family:var(--sans);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--dark);cursor:pointer;list-style:none;padding:14px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+  .coll-details summary::-webkit-details-marker{display:none}
+  .coll-details summary::after{content:"+";color:var(--gold);font-size:18px;font-family:var(--serif)}
+  .coll-details[open] summary::after{content:"–"}
+  .coll-details .included-grid{margin-top:26px}
   .included-item::before{content:"✓";color:var(--gold);font-weight:600;flex-shrink:0}
 
   /* Credits */
@@ -172,14 +178,6 @@
   .credit-card .num{font-family:var(--display);font-size:28px;color:var(--gold);margin-bottom:10px}
   .credit-card p{font-family:var(--sans);font-size:14px;color:var(--muted)}
   .credits-note{max-width:680px;margin:30px auto 0;text-align:center;color:var(--muted);font-size:17px;font-style:italic}
-
-  /* The experience — narrative steps */
-  .steps-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:0}
-  .exp-step{display:grid;grid-template-columns:30px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
-  .exp-step:last-child{border-bottom:none}
-  .exp-step-num{font-family:var(--sans);font-size:13px;color:var(--gold);font-weight:600}
-  .exp-step h4{font-family:var(--display);font-weight:400;font-size:20px;color:var(--dark);margin-bottom:5px}
-  .exp-step p{color:var(--muted);font-size:17px;line-height:1.6}
 
   /* Featured story */
   .feat-story-card{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:center;max-width:1050px;margin:0 auto}
@@ -436,19 +434,22 @@
       <span class="eyebrow">The Details</span>
       <h2 id="included-h2">What's Included</h2>
     </div>
-    <div class="included-grid">
-      <div class="included-item">Seasonal portrait moments with your group</div>
-      <div class="included-item">A fully styled signature senior session</div>
-      <div class="included-item">Professional stylist, hair, and makeup</div>
-      <div class="included-item">Grooming for guys</div>
-      <div class="included-item">Personalized planning before the season begins</div>
-      <div class="included-item">Calendar access before the public season opens</div>
-      <div class="included-item">Posing guidance throughout</div>
-      <div class="included-item">Full digital gallery delivery</div>
-      <div class="included-item">An in-person Gallery Reveal</div>
-      <div class="included-item">Featured on NP social or portfolio when appropriate</div>
-      <div class="included-item">Personal guidance throughout the season</div>
-    </div>
+    <details class="coll-details">
+      <summary>See Everything Included</summary>
+      <div class="included-grid">
+        <div class="included-item">Seasonal portrait moments with your group</div>
+        <div class="included-item">A fully styled signature senior session</div>
+        <div class="included-item">Professional stylist, hair, and makeup</div>
+        <div class="included-item">Grooming for guys</div>
+        <div class="included-item">Personalized planning before the season begins</div>
+        <div class="included-item">Calendar access before the public season opens</div>
+        <div class="included-item">Posing guidance throughout</div>
+        <div class="included-item">Full digital gallery delivery</div>
+        <div class="included-item">An in-person Gallery Reveal</div>
+        <div class="included-item">Featured on NP social or portfolio when appropriate</div>
+        <div class="included-item">Personal guidance throughout the season</div>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -462,33 +463,6 @@
     <div class="section-narrow prose">
       <p>This is for the parents who've already caught themselves saying "where did the time go," more than once, this year. It's for the seniors who'd rather feel like themselves in their photos than perform for a camera they've never met before. It's for families who want to remember this season as more than a cap-and-gown photo taken in a hurry between graduation rehearsal and the ceremony itself.</p>
       <p>It isn't for everyone, and that's alright. Families looking for a single, standalone senior session can find that through the navigation, without needing this page to make a case for it.</p>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="section" aria-labelledby="exp-h2">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">How It Works</span>
-      <h2 id="exp-h2">From First Conversation to Gallery Reveal</h2>
-    </div>
-    <div class="steps-list">
-      <div class="exp-step"><span class="exp-step-num">01</span><div><h4>A First Conversation</h4><p>We talk through who your senior is, and what this year should feel like for your family.</p></div></div>
-      <div class="exp-step"><span class="exp-step-num">02</span><div><h4>Seasonal Moments Together</h4><p>A handful of group portrait experiences across the year, shaped by the season you're actually living.</p></div></div>
-      <div class="exp-step"><span class="exp-step-num">03</span><div><h4>Your Signature Senior Session</h4><p>Fully styled, fully guided, entirely theirs — the photograph your family will keep.</p></div></div>
-      <div class="exp-step"><span class="exp-step-num">04</span><div><h4>Gallery Reveal</h4><p>An in-person moment, seeing the finished season together for the first time.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PORTRAIT CREDITS (moved low, simplified) -->
-<section class="section" aria-labelledby="credits-h2">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">A Nice Bonus</span>
-      <h2 id="credits-h2">Refer a Friend, Earn Portrait Credits</h2>
-      <p>Refer a friend who completes their own session, and you'll earn a Portrait Credit toward prints, canvas, an album, or a future session — valid for 12 months, no limit on how many you can earn.</p>
     </div>
   </div>
 </section>
