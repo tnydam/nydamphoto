@@ -140,6 +140,15 @@
   .pillar-list{max-width:840px;margin:0 auto;display:flex;flex-direction:column;gap:0}
   .pillar{display:grid;grid-template-columns:140px 90px 1fr;gap:30px;padding:38px 0;border-bottom:1px solid var(--line);align-items:start}
   .pillar-photo{width:140px;height:140px;flex-shrink:0;overflow:hidden;background:var(--ivory)}
+
+  .chapter{padding:70px 0;border-top:1px solid var(--line)}
+  .chapter-head{max-width:760px;margin:0 auto 36px}
+  .chapter-head .eyebrow{margin-bottom:10px}
+  .chapter-head h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,3vw,32px);color:var(--dark);margin-bottom:14px}
+  .chapter-head p{color:var(--muted);font-size:19px}
+  .chapter-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-flow:dense;gap:14px}
+  .chapter-grid img{width:100%;height:100%;aspect-ratio:9/16;object-fit:cover;background:var(--cream);color:transparent;font-size:0}
+  .chapter-grid .landscape{grid-column:span 2;aspect-ratio:16/9}
   .pillar-photo img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
   .pillar:last-child{border-bottom:none}
   .pillar-num{font-family:var(--display);font-size:38px;color:var(--gold);line-height:1}
@@ -220,11 +229,12 @@
     .credits-grid{grid-template-columns:repeat(2,1fr)}
     .feat-story-card{grid-template-columns:1fr;gap:30px}
     .testimonial-grid{grid-template-columns:1fr;gap:36px}
+    .chapter-grid{grid-template-columns:repeat(3,1fr)}
     .footer-grid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:640px){
     body{font-size:18px}
-    .section{padding:64px 0}
+    .section,.chapter{padding:56px 0}
     .nav-links{position:fixed;inset:74px 0 auto 0;background:var(--ivory);flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid var(--line);display:none}
     .nav-links.open{display:flex}
     .nav-links a{padding:15px 28px;width:100%}
@@ -233,6 +243,7 @@
     .s-hero-ctas{flex-direction:column;align-items:stretch}
     .pillar{grid-template-columns:1fr}
     .pillar-photo{width:100%;height:220px;margin-bottom:14px}
+    .chapter-grid{grid-template-columns:repeat(2,1fr)}
     .testimonial{grid-template-columns:1fr}
     .testimonial-photo{width:100%;height:200px}
     .included-grid,.credits-grid{grid-template-columns:1fr}
@@ -265,12 +276,12 @@
 <div class="wrap crumb"><a href="/">Home</a> / <a href="/seniors/">Senior Portraits</a> / NP Seniors</div>
 
 <!-- HERO -->
-<section class="s-hero" aria-label="A Senior Year Worth Remembering">
+<section class="s-hero" aria-label="Every Senior Year Has a Story">
   <img src="/senior-team-hero.jpg" alt="A senior in her final year of high school, photographed by Nydam Photography" loading="eager">
   <div class="wrap s-hero-inner">
     <span class="eyebrow">Nydam Photography</span>
-    <h1>Senior Year Happens Once</h1>
-    <p class="lead">It deserves more than a single afternoon.</p>
+    <h1>Every Senior Year Has a Story</h1>
+    <p class="lead">This is how we tell it.</p>
     <div class="s-hero-ctas">
       <a href="/book/" class="btn btn-gold">Apply for NP Seniors 2027</a>
       <a href="/guides/seniors/np-seniors-senior-portrait-program/" class="btn btn-outline">Learn How It Works</a>
@@ -278,17 +289,13 @@
   </div>
 </section>
 
-<!-- WHY THIS YEAR MATTERS -->
+<!-- THE STORY OF SENIOR YEAR -->
 <section class="section" aria-labelledby="why-h2">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">The Year That's Ending</span>
-      <h2 id="why-h2">Everything Is About to Change</h2>
-    </div>
     <div class="section-narrow prose">
-      <p>This is the year of lasts. The last football game under the lights. The last dance recital before the curtain closes on a decade of lessons. The last summer before everyone scatters to different colleges, different cities, different lives. Friendships that have lasted since third grade are about to be tested by distance for the first time.</p>
-      <p>Parents feel it too — usually somewhere in the middle of an ordinary Tuesday, watching their kid grab the car keys without a second thought, and realizing how close the end actually is. Childhood doesn't announce its ending. It just quietly stops, somewhere in the middle of senior year, while everyone's busy with college applications and prom dresses and one more "last time."</p>
-      <p>A single portrait session can capture how a senior looked. It can't capture what this year actually felt like — the friendships, the nerves, the in-between moments nobody thinks to photograph until they're gone.</p>
+      <p class="emphasis" style="margin-top:0">Senior year isn't remembered in one photograph.</p>
+      <p>It's remembered in hundreds of little moments. Walking into school for the last first day. One more Friday night under the stadium lights. Trying on a prom dress. College acceptance letters spread across the kitchen table. Laughing with the friends who have been beside you since elementary school. Realizing — almost without noticing — that childhood is quietly becoming memory.</p>
+      <p class="emphasis">That's the story we photograph. Not just the portraits. The year.</p>
     </div>
     <div class="intro-photos">
       <div class="intro-photo-main"><img src="/senior-team-intro-01.jpg" alt="Senior portrait by Nydam Photography, Austin" loading="lazy"></div>
@@ -298,21 +305,21 @@
   </div>
 </section>
 
-<!-- MEET A REAL SENIOR: BRYNLEY -->
+<!-- EVERY STORY BEGINS SOMEWHERE: BRYNLEY -->
 <section class="section" aria-labelledby="brynley-h2">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">One Senior's Story</span>
-      <h2 id="brynley-h2">Brynley</h2>
+      <span class="eyebrow">Every Story Begins Somewhere</span>
+      <h2 id="brynley-h2">Meet Brynley</h2>
     </div>
     <div class="feat-story-card">
       <div class="feat-story-img"><img src="/story-brynley-senior.jpg" alt="Brynley's senior portraits at The Domain" loading="lazy"></div>
       <div class="feat-story-body">
         <span class="feat-story-meta">Class of 2027 · The Domain, Austin</span>
-        <p>Brynley dances. So when it came time for her senior portraits, the idea wasn't to pose her like every other senior on a park bench — it was to let her move the way she already moves. She crossed an Austin street the way a model crosses a runway. She set her pointe shoes down beside her and sat with them for a quiet minute before a single frame was taken. None of it was performance. It was just Brynley, doing the thing she's spent years learning to do, with someone finally there to catch it.</p>
-        <p>That's the difference between a senior portrait and a senior story. One captures a pose. The other captures a person.</p>
+        <p>She dances. So instead of asking her to become someone else for the camera, we built the session around who she already was. She crossed an Austin street the way a model crosses a runway. She set her pointe shoes down beside her and sat with them for a quiet minute before a single frame was taken.</p>
+        <p>None of it was performance. It was just Brynley — and a year of her life, told the way it actually happened.</p>
         <div class="feat-story-ctas">
-          <a href="/portfolio/stories/brynley-2027-domain/" class="btn btn-gold">See Brynley's Full Story</a>
+          <a href="/portfolio/stories/brynley-2027-domain/" class="btn btn-gold">Read Brynley's Full Story</a>
           <a href="/portfolio/stories/seniors/" class="btn btn-outline">See More Senior Stories</a>
         </div>
       </div>
@@ -320,51 +327,78 @@
   </div>
 </section>
 
-<!-- WHAT THE YEAR LOOKS LIKE: EMOTIONAL CHAPTERS -->
-<section class="section pillars" aria-labelledby="pillars-h2">
+<!-- WHY NP SENIORS EXISTS -->
+<section class="section" aria-labelledby="reveal-h2">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Inside the Year</span>
-      <h2 id="pillars-h2">What This Season Looks Like</h2>
+    <div class="section-narrow prose">
+      <p class="emphasis" style="margin-top:0">Because one portrait session could never tell an entire story —</p>
+      <h2 id="reveal-h2" style="text-align:center;font-family:var(--display);font-weight:400;font-size:clamp(28px,4vw,40px);color:var(--dark);margin:0 0 26px">we created NP Seniors.</h2>
+      <p>A small group of seniors, each year, who get to live their senior story across an entire season instead of a single afternoon — with the friendships, the practice, and the confidence that only come from time, built in along the way.</p>
     </div>
-    <div class="pillar-list">
+  </div>
+</section>
 
-      <div class="pillar">
-        <div class="pillar-photo"><img src="/senior-team-pillar-01.jpg" alt="Seniors laughing together during a seasonal portrait shoot" loading="lazy"></div>
-        <div class="pillar-num">01</div>
-        <div>
-          <h3>Friendships Along the Way</h3>
-          <p>Before a senior ever steps in front of a camera alone, they get to do it alongside other seniors — at a holiday shoot, a spring session, whatever the season brings. Some of these seniors didn't know each other before this year. By the end of it, they're laughing in the background of each other's photos.</p>
-        </div>
-      </div>
+<!-- CHAPTERS OF A SENIOR STORY -->
+<section class="chapter" aria-labelledby="ch-people">
+  <div class="wrap">
+    <div class="chapter-head">
+      <span class="eyebrow">Chapter One</span>
+      <h3 id="ch-people">Finding Their People</h3>
+      <p>Before a senior ever steps in front of a camera alone, they get to do it alongside other seniors — at a holiday shoot, a spring session, whatever the season brings. Some of these seniors didn't know each other before this year. By the end of it, they're laughing in the background of each other's photos.</p>
+    </div>
+    <div class="chapter-grid">
+      <img src="/senior-team-chapter-people-01.jpg" alt="Seniors meeting and laughing together at a seasonal portrait shoot" loading="lazy">
+      <img src="/senior-team-chapter-people-02.jpg" alt="Group of seniors at a holiday-themed portrait session" loading="lazy">
+      <img class="landscape" src="/senior-team-chapter-people-03.jpg" alt="Seniors gathered together during NP Seniors season" loading="lazy">
+      <img src="/senior-team-chapter-people-04.jpg" alt="Friends made during the NP Seniors season" loading="lazy">
+    </div>
+  </div>
+</section>
 
-      <div class="pillar">
-        <div class="pillar-photo"><img src="/senior-team-pillar-02.jpg" alt="A senior relaxed and confident in front of the camera" loading="lazy"></div>
-        <div class="pillar-num">02</div>
-        <div>
-          <h3>Finding Their Confidence</h3>
-          <p>The first time anyone's in front of a camera, it shows — the stiff shoulders, the unsure smile. By the third or fourth time, that's gone. We've watched seniors arrive nervous in the fall and leave their final session not even thinking about the camera anymore, because by then, they've forgotten to be self-conscious.</p>
-        </div>
-      </div>
+<section class="chapter" aria-labelledby="ch-confidence">
+  <div class="wrap">
+    <div class="chapter-head">
+      <span class="eyebrow">Chapter Two</span>
+      <h3 id="ch-confidence">Becoming Comfortable</h3>
+      <p>The first time anyone's in front of a camera, it shows — the stiff shoulders, the unsure smile. By the third or fourth time, that's gone. We've watched seniors arrive nervous in the fall and leave their final session not even thinking about the camera anymore, because by then, they've forgotten to be self-conscious.</p>
+    </div>
+    <div class="chapter-grid">
+      <img src="/senior-team-chapter-confidence-01.jpg" alt="A senior relaxed and confident in front of the camera" loading="lazy">
+      <img class="landscape" src="/senior-team-chapter-confidence-02.jpg" alt="A senior growing more comfortable across the season" loading="lazy">
+      <img src="/senior-team-chapter-confidence-03.jpg" alt="Natural, unposed senior portrait moment" loading="lazy">
+      <img src="/senior-team-chapter-confidence-04.jpg" alt="A senior laughing naturally during a portrait session" loading="lazy">
+    </div>
+  </div>
+</section>
 
-      <div class="pillar">
-        <div class="pillar-photo"><img src="/senior-team-pillar-03.jpg" alt="Signature senior portrait session, fully styled" loading="lazy"></div>
-        <div class="pillar-num">03</div>
-        <div>
-          <h3>Your Signature Senior Session</h3>
-          <p>This is the one your family will hang on the wall. Fully styled — hair, makeup, the works — and built entirely around who your senior actually is. Editorial, classic, athletic, theatrical, quiet, loud: whatever feels like them, this is where it gets made.</p>
-        </div>
-      </div>
+<section class="chapter" aria-labelledby="ch-portrait">
+  <div class="wrap">
+    <div class="chapter-head">
+      <span class="eyebrow">Chapter Three</span>
+      <h3 id="ch-portrait">The Portrait They'll Remember</h3>
+      <p>This is the one your family will hang on the wall. Fully styled — hair, makeup, the works — and built entirely around who your senior actually is. Editorial, classic, athletic, theatrical, quiet, loud: whatever feels like them, this is where it gets made.</p>
+    </div>
+    <div class="chapter-grid">
+      <img class="landscape" src="/senior-team-chapter-portrait-01.jpg" alt="Signature senior portrait session, fully styled" loading="lazy">
+      <img src="/senior-team-chapter-portrait-02.jpg" alt="A senior's signature portrait, hair and makeup styled" loading="lazy">
+      <img src="/senior-team-chapter-portrait-03.jpg" alt="An editorial senior portrait built around the senior's personality" loading="lazy">
+      <img src="/senior-team-chapter-portrait-04.jpg" alt="The signature senior portrait a family will treasure" loading="lazy">
+    </div>
+  </div>
+</section>
 
-      <div class="pillar">
-        <div class="pillar-photo"><img src="/senior-team-pillar-04.jpg" alt="Family looking through finished senior portraits together" loading="lazy"></div>
-        <div class="pillar-num">04</div>
-        <div>
-          <h3>A Gallery Your Family Will Treasure</h3>
-          <p>We sit down together and go through the finished images in person — not a link in an inbox, but a real moment where you watch your family's reaction to seeing this season for the first time, all at once.</p>
-        </div>
-      </div>
-
+<section class="chapter" aria-labelledby="ch-together">
+  <div class="wrap">
+    <div class="chapter-head">
+      <span class="eyebrow">Chapter Four</span>
+      <h3 id="ch-together">Looking Back Together</h3>
+      <p>We sit down together and go through the finished images in person — not a link in an inbox, but a real moment where you watch your family's reaction to seeing this season for the first time, all at once.</p>
+    </div>
+    <div class="chapter-grid">
+      <img src="/senior-team-chapter-together-01.jpg" alt="Family looking through finished senior portraits together" loading="lazy">
+      <img src="/senior-team-chapter-together-02.jpg" alt="A mom and senior at the Gallery Reveal" loading="lazy">
+      <img class="landscape" src="/senior-team-chapter-together-03.jpg" alt="In-person Gallery Reveal for a senior's family" loading="lazy">
+      <img src="/senior-team-chapter-together-04.jpg" alt="A family treasuring their senior's finished gallery" loading="lazy">
     </div>
     <div class="seasonal-examples">
       <span class="seasonal-chip">Holiday portraits</span>
@@ -374,7 +408,7 @@
       <span class="seasonal-chip">Best-friend portraits</span>
       <span class="seasonal-chip">Mom-and-senior portraits</span>
     </div>
-    <p class="credits-note">Depending on a group's season and timeline, the year may include any combination of these — every group's year takes its own shape.</p>
+    <p class="credits-note">Depending on a group's season and timeline, the story may include any combination of these — every senior's year takes its own shape.</p>
   </div>
 </section>
 
