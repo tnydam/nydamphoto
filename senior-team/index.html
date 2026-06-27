@@ -121,17 +121,13 @@
   .prose p.emphasis{font-family:var(--display);font-size:24px;font-weight:400;color:var(--dark);text-align:center;line-height:1.45;margin:36px 0}
 
   /* Intro photo grid */
-  .intro-photos{display:grid;grid-template-columns:1.2fr 1fr;gap:8px;max-width:560px;margin:0 auto 44px}
-  .intro-photo-main{grid-row:1/3;aspect-ratio:3/4}
-  .intro-photo-main img,.intro-photo-sub img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
-  .intro-photo-sub{aspect-ratio:4/3}
+  .story-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:48px auto 0}
+  .story-photos img{width:100%;height:auto;display:block;color:transparent;font-size:0}
 
   /* Testimonials */
   .testimonials{background:var(--dark)}
   .testimonial-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;max-width:1000px;margin:0 auto}
-  .testimonial{display:grid;grid-template-columns:110px 1fr;gap:22px;align-items:start}
-  .testimonial-photo{width:110px;height:140px;overflow:hidden;flex-shrink:0}
-  .testimonial-photo img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+  .testimonial{max-width:440px}
   .testimonial blockquote{font-family:var(--display);font-style:italic;font-size:18px;color:#F3ECE0;line-height:1.6;margin-bottom:12px}
   .testimonial cite{font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light)}
 
@@ -224,6 +220,7 @@
   .footer-social a{margin-left:18px}
 
   @media(max-width:920px){
+    .story-photos{grid-template-columns:1fr;gap:24px}
     .difference-grid{grid-template-columns:1fr;gap:30px}
     .included-grid{grid-template-columns:repeat(2,1fr)}
     .credits-grid{grid-template-columns:repeat(2,1fr)}
@@ -244,8 +241,6 @@
     .pillar{grid-template-columns:1fr}
     .pillar-photo{width:100%;height:220px;margin-bottom:14px}
     .chapter-grid{grid-template-columns:repeat(2,1fr)}
-    .testimonial{grid-template-columns:1fr}
-    .testimonial-photo{width:100%;height:200px}
     .included-grid,.credits-grid{grid-template-columns:1fr}
     .footer-grid{grid-template-columns:1fr}
   }
@@ -283,7 +278,7 @@
     <h1>Every Senior Year Has a Story</h1>
     <p class="lead">This is how we tell it.</p>
     <div class="s-hero-ctas">
-      <a href="/book/" class="btn btn-gold">Apply for NP Seniors 2027</a>
+      <a href="/senior-team/apply/" class="btn btn-gold">Apply for NP Seniors 2027</a>
       <a href="/guides/seniors/np-seniors-senior-portrait-program/" class="btn btn-outline">Learn How It Works</a>
     </div>
   </div>
@@ -297,10 +292,10 @@
       <p>It's remembered in hundreds of little moments. Walking into school for the last first day. One more Friday night under the stadium lights. Trying on a prom dress. College acceptance letters spread across the kitchen table. Laughing with the friends who have been beside you since elementary school. Realizing — almost without noticing — that childhood is quietly becoming memory.</p>
       <p class="emphasis">That's the story we photograph. Not just the portraits. The year.</p>
     </div>
-    <div class="intro-photos">
-      <div class="intro-photo-main"><img src="/senior-team-intro-01.jpg" alt="Senior portrait by Nydam Photography, Austin" loading="lazy"></div>
-      <div class="intro-photo-sub"><img src="/senior-team-intro-02.jpg" alt="Senior portrait detail, Nydam Photography" loading="lazy"></div>
-      <div class="intro-photo-sub"><img src="/senior-team-intro-03.jpg" alt="Senior portrait outdoors, Austin Texas" loading="lazy"></div>
+    <div class="story-photos">
+      <img src="/senior-team-story-01.jpg" alt="Senior portrait by Nydam Photography, Austin" loading="lazy">
+      <img src="/senior-team-story-02.jpg" alt="Senior portrait detail, Nydam Photography" loading="lazy">
+      <img src="/senior-team-story-03.jpg" alt="Senior portrait outdoors, Austin Texas" loading="lazy">
     </div>
   </div>
 </section>
@@ -334,6 +329,9 @@
       <p class="emphasis" style="margin-top:0">Because one portrait session could never tell an entire story —</p>
       <h2 id="reveal-h2" style="text-align:center;font-family:var(--display);font-weight:400;font-size:clamp(28px,4vw,40px);color:var(--dark);margin:0 0 26px">we created NP Seniors.</h2>
       <p>A small group of seniors, each year, who get to live their senior story across an entire season instead of a single afternoon — with the friendships, the practice, and the confidence that only come from time, built in along the way.</p>
+    </div>
+    <div style="text-align:center;margin-top:34px">
+      <a href="/senior-team/apply/" class="btn btn-gold">Apply for NP Seniors 2027</a>
     </div>
   </div>
 </section>
@@ -509,14 +507,12 @@
     </div>
     <div class="testimonial-grid">
       <div class="testimonial">
-        <div class="testimonial-photo"><img src="/senior-team-testimonial-sonya.jpg" alt="Sonya Forster's family, photographed by Nydam Photography" loading="lazy"></div>
         <div>
           <blockquote>"Arlen has become our family's dedicated photographer and an important part of our lives. From LinkedIn photos to prom, senior portraits, college milestones, and our wedding, he has been there for every meaningful moment."</blockquote>
           <cite>— Sonya Forster · Weddings &amp; Family</cite>
         </div>
       </div>
       <div class="testimonial">
-        <div class="testimonial-photo"><img src="/senior-team-testimonial-sean.jpg" alt="Sean Benson's daughter's senior portraits by Nydam Photography" loading="lazy"></div>
         <div>
           <blockquote>"Our daughter's senior pictures were superb. He was accommodating, took the time to get everything right, and was very professional."</blockquote>
           <cite>— Sean Benson · Senior Portraits</cite>
@@ -554,7 +550,7 @@
     <h2 id="cta-h2">Apply for NP Seniors 2027</h2>
     <p>We intentionally welcome only a small number of seniors into the program each year, so every family receives the time, guidance, and attention that define the experience.</p>
     <div class="s-cta-paths">
-      <a href="/book/" class="btn btn-gold">Apply for NP Seniors 2027</a>
+      <a href="/senior-team/apply/" class="btn btn-gold">Apply for NP Seniors 2027</a>
       <a href="/guides/seniors/np-seniors-senior-portrait-program/" class="btn btn-outline">Learn How It Works</a>
       <a href="/#contact" class="btn btn-outline">Send a Message</a>
     </div>
