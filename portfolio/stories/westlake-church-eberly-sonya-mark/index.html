@@ -130,8 +130,11 @@
   .chapter-head .eyebrow{margin-bottom:10px}
   .chapter-head h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,3vw,32px);color:var(--dark);margin-bottom:14px}
   .chapter-head p{color:var(--muted);font-size:19px}
-  .chapter-grid{column-count:3;column-gap:14px}
-  .chapter-grid img{width:100%;height:auto;margin:0 0 14px;break-inside:avoid;background:var(--cream);color:transparent;font-size:0}
+  .chapter-grid{--gh:14px}
+  .grow-row{display:flex;gap:var(--gh);margin-bottom:var(--gh)}
+  .grow-row:last-child{margin-bottom:0}
+  .grow-row img{height:auto;flex-basis:0;min-width:0;display:block;background:var(--cream);color:transparent;font-size:0}
+  .grow-row .sp{flex-grow:0;background:transparent}
 
   .venue-notes{background:var(--cream)}
   .venue-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;max-width:920px;margin:0 auto}
@@ -182,7 +185,6 @@
   @media(max-width:920px){
     .venue-grid{grid-template-columns:1fr}
     .guide-cards-grid{grid-template-columns:repeat(2,1fr)}
-    .chapter-grid{column-count:2}
     .footer-grid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:640px){
@@ -193,7 +195,10 @@
     .nav-links a{padding:15px 28px;width:100%}
     .nav-book{margin:10px 28px;text-align:center}
     .nav-toggle{display:block}
-    .chapter-grid{column-count:1}
+    .grow-row{display:block}
+    .grow-row img{width:100%;height:auto;margin-bottom:var(--gh)}
+    .grow-row img:last-child{margin-bottom:0}
+    .grow-row .sp{display:none}
     .guide-cards-grid{grid-template-columns:1fr}
     .footer-grid{grid-template-columns:1fr}
   }
@@ -277,12 +282,18 @@
       <p>The vows themselves, photographed quietly from the places we could be without ever becoming part of the moment. Westlake Church gave the ceremony its own light and its own hush.</p>
     </div>
     <div class="chapter-grid">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-01.jpg" alt="Sonya and Mark's wedding ceremony at Westlake Church" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-02.jpg" alt="Wedding ceremony processional at Westlake Church" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-03.jpg" alt="Exchange of vows at Westlake Church wedding" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-04.jpg" alt="Ring exchange during the wedding ceremony" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-05.jpg" alt="First kiss at Westlake Church wedding ceremony" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-06.jpg" alt="Recessional after the wedding ceremony" width="1350" height="900" loading="lazy">
+      <div class="grow-row">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-01.jpg" alt="Sonya and Mark's wedding ceremony at Westlake Church" width="1350" height="900" loading="lazy">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-02.jpg" alt="Wedding ceremony processional at Westlake Church" width="1350" height="900" loading="lazy">
+      </div>
+      <div class="grow-row">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-03.jpg" alt="Exchange of vows at Westlake Church wedding" width="1350" height="900" loading="lazy">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-04.jpg" alt="Ring exchange during the wedding ceremony" width="1350" height="900" loading="lazy">
+      </div>
+      <div class="grow-row">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-05.jpg" alt="First kiss at Westlake Church wedding ceremony" width="1350" height="900" loading="lazy">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-06.jpg" alt="Recessional after the wedding ceremony" width="1350" height="900" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
@@ -295,12 +306,19 @@
       <p>Editorial portraits of Sonya and Mark, and the people who stood with them — composed with care, but never so much direction that the day stopped feeling like their own.</p>
     </div>
     <div class="chapter-grid">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-01.jpg" alt="Editorial couple portrait, Sonya and Mark" width="1350" height="1080" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-02.jpg" alt="Wedding party portrait, Austin wedding" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-03.jpg" alt="Couple portrait, Austin wedding photography" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-04.jpg" alt="Family portrait at Austin wedding" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-05.jpg" alt="Bride and groom official portrait" width="900" height="1350" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-06.jpg" alt="Candid portrait moment, Austin wedding" width="900" height="1200" loading="lazy">
+      <div class="grow-row">
+        <img style="flex-grow:1.2500" src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-01.jpg" alt="Editorial couple portrait, Sonya and Mark" width="1350" height="1080" loading="lazy">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-02.jpg" alt="Wedding party portrait, Austin wedding" width="1350" height="900" loading="lazy">
+      </div>
+      <div class="grow-row">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-03.jpg" alt="Couple portrait, Austin wedding photography" width="1350" height="900" loading="lazy">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-04.jpg" alt="Family portrait at Austin wedding" width="1350" height="900" loading="lazy">
+      </div>
+      <div class="grow-row">
+        <img style="flex-grow:0.6667" src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-05.jpg" alt="Bride and groom official portrait" width="900" height="1350" loading="lazy">
+        <img style="flex-grow:0.7500" src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-06.jpg" alt="Candid portrait moment, Austin wedding" width="900" height="1200" loading="lazy">
+        <span class="sp" style="flex-grow:1.2438"></span>
+      </div>
     </div>
   </div>
 </section>
@@ -313,12 +331,18 @@
       <p>A shift in register — Eberly's downtown Austin space brought warmth, toasts, and the particular energy of a room ready to celebrate.</p>
     </div>
     <div class="chapter-grid">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-01.jpg" alt="Wedding reception at Eberly, downtown Austin" width="1350" height="1080" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-02.jpg" alt="Reception toast at Eberly Austin wedding venue" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-03.jpg" alt="Eberly reception details, Austin wedding" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-04.jpg" alt="Guests celebrating at Eberly wedding reception" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-05.jpg" alt="Reception candid moment at Eberly" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-06.jpg" alt="Eberly Austin wedding reception room" width="1350" height="900" loading="lazy">
+      <div class="grow-row">
+        <img style="flex-grow:1.2500" src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-01.jpg" alt="Wedding reception at Eberly, downtown Austin" width="1350" height="1080" loading="lazy">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-02.jpg" alt="Reception toast at Eberly Austin wedding venue" width="1350" height="900" loading="lazy">
+      </div>
+      <div class="grow-row">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-03.jpg" alt="Eberly reception details, Austin wedding" width="1350" height="900" loading="lazy">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-04.jpg" alt="Guests celebrating at Eberly wedding reception" width="1350" height="900" loading="lazy">
+      </div>
+      <div class="grow-row">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-05.jpg" alt="Reception candid moment at Eberly" width="1350" height="900" loading="lazy">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-06.jpg" alt="Eberly Austin wedding reception room" width="1350" height="900" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
@@ -331,12 +355,19 @@
       <p>The part of the night that's hardest to plan for and the easiest to love — first dances, late laughter, and the moments that only happen once the formalities are over.</p>
     </div>
     <div class="chapter-grid">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-01.jpg" alt="First dance at Eberly Austin wedding reception" width="900" height="1350" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-02.jpg" alt="Dance floor celebration, Austin wedding reception" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-03.jpg" alt="Guests dancing at Austin wedding reception" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-04.jpg" alt="Candid dancing moment, Eberly wedding reception" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-05.jpg" alt="Late night reception celebration" width="1350" height="900" loading="lazy">
-      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-06.jpg" alt="Final dance floor moment, Austin wedding" width="1350" height="900" loading="lazy">
+      <div class="grow-row">
+        <img style="flex-grow:0.6667" src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-01.jpg" alt="First dance at Eberly Austin wedding reception" width="900" height="1350" loading="lazy">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-02.jpg" alt="Dance floor celebration, Austin wedding reception" width="1350" height="900" loading="lazy">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-03.jpg" alt="Guests dancing at Austin wedding reception" width="1350" height="900" loading="lazy">
+      </div>
+      <div class="grow-row">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-04.jpg" alt="Candid dancing moment, Eberly wedding reception" width="1350" height="900" loading="lazy">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-05.jpg" alt="Late night reception celebration" width="1350" height="900" loading="lazy">
+      </div>
+      <div class="grow-row">
+        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-06.jpg" alt="Final dance floor moment, Austin wedding" width="1350" height="900" loading="lazy">
+        <span class="sp" style="flex-grow:1.1605"></span>
+      </div>
     </div>
   </div>
 </section>
