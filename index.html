@@ -177,7 +177,6 @@
 
   /* ══ B3 SERVICE GRID ══ */
   .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-  .svc-grid-bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:760px;margin:30px auto 0}
   .svc-card{background:#fff;border:1px solid var(--line);transition:.3s;display:flex;flex-direction:column}
   .svc-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(31,27,22,.10)}
   .svc-card a{display:flex;flex-direction:column;height:100%}
@@ -191,12 +190,12 @@
   .svc-cta{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--dark)}
   .svc-card:hover .svc-cta{color:var(--gold)}
 
-  .other-services{margin-top:46px;max-width:760px;margin-left:auto;margin-right:auto}
-  .other-services summary{font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--dark);cursor:pointer;list-style:none;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:center;align-items:center;gap:10px}
-  .other-services summary::-webkit-details-marker{display:none}
-  .other-services summary::after{content:"+";color:var(--gold);font-size:18px;font-family:var(--serif)}
-  .other-services[open] summary::after{content:"–"}
-  .other-services summary:hover{color:var(--gold)}
+  .svc-card-toggle button{all:unset;display:flex;flex-direction:column;height:100%;width:100%;cursor:pointer;text-align:left}
+  .svc-card-toggle .svc-cta{transition:.2s}
+  .svc-card-toggle:hover .svc-cta{color:var(--gold)}
+
+  .other-services-panel{margin-top:30px;max-height:0;opacity:0;overflow:hidden;transition:max-height .4s ease,opacity .3s ease,margin-top .4s ease}
+  .other-services-panel.open{max-height:2000px;opacity:1}
 
   /* ══ B4 DUAL ANCHOR ══ */
   .dual{background:var(--cream)}
@@ -319,7 +318,7 @@
 
   /* ══ RESPONSIVE ══ */
   @media(max-width:920px){
-    .svc-grid,.svc-grid-bottom,.review-grid,.venue-list,.res-grid{grid-template-columns:repeat(2,1fr)}
+    .svc-grid,.review-grid,.venue-list,.res-grid{grid-template-columns:repeat(2,1fr)}
     .process-grid{grid-template-columns:repeat(2,1fr);gap:40px 30px}
     .dual-grid,.story-grid{grid-template-columns:1fr}
     .story-grid--reverse .story-img,.story-grid--reverse .story-text{order:0}
@@ -334,7 +333,7 @@
     .nav-links a{padding:15px 28px;width:100%}
     .nav-book{margin:10px 28px;text-align:center}
     .nav-toggle{display:block}
-    .svc-grid,.svc-grid-bottom,.review-grid,.venue-list,.res-grid{grid-template-columns:1fr}
+    .svc-grid,.review-grid,.venue-list,.res-grid{grid-template-columns:1fr}
     .process-grid{grid-template-columns:1fr}
     .story-text{padding:42px 30px}
     .hero-ctas{flex-direction:column;align-items:stretch}
@@ -403,7 +402,6 @@
     </div>
     <div class="svc-grid">
 
-      <!-- Row 1 -->
       <article class="svc-card">
         <a href="/weddings/" aria-label="Wedding Photography">
           <div class="svc-img"><img src="/austin-wedding-photography.jpg" alt="Austin wedding photography" loading="lazy"></div>
@@ -438,11 +436,6 @@
         </a>
       </article>
 
-    </div>
-
-    <!-- Row 2 (centered, 2 cards) -->
-    <div class="svc-grid-bottom">
-
       <article class="svc-card">
         <a href="/corporate/" aria-label="Corporate Portraits and Branding">
           <div class="svc-img"><img src="/austin-corporate-branding.jpg" alt="Austin corporate headshots and branding photography" loading="lazy"></div>
@@ -465,59 +458,67 @@
         </a>
       </article>
 
+      <article class="svc-card svc-card-toggle" id="otherServicesToggle">
+        <button type="button" aria-expanded="false" aria-controls="otherServicesPanel" onclick="toggleOtherServices(this)">
+          <div class="svc-img"><img src="/austin-engagement-photography.jpg" alt="Other photography services" loading="lazy"></div>
+          <div class="svc-body">
+            <h3 class="svc-title">Other Services</h3>
+            <p class="svc-vp">Engagements, family portraits, Quinceañera, and sports photography.</p>
+            <span class="svc-cta" id="otherServicesCta">See More →</span>
+          </div>
+        </button>
+      </article>
+
     </div>
 
-    <!-- OTHER SERVICES (collapsed) -->
-    <details class="other-services">
-      <summary>Other Services</summary>
-      <div class="svc-grid" style="margin-top:30px">
+    <!-- OTHER SERVICES (revealed on click) -->
+    <div class="svc-grid other-services-panel" id="otherServicesPanel">
 
-        <article class="svc-card">
-          <a href="/engagements/" aria-label="Engagement Sessions">
-            <div class="svc-img"><img src="/austin-engagement-photography.jpg" alt="Austin engagement photography" loading="lazy"></div>
-            <div class="svc-body">
-              <h3 class="svc-title">Engagement Sessions</h3>
-              <p class="svc-vp">The very beginning of your forever — the two of you, in the places that already feel like yours.</p>
-              <span class="svc-cta">Explore →</span>
-            </div>
-          </a>
-        </article>
+      <article class="svc-card">
+        <a href="/engagements/" aria-label="Engagement Sessions">
+          <div class="svc-img"><img src="/austin-engagement-photography.jpg" alt="Austin engagement photography" loading="lazy"></div>
+          <div class="svc-body">
+            <h3 class="svc-title">Engagement Sessions</h3>
+            <p class="svc-vp">The very beginning of your forever — the two of you, in the places that already feel like yours.</p>
+            <span class="svc-cta">Explore →</span>
+          </div>
+        </a>
+      </article>
 
-        <article class="svc-card">
-          <a href="/families/" aria-label="Family Portraits">
-            <div class="svc-img"><img src="/austin-family-photography.jpg" alt="Austin family portrait photography" loading="lazy"></div>
-            <div class="svc-body">
-              <h3 class="svc-title">Family Portraits</h3>
-              <p class="svc-vp">Everyone together, exactly as they are now — for your walls today, and your grandchildren one day.</p>
-              <span class="svc-cta">Explore →</span>
-            </div>
-          </a>
-        </article>
+      <article class="svc-card">
+        <a href="/families/" aria-label="Family Portraits">
+          <div class="svc-img"><img src="/austin-family-photography.jpg" alt="Austin family portrait photography" loading="lazy"></div>
+          <div class="svc-body">
+            <h3 class="svc-title">Family Portraits</h3>
+            <p class="svc-vp">Everyone together, exactly as they are now — for your walls today, and your grandchildren one day.</p>
+            <span class="svc-cta">Explore →</span>
+          </div>
+        </a>
+      </article>
 
-        <article class="svc-card">
-          <a href="/quinceanera/" aria-label="Quinceañera Photography">
-            <div class="svc-img"><img src="/austin-quinceanera-photography.jpg" alt="Quinceañera photography in Austin" loading="lazy"></div>
-            <div class="svc-body">
-              <h3 class="svc-title">Quinceañera Photography</h3>
-              <p class="svc-vp">A once-in-a-lifetime celebration, honored with all the beauty and tradition the day deserves.</p>
-              <span class="svc-cta">Explore →</span>
-            </div>
-          </a>
-        </article>
+      <article class="svc-card">
+        <a href="/quinceanera/" aria-label="Quinceañera Photography">
+          <div class="svc-img"><img src="/austin-quinceanera-photography.jpg" alt="Quinceañera photography in Austin" loading="lazy"></div>
+          <div class="svc-body">
+            <h3 class="svc-title">Quinceañera Photography</h3>
+            <p class="svc-vp">A once-in-a-lifetime celebration, honored with all the beauty and tradition the day deserves.</p>
+            <span class="svc-cta">Explore →</span>
+          </div>
+        </a>
+      </article>
 
-        <article class="svc-card">
-          <a href="/sports/" aria-label="Sports Photography">
-            <div class="svc-img"><img src="/austin-sports-photography.jpg" alt="Austin sports photography" loading="lazy"></div>
-            <div class="svc-body">
-              <h3 class="svc-title">Sports Photography</h3>
-              <p class="svc-vp">The grit, the focus, the moment it all comes together — your athlete at their very best.</p>
-              <span class="svc-cta">Explore →</span>
-            </div>
-          </a>
-        </article>
+      <article class="svc-card">
+        <a href="/sports/" aria-label="Sports Photography">
+          <div class="svc-img"><img src="/austin-sports-photography.jpg" alt="Austin sports photography" loading="lazy"></div>
+          <div class="svc-body">
+            <h3 class="svc-title">Sports Photography</h3>
+            <p class="svc-vp">The grit, the focus, the moment it all comes together — your athlete at their very best.</p>
+            <span class="svc-cta">Explore →</span>
+          </div>
+        </a>
+      </article>
 
-      </div>
-    </details>
+    </div>
 
   </div>
 </section>
@@ -807,6 +808,15 @@
   document.querySelectorAll('#navlinks a').forEach(function(a){
     a.addEventListener('click',function(){document.getElementById('navlinks').classList.remove('open');});
   });
+
+  // Toggle the "Other Services" panel
+  function toggleOtherServices(btn){
+    var panel = document.getElementById('otherServicesPanel');
+    var cta = document.getElementById('otherServicesCta');
+    var isOpen = panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    cta.textContent = isOpen ? 'See Less →' : 'See More →';
+  }
 </script>
 
 </body>
