@@ -13,7 +13,8 @@
 <meta property="og:title" content="Mattie's Wedding Photography Guide | Austin, TX | Nydam Photography">
 <meta property="og:description" content="A planning guide for couples considering Mattie's in Austin, Texas — venue history, photography considerations, and planning tips from Nydam Photography.">
 <meta property="og:url" content="https://nydamphoto.com/venues/matties-austin/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://nydamphoto.com/venue-matties.jpg">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,11 +86,13 @@
   .crumb a{color:var(--muted)}
   .crumb a:hover{color:var(--gold)}
 
-  .vp-hero{position:relative;min-height:40vh;display:flex;align-items:center;background:var(--cream);border-bottom:1px solid var(--line)}
-  .vp-hero-inner{position:relative;z-index:1;max-width:760px;padding:60px 28px}
-  .vp-hero h1{font-family:var(--display);font-weight:400;font-size:clamp(26px,4vw,40px);line-height:1.2;letter-spacing:.02em;color:var(--dark);margin-bottom:14px}
-  .vp-hero .loc{font-family:var(--sans);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-  .vp-hero p{font-size:clamp(17px,1.8vw,20px);font-style:italic;color:var(--muted);max-width:600px}
+  .vp-hero{position:relative;min-height:56vh;display:flex;align-items:center;overflow:hidden;background:var(--dark)}
+  .vp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+  .vp-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,27,22,.45),rgba(31,27,22,.7))}
+  .vp-hero-inner{position:relative;z-index:1;color:var(--ivory);max-width:760px;padding:70px 28px}
+  .vp-hero h1{font-family:var(--display);font-weight:400;font-size:clamp(28px,4.4vw,46px);line-height:1.2;letter-spacing:.02em;margin-bottom:14px;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+  .vp-hero .loc{font-family:var(--sans);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#E7DECE;margin-bottom:20px}
+  .vp-hero p{font-size:clamp(17px,1.8vw,20px);font-style:italic;color:#F3ECE0;max-width:600px;text-shadow:0 1px 10px rgba(0,0,0,.45)}
 
   .section{padding:74px 0}
   .section-narrow{max-width:760px;margin:0 auto}
@@ -204,6 +207,7 @@
 
 <!-- HERO -->
 <section class="vp-hero" aria-label="Mattie's">
+  <img src="/venue-matties.jpg" alt="Mattie's wedding venue, Austin, Texas" loading="eager">
   <div class="wrap vp-hero-inner">
     <h1>Wedding Photography at Mattie's: A Planning Guide</h1>
     <span class="loc">South Austin, Texas</span>
