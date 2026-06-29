@@ -64,7 +64,9 @@
     { "@type": "ListItem", "position": 16, "name": "The Allan House", "url": "https://nydamphoto.com/venues/the-allan-house/" },
     { "@type": "ListItem", "position": 17, "name": "The Grand Lady", "url": "https://nydamphoto.com/venues/the-grand-lady/" },
     { "@type": "ListItem", "position": 18, "name": "Chapel Dulcinea", "url": "https://nydamphoto.com/venues/chapel-dulcinea/" },
-    { "@type": "ListItem", "position": 19, "name": "The Preserve at Canyon Lake", "url": "https://nydamphoto.com/venues/the-preserve-at-canyon-lake/" }
+    { "@type": "ListItem", "position": 19, "name": "The Preserve at Canyon Lake", "url": "https://nydamphoto.com/venues/the-preserve-at-canyon-lake/" },
+    { "@type": "ListItem", "position": 20, "name": "Garey House", "url": "https://nydamphoto.com/venues/garey-house-georgetown/" },
+    { "@type": "ListItem", "position": 21, "name": "Texas Old Town", "url": "https://nydamphoto.com/venues/texas-old-town-kyle/" }
   ]
 }
 </script>
@@ -144,7 +146,10 @@
   .v-card-ctas{display:flex;gap:10px;flex-wrap:wrap}
 
   .style-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-  .style-card{background:#fff;border:1px solid var(--line);padding:26px 20px;text-align:center;font-family:var(--display);font-size:18px;color:var(--dark)}
+  .style-card{background:#fff;border:1px solid var(--line);padding:26px 20px;text-align:center;font-family:var(--display);font-size:18px;color:var(--dark);cursor:pointer;transition:.2s;width:100%}
+  .style-card[aria-pressed="true"]{background:var(--dark);border-color:var(--dark);color:var(--ivory)}
+  .filter-status{text-align:center;font-family:var(--sans);font-size:14px;color:var(--muted);margin-top:20px;min-height:20px}
+  .v-card.is-hidden{display:none}
   .style-card:hover{border-color:var(--gold);color:var(--gold)}
 
   .similar-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -292,7 +297,7 @@
     </div>
     <div class="venue-grid">
 
-      <article class="v-card">
+      <article class="v-card" data-style="austin modern">
         <div class="v-card-img"><img src="/venue-eberly.jpg" alt="Eberly, Austin wedding venue" loading="lazy"></div>
         <div class="v-card-body">
           <div class="v-card-name">Eberly</div>
@@ -305,7 +310,7 @@
         </div>
       </article>
 
-      <article class="v-card">
+      <article class="v-card" data-style="austin church">
         <div class="v-card-img"><img src="/venue-westlake-church.jpg" alt="Westlake Hills Presbyterian Church, Austin wedding venue" loading="lazy"></div>
         <div class="v-card-body">
           <div class="v-card-name">Westlake Hills Presbyterian Church</div>
@@ -318,7 +323,7 @@
         </div>
       </article>
 
-      <article class="v-card">
+      <article class="v-card" data-style="austin church">
         <div class="v-card-img"><img src="/venue-st-mary-cathedral.jpg" alt="St. Mary Cathedral, Austin wedding venue" loading="lazy"></div>
         <div class="v-card-body">
           <div class="v-card-name">St. Mary Cathedral</div>
@@ -331,7 +336,7 @@
         </div>
       </article>
 
-      <article class="v-card">
+      <article class="v-card" data-style="austin estate">
         <div class="v-card-img"><img src="/venue-charles-johnson-house.jpg" alt="Charles Johnson House, Austin wedding venue" loading="lazy"></div>
         <div class="v-card-body">
           <div class="v-card-name">Charles Johnson House</div>
@@ -344,7 +349,7 @@
         </div>
       </article>
 
-      <article class="v-card">
+      <article class="v-card" data-style="austin modern">
         <div class="v-card-img"><img src="/venue-royal-sonesta.jpg" alt="The Stephen F. Austin Royal Sonesta Hotel, Austin wedding venue" loading="lazy"></div>
         <div class="v-card-body">
           <div class="v-card-name">The Stephen F. Austin Royal Sonesta Hotel</div>
@@ -357,7 +362,7 @@
         </div>
       </article>
 
-      <article class="v-card">
+      <article class="v-card" data-style="austin modern outdoor">
         <div class="v-card-img"><img src="/venue-four-seasons.jpg" alt="Four Seasons Hotel Austin wedding venue" loading="lazy"></div>
         <div class="v-card-body">
           <div class="v-card-name">Four Seasons Hotel Austin</div>
@@ -370,8 +375,8 @@
         </div>
       </article>
 
-      <article class="v-card">
-        <div class="v-card-img"><div class="v-card-placeholder">Mattie's</div></div>
+      <article class="v-card" data-style="austin garden outdoor">
+        <div class="v-card-img"><img src="/venue-matties.jpg" alt="Mattie's wedding venue, Austin, Texas" loading="lazy"></div>
         <div class="v-card-body">
           <div class="v-card-name">Mattie's</div>
           <div class="v-card-loc">Austin, Texas</div>
@@ -382,8 +387,8 @@
         </div>
       </article>
 
-      <article class="v-card">
-        <div class="v-card-img"><div class="v-card-placeholder">Villa Antonia</div></div>
+      <article class="v-card" data-style="hillcountry estate garden">
+        <div class="v-card-img"><img src="/venue-villa-antonia.jpg" alt="Villa Antonia wedding venue" loading="lazy"></div>
         <div class="v-card-body">
           <div class="v-card-name">Villa Antonia</div>
           <div class="v-card-loc">Jonestown, Texas</div>
@@ -394,8 +399,8 @@
         </div>
       </article>
 
-      <article class="v-card">
-        <div class="v-card-img"><div class="v-card-placeholder">Prospect House</div></div>
+      <article class="v-card" data-style="hillcountry modern">
+        <div class="v-card-img"><img src="/venue-prospect-house.jpg" alt="Prospect House wedding venue" loading="lazy"></div>
         <div class="v-card-body">
           <div class="v-card-name">Prospect House</div>
           <div class="v-card-loc">Dripping Springs, Texas</div>
@@ -406,8 +411,8 @@
         </div>
       </article>
 
-      <article class="v-card">
-        <div class="v-card-img"><div class="v-card-placeholder">Canyonwood Ridge</div></div>
+      <article class="v-card" data-style="hillcountry outdoor">
+        <div class="v-card-img"><img src="/venue-canyonwood-ridge.jpg" alt="Canyonwood Ridge wedding venue" loading="lazy"></div>
         <div class="v-card-body">
           <div class="v-card-name">Canyonwood Ridge</div>
           <div class="v-card-loc">Dripping Springs, Texas</div>
@@ -418,8 +423,8 @@
         </div>
       </article>
 
-      <article class="v-card">
-        <div class="v-card-img"><div class="v-card-placeholder">Camp Lucy</div></div>
+      <article class="v-card" data-style="hillcountry church estate">
+        <div class="v-card-img"><img src="/venue-camp-lucy.jpg" alt="Camp Lucy wedding venue" loading="lazy"></div>
         <div class="v-card-body">
           <div class="v-card-name">Camp Lucy</div>
           <div class="v-card-loc">Dripping Springs, Texas</div>
@@ -430,8 +435,8 @@
         </div>
       </article>
 
-      <article class="v-card">
-        <div class="v-card-img"><div class="v-card-placeholder">Ma Maison</div></div>
+      <article class="v-card" data-style="hillcountry garden outdoor">
+        <div class="v-card-img"><img src="/venue-ma-maison.jpg" alt="Ma Maison wedding venue" loading="lazy"></div>
         <div class="v-card-body">
           <div class="v-card-name">Ma Maison</div>
           <div class="v-card-loc">Dripping Springs, Texas</div>
@@ -442,7 +447,7 @@
         </div>
       </article>
 
-      <article class="v-card">
+      <article class="v-card" data-style="hillcountry modern">
         <div class="v-card-img"><div class="v-card-placeholder">The Arlo</div></div>
         <div class="v-card-body">
           <div class="v-card-name">The Arlo</div>
@@ -454,7 +459,7 @@
         </div>
       </article>
 
-      <article class="v-card">
+      <article class="v-card" data-style="hillcountry outdoor garden intimate">
         <div class="v-card-img"><div class="v-card-placeholder">The Addison Grove</div></div>
         <div class="v-card-body">
           <div class="v-card-name">The Addison Grove</div>
@@ -466,7 +471,7 @@
         </div>
       </article>
 
-      <article class="v-card">
+      <article class="v-card" data-style="austin estate garden">
         <div class="v-card-img"><div class="v-card-placeholder">Barr Mansion</div></div>
         <div class="v-card-body">
           <div class="v-card-name">Barr Mansion</div>
@@ -478,7 +483,7 @@
         </div>
       </article>
 
-      <article class="v-card">
+      <article class="v-card" data-style="austin estate intimate">
         <div class="v-card-img"><div class="v-card-placeholder">The Allan House</div></div>
         <div class="v-card-body">
           <div class="v-card-name">The Allan House</div>
@@ -490,7 +495,7 @@
         </div>
       </article>
 
-      <article class="v-card">
+      <article class="v-card" data-style="hillcountry estate garden intimate">
         <div class="v-card-img"><div class="v-card-placeholder">The Grand Lady</div></div>
         <div class="v-card-body">
           <div class="v-card-name">The Grand Lady</div>
@@ -502,7 +507,7 @@
         </div>
       </article>
 
-      <article class="v-card">
+      <article class="v-card" data-style="hillcountry church outdoor intimate">
         <div class="v-card-img"><div class="v-card-placeholder">Chapel Dulcinea</div></div>
         <div class="v-card-body">
           <div class="v-card-name">Chapel Dulcinea</div>
@@ -514,7 +519,7 @@
         </div>
       </article>
 
-      <article class="v-card">
+      <article class="v-card" data-style="hillcountry outdoor estate">
         <div class="v-card-img"><div class="v-card-placeholder">The Preserve at Canyon Lake</div></div>
         <div class="v-card-body">
           <div class="v-card-name">The Preserve at Canyon Lake</div>
@@ -522,6 +527,31 @@
           <p class="v-card-desc">A 170-acre wildlife preserve between Austin and San Antonio, with two spring-fed lakes and an indoor chapel as a weather backup.</p>
           <div class="v-card-ctas">
             <a href="/venues/the-preserve-at-canyon-lake/" class="btn btn-outline btn-sm">View Venue Guide</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="v-card" data-style="hillcountry estate garden">
+        <div class="v-card-img"><img src="/venue-garey-house.jpg" alt="Garey House wedding venue, Georgetown, Texas" loading="lazy"></div>
+        <div class="v-card-body">
+          <div class="v-card-name">Garey House</div>
+          <div class="v-card-loc">Georgetown, Texas</div>
+          <p class="v-card-desc">A Tuscan-style estate inside a 525-acre public park, with a lawn and terrace overlooking a pond and waterfall.</p>
+          <div class="v-card-ctas">
+            <a href="/venues/garey-house-georgetown/" class="btn btn-outline btn-sm">View Venue Guide</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="v-card" data-style="hillcountry outdoor">
+        <div class="v-card-img"><img src="/venue-texas-old-town.jpg" alt="Texas Old Town wedding venue, Kyle, Texas" loading="lazy"></div>
+        <div class="v-card-body">
+          <div class="v-card-name">Texas Old Town</div>
+          <div class="v-card-loc">Kyle, Texas</div>
+          <p class="v-card-desc">A 55-acre Hill Country property with four distinct venues and century-old live oaks throughout.</p>
+          <div class="v-card-ctas">
+            <a href="/venues/texas-old-town-kyle/" class="btn btn-outline btn-sm">View Venue Guide</a>
+            <a href="/portfolio/stories/texas-old-town-madeleine-alexander/" class="btn btn-gold btn-sm">Story Coming Soon</a>
           </div>
         </div>
       </article>
@@ -538,15 +568,16 @@
       <h2 id="style-h2">Browse by Venue Style</h2>
     </div>
     <div class="style-grid">
-      <span class="style-card">Austin Venues</span>
-      <span class="style-card">Hill Country Venues</span>
-      <span class="style-card">Church Weddings</span>
-      <span class="style-card">Garden Venues</span>
-      <span class="style-card">Estate Venues</span>
-      <span class="style-card">Modern Venues</span>
-      <span class="style-card">Outdoor Venues</span>
-      <span class="style-card">Intimate Wedding Venues</span>
+      <button type="button" class="style-card" data-filter="austin" aria-pressed="false">Austin Venues</button>
+      <button type="button" class="style-card" data-filter="hillcountry" aria-pressed="false">Hill Country Venues</button>
+      <button type="button" class="style-card" data-filter="church" aria-pressed="false">Church Weddings</button>
+      <button type="button" class="style-card" data-filter="garden" aria-pressed="false">Garden Venues</button>
+      <button type="button" class="style-card" data-filter="estate" aria-pressed="false">Estate Venues</button>
+      <button type="button" class="style-card" data-filter="modern" aria-pressed="false">Modern Venues</button>
+      <button type="button" class="style-card" data-filter="outdoor" aria-pressed="false">Outdoor Venues</button>
+      <button type="button" class="style-card" data-filter="intimate" aria-pressed="false">Intimate Wedding Venues</button>
     </div>
+    <p class="filter-status" id="filterStatus" aria-live="polite"></p>
     <div class="similar-groups" style="margin-top:40px">
       <div class="similar-group">
         <h4>If You Love Historic Architecture</h4>
@@ -620,6 +651,15 @@
           <span class="rw-card-venue">St. Mary Cathedral + Four Seasons</span>
           <span class="rw-card-names">Alexandra &amp; Matt</span>
           <a href="/portfolio/stories/st-mary-cathedral-four-seasons-alexandra-matt/" class="rw-card-link">View the Story →</a>
+        </div>
+      </article>
+
+      <article class="rw-card">
+        <div class="rw-card-img"><img src="/venue-texas-old-town.jpg" alt="Madeleine and Alexander's wedding at Texas Old Town" loading="lazy"></div>
+        <div class="rw-card-body">
+          <span class="rw-card-venue">Texas Old Town</span>
+          <span class="rw-card-names">Madeleine &amp; Alexander</span>
+          <a href="/portfolio/stories/texas-old-town-madeleine-alexander/" class="rw-card-link">Story Coming Soon →</a>
         </div>
       </article>
 
@@ -779,6 +819,45 @@
   document.querySelectorAll('#navlinks a').forEach(function(a){
     a.addEventListener('click',function(){document.getElementById('navlinks').classList.remove('open');});
   });
+
+  // Browse by Venue Style — real filtering
+  (function(){
+    var buttons = document.querySelectorAll('.style-card');
+    var cards = document.querySelectorAll('.v-card');
+    var statusEl = document.getElementById('filterStatus');
+    var activeFilter = null;
+
+    function applyFilter(filter){
+      var visibleCount = 0;
+      cards.forEach(function(card){
+        var styles = (card.getAttribute('data-style') || '').split(' ');
+        var matches = !filter || styles.indexOf(filter) !== -1;
+        card.classList.toggle('is-hidden', !matches);
+        if (matches) visibleCount++;
+      });
+      return visibleCount;
+    }
+
+    buttons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var filter = btn.getAttribute('data-filter');
+        var isSame = activeFilter === filter;
+        activeFilter = isSame ? null : filter;
+
+        buttons.forEach(function(b){ b.setAttribute('aria-pressed', 'false'); });
+        if (!isSame) btn.setAttribute('aria-pressed', 'true');
+
+        var count = applyFilter(activeFilter);
+
+        if (!activeFilter) {
+          statusEl.textContent = '';
+        } else {
+          statusEl.textContent = 'Showing ' + count + ' venue' + (count === 1 ? '' : 's') + ' — ' + btn.textContent;
+          document.getElementById('venues').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  })();
 </script>
 
 </body>
