@@ -48,10 +48,25 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "The Beliefs Behind the Work",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Every Wedding Has a Story", "url": "https://nydamphoto.com/weddings/our-approach/every-wedding-has-a-story/" },
+    { "@type": "ListItem", "position": 2, "name": "Editorial Does Not Mean Stiff", "url": "https://nydamphoto.com/weddings/our-approach/editorial-doesnt-mean-stiff/" },
+    { "@type": "ListItem", "position": 3, "name": "Candid When It Matters. Directed When It Helps.", "url": "https://nydamphoto.com/weddings/our-approach/candid-when-it-matters-directed-when-it-helps/" },
+    { "@type": "ListItem", "position": 4, "name": "Light Should Serve the Story", "url": "https://nydamphoto.com/weddings/our-approach/light-serves-the-story/" },
+    { "@type": "ListItem", "position": 5, "name": "Timeless Over Trendy", "url": "https://nydamphoto.com/weddings/our-approach/timeless-over-trendy/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "What is your wedding photography style?", "acceptedAnswer": { "@type": "Answer", "text": "Editorial and photojournalistic — candid storytelling during the moments that unfold on their own, with calm, intentional direction for portraits and formals." } },
     { "@type": "Question", "name": "Do you pose couples?", "acceptedAnswer": { "@type": "Answer", "text": "For portraits, yes — gently. We guide posture, movement, and composition so the images feel elevated, but we never make a couple feel like they're performing." } },
+    { "@type": "Question", "name": "Does editorial wedding photography mean stiff, posed photos?", "acceptedAnswer": { "@type": "Answer", "text": "No. Editorial means the images are composed with intention — light, framing, and moment all considered — not that couples are arranged into rigid poses. We combine photojournalistic coverage with calm direction, so portraits look refined without ever feeling forced." } },
     { "@type": "Question", "name": "Do you photograph candid moments?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Ceremony, reception, reactions, and laughter are covered candidly, the way they actually happen, without staging or interruption." } },
     { "@type": "Question", "name": "Can you handle dark churches and receptions?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work confidently in natural light and low light alike, using flash when a space calls for it, always in service of the story rather than overpowering it." } },
     { "@type": "Question", "name": "Do you photograph family formals?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Family formals are handled calmly and efficiently, with a clear structure so no one is left standing around wondering what's next." } },
@@ -169,6 +184,17 @@
   .related-card-link{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dark);border-bottom:1px solid var(--gold);padding-bottom:2px;align-self:flex-start}
   .related-card:hover .related-card-link{color:var(--gold)}
 
+  .beliefs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .belief-card{background:#fff;border:1px solid var(--line);padding:30px 28px;display:flex;flex-direction:column}
+  .belief-card h4{font-family:var(--display);font-weight:400;font-size:20px;color:var(--dark);margin-bottom:10px}
+  .belief-card p{color:var(--muted);font-size:16px;line-height:1.7;flex:1;margin-bottom:18px}
+  .belief-card-cta{font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .belief-card-soon{font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px;max-width:880px;margin:0 auto}
+  .review-card blockquote{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--text);line-height:1.7;margin-bottom:14px}
+  .review-card cite{font-style:normal;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
   /* Resources */
   .resources{text-align:center}
   .resource-list{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
@@ -204,7 +230,8 @@
   .footer-social a{margin-left:18px}
 
   @media(max-width:920px){
-    .balance-grid,.related-grid{grid-template-columns:1fr}
+    .balance-grid,.related-grid,.beliefs-grid{grid-template-columns:1fr}
+    .reviews-grid{grid-template-columns:1fr;gap:30px}
     .feature-row,.feature-row.reverse{grid-template-columns:1fr;gap:30px}
     .feature-row.reverse .feature-img{order:0}
     .steps-grid{grid-template-columns:repeat(2,1fr)}
@@ -286,6 +313,55 @@
     <h2 id="lens-h2">Photography and storytelling have always been the same craft.</h2>
     <p>Arlen earned his PhD in English and began photographing professionally during the same season of life. The two were never separate pursuits. He reads a wedding day the way a close reader reads a page — looking for what is true, fleeting, layered, and worth remembering.</p>
     <p>That means watching for relationships, not just faces — the gesture a father makes before he walks his daughter down the aisle, the rhythm of a reception as it builds toward a first dance, the quiet emotional logic that runs underneath a day that looks, from the outside, like a simple schedule of events. That's the difference between generic wedding coverage and a wedding actually being read as the story it is.</p>
+  </div>
+</section>
+
+<!-- THE BELIEFS BEHIND THE WORK -->
+<section class="section" aria-labelledby="beliefs-h2">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Going Deeper</span>
+      <h2 id="beliefs-h2">The Beliefs Behind the Work</h2>
+      <p>Everything above comes from a handful of core beliefs. Each one has its own story — these pages will expand on them as they're published.</p>
+    </div>
+    <div class="beliefs-grid">
+
+      <article class="belief-card">
+        <span class="belief-card-soon">Coming Soon</span>
+        <h4>Every Wedding Has a Story</h4>
+        <p>Why we photograph weddings as stories rather than checklists — and what that actually changes about how we shoot a day.</p>
+        <span class="belief-card-cta">Read More →</span>
+      </article>
+
+      <article class="belief-card">
+        <span class="belief-card-soon">Coming Soon</span>
+        <h4>Editorial Does Not Mean Stiff</h4>
+        <p>How a portrait can feel refined and intentional without ever feeling forced — and why over-posing is the opposite of what editorial actually means.</p>
+        <span class="belief-card-cta">Read More →</span>
+      </article>
+
+      <article class="belief-card">
+        <span class="belief-card-soon">Coming Soon</span>
+        <h4>Candid When It Matters. Directed When It Helps.</h4>
+        <p>The real balance between documentary coverage and calm direction — and how we decide, moment to moment, which one a day actually needs.</p>
+        <span class="belief-card-cta">Read More →</span>
+      </article>
+
+      <article class="belief-card">
+        <span class="belief-card-soon">Coming Soon</span>
+        <h4>Light Should Serve the Story</h4>
+        <p>Our natural light and flash philosophy — why lighting decisions should support the feeling of a moment, not call attention to themselves.</p>
+        <span class="belief-card-cta">Read More →</span>
+      </article>
+
+      <article class="belief-card">
+        <span class="belief-card-soon">Coming Soon</span>
+        <h4>Timeless Over Trendy</h4>
+        <p>Our editing and storytelling philosophy — why a photograph should still feel true twenty years from now, not just current the week it's delivered.</p>
+        <span class="belief-card-cta">Read More →</span>
+      </article>
+
+    </div>
   </div>
 </section>
 
@@ -438,11 +514,35 @@
       <h2 id="res-h2">Related Resources</h2>
     </div>
     <div class="resource-list">
+      <a href="/weddings/" class="resource-chip">Wedding Photography</a>
       <a href="/weddings/collections/" class="resource-chip">Wedding Collections</a>
+      <a href="/portfolio/stories/weddings/" class="resource-chip">Wedding Stories</a>
       <a href="/weddings/guides/" class="resource-chip">Wedding Guides</a>
       <a href="/weddings/guides/how-to-choose-your-wedding-photographer/" class="resource-chip">Choosing Your Photographer</a>
       <a href="/weddings/guides/wedding-day-timeline-guide/" class="resource-chip">Wedding Day Timeline Guide</a>
       <a href="/weddings/guides/wedding-morning-getting-ready-guide/" class="resource-chip">Wedding Morning Guide</a>
+      <a href="/venues/" class="resource-chip">Wedding Venue Guide</a>
+      <a href="/book/" class="resource-chip">Check Availability</a>
+    </div>
+  </div>
+</section>
+
+<!-- IN THEIR WORDS -->
+<section class="section" aria-labelledby="reviews-h2">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What Couples Remember</span>
+      <h2 id="reviews-h2">In Their Words</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <blockquote>"Arlen has become our family's dedicated photographer and an important part of our lives. From LinkedIn photos to prom, senior portraits, college milestones, and our wedding, he has been there for every meaningful moment."</blockquote>
+        <cite>— Sonya Forster</cite>
+      </div>
+      <div class="review-card">
+        <blockquote style="color:var(--muted);font-style:normal">A second review will go here once we have one to share — we won't put words in a couple's mouth.</blockquote>
+        <cite>Coming Soon</cite>
+      </div>
     </div>
   </div>
 </section>
@@ -457,6 +557,7 @@
     <div class="faq-list">
       <details class="faq-item"><summary>What is your wedding photography style?</summary><div class="faq-answer">Editorial and photojournalistic — candid storytelling during the moments that unfold on their own, with calm, intentional direction for portraits and formals.</div></details>
       <details class="faq-item"><summary>Do you pose couples?</summary><div class="faq-answer">For portraits, yes — gently. We guide posture, movement, and composition so the images feel elevated, but we never make a couple feel like they're performing.</div></details>
+      <details class="faq-item"><summary>Does editorial wedding photography mean stiff, posed photos?</summary><div class="faq-answer">No. Editorial means the images are composed with intention — light, framing, and moment all considered — not that couples are arranged into rigid poses. We combine photojournalistic coverage with calm direction, so portraits look refined without ever feeling forced.</div></details>
       <details class="faq-item"><summary>Do you photograph candid moments?</summary><div class="faq-answer">Yes. Ceremony, reception, reactions, and laughter are covered candidly, the way they actually happen, without staging or interruption.</div></details>
       <details class="faq-item"><summary>Can you handle dark churches and receptions?</summary><div class="faq-answer">Yes. We work confidently in natural light and low light alike, using flash when a space calls for it, always in service of the story rather than overpowering it.</div></details>
       <details class="faq-item"><summary>Do you photograph family formals?</summary><div class="faq-answer">Yes. Family formals are handled calmly and efficiently, with a clear structure so no one is left standing around wondering what's next.</div></details>
