@@ -185,11 +185,12 @@
   .related-card:hover .related-card-link{color:var(--gold)}
 
   .beliefs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .belief-card{background:#fff;border:1px solid var(--line);padding:30px 28px;display:flex;flex-direction:column}
+  .belief-card{background:#fff;border:1px solid var(--line);padding:30px 28px;display:flex;flex-direction:column;color:inherit;transition:.2s}
+  .belief-card:hover{border-color:var(--gold)}
+  .belief-card:hover .belief-card-cta{color:var(--gold)}
   .belief-card h4{font-family:var(--display);font-weight:400;font-size:20px;color:var(--dark);margin-bottom:10px}
   .belief-card p{color:var(--muted);font-size:16px;line-height:1.7;flex:1;margin-bottom:18px}
   .belief-card-cta{font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-  .belief-card-soon{font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
 
   .reviews-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px;max-width:880px;margin:0 auto}
   .review-card blockquote{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--text);line-height:1.7;margin-bottom:14px}
@@ -326,40 +327,35 @@
     </div>
     <div class="beliefs-grid">
 
-      <article class="belief-card">
-        <span class="belief-card-soon">Coming Soon</span>
+      <a href="/weddings/our-approach/every-wedding-has-a-story/" class="belief-card" style="text-decoration:none">
         <h4>Every Wedding Has a Story</h4>
         <p>Why we photograph weddings as stories rather than checklists — and what that actually changes about how we shoot a day.</p>
         <span class="belief-card-cta">Read More →</span>
-      </article>
+      </a>
 
-      <article class="belief-card">
-        <span class="belief-card-soon">Coming Soon</span>
+      <a href="/weddings/our-approach/editorial-doesnt-mean-stiff/" class="belief-card" style="text-decoration:none">
         <h4>Editorial Does Not Mean Stiff</h4>
         <p>How a portrait can feel refined and intentional without ever feeling forced — and why over-posing is the opposite of what editorial actually means.</p>
         <span class="belief-card-cta">Read More →</span>
-      </article>
+      </a>
 
-      <article class="belief-card">
-        <span class="belief-card-soon">Coming Soon</span>
+      <a href="/weddings/our-approach/candid-when-it-matters-directed-when-it-helps/" class="belief-card" style="text-decoration:none">
         <h4>Candid When It Matters. Directed When It Helps.</h4>
         <p>The real balance between documentary coverage and calm direction — and how we decide, moment to moment, which one a day actually needs.</p>
         <span class="belief-card-cta">Read More →</span>
-      </article>
+      </a>
 
-      <article class="belief-card">
-        <span class="belief-card-soon">Coming Soon</span>
+      <a href="/weddings/our-approach/light-serves-the-story/" class="belief-card" style="text-decoration:none">
         <h4>Light Should Serve the Story</h4>
         <p>Our natural light and flash philosophy — why lighting decisions should support the feeling of a moment, not call attention to themselves.</p>
         <span class="belief-card-cta">Read More →</span>
-      </article>
+      </a>
 
-      <article class="belief-card">
-        <span class="belief-card-soon">Coming Soon</span>
+      <a href="/weddings/our-approach/timeless-over-trendy/" class="belief-card" style="text-decoration:none">
         <h4>Timeless Over Trendy</h4>
         <p>Our editing and storytelling philosophy — why a photograph should still feel true twenty years from now, not just current the week it's delivered.</p>
         <span class="belief-card-cta">Read More →</span>
-      </article>
+      </a>
 
     </div>
   </div>
@@ -540,8 +536,8 @@
         <cite>— Sonya Forster</cite>
       </div>
       <div class="review-card">
-        <blockquote style="color:var(--muted);font-style:normal">A second review will go here once we have one to share — we won't put words in a couple's mouth.</blockquote>
-        <cite>Coming Soon</cite>
+        <blockquote>"Nydam Photography did an absolutely spectacular job in every aspect for our wedding. They melted into the background during the ceremony, captured the most important moments, and delivered an absolutely stunning gallery of world-class photographs. I'm so happy that they were able to capture our once-in-a-lifetime day!"</blockquote>
+        <cite>— Laure Henri</cite>
       </div>
     </div>
   </div>
