@@ -66,6 +66,21 @@
 }
 </script>
 
+<!-- ══════ SCHEMA: Review ══════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://nydamphoto.com/#organization",
+  "review": {
+    "@type": "Review",
+    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+    "author": { "@type": "Person", "name": "Sonya Forster" },
+    "reviewBody": "Arlen has become our family's dedicated photographer and an important part of our lives. From LinkedIn photos to prom, senior portraits, college milestones, and our wedding, he has been there for every meaningful moment."
+  }
+}
+</script>
+
 <style>
   :root{
     --ivory:#FAF7F2; --cream:#F1EBE1; --dark:#1F1B16;
@@ -130,13 +145,17 @@
   .chapter-head .eyebrow{margin-bottom:10px}
   .chapter-head h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,3vw,32px);color:var(--dark);margin-bottom:14px}
   .chapter-head p{color:var(--muted);font-size:19px}
-  .chapter-grid{--gh:14px}
-  .grow-row{display:flex;gap:var(--gh);margin-bottom:var(--gh)}
-  .grow-row:last-child{margin-bottom:0}
-  .grow-row img{height:auto;flex-basis:0;min-width:0;display:block;background:var(--cream);color:transparent;font-size:0}
-  .grow-row .sp{flex-grow:0;background:transparent}
+  .chapter-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .chapter-grid img{width:100%;height:100%;aspect-ratio:1;object-fit:cover;background:var(--cream);color:transparent;font-size:0}
+  .chapter-grid .wide{grid-column:span 2;aspect-ratio:2/1}
 
   .venue-notes{background:var(--cream)}
+
+  .evidence-block{max-width:720px;margin:0 auto;text-align:center}
+  .evidence-label{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;display:block}
+  .evidence-quote{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.4vw,25px);color:var(--dark);line-height:1.6;margin-bottom:20px}
+  .evidence-cite{font-family:var(--sans);font-size:13px;letter-spacing:.08em;color:var(--muted)}
+  .evidence-cite strong{color:var(--text);font-weight:600;letter-spacing:.04em}
   .venue-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;max-width:920px;margin:0 auto}
   .venue-card h3{font-family:var(--display);font-weight:400;font-size:24px;color:var(--dark);margin-bottom:14px}
   .venue-card p{color:var(--muted);font-size:18px}
@@ -185,6 +204,8 @@
   @media(max-width:920px){
     .venue-grid{grid-template-columns:1fr}
     .guide-cards-grid{grid-template-columns:repeat(2,1fr)}
+    .chapter-grid{grid-template-columns:repeat(2,1fr)}
+    .chapter-grid .wide{grid-column:span 2}
     .footer-grid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:640px){
@@ -195,10 +216,7 @@
     .nav-links a{padding:15px 28px;width:100%}
     .nav-book{margin:10px 28px;text-align:center}
     .nav-toggle{display:block}
-    .grow-row{display:block}
-    .grow-row img{width:100%;height:auto;margin-bottom:var(--gh)}
-    .grow-row img:last-child{margin-bottom:0}
-    .grow-row .sp{display:none}
+    .chapter-grid{grid-template-columns:repeat(2,1fr)}
     .guide-cards-grid{grid-template-columns:1fr}
     .footer-grid{grid-template-columns:1fr}
   }
@@ -282,18 +300,12 @@
       <p>The vows themselves, photographed quietly from the places we could be without ever becoming part of the moment. Westlake Church gave the ceremony its own light and its own hush.</p>
     </div>
     <div class="chapter-grid">
-      <div class="grow-row">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-01.jpg" alt="Sonya and Mark's wedding ceremony at Westlake Church" width="1350" height="900" loading="lazy">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-02.jpg" alt="Wedding ceremony processional at Westlake Church" width="1350" height="900" loading="lazy">
-      </div>
-      <div class="grow-row">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-03.jpg" alt="Exchange of vows at Westlake Church wedding" width="1350" height="900" loading="lazy">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-04.jpg" alt="Ring exchange during the wedding ceremony" width="1350" height="900" loading="lazy">
-      </div>
-      <div class="grow-row">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-05.jpg" alt="First kiss at Westlake Church wedding ceremony" width="1350" height="900" loading="lazy">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-06.jpg" alt="Recessional after the wedding ceremony" width="1350" height="900" loading="lazy">
-      </div>
+      <img class="wide" src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-01.jpg" alt="Sonya and Mark's wedding ceremony at Westlake Church" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-02.jpg" alt="Wedding ceremony processional at Westlake Church" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-03.jpg" alt="Exchange of vows at Westlake Church wedding" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-04.jpg" alt="Ring exchange during the wedding ceremony" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-05.jpg" alt="First kiss at Westlake Church wedding ceremony" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/ceremony-06.jpg" alt="Recessional after the wedding ceremony" loading="lazy">
     </div>
   </div>
 </section>
@@ -306,19 +318,12 @@
       <p>Editorial portraits of Sonya and Mark, and the people who stood with them — composed with care, but never so much direction that the day stopped feeling like their own.</p>
     </div>
     <div class="chapter-grid">
-      <div class="grow-row">
-        <img style="flex-grow:1.2500" src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-01.jpg" alt="Editorial couple portrait, Sonya and Mark" width="1350" height="1080" loading="lazy">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-02.jpg" alt="Wedding party portrait, Austin wedding" width="1350" height="900" loading="lazy">
-      </div>
-      <div class="grow-row">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-03.jpg" alt="Couple portrait, Austin wedding photography" width="1350" height="900" loading="lazy">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-04.jpg" alt="Family portrait at Austin wedding" width="1350" height="900" loading="lazy">
-      </div>
-      <div class="grow-row">
-        <img style="flex-grow:0.6667" src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-05.jpg" alt="Bride and groom official portrait" width="900" height="1350" loading="lazy">
-        <img style="flex-grow:0.7500" src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-06.jpg" alt="Candid portrait moment, Austin wedding" width="900" height="1200" loading="lazy">
-        <span class="sp" style="flex-grow:1.2438"></span>
-      </div>
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-01.jpg" alt="Editorial couple portrait, Sonya and Mark" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-02.jpg" alt="Wedding party portrait, Austin wedding" loading="lazy">
+      <img class="wide" src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-03.jpg" alt="Couple portrait, Austin wedding photography" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-04.jpg" alt="Family portrait at Austin wedding" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-05.jpg" alt="Bride and groom official portrait" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/portraits-06.jpg" alt="Candid portrait moment, Austin wedding" loading="lazy">
     </div>
   </div>
 </section>
@@ -331,18 +336,12 @@
       <p>A shift in register — Eberly's downtown Austin space brought warmth, toasts, and the particular energy of a room ready to celebrate.</p>
     </div>
     <div class="chapter-grid">
-      <div class="grow-row">
-        <img style="flex-grow:1.2500" src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-01.jpg" alt="Wedding reception at Eberly, downtown Austin" width="1350" height="1080" loading="lazy">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-02.jpg" alt="Reception toast at Eberly Austin wedding venue" width="1350" height="900" loading="lazy">
-      </div>
-      <div class="grow-row">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-03.jpg" alt="Eberly reception details, Austin wedding" width="1350" height="900" loading="lazy">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-04.jpg" alt="Guests celebrating at Eberly wedding reception" width="1350" height="900" loading="lazy">
-      </div>
-      <div class="grow-row">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-05.jpg" alt="Reception candid moment at Eberly" width="1350" height="900" loading="lazy">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-06.jpg" alt="Eberly Austin wedding reception room" width="1350" height="900" loading="lazy">
-      </div>
+      <img class="wide" src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-01.jpg" alt="Wedding reception at Eberly, downtown Austin" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-02.jpg" alt="Reception toast at Eberly Austin wedding venue" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-03.jpg" alt="Eberly reception details, Austin wedding" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-04.jpg" alt="Guests celebrating at Eberly wedding reception" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-05.jpg" alt="Reception candid moment at Eberly" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/reception-06.jpg" alt="Eberly Austin wedding reception room" loading="lazy">
     </div>
   </div>
 </section>
@@ -355,19 +354,12 @@
       <p>The part of the night that's hardest to plan for and the easiest to love — first dances, late laughter, and the moments that only happen once the formalities are over.</p>
     </div>
     <div class="chapter-grid">
-      <div class="grow-row">
-        <img style="flex-grow:0.6667" src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-01.jpg" alt="First dance at Eberly Austin wedding reception" width="900" height="1350" loading="lazy">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-02.jpg" alt="Dance floor celebration, Austin wedding reception" width="1350" height="900" loading="lazy">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-03.jpg" alt="Guests dancing at Austin wedding reception" width="1350" height="900" loading="lazy">
-      </div>
-      <div class="grow-row">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-04.jpg" alt="Candid dancing moment, Eberly wedding reception" width="1350" height="900" loading="lazy">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-05.jpg" alt="Late night reception celebration" width="1350" height="900" loading="lazy">
-      </div>
-      <div class="grow-row">
-        <img style="flex-grow:1.5000" src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-06.jpg" alt="Final dance floor moment, Austin wedding" width="1350" height="900" loading="lazy">
-        <span class="sp" style="flex-grow:1.1605"></span>
-      </div>
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-01.jpg" alt="First dance at Eberly Austin wedding reception" loading="lazy">
+      <img class="wide" src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-02.jpg" alt="Dance floor celebration, Austin wedding reception" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-03.jpg" alt="Guests dancing at Austin wedding reception" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-04.jpg" alt="Candid dancing moment, Eberly wedding reception" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-05.jpg" alt="Late night reception celebration" loading="lazy">
+      <img src="/portfolio/stories/westlake-church-eberly-sonya-mark/dancing-06.jpg" alt="Final dance floor moment, Austin wedding" loading="lazy">
     </div>
   </div>
 </section>
@@ -392,6 +384,17 @@
       </div>
     </div>
     <p style="max-width:760px;margin:36px auto 0;text-align:center;color:var(--muted);font-size:18px">A ceremony and reception in two distinct spaces gives a wedding day real range — different light, different pace, different mood — and that range is exactly what makes a full wedding story worth telling.</p>
+  </div>
+</section>
+
+<!-- ══════ IN THEIR WORDS ══════ -->
+<section class="section" aria-labelledby="review-h2">
+  <div class="wrap">
+    <div class="evidence-block">
+      <span class="evidence-label" id="review-h2">In Their Words</span>
+      <p class="evidence-quote">"Arlen has become our family's dedicated photographer and an important part of our lives. From LinkedIn photos to prom, senior portraits, college milestones, and our wedding, he has been there for every meaningful moment."</p>
+      <p class="evidence-cite"><strong>Sonya Forster</strong> · Westlake Church + Eberly, Austin</p>
+    </div>
   </div>
 </section>
 
