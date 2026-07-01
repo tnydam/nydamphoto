@@ -142,9 +142,9 @@
   .storyteller-block .eyebrow{color:var(--gold-light);text-shadow:0 1px 8px rgba(0,0,0,.6)}
   .storyteller-block h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.4vw,36px);line-height:1.3;letter-spacing:.02em;margin:14px 0 22px;text-shadow:0 2px 14px rgba(0,0,0,.6)}
   .storyteller-block p{color:#CFC4B2;font-size:21px;line-height:1.65;text-shadow:0 1px 10px rgba(0,0,0,.5)}
-  .stories-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+  .stories-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
   .story-card{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
-  .story-card-img{aspect-ratio:4/3;background:var(--cream)}
+  .story-card-img{aspect-ratio:3/2;background:var(--cream)}
   .story-card-img img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
   .story-card-body{padding:26px;flex:1;display:flex;flex-direction:column}
   .story-card-meta{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
@@ -211,6 +211,15 @@
   .w-cta-paths{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
   .w-cta .btn-outline{color:var(--ivory);border-color:rgba(255,255,255,.45)}
   .w-cta .btn-outline:hover{background:var(--ivory);color:var(--dark);border-color:var(--ivory)}
+
+  /* Editorial imagery */
+  .triptych{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .triptych img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;background:var(--cream);color:transparent;font-size:0}
+  .w-cta{position:relative;overflow:hidden}
+  .w-cta .w-cta-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;color:transparent;font-size:0}
+  .w-cta::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,13,.74),rgba(20,17,13,.84))}
+  .w-cta .wrap{position:relative;z-index:1}
+  @media(max-width:560px){.triptych{gap:8px}}
   .footer{background:#171310;color:#CFC4B2;padding:72px 0 36px;font-size:16px}
   .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
   .footer-brand .f-logo{font-family:var(--display);font-size:22px;letter-spacing:.14em;color:var(--ivory);margin-bottom:16px}
@@ -306,6 +315,18 @@
       <div class="flow-step"><div class="flow-num">04</div><div><h3>Official Portraits &amp; Family Formals</h3><p>Calm, efficient direction for couple portraits and family formals — editorial images without losing the day's momentum.</p></div></div>
       <div class="flow-step"><div class="flow-num">05</div><div><h3>Reception &amp; Candid Moments</h3><p>The toasts, the first dance, the moments between — covered with the same candid storytelling as the rest of your day.</p></div></div>
       <div class="flow-step"><div class="flow-num">06</div><div><h3>Gallery Delivery</h3><p>Your wedding, thoughtfully edited and delivered in a private online gallery, ready to relive, share, and print.</p></div></div>
+    </div>
+  </div>
+</section>
+<!-- TRIPTYCH -->
+<!-- IMAGE RULE: three vertical 4:5 frames. Vary them — a candid moment, a portrait, a detail —
+     so the row reads like an editorial spread, not a contact sheet. -->
+<section class="section" style="padding-top:0" aria-label="Wedding photographs by Nydam Photography">
+  <div class="wrap">
+    <div class="triptych">
+      <img src="/weddings-strip-01.jpg" alt="Candid wedding moment, Austin wedding photography" loading="lazy">
+      <img src="/weddings-strip-02.jpg" alt="Editorial couple portrait by Nydam Photography" loading="lazy">
+      <img src="/weddings-strip-03.jpg" alt="Wedding day detail, Austin wedding" loading="lazy">
     </div>
   </div>
 </section>
@@ -463,6 +484,12 @@
     <div class="guides-preview-cta"><a href="/weddings/guides/" class="btn btn-gold">Browse All Wedding Guides</a></div>
   </div>
 </section>
+<!-- FULL-BLEED PHOTO STRIP -->
+<!-- IMAGE RULE: one wide, full-bleed cinematic frame with depth — a ceremony, a reception room,
+     a landscape. No text over it. Faces small relative to the whole frame. -->
+<div class="photo-break">
+  <img src="/weddings-feature.jpg" alt="Austin wedding photography by Nydam Photography" loading="lazy">
+</div>
 <section class="section" aria-labelledby="faq-h2">
   <div class="wrap">
     <div class="section-head">
@@ -483,6 +510,7 @@
   </div>
 </section>
 <section class="section w-cta" id="book" aria-labelledby="cta-h2">
+  <img class="w-cta-bg" src="/weddings-cta.jpg" alt="" aria-hidden="true" loading="lazy">
   <div class="wrap">
     <span class="eyebrow">Begin When You're Ready</span>
     <h2 id="cta-h2">Let's Tell Your Wedding Story</h2>
