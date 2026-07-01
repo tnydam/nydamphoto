@@ -65,6 +65,20 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://nydamphoto.com/#organization",
+  "review": {
+    "@type": "Review",
+    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+    "author": { "@type": "Person", "name": "Laura Henri" },
+    "reviewBody": "Nydam Photography did an absolutely spectacular job in every aspect for our wedding. They melted into the background during the ceremony, captured the most important moments, and delivered an absolutely stunning gallery of world-class photographs. I'm so happy that they were able to capture our once-in-a-lifetime day!"
+  }
+}
+</script>
+
 <style>
   :root{--ivory:#FAF7F2;--cream:#F1EBE1;--dark:#1F1B16;--gold:#C9943A;--gold-light:#D4A843;--text:#2A2521;--muted:#7A7064;--line:#E2D9CB;--serif:'Cormorant Garamond',Georgia,serif;--display:'Cinzel',serif;--sans:'Jost',-apple-system,sans-serif}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -132,6 +146,12 @@
   .chapter-grid .wide{grid-column:span 2;aspect-ratio:2/1}
 
   .venue-notes{background:var(--cream)}
+
+  .evidence-block{max-width:720px;margin:0 auto;text-align:center}
+  .evidence-label{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;display:block}
+  .evidence-quote{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.4vw,25px);color:var(--dark);line-height:1.6;margin-bottom:20px}
+  .evidence-cite{font-family:var(--sans);font-size:13px;letter-spacing:.08em;color:var(--muted)}
+  .evidence-cite strong{color:var(--text);font-weight:600;letter-spacing:.04em}
   .venue-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;max-width:920px;margin:0 auto}
   .venue-card h3{font-family:var(--display);font-weight:400;font-size:24px;color:var(--dark);margin-bottom:14px}
   .venue-card p{color:var(--muted);font-size:18px}
@@ -335,6 +355,17 @@
         <p>The Charles Johnson House gave the reception its own unpretentious warmth — a room built for celebration, without any of the formality the ceremony called for earlier in the day.</p>
         <p class="venue-card-link">Planning your own celebration? <a href="/weddings/guides/wedding-day-timeline-guide/">See our wedding timeline guide →</a></p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- IN THEIR WORDS -->
+<section class="section" aria-labelledby="review-h2">
+  <div class="wrap">
+    <div class="evidence-block">
+      <span class="evidence-label" id="review-h2">In Their Words</span>
+      <p class="evidence-quote">"Nydam Photography did an absolutely spectacular job in every aspect for our wedding. They melted into the background during the ceremony, captured the most important moments, and delivered an absolutely stunning gallery of world-class photographs. I'm so happy that they were able to capture our once-in-a-lifetime day!"</p>
+      <p class="evidence-cite"><strong>Laura Henri</strong> · St. Mary Cathedral + Charles Johnson House, Austin</p>
     </div>
   </div>
 </section>
