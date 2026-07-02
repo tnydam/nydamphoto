@@ -174,6 +174,15 @@
   .section-head{text-align:center;max-width:680px;margin:0 auto 56px}
   .section-head h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.4vw,40px);letter-spacing:.03em;color:var(--dark);margin:14px 0 18px}
   .section-head p{color:var(--muted);font-size:20px}
+  /* Where to Begin */
+  .begin-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1000px;margin:0 auto}
+  .begin-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);padding:46px 42px;transition:.25s}
+  .begin-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+  .begin-card h3{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,28px);line-height:1.28;color:var(--dark);margin-bottom:16px}
+  .begin-card p{color:var(--muted);font-size:18px;line-height:1.6;flex:1;margin-bottom:24px}
+  .begin-link{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:3px;align-self:flex-start}
+  .begin-card:hover .begin-link{color:var(--dark);border-color:var(--dark)}
+  @media(max-width:760px){.begin-grid{grid-template-columns:1fr}}
 
   /* ══ B3 SERVICE GRID ══ */
   .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
@@ -354,7 +363,7 @@
       <a href="/portfolio/">Portfolio</a>
       <a href="/venues/">Venues</a>
       <a href="/senior-team/" class="nav-highlight">NP Seniors</a>
-      <a href="/guides/">Guides</a>
+      <a href="/guides/">GuideHub</a>
       <a href="/about/">About</a>
       <a href="/book/" class="nav-book">Check Availability</a>
     </nav>
@@ -389,6 +398,29 @@
     <span>Austin Family Magazine</span><span class="trustbar-dot">·</span>
     <span>Riviera Orange County</span><span class="trustbar-dot">·</span>
     <span>Classical Guitar Magazine</span>
+  </div>
+</section>
+
+<!-- ══════ WHERE TO BEGIN ══════ -->
+<section class="section begin" aria-labelledby="begin-h2">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Where to Begin</span>
+      <h2 id="begin-h2">What brings you here today?</h2>
+      <p>Every story starts somewhere. Find the moment you're planning for — and let's talk about how we'll remember it.</p>
+    </div>
+    <div class="begin-grid">
+      <a class="begin-card" href="/weddings/">
+        <h3>The day you'll feel before you remember it.</h3>
+        <p>The vows, the laughter, the quiet glance no one else caught — your wedding day in Austin, exactly as it felt to live it.</p>
+        <span class="begin-link">Explore Weddings →</span>
+      </a>
+      <a class="begin-card" href="/seniors/">
+        <h3>The person they are right now.</h3>
+        <p>This chapter passes so quickly. Senior portraits in Austin built entirely around who your senior is — never a formula.</p>
+        <span class="begin-link">Explore Seniors →</span>
+      </a>
+    </div>
   </div>
 </section>
 
