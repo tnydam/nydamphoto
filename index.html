@@ -251,16 +251,16 @@
 
   /* ══ B9 PROGRAMS & RESOURCES ══ */
   .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-  .res-card{background:#fff;border:1px solid var(--line);padding:40px 32px 36px;display:flex;flex-direction:column;text-align:center}
-  .res-card--feature{background:var(--dark);border-color:var(--dark);color:var(--ivory)}
-  .res-kicker{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-  .res-card h3{font-family:var(--display);font-weight:400;font-size:25px;letter-spacing:.02em;margin-bottom:14px;color:var(--dark)}
-  .res-card--feature h3{color:var(--ivory)}
-  .res-card p{color:var(--muted);font-size:18px;line-height:1.55;flex:1;margin-bottom:22px}
-  .res-card--feature p{color:#CFC4B2}
-  .res-link{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--dark);border-bottom:1px solid var(--gold);padding-bottom:3px;display:inline-block;align-self:center}
-  .res-card--feature .res-link{color:var(--gold-light)}
-  .res-link:hover{color:var(--gold)}
+  .res-card{position:relative;overflow:hidden;background:var(--dark);border:1px solid var(--dark);padding:44px 32px 40px;display:flex;flex-direction:column;text-align:center;color:var(--ivory)}
+  .res-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;color:transparent;font-size:0;z-index:0}
+  .res-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,13,.78),rgba(20,17,13,.9));z-index:0}
+  .res-card > *{position:relative;z-index:1}
+  .res-card--feature{border-color:var(--gold)}
+  .res-kicker{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-light);margin-bottom:14px}
+  .res-card h3{font-family:var(--display);font-weight:400;font-size:25px;letter-spacing:.02em;margin-bottom:14px;color:var(--ivory)}
+  .res-card p{color:#E4DBCE;font-size:18px;line-height:1.55;flex:1;margin-bottom:22px}
+  .res-link{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-light);border-bottom:1px solid var(--gold);padding-bottom:3px;display:inline-block;align-self:center}
+  .res-link:hover{color:var(--ivory);border-color:var(--ivory)}
   /* Reviews background band */
   .reviews{position:relative;overflow:hidden;background:var(--dark)}
   .reviews-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;color:transparent;font-size:0}
@@ -273,10 +273,7 @@
   .reviews .review cite{color:#CFC4B2}
   .reviews .review-stars{color:var(--gold-light)}
   /* NP Seniors feature card background */
-  .res-card--feature{position:relative;overflow:hidden}
-  .res-card--feature .np-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%;color:transparent;font-size:0;z-index:0}
-  .res-card--feature::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,13,.68),rgba(20,17,13,.86));z-index:0}
-  .res-card--feature > *{position:relative;z-index:1}
+  /* NP Seniors feature card keeps a gold border accent (backgrounds handled by .res-card rules above) */
 
   /* ══ B10 BOOKING PATHS ══ */
   .book-paths{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
@@ -662,19 +659,21 @@
     </div>
     <div class="res-grid">
       <article class="res-card">
+        <img class="res-bg" src="/guides-card-bg.jpg" alt="" aria-hidden="true" loading="lazy">
         <span class="res-kicker">Client Resources</span>
         <h3>Complimentary Guides</h3>
         <p>Thoughtful guides on what to wear, how to prepare, and what to expect — so your session feels effortless and entirely like you.</p>
         <a href="/guides/" class="res-link">Explore the Resources →</a>
       </article>
       <article class="res-card res-card--feature">
-        <img class="np-bg" src="/np-seniors-card-bg.jpg" alt="" aria-hidden="true" loading="lazy">
+        <img class="res-bg" src="/np-seniors-card-bg.jpg" alt="" aria-hidden="true" loading="lazy">
         <span class="res-kicker">Featured Program</span>
         <h3>NP Seniors</h3>
         <p>Our signature senior program, with a limited number of spots each season and an experience designed entirely around your senior.</p>
         <a href="/senior-team/" class="res-link">Discover the Program →</a>
       </article>
       <article class="res-card">
+        <img class="res-bg" src="/referral-card-bg.jpg" alt="" aria-hidden="true" loading="lazy">
         <span class="res-kicker">For Past Clients</span>
         <h3>Referral Program</h3>
         <p>The kindest way to support us is to share us with someone you love. Our referral program is our thank-you for doing so.</p>
