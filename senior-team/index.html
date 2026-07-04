@@ -111,7 +111,7 @@
   .s-hero .btn-outline{color:var(--ivory);border-color:rgba(255,255,255,.45)}
   .s-hero .btn-outline:hover{background:var(--ivory);color:var(--dark);border-color:var(--ivory)}
 
-  .section{padding:100px 0}
+  .section{padding:80px 0}
   .section-narrow{max-width:760px;margin:0 auto}
   .section-head{max-width:760px;margin:0 auto 50px;text-align:center}
   .section-head h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.4vw,38px);letter-spacing:.03em;color:var(--dark);margin:14px 0 18px}
@@ -134,22 +134,43 @@
   /* Pillars — reordered, logistics last */
   .pillars{background:var(--cream)}
   .pillar-list{max-width:840px;margin:0 auto;display:flex;flex-direction:column;gap:0}
-  .pillar{display:grid;grid-template-columns:140px 90px 1fr;gap:30px;padding:38px 0;border-bottom:1px solid var(--line);align-items:start}
-  .pillar-photo{width:140px;height:140px;flex-shrink:0;overflow:hidden;background:var(--ivory)}
+  .pillar{display:grid;grid-template-columns:150px 90px 1fr;gap:30px;padding:38px 0;border-bottom:1px solid var(--line);align-items:start}
+  .pillar-photo{width:150px;height:190px;flex-shrink:0;overflow:hidden;background:var(--ivory)}
 
-  .chapter{padding:70px 0;border-top:1px solid var(--line)}
+  .chapter{padding:52px 0;border-top:1px solid var(--line)}
   .chapter-head{max-width:760px;margin:0 auto 36px}
   .chapter-head .eyebrow{margin-bottom:10px}
   .chapter-head h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,3vw,32px);color:var(--dark);margin-bottom:14px}
   .chapter-head p{color:var(--muted);font-size:19px}
-  .chapter-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-flow:dense;gap:14px}
-  .chapter-grid img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;background:var(--cream);color:transparent;font-size:0}
+  .chapter-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-flow:dense;gap:6px}
+  .chapter-grid img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;background:var(--cream);color:transparent;font-size:0}
   .chapter-grid .landscape{grid-column:span 2;aspect-ratio:16/9}
-  .pillar-photo img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
+  .chapter-grid img.pos-top{object-position:center top}
+  .chapter-grid img.pos-center{object-position:center center}
+  .chapter-grid img.pos-bottom{object-position:center bottom}
+  .pillar-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;color:transparent;font-size:0}
   .pillar:last-child{border-bottom:none}
   .pillar-num{font-family:var(--display);font-size:38px;color:var(--gold);line-height:1}
   .pillar h3{font-family:var(--display);font-weight:400;font-size:25px;color:var(--dark);margin-bottom:10px}
   .pillar p{color:var(--muted);font-size:18px;line-height:1.65}
+
+  /* Full-bleed photo band with overlay text — replaces plain text-on-ivory blocks */
+  .photo-band{position:relative;min-height:64vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--dark)}
+  .photo-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;color:transparent;font-size:0}
+  .photo-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,27,22,.35),rgba(31,27,22,.7))}
+  .photo-band-inner{position:relative;z-index:1;color:var(--ivory);text-align:center;max-width:740px;padding:60px 28px}
+  .photo-band-inner .eyebrow{color:var(--gold-light)}
+  .photo-band-inner p.emphasis{font-family:var(--display);font-weight:400;font-size:clamp(24px,3.2vw,32px);color:var(--ivory);line-height:1.4;margin:0 0 20px;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+  .photo-band-inner h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,4vw,42px);letter-spacing:.03em;margin:0 0 24px;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+  .photo-band-inner p.sub{font-size:19px;color:#F3ECE0;max-width:600px;margin:0 auto 30px;line-height:1.7}
+
+  /* Split image/text section — replaces plain text blocks with a real photograph */
+  .split-section{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;max-width:1200px;margin:0 auto}
+  .split-img{overflow:hidden;min-height:480px}
+  .split-img img{width:100%;height:100%;object-fit:cover;object-position:center 15%;color:transparent;font-size:0}
+  .split-body{display:flex;flex-direction:column;justify-content:center;padding:60px}
+  .split-body .section-head{text-align:left;margin:0 0 24px}
+  .split-body .prose p{font-size:19px}
 
   .seasonal-examples{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px;max-width:700px;margin-left:auto;margin-right:auto}
   .seasonal-chip{font-family:var(--sans);font-size:14px;color:var(--dark);border:1px solid var(--line);background:#fff;padding:10px 20px}
@@ -162,8 +183,8 @@
 
   /* Included checklist — secondary, after the narrative */
   .included{background:var(--cream)}
-  .included-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:980px;margin:0 auto}
-  .included-item{background:#fff;border:1px solid var(--line);padding:22px 20px;font-family:var(--sans);font-size:16px;color:var(--text);display:flex;align-items:flex-start;gap:10px}
+  .included-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px;max-width:900px;margin:0 auto}
+  .included-item{padding:16px 0;border-bottom:1px solid var(--line);font-family:var(--sans);font-size:16px;color:var(--text);display:flex;align-items:flex-start;gap:12px}
   .coll-details{margin-top:0}
   .coll-details summary{font-family:var(--sans);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--dark);cursor:pointer;list-style:none;padding:14px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
   .coll-details summary::-webkit-details-marker{display:none}
@@ -220,6 +241,10 @@
   .footer-social a{margin-left:18px}
 
   @media(max-width:920px){
+    .split-section{grid-template-columns:1fr}
+    .split-img{min-height:340px}
+    .split-body{padding:44px 28px}
+    .split-body .section-head{text-align:center}
     .story-photos{grid-template-columns:1fr;gap:24px}
     .brynley-photos{grid-template-columns:1fr;gap:18px}
     .difference-grid{grid-template-columns:1fr;gap:30px}
@@ -232,6 +257,7 @@
   @media(max-width:640px){
     body{font-size:18px}
     .section,.chapter{padding:56px 0}
+    .photo-band{min-height:70vh}
     .nav-links{position:fixed;inset:74px 0 auto 0;background:var(--ivory);flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid var(--line);display:none}
     .nav-links.open{display:flex}
     .nav-links a{padding:15px 28px;width:100%}
@@ -274,9 +300,9 @@
 <section class="s-hero" aria-label="Every Senior Year Has a Story">
   <img src="/senior-team-hero.jpg" alt="A senior in her final year of high school, photographed by Nydam Photography" loading="eager">
   <div class="wrap s-hero-inner">
-    <span class="eyebrow">Nydam Photography</span>
-    <h1>Every Senior Year Has a Story</h1>
-    <p class="lead">This is how we tell it.</p>
+    <span class="eyebrow">Every Senior Year Has A Story</span>
+    <h1>The Signature Senior Portrait Experience</h1>
+    <p class="lead">For the senior who wants to be remembered as who they actually are — captured across an entire season, not a single afternoon.</p>
     <div class="s-hero-ctas">
       <a href="/senior-team/apply/" class="btn btn-gold">Apply for NP Seniors 2027</a>
       <a href="/guides/seniors/np-seniors-senior-portrait-program/" class="btn btn-outline">Learn How It Works</a>
@@ -327,16 +353,14 @@
 </section>
 
 <!-- WHY NP SENIORS EXISTS -->
-<section class="section" aria-labelledby="reveal-h2">
-  <div class="wrap">
-    <div class="section-narrow prose">
-      <p class="emphasis" style="margin-top:0">Because one portrait session could never tell an entire story —</p>
-      <h2 id="reveal-h2" style="text-align:center;font-family:var(--display);font-weight:400;font-size:clamp(28px,4vw,40px);color:var(--dark);margin:0 0 26px">we created NP Seniors.</h2>
-      <p>A small group of seniors, each year, who get to live their senior story across an entire season instead of a single afternoon — with the friendships, the practice, and the confidence that only come from time, built in along the way.</p>
-    </div>
-    <div style="text-align:center;margin-top:34px">
-      <a href="/senior-team/apply/" class="btn btn-gold">Apply for NP Seniors 2027</a>
-    </div>
+<section class="photo-band" aria-labelledby="reveal-h2">
+  <img src="/senior-team-reveal.jpg" alt="A senior laughing candidly with friends during an NP Seniors seasonal shoot, Austin" loading="lazy">
+  <div class="photo-band-inner">
+    <span class="eyebrow">Why NP Seniors Exists</span>
+    <p class="emphasis">Because one portrait session could never tell an entire story —</p>
+    <h2 id="reveal-h2">we created NP Seniors.</h2>
+    <p class="sub">A small group of seniors, each year, who get to live their senior story across an entire season instead of a single afternoon — with the friendships, the practice, and the confidence that only come from time, built in along the way.</p>
+    <a href="/senior-team/apply/" class="btn btn-gold">Apply for NP Seniors 2027</a>
   </div>
 </section>
 
@@ -464,15 +488,20 @@
 </section>
 
 <!-- FAMILIES WHO VALUE THE EXPERIENCE -->
-<section class="section pillars" aria-labelledby="for-h2">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Is This Your Family?</span>
-      <h2 id="for-h2">For Parents Who Already Know How Fast This Goes</h2>
+<section class="pillars" aria-labelledby="for-h2">
+  <div class="split-section">
+    <div class="split-img">
+      <img src="/senior-team-family-01.jpg" alt="A parent adjusting a senior's dress before an NP Seniors portrait session" loading="lazy">
     </div>
-    <div class="section-narrow prose">
-      <p>This is for the parents who've already caught themselves saying "where did the time go," more than once, this year. It's for the seniors who'd rather feel like themselves in their photos than perform for a camera they've never met before. It's for families who want to remember this season as more than a cap-and-gown photo taken in a hurry between graduation rehearsal and the ceremony itself.</p>
-      <p>It isn't for everyone, and that's alright. Families looking for a single, standalone senior session can find that through the navigation, without needing this page to make a case for it.</p>
+    <div class="split-body">
+      <div class="section-head">
+        <span class="eyebrow">Is This Your Family?</span>
+        <h2 id="for-h2">For Parents Who Already Know How Fast This Goes</h2>
+      </div>
+      <div class="prose">
+        <p>This is for the parents who've already caught themselves saying "where did the time go," more than once, this year. It's for the seniors who'd rather feel like themselves in their photos than perform for a camera they've never met before. It's for families who want to remember this season as more than a cap-and-gown photo taken in a hurry between graduation rehearsal and the ceremony itself.</p>
+        <p>It isn't for everyone, and that's alright. Families looking for a single, standalone senior session can find that through the navigation, without needing this page to make a case for it.</p>
+      </div>
     </div>
   </div>
 </section>
