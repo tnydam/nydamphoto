@@ -262,6 +262,17 @@
   .res-card p{color:#EDE6DA;font-size:18px;line-height:1.55;margin-bottom:22px}
   .res-link{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-light);border-bottom:1px solid var(--gold);padding-bottom:3px;display:inline-block;align-self:center;text-shadow:none}
   .res-link:hover{color:var(--ivory);border-color:var(--ivory)}
+  /* More services cards */
+  .more-services{background:var(--ivory)}
+  .more-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:1200px;margin:0 auto}
+  .more-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);padding:34px 26px;transition:.25s;text-align:center}
+  .more-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+  .more-card h3{font-family:var(--display);font-weight:400;font-size:22px;color:var(--dark);margin-bottom:10px}
+  .more-card p{color:var(--muted);font-size:16px;line-height:1.5;flex:1;margin-bottom:18px}
+  .more-card .more-link{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:2px;align-self:center}
+  .more-card:hover .more-link{color:var(--dark);border-color:var(--dark)}
+  @media(max-width:900px){.more-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.more-grid{grid-template-columns:1fr}}
   /* Reviews background band */
   .reviews{position:relative;overflow:hidden;background:var(--dark)}
   .reviews-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;color:transparent;font-size:0}
@@ -471,9 +482,41 @@
       <div class="dual-body">
         <h3>Every moment worth keeping.</h3>
         <p>Families, engagements, sports, and quinceañeras — the same intention and care, across every occasion.</p>
-        <a href="/#contact" class="dual-link">Explore Other Services →</a>
+        <a href="#more-services" class="dual-link">Explore Other Services →</a>
       </div>
     </article>
+  </div>
+</section>
+
+<!-- ══════ MORE SERVICES (cards) ══════ -->
+<section class="section more-services" id="more-services" aria-labelledby="more-h2">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">More Ways We Photograph</span>
+      <h2 id="more-h2">Other Services</h2>
+    </div>
+    <div class="more-grid">
+      <a class="more-card" href="/families/">
+        <h3>Families</h3>
+        <p>Relaxed, natural family portraits in real Austin settings.</p>
+        <span class="more-link">Explore →</span>
+      </a>
+      <a class="more-card" href="/engagements/">
+        <h3>Engagements</h3>
+        <p>The session before the wedding — where the camera stops being a stranger.</p>
+        <span class="more-link">Explore →</span>
+      </a>
+      <a class="more-card" href="/sports/">
+        <h3>Sports</h3>
+        <p>Player portraits, team media days, and tournament action.</p>
+        <span class="more-link">Explore →</span>
+      </a>
+      <a class="more-card" href="/quinceanera/">
+        <h3>Quinceañeras</h3>
+        <p>Portraits, the Misa, and the celebration — captured in full.</p>
+        <span class="more-link">Explore →</span>
+      </a>
+    </div>
   </div>
 </section>
 
