@@ -75,7 +75,7 @@
   :root{--ivory:#FAF7F2;--cream:#F1EBE1;--dark:#1F1B16;--gold:#C9943A;--gold-light:#D4A843;--text:#2A2521;--muted:#7A7064;--line:#E2D9CB;--serif:'Cormorant Garamond',Georgia,serif;--display:'Cinzel',serif;--sans:'Jost',-apple-system,sans-serif}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--ivory);color:var(--text);font-family:var(--serif);font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  body{background:var(--ivory);color:var(--text);font-family:var(--serif);font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   img{max-width:100%;display:block}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
@@ -142,6 +142,16 @@
   .chapter-head .eyebrow{margin-bottom:10px}
   .chapter-head h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,3vw,32px);color:var(--dark);margin-bottom:14px}
   .chapter-head p{color:var(--muted);font-size:19px}
+  /* Full-bleed banner image — breaks out of the wrap for maximum impact */
+  .img-banner{position:relative;width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;overflow:hidden;background:var(--cream);margin-top:36px;margin-bottom:36px}
+  .img-banner img{width:100%;height:62vh;object-fit:cover;object-position:center 20%;display:block;color:transparent;font-size:0}
+  .img-banner.tall img{height:74vh}
+  .img-banner-caption{position:absolute;left:0;right:0;bottom:0;padding:28px 28px 24px;background:linear-gradient(0deg,rgba(31,27,22,.72),rgba(31,27,22,0));font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);text-align:center}
+
+  /* A pair of true 4:5 portrait images, shown after a banner */
+  .img-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:900px;margin:0 auto}
+  .img-pair img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 16%;display:block;color:transparent;font-size:0}
+
   .chapter-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-flow:dense;gap:6px}
   .chapter-grid img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;background:var(--cream);color:transparent;font-size:0}
   .chapter-grid .landscape{grid-column:span 2;aspect-ratio:16/9}
@@ -241,6 +251,9 @@
   .footer-social a{margin-left:18px}
 
   @media(max-width:920px){
+    .img-banner img{height:46vh}
+    .img-banner.tall img{height:54vh}
+    .img-pair{grid-template-columns:1fr;max-width:520px}
     .split-section{grid-template-columns:1fr}
     .split-img{min-height:340px}
     .split-body{padding:44px 28px}
@@ -311,17 +324,23 @@
 </section>
 
 <!-- THE STORY OF SENIOR YEAR -->
-<section class="section" aria-labelledby="why-h2">
+<section class="section" aria-labelledby="why-h2" style="padding-bottom:0">
   <div class="wrap">
     <div class="section-narrow prose">
       <p class="emphasis" style="margin-top:0">Senior year isn't remembered in one photograph.</p>
       <p>It's remembered in hundreds of little moments. Walking into school for the last first day. One more Friday night under the stadium lights. Trying on a prom dress. College acceptance letters spread across the kitchen table. Laughing with the friends who have been beside you since elementary school. Realizing — almost without noticing — that childhood is quietly becoming memory.</p>
-      <p class="emphasis">That's the story we photograph. Not just the portraits. The year.</p>
     </div>
-    <div class="story-photos">
-      <img src="/senior-team-story-01.jpg" alt="Senior portrait by Nydam Photography, Austin" loading="lazy">
+  </div>
+  <div class="img-banner">
+    <img src="/senior-team-story-01.jpg" alt="Senior portrait by Nydam Photography, Austin" loading="lazy">
+  </div>
+  <div class="wrap">
+    <div class="img-pair">
       <img src="/senior-team-story-02.jpg" alt="Senior portrait detail, Nydam Photography" loading="lazy">
       <img src="/senior-team-story-03.jpg" alt="Senior portrait outdoors, Austin Texas" loading="lazy">
+    </div>
+    <div class="section-narrow prose" style="margin-top:44px">
+      <p class="emphasis">That's the story we photograph. Not just the portraits. The year.</p>
     </div>
   </div>
 </section>
@@ -333,14 +352,18 @@
       <span class="eyebrow">Every Story Begins Somewhere</span>
       <h2 id="brynley-h2">Meet Brynley</h2>
     </div>
-    <div class="brynley-photos">
+  </div>
+  <div class="img-banner tall">
+    <img src="/story-brynley-senior.jpg" alt="Brynley's senior portraits at The Domain" loading="lazy">
+    <div class="img-banner-caption">Class of 2027 · The Domain, Austin</div>
+  </div>
+  <div class="wrap">
+    <div class="img-pair">
       <img src="/story-brynley-senior-01.jpg" alt="Brynley's senior portrait at The Domain, Austin" loading="lazy">
-      <img src="/story-brynley-senior.jpg" alt="Brynley's senior portraits at The Domain" loading="lazy">
       <img src="/story-brynley-senior-03.jpg" alt="Brynley's senior portrait at The Domain, Austin" loading="lazy">
     </div>
-    <div class="feat-story-card" style="grid-template-columns:1fr">
+    <div class="feat-story-card" style="grid-template-columns:1fr;margin-top:44px">
       <div class="feat-story-body">
-        <span class="feat-story-meta">Class of 2027 · The Domain, Austin</span>
         <p>She dances. So instead of asking her to become someone else for the camera, we built the session around who she already was. She crossed an Austin street the way a model crosses a runway. She set her pointe shoes down beside her and sat with them for a quiet minute before a single frame was taken.</p>
         <p>None of it was performance. It was just Brynley — and a year of her life, told the way it actually happened.</p>
         <div class="feat-story-ctas">
@@ -372,10 +395,14 @@
       <h3 id="ch-people">Finding Their People</h3>
       <p>Before a senior ever steps in front of a camera alone, they get to do it alongside other seniors — at a holiday shoot, a spring session, whatever the season brings. Some of these seniors didn't know each other before this year. By the end of it, they're laughing in the background of each other's photos.</p>
     </div>
-    <div class="chapter-grid">
+  </div>
+  <div class="img-banner">
+    <img src="/senior-team-chapter-people-03.jpg" alt="Seniors gathered together during NP Seniors season" loading="lazy">
+  </div>
+  <div class="wrap">
+    <div class="img-pair">
       <img src="/senior-team-chapter-people-01.jpg" alt="Seniors meeting and laughing together at a seasonal portrait shoot" loading="lazy">
       <img src="/senior-team-chapter-people-02.jpg" alt="Group of seniors at a holiday-themed portrait session" loading="lazy">
-      <img class="landscape" src="/senior-team-chapter-people-03.jpg" alt="Seniors gathered together during NP Seniors season" loading="lazy">
     </div>
   </div>
 </section>
@@ -387,9 +414,13 @@
       <h3 id="ch-confidence">The Art of Being Photographed</h3>
       <p>This isn't about learning to pose. Across the season, a senior tries on different creative directions — editorial one month, something quieter and more natural the next — and starts to notice which one actually feels like them. They learn how their own movement, posture, and expression read on camera, and which locations and wardrobe choices bring out something true rather than performed. By the time their signature session arrives, they're not discovering the camera for the first time. They already know what feels like them.</p>
     </div>
-    <div class="chapter-grid">
+  </div>
+  <div class="img-banner">
+    <img src="/senior-team-chapter-confidence-02.jpg" alt="A senior discovering what feels authentic across the season" loading="lazy">
+  </div>
+  <div class="wrap">
+    <div class="img-pair">
       <img src="/senior-team-chapter-confidence-01.jpg" alt="A senior exploring their own style in front of the camera" loading="lazy">
-      <img class="landscape" src="/senior-team-chapter-confidence-02.jpg" alt="A senior discovering what feels authentic across the season" loading="lazy">
       <img src="/senior-team-chapter-confidence-03.jpg" alt="Natural, unposed senior portrait moment" loading="lazy">
     </div>
   </div>
@@ -402,8 +433,12 @@
       <h3 id="ch-portrait">The Portrait They'll Remember</h3>
       <p>This is the one your family will hang on the wall. Fully styled — hair, makeup, the works — and built entirely around who your senior actually is. Editorial, classic, athletic, theatrical, quiet, loud: whatever feels like them, this is where it gets made.</p>
     </div>
-    <div class="chapter-grid">
-      <img class="landscape" src="/senior-team-chapter-portrait-01.jpg" alt="Signature senior portrait session, fully styled" loading="lazy">
+  </div>
+  <div class="img-banner tall">
+    <img src="/senior-team-chapter-portrait-01.jpg" alt="Signature senior portrait session, fully styled" loading="lazy">
+  </div>
+  <div class="wrap">
+    <div class="img-pair">
       <img src="/senior-team-chapter-portrait-02.jpg" alt="A senior's signature portrait, hair and makeup styled" loading="lazy">
       <img src="/senior-team-chapter-portrait-03.jpg" alt="An editorial senior portrait built around the senior's personality" loading="lazy">
     </div>
@@ -417,10 +452,14 @@
       <h3 id="ch-together">Looking Back Together</h3>
       <p>We sit down together and go through the finished images in person — not a link in an inbox, but a real moment where you watch your family's reaction to seeing this season for the first time, all at once.</p>
     </div>
-    <div class="chapter-grid">
+  </div>
+  <div class="img-banner">
+    <img src="/senior-team-chapter-together-03.jpg" alt="In-person Gallery Reveal for a senior's family" loading="lazy">
+  </div>
+  <div class="wrap">
+    <div class="img-pair">
       <img src="/senior-team-chapter-together-01.jpg" alt="Family looking through finished senior portraits together" loading="lazy">
       <img src="/senior-team-chapter-together-02.jpg" alt="A mom and senior at the Gallery Reveal" loading="lazy">
-      <img class="landscape" src="/senior-team-chapter-together-03.jpg" alt="In-person Gallery Reveal for a senior's family" loading="lazy">
     </div>
     <div class="seasonal-examples">
       <span class="seasonal-chip">Holiday portraits</span>
