@@ -271,8 +271,10 @@
   .more-card p{color:var(--muted);font-size:16px;line-height:1.5;flex:1;margin-bottom:18px}
   .more-card .more-link{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:2px;align-self:center}
   .more-card:hover .more-link{color:var(--dark);border-color:var(--dark)}
+  .more-services{max-height:0;overflow:hidden;padding-top:0;padding-bottom:0;opacity:0;transition:max-height .45s ease,opacity .35s ease,padding .45s ease}
+  .more-services.open{max-height:1200px;opacity:1;padding-top:90px;padding-bottom:90px}
   @media(max-width:900px){.more-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:520px){.more-grid{grid-template-columns:1fr}}
+  @media(max-width:520px){.more-grid{grid-template-columns:1fr}.more-services.open{max-height:2400px}}
   /* Reviews background band */
   .reviews{position:relative;overflow:hidden;background:var(--dark)}
   .reviews-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;color:transparent;font-size:0}
@@ -482,7 +484,7 @@
       <div class="dual-body">
         <h3>Every moment worth keeping.</h3>
         <p>Families, engagements, sports, and quinceañeras — the same intention and care, across every occasion.</p>
-        <a href="#more-services" class="dual-link">Explore Other Services →</a>
+        <a href="#more-services" class="dual-link" role="button" aria-expanded="false" aria-controls="more-services" onclick="return toggleMore(this)">Explore Other Services →</a>
       </div>
     </article>
   </div>
@@ -785,6 +787,16 @@
   document.querySelectorAll('#navlinks a').forEach(function(a){
     a.addEventListener('click',function(){document.getElementById('navlinks').classList.remove('open');});
   });
+
+  // Reveal the hidden "Other Services" cards in place
+  function toggleMore(el){
+    var panel = document.getElementById('more-services');
+    var isOpen = panel.classList.toggle('open');
+    el.setAttribute('aria-expanded', isOpen);
+    el.textContent = isOpen ? 'Hide Other Services ↑' : 'Explore Other Services →';
+    if(isOpen){ setTimeout(function(){ panel.scrollIntoView({behavior:'smooth', block:'start'}); }, 120); }
+    return false;
+  }
 
 </script>
 
