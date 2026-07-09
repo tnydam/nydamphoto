@@ -93,9 +93,9 @@
   .photo-band .eyebrow{color:var(--gold-light)}
   .photo-band h2{font-family:var(--display);font-weight:400;font-size:clamp(24px,3.2vw,34px);margin:14px 0 22px;text-shadow:0 2px 16px rgba(0,0,0,.5)}
   .photo-band p{font-style:italic;color:#EFE7DA;font-size:clamp(18px,2vw,20px);margin:0 auto}
-  .pf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1200px;margin:0 auto}
-  .pf-grid img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;background:var(--cream);color:transparent;font-size:0}
-  .pf-grid img.wide{grid-column:span 2;aspect-ratio:16/10}
+  .pf-grid{column-count:3;column-gap:16px;max-width:1200px;margin:0 auto}
+  .pf-grid img{width:100%;height:auto;margin:0 0 16px;display:block;break-inside:avoid;background:var(--cream);color:transparent;font-size:0}
+  .pf-grid img.wide{width:100%}
   .np-review{max-width:720px;margin:0 auto;text-align:center}
   .np-review .eyebrow{color:var(--gold)}
   .np-review blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.8vw,28px);line-height:1.55;color:var(--dark);margin:0 auto 22px}
@@ -129,9 +129,9 @@
   .footer a:hover{color:var(--gold-light)}
   .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:var(--sans);font-size:12px;letter-spacing:.06em;color:#8A8073}
   .footer-social a{margin-left:18px}
-  @media(max-width:920px){.eco-grid{grid-template-columns:1fr}.pf-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:920px){.eco-grid{grid-template-columns:1fr}.pf-grid{column-count:2}.footer-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:860px){.split{grid-template-columns:1fr}.split--rev .split-media{order:0}.split-media{min-height:340px}.split-body{padding:50px 28px}.feature-list{grid-template-columns:1fr}}
-  @media(max-width:640px){body{font-size:18px}.section{padding:60px 0}.nav-links{position:fixed;inset:74px 0 auto 0;background:var(--ivory);flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid var(--line);display:none}.nav-links.open{display:flex}.nav-links a{padding:15px 28px;width:100%}.nav-book{margin:10px 28px;text-align:center}.nav-toggle{display:block}.g-hero-ctas{flex-direction:column;align-items:stretch}.pf-grid img.wide{grid-column:span 2}.footer-grid{grid-template-columns:1fr}}
+  @media(max-width:640px){body{font-size:18px}.section{padding:60px 0}.nav-links{position:fixed;inset:74px 0 auto 0;background:var(--ivory);flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid var(--line);display:none}.nav-links.open{display:flex}.nav-links a{padding:15px 28px;width:100%}.nav-book{margin:10px 28px;text-align:center}.nav-toggle{display:block}.g-hero-ctas{flex-direction:column;align-items:stretch}.footer-grid{grid-template-columns:1fr}}
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
 
   .article{max-width:820px;margin:0 auto}
@@ -235,7 +235,61 @@
       <img src="sports-portfolio-43.jpg" alt="Austin sports photography — team and athlete portrait 43" loading="lazy">
       <img src="sports-portfolio-44.jpg" alt="Austin sports photography — team and athlete portrait 44" loading="lazy">
       <img src="sports-portfolio-45.jpg" alt="Austin sports photography — team and athlete portrait 45" loading="lazy">
-      <img src="sports-portfolio-46.jpg" alt="Austin sports photography — team and athlete portrait 46" loading="lazy">
+      <img class="wide" src="sports-portfolio-46.jpg" alt="Austin sports photography — team and athlete portrait 46" loading="lazy">
+      <img src="sports-portfolio-47.jpg" alt="Austin sports photography — team and athlete portrait 47" loading="lazy">
+      <img src="sports-portfolio-48.jpg" alt="Austin sports photography — team and athlete portrait 48" loading="lazy">
+      <img src="sports-portfolio-49.jpg" alt="Austin sports photography — team and athlete portrait 49" loading="lazy">
+      <img src="sports-portfolio-50.jpg" alt="Austin sports photography — team and athlete portrait 50" loading="lazy">
+      <img src="sports-portfolio-51.jpg" alt="Austin sports photography — team and athlete portrait 51" loading="lazy">
+      <img src="sports-portfolio-52.jpg" alt="Austin sports photography — team and athlete portrait 52" loading="lazy">
+      <img class="wide" src="sports-portfolio-53.jpg" alt="Austin sports photography — team and athlete portrait 53" loading="lazy">
+      <img src="sports-portfolio-54.jpg" alt="Austin sports photography — team and athlete portrait 54" loading="lazy">
+      <img src="sports-portfolio-55.jpg" alt="Austin sports photography — team and athlete portrait 55" loading="lazy">
+      <img src="sports-portfolio-56.jpg" alt="Austin sports photography — team and athlete portrait 56" loading="lazy">
+      <img src="sports-portfolio-57.jpg" alt="Austin sports photography — team and athlete portrait 57" loading="lazy">
+      <img src="sports-portfolio-58.jpg" alt="Austin sports photography — team and athlete portrait 58" loading="lazy">
+      <img src="sports-portfolio-59.jpg" alt="Austin sports photography — team and athlete portrait 59" loading="lazy">
+      <img class="wide" src="sports-portfolio-60.jpg" alt="Austin sports photography — team and athlete portrait 60" loading="lazy">
+      <img src="sports-portfolio-61.jpg" alt="Austin sports photography — team and athlete portrait 61" loading="lazy">
+      <img src="sports-portfolio-62.jpg" alt="Austin sports photography — team and athlete portrait 62" loading="lazy">
+      <img src="sports-portfolio-63.jpg" alt="Austin sports photography — team and athlete portrait 63" loading="lazy">
+      <img src="sports-portfolio-64.jpg" alt="Austin sports photography — team and athlete portrait 64" loading="lazy">
+      <img src="sports-portfolio-65.jpg" alt="Austin sports photography — team and athlete portrait 65" loading="lazy">
+      <img src="sports-portfolio-66.jpg" alt="Austin sports photography — team and athlete portrait 66" loading="lazy">
+      <img class="wide" src="sports-portfolio-67.jpg" alt="Austin sports photography — team and athlete portrait 67" loading="lazy">
+      <img src="sports-portfolio-68.jpg" alt="Austin sports photography — team and athlete portrait 68" loading="lazy">
+      <img src="sports-portfolio-69.jpg" alt="Austin sports photography — team and athlete portrait 69" loading="lazy">
+      <img src="sports-portfolio-70.jpg" alt="Austin sports photography — team and athlete portrait 70" loading="lazy">
+      <img src="sports-portfolio-71.jpg" alt="Austin sports photography — team and athlete portrait 71" loading="lazy">
+      <img src="sports-portfolio-72.jpg" alt="Austin sports photography — team and athlete portrait 72" loading="lazy">
+      <img src="sports-portfolio-73.jpg" alt="Austin sports photography — team and athlete portrait 73" loading="lazy">
+      <img class="wide" src="sports-portfolio-74.jpg" alt="Austin sports photography — team and athlete portrait 74" loading="lazy">
+      <img src="sports-portfolio-75.jpg" alt="Austin sports photography — team and athlete portrait 75" loading="lazy">
+      <img src="sports-portfolio-76.jpg" alt="Austin sports photography — team and athlete portrait 76" loading="lazy">
+      <img src="sports-portfolio-77.jpg" alt="Austin sports photography — team and athlete portrait 77" loading="lazy">
+      <img src="sports-portfolio-78.jpg" alt="Austin sports photography — team and athlete portrait 78" loading="lazy">
+      <img src="sports-portfolio-79.jpg" alt="Austin sports photography — team and athlete portrait 79" loading="lazy">
+      <img src="sports-portfolio-80.jpg" alt="Austin sports photography — team and athlete portrait 80" loading="lazy">
+      <img class="wide" src="sports-portfolio-81.jpg" alt="Austin sports photography — team and athlete portrait 81" loading="lazy">
+      <img src="sports-portfolio-82.jpg" alt="Austin sports photography — team and athlete portrait 82" loading="lazy">
+      <img src="sports-portfolio-83.jpg" alt="Austin sports photography — team and athlete portrait 83" loading="lazy">
+      <img src="sports-portfolio-84.jpg" alt="Austin sports photography — team and athlete portrait 84" loading="lazy">
+      <img src="sports-portfolio-85.jpg" alt="Austin sports photography — team and athlete portrait 85" loading="lazy">
+      <img src="sports-portfolio-86.jpg" alt="Austin sports photography — team and athlete portrait 86" loading="lazy">
+      <img src="sports-portfolio-87.jpg" alt="Austin sports photography — team and athlete portrait 87" loading="lazy">
+      <img class="wide" src="sports-portfolio-88.jpg" alt="Austin sports photography — team and athlete portrait 88" loading="lazy">
+      <img src="sports-portfolio-89.jpg" alt="Austin sports photography — team and athlete portrait 89" loading="lazy">
+      <img src="sports-portfolio-90.jpg" alt="Austin sports photography — team and athlete portrait 90" loading="lazy">
+      <img src="sports-portfolio-91.jpg" alt="Austin sports photography — team and athlete portrait 91" loading="lazy">
+      <img src="sports-portfolio-92.jpg" alt="Austin sports photography — team and athlete portrait 92" loading="lazy">
+      <img src="sports-portfolio-93.jpg" alt="Austin sports photography — team and athlete portrait 93" loading="lazy">
+      <img src="sports-portfolio-94.jpg" alt="Austin sports photography — team and athlete portrait 94" loading="lazy">
+      <img class="wide" src="sports-portfolio-95.jpg" alt="Austin sports photography — team and athlete portrait 95" loading="lazy">
+      <img src="sports-portfolio-96.jpg" alt="Austin sports photography — team and athlete portrait 96" loading="lazy">
+      <img src="sports-portfolio-97.jpg" alt="Austin sports photography — team and athlete portrait 97" loading="lazy">
+      <img src="sports-portfolio-98.jpg" alt="Austin sports photography — team and athlete portrait 98" loading="lazy">
+      <img src="sports-portfolio-99.jpg" alt="Austin sports photography — team and athlete portrait 99" loading="lazy">
+      <img src="sports-portfolio-100.jpg" alt="Austin sports photography — team and athlete portrait 100" loading="lazy">
     </div>
   </div>
 </section>
