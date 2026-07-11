@@ -176,17 +176,14 @@
   .img-banner-caption{position:absolute;left:0;right:0;bottom:0;padding:28px 28px 24px;background:linear-gradient(0deg,rgba(31,27,22,.72),rgba(31,27,22,0));font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);text-align:center}
   .img-banner img.banner-center{object-position:center center}
 
-  /* A pair of true 4:5 portrait images, shown after a banner */
-  .img-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:900px;margin:0 auto}
-  .img-pair img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 16%;display:block;color:transparent;font-size:0}
+  /* A pair of portrait images, shown after a banner — full image, no crop */
+  .img-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:900px;margin:0 auto;align-items:start}
+  .img-pair img{width:100%;height:auto;display:block;color:transparent;font-size:0}
 
   .chapter-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-flow:dense;gap:6px}
-  .chapter-grid img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;background:var(--cream);color:transparent;font-size:0}
+  .chapter-grid img{width:100%;height:100%;aspect-ratio:4/5;object-fit:contain;object-position:center center;background:var(--cream);color:transparent;font-size:0}
   .chapter-grid .landscape{grid-column:span 2;aspect-ratio:3/2}
-  .chapter-grid img.pos-top{object-position:center top}
-  .chapter-grid img.pos-center{object-position:center center}
-  .chapter-grid img.pos-bottom{object-position:center bottom}
-  .pillar-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;color:transparent;font-size:0}
+  .pillar-photo img{width:100%;height:100%;object-fit:contain;background:var(--ivory);color:transparent;font-size:0}
   .pillar:last-child{border-bottom:none}
   .pillar-num{font-family:var(--display);font-size:38px;color:var(--gold);line-height:1}
   .pillar h3{font-family:var(--display);font-weight:400;font-size:25px;color:var(--dark);margin-bottom:10px}
@@ -204,8 +201,8 @@
 
   /* Split image/text section — replaces plain text blocks with a real photograph */
   .split-section{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;max-width:1200px;margin:0 auto}
-  .split-img{overflow:hidden;min-height:480px}
-  .split-img img{width:100%;height:100%;object-fit:cover;object-position:center 15%;color:transparent;font-size:0}
+  .split-img{overflow:hidden;min-height:480px;background:var(--cream)}
+  .split-img img{width:100%;height:100%;object-fit:contain;color:transparent;font-size:0}
   .split-body{display:flex;flex-direction:column;justify-content:center;padding:60px}
   .split-body .section-head{text-align:left;margin:0 0 24px}
   .split-body .prose p{font-size:19px}
@@ -260,7 +257,7 @@
   .feat-story-img{aspect-ratio:4/5;background:var(--cream);overflow:hidden}
   .brynley-photos{display:grid;grid-template-columns:1fr;gap:14px;align-items:center;max-width:600px;margin:0 auto 48px}
   .brynley-photos img{width:100%;height:auto;display:block;color:transparent;font-size:0}
-  .feat-story-img img{width:100%;height:100%;object-fit:cover;object-position:center top;color:transparent;font-size:0}
+  .feat-story-img img{width:100%;height:100%;object-fit:contain;color:transparent;font-size:0}
   .feat-story-body h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,3.2vw,30px);color:var(--dark);margin-bottom:10px}
   .feat-story-meta{font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block}
   .feat-story-body p{color:var(--muted);font-size:19px;margin-bottom:26px}
