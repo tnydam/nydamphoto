@@ -170,9 +170,8 @@
   .chapter-head h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,3vw,32px);color:var(--dark);margin-bottom:14px}
   .chapter-head p{color:var(--muted);font-size:19px}
   /* Full-bleed banner image — breaks out of the wrap for maximum impact */
-  .img-banner{position:relative;width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;overflow:hidden;background:var(--cream);margin-top:36px;margin-bottom:36px}
-  .img-banner img{width:100%;height:62vh;object-fit:cover;object-position:center 20%;display:block;color:transparent;font-size:0}
-  .img-banner.tall img{height:74vh}
+  .img-banner{position:relative;width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:var(--cream);margin-top:36px;margin-bottom:36px}
+  .img-banner img{width:100%;height:auto;display:block;color:transparent;font-size:0}
   .img-banner-caption{position:absolute;left:0;right:0;bottom:0;padding:28px 28px 24px;background:linear-gradient(0deg,rgba(31,27,22,.72),rgba(31,27,22,0));font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);text-align:center}
   .img-banner img.banner-center{object-position:center center}
 
@@ -200,9 +199,9 @@
   .photo-band-inner p.sub{font-size:19px;color:#F3ECE0;max-width:600px;margin:0 auto 30px;line-height:1.7}
 
   /* Split image/text section — replaces plain text blocks with a real photograph */
-  .split-section{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;max-width:1200px;margin:0 auto}
-  .split-img{overflow:hidden;min-height:480px;background:var(--cream)}
-  .split-img img{width:100%;height:100%;object-fit:contain;color:transparent;font-size:0}
+  .split-section{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:center;max-width:1200px;margin:0 auto}
+  .split-img{background:var(--cream);display:flex;align-items:center}
+  .split-img img{width:100%;height:auto;display:block;color:transparent;font-size:0}
   .split-body{display:flex;flex-direction:column;justify-content:center;padding:60px}
   .split-body .section-head{text-align:left;margin:0 0 24px}
   .split-body .prose p{font-size:19px}
@@ -293,11 +292,10 @@
   .footer-social a{margin-left:18px}
 
   @media(max-width:920px){
-    .img-banner img{height:46vh}
-    .img-banner.tall img{height:54vh}
+
     .img-pair{grid-template-columns:1fr;max-width:520px}
     .split-section{grid-template-columns:1fr}
-    .split-img{min-height:340px;margin-bottom:28px}
+    .split-img{margin-bottom:28px}
     .split-body{padding:44px 28px}
     .split-body .section-head{text-align:center}
     .story-photos{grid-template-columns:1fr;gap:24px}
