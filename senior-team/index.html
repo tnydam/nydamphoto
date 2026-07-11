@@ -178,6 +178,8 @@
   /* A pair of portrait images, shown after a banner — full image, no crop */
   .img-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:900px;margin:0 auto;align-items:start}
   .img-pair img{width:100%;height:auto;display:block;color:transparent;font-size:0}
+  /* Matched-height variant: forces both images in the pair to the same aspect ratio, cropping only as needed */
+  .img-pair.img-pair-match img{aspect-ratio:4/5;object-fit:cover;object-position:center top}
 
   .chapter-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-flow:dense;gap:6px}
   .chapter-grid img{width:100%;height:100%;aspect-ratio:4/5;object-fit:contain;object-position:center center;background:var(--cream);color:transparent;font-size:0}
@@ -428,7 +430,7 @@
     <img src="/senior-team-story-01.jpg" alt="Senior portrait by Nydam Photography, Austin" loading="lazy">
   </div>
   <div class="wrap">
-    <div class="img-pair">
+    <div class="img-pair img-pair-match">
       <img src="/senior-team-story-02.jpg" alt="Senior portrait detail, Nydam Photography" loading="lazy">
       <img src="/senior-team-story-03.jpg" alt="Senior portrait outdoors, Austin Texas" loading="lazy">
     </div>
