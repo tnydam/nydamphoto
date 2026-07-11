@@ -179,6 +179,11 @@ src="https://www.facebook.com/tr?id=1967863120494016&ev=PageView&noscript=1"/></
   .pdf-icon{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:14px 18px;white-space:nowrap}
   .pdf-block h3{font-family:var(--display);font-weight:400;font-size:22px;color:var(--dark);margin-bottom:8px}
   .pdf-block p{color:var(--muted);font-size:17px;margin-bottom:14px}
+  .pdf-form{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;max-width:540px}
+  .pdf-form input[type=text],.pdf-form input[type=email]{font-family:var(--sans);font-size:14px;padding:12px 14px;border:1px solid var(--line);background:#fff;color:var(--text);flex:1 1 180px}
+  .pdf-form input:focus{outline:none;border-color:var(--gold)}
+  .pdf-form button.btn{flex:1 1 100%;text-align:center;cursor:pointer;border:none;font-family:var(--sans)}
+  .pdf-form .form-note{flex:1 1 100%;font-family:var(--sans);font-size:12px;color:var(--muted);margin-top:2px}
 
   .related{background:var(--cream);padding:44px 38px;margin-bottom:56px}
   .related-label{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:block}
@@ -422,8 +427,16 @@ src="https://www.facebook.com/tr?id=1967863120494016&ev=PageView&noscript=1"/></
   <span class="pdf-icon">PDF Guide</span>
   <div>
     <h3>Take This Guide With You</h3>
-    <p>Download the complimentary PDF guide — the complete NP Seniors guide, formatted to review with your family before you apply.</p>
-    <a href="/guides/seniors/np-seniors-senior-portrait-program/np-seniors-program-guide-austin-texas.pdf" class="btn btn-gold">Download the Complimentary PDF Guide &rarr;</a>
+    <p>Enter your details and we'll send you straight to the complimentary PDF guide — the complete NP Seniors guide, formatted to review with your family before you apply.</p>
+    <form action="https://formspree.io/f/mkopbwjb" method="POST" class="pdf-form">
+      <input type="hidden" name="_subject" value="NP Seniors Guide — PDF Download">
+      <input type="hidden" name="form_name" value="NP Seniors Guide Download">
+      <input type="hidden" name="_next" value="https://nydamphoto.com/guides/seniors/np-seniors-senior-portrait-program/np-seniors-program-guide-austin-texas.pdf">
+      <input type="text" name="name" placeholder="First name" required aria-label="First name">
+      <input type="email" name="email" placeholder="Email address" required aria-label="Email address">
+      <button type="submit" class="btn btn-gold">Send Me the Guide &rarr;</button>
+      <span class="form-note">We'll only use this to send your guide and occasional NP Seniors updates.</span>
+    </form>
   </div>
 </div>
 
