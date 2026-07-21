@@ -35,9 +35,9 @@
     "@type": "OfferCatalog",
     "name": "Wedding Collections",
     "itemListElement": [
-      { "@type": "Offer", "name": "Essential Collection", "price": "2500", "priceCurrency": "USD", "url": "https://nydamphoto.com/weddings/collections/" },
-      { "@type": "Offer", "name": "Signature Collection", "price": "5000", "priceCurrency": "USD", "url": "https://nydamphoto.com/weddings/collections/" },
-      { "@type": "Offer", "name": "Wedding Story Collection", "price": "6500", "priceCurrency": "USD", "url": "https://nydamphoto.com/weddings/collections/" }
+      { "@type": "Offer", "name": "Essential Collection", "price": "2500", "priceCurrency": "USD", "description": "Up to 4 hours of wedding-day coverage.", "url": "https://nydamphoto.com/weddings/collections/" },
+      { "@type": "Offer", "name": "Signature Collection", "price": "5000", "priceCurrency": "USD", "description": "6 to 8 hours of coverage, second photographer, and complimentary engagement session.", "url": "https://nydamphoto.com/weddings/collections/" },
+      { "@type": "Offer", "name": "Wedding Story Collection", "price": "6500", "priceCurrency": "USD", "description": "10+ hours across the wedding weekend, including rehearsal dinner and next-morning brunch, plus album design.", "url": "https://nydamphoto.com/weddings/collections/" }
     ]
   }
 }
@@ -58,7 +58,7 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "How much coverage do we need?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your day. Essential suits intimate weddings and elopements, Signature fits a full traditional wedding day, and Wedding Story is built for multi-location celebrations and wedding weekends. We're happy to talk through your specific plans." } },
+    { "@type": "Question", "name": "How much coverage do we need?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your day. Essential includes up to 4 hours and suits intimate weddings and elopements; Signature includes 6 to 8 hours for a full traditional wedding day; and Wedding Story spans 10+ hours across the weekend, including the rehearsal dinner and a next-morning farewell brunch. Additional coverage is available at $350 per hour." } },
     { "@type": "Question", "name": "Do you require a retainer?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A 30% retainer secures your date and collection, with the remaining balance due before the wedding." } },
     { "@type": "Question", "name": "Can we customize a collection?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each collection is a starting point, and we can adjust coverage, add a second photographer to Essential, or include additional events to fit your day." } },
     { "@type": "Question", "name": "Is travel included?", "acceptedAnswer": { "@type": "Answer", "text": "Travel within Central Texas is included. Destination weddings and travel beyond the area are quoted individually." } },
@@ -269,6 +269,8 @@
     .footer-grid{grid-template-columns:1fr}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+  .coll-hours{font-family:var(--sans);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .coll-extra-note{text-align:center;font-family:var(--serif);font-size:18px;color:var(--muted);max-width:720px;margin:44px auto 0;font-style:italic}
 </style>
 </head>
 <body>
@@ -351,13 +353,13 @@
           <h3>Essential Collection</h3>
           <p class="coll-body">The Essential Collection is designed for celebrations where every guest matters and every moment feels personal. Whether you're planning an intimate Hill Country wedding, a private ceremony, or a thoughtfully curated gathering with your closest family and friends, this collection focuses on preserving what matters most.</p>
           <p class="coll-feel">You'll receive the same care, attention, and storytelling approach we bring to every wedding — capturing the emotion, the relationships, and the moments you'll return to for years to come.</p>
-          <div class="coll-price-row"><span class="coll-price">$2,500 + tax</span></div>
+          <div class="coll-price-row"><span class="coll-price">$2,500 + tax</span><span class="coll-hours">Up to 4 hours of coverage</span></div>
           <a href="https://calendly.com/nydamphotography/wedding-photography-order" target="_blank" rel="noopener" class="btn btn-outline coll-cta">Check Availability</a>
           <details class="coll-details">
             <summary>Collection Includes</summary>
             <div class="coll-details-body">
               <ul>
-                <li>Coverage tailored to your wedding</li>
+                <li>Up to 4 hours of continuous wedding-day coverage</li>
                 <li>Private online gallery</li>
                 <li>High-resolution images</li>
                 <li>Personal printing rights</li>
@@ -376,13 +378,13 @@
           <h3>Signature Collection</h3>
           <p class="coll-body">The Signature Collection is designed for couples who want to experience their wedding day without feeling rushed by it. There is time for the anticipation, time for the portraits, time for the celebration, and time for the unexpected moments that become the photographs people remember most.</p>
           <p class="coll-feel">This collection includes a second photographer and a complimentary engagement session, giving us the opportunity to work together before the wedding day and helping your portraits feel effortless and genuinely you.</p>
-          <div class="coll-price-row"><span class="coll-price">$5,000 + tax</span></div>
+          <div class="coll-price-row"><span class="coll-price">$5,000 + tax</span><span class="coll-hours">6–8 hours of coverage</span></div>
           <a href="https://calendly.com/nydamphotography/wedding-photography-signature-collection" target="_blank" rel="noopener" class="btn btn-outline coll-cta">Check Availability</a>
           <details class="coll-details">
             <summary>Collection Includes</summary>
             <div class="coll-details-body">
               <ul>
-                <li>Extended coverage tailored to your day</li>
+                <li>6–8 hours of wedding-day coverage — from getting ready through the reception</li>
                 <li>Second photographer</li>
                 <li>Complimentary engagement session</li>
                 <li>A same-day sneak peek shared during your reception — a curated slideshow and album, so your first images are with you before the night ends</li>
@@ -404,14 +406,16 @@
           <div class="coll-block-kicker">For extraordinary celebrations, wedding weekends, and once-in-a-lifetime gatherings.</div>
           <h3>Wedding Story Collection</h3>
           <p class="coll-body">Some weddings are more than a single day. They bring together family and friends from across the country, span multiple events, and deserve a level of coverage that allows every chapter of the story to be preserved.</p>
-          <p class="coll-feel">The Wedding Story Collection is our most comprehensive experience. With extended coverage, a second photographer, album design, and the flexibility to document every meaningful part of the celebration, it is designed for couples who want nothing missed and nothing rushed. Because decades from now, the photographs won't simply remind you what happened. They'll remind you how it felt. Some celebrations deserve more than coverage. They deserve a legacy.</p>
-          <div class="coll-price-row"><span class="coll-price">$6,500 + tax</span></div>
+          <p class="coll-feel">The Wedding Story Collection is our most comprehensive experience — built for the whole weekend, not just the day. It begins the evening before with your <strong>rehearsal dinner</strong>, carries through 10+ hours of the wedding day itself, and continues into the <strong>next-morning farewell brunch</strong>, when the celebration softens and the goodbyes happen. With a second photographer, album design, and the room to capture every chapter, nothing is missed and nothing is rushed. Decades from now, these photographs won't simply remind you what happened. They'll remind you how it felt. Some celebrations deserve more than coverage. They deserve a legacy.</p>
+          <div class="coll-price-row"><span class="coll-price">$6,500 + tax</span><span class="coll-hours">10+ hours across your wedding weekend</span></div>
           <a href="https://calendly.com/nydamphotography/wedding-photography-weddingstory-collection" target="_blank" rel="noopener" class="btn btn-outline coll-cta">Check Availability</a>
           <details class="coll-details">
             <summary>Collection Includes</summary>
             <div class="coll-details-body">
               <ul>
-                <li>Comprehensive coverage tailored to your celebration</li>
+                <li>Rehearsal dinner coverage the evening before</li>
+                <li>10+ hours of wedding-day coverage — getting ready through the send-off</li>
+                <li>Next-morning farewell brunch coverage</li>
                 <li>Second photographer</li>
                 <li>Complimentary engagement session</li>
                 <li>Album design consultation</li>
@@ -426,6 +430,8 @@
           </details>
         </div>
       </article>
+
+      <p class="coll-extra-note">Every collection can be extended — additional wedding-day coverage is available at <strong>$350&nbsp;per&nbsp;hour</strong>, arranged before your date or added on the day itself.</p>
 
     </div>
   </div>
