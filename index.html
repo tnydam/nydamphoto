@@ -409,6 +409,27 @@ src="https://www.facebook.com/tr?id=1967863120494016&ev=PageView&noscript=1"/></
   .addl-toggle:hover{color:var(--dark);border-color:var(--dark)}
   .addl-panel{max-height:0;overflow:hidden;opacity:0;transition:max-height .4s ease,opacity .3s ease,margin .4s ease}
   .addl-panel.open{max-height:200px;opacity:1;margin-top:30px}
+  /* Editorial service showcase */
+  .showcase{background:var(--ivory)}
+  .show-row{display:grid;grid-template-columns:1.05fr 1fr;align-items:stretch;min-height:90vh}
+  .show-row:nth-child(even){grid-template-columns:1fr 1.05fr}
+  .show-row:nth-child(even) .show-media{order:2}
+  .show-media{position:relative;overflow:hidden;background:var(--cream)}
+  .show-media img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0;transition:transform 1.2s ease}
+  .show-row:hover .show-media img{transform:scale(1.03)}
+  .show-body{display:flex;flex-direction:column;justify-content:center;padding:clamp(42px,6vw,100px);background:var(--ivory);border-top:1px solid var(--line)}
+  .show-num{font-family:var(--display);font-size:15px;letter-spacing:.32em;color:var(--gold);margin-bottom:26px}
+  .show-eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+  .show-body h3{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.3vw,44px);line-height:1.16;color:var(--dark);margin-bottom:24px}
+  .show-body p{font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.5vw,21px);line-height:1.6;color:var(--muted);max-width:460px;margin-bottom:36px}
+  .show-link{font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--dark);align-self:flex-start;border-bottom:1px solid var(--gold);padding-bottom:6px;transition:.25s}
+  .show-link:hover{color:var(--gold);letter-spacing:.25em}
+  @media(max-width:860px){
+    .show-row,.show-row:nth-child(even){grid-template-columns:1fr;min-height:0}
+    .show-row:nth-child(even) .show-media{order:0}
+    .show-media{min-height:64vh}
+    .show-body{padding:54px 30px}
+  }
 </style>
 </head>
 
@@ -475,41 +496,39 @@ src="https://www.facebook.com/tr?id=1967863120494016&ev=PageView&noscript=1"/></
   </div>
 </section>
 
-<!-- ══════ SERVICE BANNERS ══════ -->
-<section class="dual" id="services" aria-label="Our photography specialties">
-  <div class="dual-grid dual-grid--solo">
-    <article class="dual-col">
-      <img src="/austin-wedding-feature.jpg" alt="Austin wedding photographer Nydam Photography" loading="lazy">
-      <span class="dual-eyebrow">Wedding Photography</span>
-      <div class="dual-body">
-        <h3>The day you'll feel before you remember it.</h3>
-        <p>The vows, the laughter, the quiet glance no one else caught — your wedding day in Austin, exactly as it felt to live it.</p>
-        <a href="/weddings/" class="dual-link">Explore Weddings →</a>
-      </div>
-    </article>
+<!-- ══════ SERVICE SHOWCASE ══════ -->
+<section class="showcase" id="services" aria-label="Our photography specialties">
+  <div class="show-row">
+    <div class="show-media"><img src="/austin-wedding-feature.jpg" alt="Austin wedding photography by Nydam Photography" loading="lazy" style="object-position:center 22%"></div>
+    <div class="show-body">
+      <div class="show-num">01</div>
+      <div class="show-eyebrow">Wedding Photography</div>
+      <h3>The day you'll feel before you remember it.</h3>
+      <p>The vows, the laughter, the quiet glance no one else caught — your wedding day in Austin, exactly as it felt to live it.</p>
+      <a href="/weddings/" class="show-link">Explore Weddings →</a>
+    </div>
   </div>
-  <div class="dual-grid dual-grid--solo">
-    <article class="dual-col">
-      <img src="/austin-senior-feature.jpg" alt="Austin senior portraits by Nydam Photography" loading="lazy">
-      <span class="dual-eyebrow">Senior Portraits</span>
-      <div class="dual-body">
-        <h3>The person they are right now.</h3>
-        <p>This chapter passes so quickly. Senior portraits in Austin, built entirely around who your senior is — never a formula.</p>
-        <a href="/seniors/" class="dual-link">Explore Seniors →</a>
-      </div>
-    </article>
+
+  <div class="show-row">
+    <div class="show-media"><img src="/austin-senior-feature.jpg" alt="Austin senior portraits by Nydam Photography" loading="lazy" style="object-position:center 30%"></div>
+    <div class="show-body">
+      <div class="show-num">02</div>
+      <div class="show-eyebrow">Senior Portraits</div>
+      <h3>The person they are right now.</h3>
+      <p>This chapter passes so quickly. Senior portraits in Austin, built entirely around who your senior is — never a formula.</p>
+      <a href="/seniors/" class="show-link">Explore Seniors →</a>
+    </div>
   </div>
-  
-  <div class="dual-grid dual-grid--solo">
-    <article class="dual-col">
-      <img src="/catholic-feature.jpg" alt="Catholic photography in Austin, Diocese of Austin" loading="lazy">
-      <span class="dual-eyebrow">Catholic Photography</span>
-      <div class="dual-body">
-        <h3>Faith, family, and tradition — honored.</h3>
-        <p>Catholic weddings, sacraments, and parish milestones across the Diocese of Austin, captured with reverence and care.</p>
-        <a href="/catholic/" class="dual-link">Explore Catholic Photography →</a>
-      </div>
-    </article>
+
+  <div class="show-row">
+    <div class="show-media"><img src="/catholic-feature.jpg" alt="Catholic photography in Austin by Nydam Photography" loading="lazy" style="object-position:center 30%"></div>
+    <div class="show-body">
+      <div class="show-num">03</div>
+      <div class="show-eyebrow">Catholic Photography</div>
+      <h3>Faith, family, and tradition — honored.</h3>
+      <p>Weddings, First Communions, Confirmations, and the sacred milestones of a life of faith — photographed with reverence and care across the Diocese of Austin.</p>
+      <a href="/catholic/" class="show-link">Explore Catholic Photography →</a>
+    </div>
   </div>
 </section>
 
