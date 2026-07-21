@@ -402,16 +402,13 @@ src="https://www.facebook.com/tr?id=1967863120494016&ev=PageView&noscript=1"/></
     .hero-ctas{flex-direction:column;align-items:stretch}
   }
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
-  .np-block{background:var(--cream)}
-  .np-sub{font-family:var(--display);font-weight:400;font-size:clamp(18px,2.2vw,24px);color:var(--gold);margin:6px 0 16px;letter-spacing:.03em}
-  .np-price{font-family:var(--sans);font-size:16px;color:var(--dark);margin-top:14px;letter-spacing:.02em}
-  .np-collections{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:34px 0 30px}
-  .np-chip{display:flex;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);padding:20px 30px;text-align:center;font-family:var(--serif);font-size:17px;color:var(--dark);transition:.25s}
-  .np-chip span{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
   .np-chip:hover{border-color:var(--gold);transform:translateY(-3px)}
-  .np-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
   .meet-block{background:var(--ivory)}
   .meet-links{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:26px}
+  .addl-toggle{margin-top:22px;background:none;border:none;cursor:pointer;font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:4px;transition:.2s}
+  .addl-toggle:hover{color:var(--dark);border-color:var(--dark)}
+  .addl-panel{max-height:0;overflow:hidden;opacity:0;transition:max-height .4s ease,opacity .3s ease,margin .4s ease}
+  .addl-panel.open{max-height:200px;opacity:1;margin-top:30px}
 </style>
 </head>
 
@@ -493,15 +490,16 @@ src="https://www.facebook.com/tr?id=1967863120494016&ev=PageView&noscript=1"/></
   </div>
   <div class="dual-grid dual-grid--solo">
     <article class="dual-col">
-      <img src="/austin-senior-feature.jpg" alt="Austin senior portraits by Nydam Photography, NP Seniors signature experience" loading="lazy">
-      <span class="dual-eyebrow">Senior Photography · NP Seniors</span>
+      <img src="/austin-senior-feature.jpg" alt="Austin senior portraits by Nydam Photography" loading="lazy">
+      <span class="dual-eyebrow">Senior Portraits</span>
       <div class="dual-body">
         <h3>The person they are right now.</h3>
-        <p><strong>NP Seniors</strong> is our signature senior experience: an all-inclusive fall season — the signature session plus milestone and event shoots across the whole season — for a small group of Class of 2027 seniors. <strong>$1,350, everything included.</strong></p>
-        <a href="/senior-team/" class="dual-link">Explore NP Seniors →</a>
+        <p>This chapter passes so quickly. Senior portraits in Austin, built entirely around who your senior is — never a formula.</p>
+        <a href="/seniors/" class="dual-link">Explore Seniors →</a>
       </div>
     </article>
   </div>
+  
   <div class="dual-grid dual-grid--solo">
     <article class="dual-col">
       <img src="/catholic-feature.jpg" alt="Catholic photography in Austin, Diocese of Austin" loading="lazy">
@@ -515,23 +513,23 @@ src="https://www.facebook.com/tr?id=1967863120494016&ev=PageView&noscript=1"/></
   </div>
 </section>
 
-<section class="section np-block" aria-labelledby="np-h2">
+<section class="section additional-services" aria-labelledby="addl-h2">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Senior Portraits</span>
-      <h2 id="np-h2">Senior Photography in Austin, Texas</h2>
-      <h3 class="np-sub">The NP Seniors Signature Experience</h3>
-      <p>For Austin seniors who want more than a single photo session. NP Seniors is an all-inclusive <strong>fall season</strong> — the fully styled signature session <em>plus</em> milestone and event shoots across the season — for a small group of Class of 2027 seniors. Styling guidance, multiple locations, and a luxury editorial experience, start to finish.</p>
-      <p class="np-price"><strong>$1,350 — everything included.</strong> One booking covers the entire season.</p>
+    <div class="section-head" style="margin-bottom:0">
+      <span class="eyebrow">Also by Nydam Photography</span>
+      <h2 id="addl-h2">Additional Photography Services</h2>
+      <p>Explore our full range of portrait and event photography in Austin and Central Texas.</p>
+      <button type="button" class="addl-toggle" aria-expanded="false" aria-controls="addl-panel" onclick="return toggleAddl(this)">Explore Other Services →</button>
     </div>
-    <div class="np-collections">
-      <a href="/seniors/collections/" class="np-chip"><span>Collection I</span>Signature Session</a>
-      <a href="/seniors/collections/" class="np-chip"><span>Collection II</span>Extended Experience</a>
-      <a href="/seniors/collections/" class="np-chip"><span>Collection III</span>Full Signature</a>
-    </div>
-    <div class="np-ctas">
-      <a href="/senior-team/" class="btn btn-gold">Explore the NP Seniors Experience</a>
-      <a href="/seniors/collections/" class="btn btn-outline">View Senior Collections</a>
+    <div class="addl-panel" id="addl-panel">
+      <p class="addl-list">
+        <a href="/corporate/">Corporate &amp; Branding</a> ·
+        <a href="/families/">Families</a> ·
+        <a href="/engagements/">Engagements</a> ·
+        <a href="/quinceanera/">Quinceañeras</a> ·
+        <a href="/events/">Events</a> ·
+        <a href="/sports/">Sports</a>
+      </p>
     </div>
   </div>
 </section>
@@ -693,23 +691,7 @@ src="https://www.facebook.com/tr?id=1967863120494016&ev=PageView&noscript=1"/></
 </section>
 
 <!-- ══════ CONTACT ══════ -->
-<section class="section additional-services" id="more-services" aria-labelledby="addl-h2">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Also by Nydam Photography</span>
-      <h2 id="addl-h2">Additional Photography Services</h2>
-      <p>Explore our full range of portrait and event photography in Austin and Central Texas.</p>
-    </div>
-    <p class="addl-list">
-      <a href="/corporate/">Corporate &amp; Branding</a> ·
-      <a href="/families/">Families</a> ·
-      <a href="/engagements/">Engagements</a> ·
-      <a href="/quinceanera/">Quinceañeras</a> ·
-      <a href="/events/">Events</a> ·
-      <a href="/sports/">Sports</a>
-    </p>
-  </div>
-</section>
+
 
 <section class="section meet-block" aria-labelledby="meet-h2">
   <div class="wrap">
@@ -845,6 +827,14 @@ src="https://www.facebook.com/tr?id=1967863120494016&ev=PageView&noscript=1"/></
     a.addEventListener('click',function(){document.getElementById('navlinks').classList.remove('open');});
   });
 
+
+  function toggleAddl(el){
+    var panel=document.getElementById('addl-panel');
+    var open=panel.classList.toggle('open');
+    el.setAttribute('aria-expanded', open);
+    el.textContent = open ? 'Hide Other Services ↑' : 'Explore Other Services →';
+    return false;
+  }
 </script>
 
 </body>
