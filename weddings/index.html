@@ -42,9 +42,9 @@
     "@type": "OfferCatalog",
     "name": "Wedding Collections",
     "itemListElement": [
-      { "@type": "Offer", "name": "Essential Collection", "url": "https://nydamphoto.com/weddings/collections/" },
-      { "@type": "Offer", "name": "Signature Collection", "url": "https://nydamphoto.com/weddings/collections/" },
-      { "@type": "Offer", "name": "Wedding Story Collection", "url": "https://nydamphoto.com/weddings/collections/" }
+      { "@type": "Offer", "name": "Essential Collection", "description": "Up to 4 hours of wedding-day coverage.", "url": "https://nydamphoto.com/weddings/collections/" },
+      { "@type": "Offer", "name": "Signature Collection", "description": "6 to 8 hours of coverage with a second photographer.", "url": "https://nydamphoto.com/weddings/collections/" },
+      { "@type": "Offer", "name": "Wedding Story Collection", "description": "10+ hours across the wedding weekend, including rehearsal dinner and next-morning brunch.", "url": "https://nydamphoto.com/weddings/collections/" }
     ]
   }
 }
@@ -66,7 +66,7 @@
   "mainEntity": [
     { "@type": "Question", "name": "How far in advance should we inquire about wedding photography?", "acceptedAnswer": { "@type": "Answer", "text": "Most couples reach out six to eighteen months before their wedding, since dates on popular weekends fill first. If your wedding is sooner, it's still worth checking availability." } },
     { "@type": "Question", "name": "Do you require a retainer?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A 30% retainer reserves your date and collection, with the remaining balance due before the wedding." } },
-    { "@type": "Question", "name": "Can we book shorter coverage instead of a full day?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our Essential collection covers the core hours of the day, while Signature and Wedding Story extend into full-day storytelling from getting ready through reception." } },
+    { "@type": "Question", "name": "Can we book shorter coverage instead of a full day?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Essential covers up to 4 hours, Signature covers 6 to 8 hours from getting ready through the reception, and Wedding Story spans 10+ hours across the weekend, including the rehearsal dinner and a next-morning brunch. Additional coverage is $350 per hour." } },
     { "@type": "Question", "name": "Is an engagement session included?", "acceptedAnswer": { "@type": "Answer", "text": "A complimentary engagement session is included with our Signature and Wedding Story collections, and can be added to Essential." } },
     { "@type": "Question", "name": "Do you provide a second photographer?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A second photographer is included with our Signature and Wedding Story collections, and can be added to Essential. This ensures separate getting-ready spaces, the ceremony, and the reception are all covered without missing a moment." } },
     { "@type": "Question", "name": "Do you photograph Catholic weddings?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, including full Nuptial Mass ceremonies, with care for the liturgy alongside our editorial wedding-day coverage." } },
@@ -172,6 +172,7 @@
   .coll-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--ivory);font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:5px 14px}
   .coll-name{font-family:var(--display);font-weight:400;font-size:25px;letter-spacing:.02em;color:var(--dark);margin-bottom:10px}
   .coll-price{font-family:var(--sans);font-size:14px;letter-spacing:.06em;color:var(--gold);margin-bottom:18px}
+  .coll-hours{font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
   .coll-desc{color:var(--muted);font-size:17px;flex:1;margin-bottom:22px}
   .coll-link{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:3px;align-self:center}
   .coll-link:hover{color:var(--gold)}
@@ -418,12 +419,13 @@
     <div class="section-head">
       <span class="eyebrow">Investment</span>
       <h2 id="coll-h2">Choose Your Collection</h2>
-      <p>Essential, Signature, and Wedding Story — our Austin wedding photography packages. Each includes full-resolution downloads, a private online gallery, and our editorial approach from ceremony through reception.</p>
+      <p>Essential, Signature, and Wedding Story — our Austin wedding photography collections. Each includes full-resolution downloads, a private online gallery, and our editorial approach from ceremony through reception.</p>
     </div>
     <div class="collections-grid">
       <article class="coll-card">
         <div class="coll-name">Essential</div>
         <div class="coll-price">$2,500 + tax</div>
+        <div class="coll-hours">Up to 4 hours</div>
         <p class="coll-desc">For intimate weddings, elopements, and celebrations where the story lives in a few meaningful hours.</p>
         <a href="/weddings/collections/" class="coll-link">View Details →</a>
       </article>
@@ -431,17 +433,19 @@
         <span class="coll-badge">Most Popular</span>
         <div class="coll-name">Signature</div>
         <div class="coll-price">$5,000 + tax</div>
+        <div class="coll-hours">6–8 hours</div>
         <p class="coll-desc">For couples who want the complete wedding-day story, from getting ready through the celebration.</p>
         <a href="/weddings/collections/" class="coll-link">View Details →</a>
       </article>
       <article class="coll-card">
         <div class="coll-name">Wedding Story</div>
         <div class="coll-price">$6,500 + tax</div>
-        <p class="coll-desc">For multi-location celebrations, large guest counts, and couples who never want to wonder whether a moment was missed.</p>
+        <div class="coll-hours">10+ hours · full wedding weekend</div>
+        <p class="coll-desc">For the full wedding weekend — rehearsal dinner, 10+ hours on the wedding day, and a next-morning farewell brunch, for couples who never want to wonder whether a moment was missed.</p>
         <a href="/weddings/collections/" class="coll-link">View Details →</a>
       </article>
     </div>
-    <p class="coll-retainer">A retainer secures your date. Once it's in place, we begin planning — you'll receive a detailed questionnaire and build a timeline together, so every key moment gets captured.</p>
+    <p class="coll-retainer">A retainer secures your date. Once it's in place, we begin planning — you'll receive a detailed questionnaire and build a timeline together, so every key moment gets captured. Additional coverage is available for any collection at $350 per hour.</p>
     <div class="collections-cta"><a href="/weddings/collections/" class="btn btn-gold">View Wedding Collections</a></div>
   </div>
 </section>
