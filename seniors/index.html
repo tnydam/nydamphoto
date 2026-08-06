@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Austin Senior Photographer | Class of 2027 | Nydam Photography</title>
-<meta name="description" content="Senior portraits for the Class of 2027 throughout Austin, Westlake, Bee Cave, Lakeway, Round Rock, Georgetown, Cedar Park, Hutto and the surrounding Hill Country. Thoughtfully guided sessions built around your senior.">
+<meta name="description" content="Senior portraits for Class of 2027 families throughout Austin and the Texas Hill Country. Thoughtfully planned, naturally directed sessions with edited digital images included.">
 <link rel="canonical" href="https://nydamphoto.com/seniors/">
 <meta name="robots" content="index, follow">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Austin Senior Photographer | Class of 2027 | Nydam Photography">
-<meta property="og:description" content="Senior portraits for the Class of 2027 throughout Austin, Westlake, Bee Cave, Lakeway, Round Rock, Georgetown, Cedar Park, Hutto and the surrounding Hill Country. Thoughtfully guided sessions built around your senior.">
+<meta property="og:description" content="Senior portraits for Class of 2027 families throughout Austin and the Texas Hill Country. Thoughtfully planned, naturally directed sessions with edited digital images included.">
 <meta property="og:url" content="https://nydamphoto.com/seniors/">
 <meta property="og:image" content="https://nydamphoto.com/og-nydam-seniors.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,7 +33,19 @@
     "name": "Nydam Photography",
     "telephone": "+15129554520"
   },
-  "areaServed": ["Austin","Round Rock","Cedar Park","Georgetown","Hutto","Pflugerville","Leander","Westlake","Bee Cave","Dripping Springs"]
+  "areaServed": ["Austin","Round Rock","Cedar Park","Georgetown","Pflugerville","Leander","Westlake","Bee Cave","Dripping Springs","Hutto"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Senior Portrait Experiences",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "The Post", "description": "One senior session — a simple, stylish experience for social media, graduation announcements and everyday favorites." }, "price": "500", "priceCurrency": "USD", "url": "https://nydamphoto.com/seniors/collections/" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "The Frame", "description": "One senior session with more variety, more locations and more finished portraits, designed for the images families frame and display." }, "price": "750", "priceCurrency": "USD", "url": "https://nydamphoto.com/seniors/collections/" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "The Cover Story", "description": "Our signature one-day senior experience — maximum variety, multiple locations and looks, the complete premium senior session." }, "price": "950", "priceCurrency": "USD", "url": "https://nydamphoto.com/seniors/collections/" }
+    ]
+  },
+  "isRelatedTo": {
+    "@id": "https://nydamphoto.com/senior-team/#service"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -53,6 +65,9 @@
   "mainEntity": [
     { "@type": "Question", "name": "When should we book senior portraits?", "acceptedAnswer": { "@type": "Answer", "text": "Most families book in spring or summer of junior year through early senior year, which gives the most flexibility on dates and locations. Earlier is generally easier, but we work with families on whatever timeline fits." } },
     { "@type": "Question", "name": "Do you photograph Class of 2027 seniors?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We're currently scheduling senior sessions for the Class of 2027 throughout Austin and the surrounding area." } },
+    { "@type": "Question", "name": "Where are the best places for senior portraits in Austin?", "acceptedAnswer": { "@type": "Answer", "text": "The best location depends on the senior rather than one universal list. Some prefer modern architecture and The Domain, while others feel more at home in open Hill Country landscapes, on a sports field, or somewhere connected to their real life." } },
+    { "@type": "Question", "name": "What is the difference between school portraits and a personal senior session?", "acceptedAnswer": { "@type": "Answer", "text": "A school portrait is created for the yearbook. A personal senior session is built around your senior — their personality, interests, locations, and the photographs your family will actually use and keep." } },
+    { "@type": "Question", "name": "Do you photograph seniors outside central Austin?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Alongside Austin, we regularly photograph Class of 2027 seniors from Westlake, Bee Cave, Lakeway, Round Rock, Georgetown, Cedar Park, and Hutto." } },
     { "@type": "Question", "name": "Do you help with posing?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We guide posture, movement, and expression throughout the session, so your senior is never left wondering what to do with their hands or how to stand." } },
     { "@type": "Question", "name": "What should my senior wear?", "acceptedAnswer": { "@type": "Answer", "text": "We'll send a complimentary wardrobe guide before the session, but generally a mix of a few outfits that feel like your senior's everyday style works best." } },
     { "@type": "Question", "name": "Can we include sports, dance, music, or hobbies?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and we encourage it. A senior's interests — sports, dance, music, art, anything that's genuinely theirs — make for some of the most personal portraits in the gallery." } },
@@ -60,7 +75,7 @@
     { "@type": "Question", "name": "How long does a senior session take?", "acceptedAnswer": { "@type": "Answer", "text": "Most sessions run one to two hours depending on the collection and the number of locations or looks involved." } },
     { "@type": "Question", "name": "When do we receive the gallery?", "acceptedAnswer": { "@type": "Answer", "text": "Senior galleries are typically delivered within two to three weeks, with a few favorites shared sooner." } },
     { "@type": "Question", "name": "Do you offer prints?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Prints, albums, and wall art are available, and personal printing rights are included with every collection." } },
-    { "@type": "Question", "name": "What is NP Seniors?", "acceptedAnswer": { "@type": "Answer", "text": "NP Seniors is a separate, limited program for the Class of 2027 — built for seniors who want a more connected experience with seasonal sessions, featured portraits, and early access." } }
+    { "@type": "Question", "name": "What is the Senior Year Story?", "acceptedAnswer": { "@type": "Answer", "text": "The Senior Year Story is our year-long photography experience: three meaningful moments documented across fall, winter and spring, plus the complete Cover Story portrait session." } }
   ]
 }
 </script>
@@ -166,12 +181,15 @@
   /* Collections preview */
   .coll-preview{background:var(--cream)}
   .coll-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .coll-preview-grid--four{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:900px){.coll-preview-grid--four{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.coll-preview-grid--four{grid-template-columns:1fr}}
   .coll-preview-card{background:#fff;border:1px solid var(--line);padding:38px 30px;text-align:center}
   .coll-preview-card h3{font-family:var(--display);font-weight:400;font-size:24px;color:var(--dark);margin-bottom:14px}
   .coll-preview-card p{color:var(--muted);font-size:18px}
   .coll-preview-cta{text-align:center;margin-top:40px}
 
-  /* NP Seniors program */
+  /* Senior Year Story program */
   .np-band{position:relative;overflow:hidden;background:var(--dark);color:var(--ivory);padding:100px 0;text-align:center}
   .np-bg{position:absolute;inset:0;z-index:0}
   .np-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;color:transparent;font-size:0}
@@ -250,6 +268,35 @@
     .footer-grid{grid-template-columns:1fr}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+  .trust-band{background:var(--cream);padding:38px 0}
+  .trust-line{text-align:center;font-family:var(--serif);font-size:18px;font-style:italic;color:var(--dark);max-width:780px;margin:0 auto;line-height:1.55}
+  .s-hero-sub{font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.9vw,21px);color:#F3ECE0;margin-bottom:14px;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+  .facts-band{background:var(--cream)}
+  .facts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;max-width:1100px;margin:0 auto}
+  .facts-col h3{font-family:var(--display);font-weight:400;font-size:19px;color:var(--dark);margin-bottom:12px}
+  .facts-col p{font-family:var(--serif);font-size:15.5px;line-height:1.6;color:var(--muted)}
+  @media(max-width:760px){.facts-grid{grid-template-columns:1fr;gap:30px}}
+  .dual-promise-band{background:var(--dark);padding:56px 0}
+  .dual-promise{text-align:center;font-family:var(--display);font-weight:400;font-size:clamp(22px,2.8vw,32px);line-height:1.35;color:var(--ivory);max-width:820px;margin:0 auto}
+  .school-clarify{background:var(--ivory)}
+  .school-clarify h2{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,28px);color:var(--dark);text-align:center;margin-bottom:16px}
+  .school-clarify p{font-family:var(--serif);font-size:16.5px;line-height:1.65;color:var(--muted);text-align:center}
+  .guys-band{background:var(--ivory)}
+  .v-feature--reverse{direction:rtl}
+  .v-feature--reverse .v-feature-text{direction:ltr}
+  .v-feature--reverse .v-feature-img{direction:ltr}
+  .retouch-band{background:var(--cream);padding:64px 0}
+  .retouch-band h2{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,28px);color:var(--dark);margin-bottom:16px}
+  .retouch-band p{font-family:var(--serif);font-size:16.5px;line-height:1.65;color:var(--muted)}
+  .seasonal-band{background:var(--ivory);padding:20px 0 8px}
+  .seasonal-card{max-width:820px;margin:0 auto;border-left:3px solid var(--gold);padding:6px 0 6px 22px}
+  .seasonal-card p{font-family:var(--serif);font-size:16px;line-height:1.6;color:var(--muted);margin-top:8px}
+  .seasonal-card p a{color:var(--dark);border-bottom:1px solid var(--gold)}
+  .sr-only-heading{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+  .coll-preview-card{position:relative}
+  .coll-preview-card--chosen{border-color:var(--gold);box-shadow:0 12px 32px rgba(0,0,0,.08)}
+  .coll-preview-badge{display:inline-block;font-family:var(--sans);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:5px 12px;margin-bottom:14px}
+  .coll-preview-price{display:block;font-family:var(--display);font-size:19px;color:var(--dark);margin:8px 0 12px}
 </style>
 </head>
 
@@ -263,7 +310,7 @@
       <a href="/#services">Services</a>
       <a href="/portfolio/">Portfolio</a>
       <a href="/venues/">Venues</a>
-      <a href="/senior-team/" class="nav-highlight">NP Seniors</a>
+      <a href="/senior-team/" class="nav-highlight">Senior Year Story</a>
       <a href="/guides/">Guides</a>
       <a href="/about/">About</a>
       <a href="/book/" class="nav-book">Check Availability</a>
@@ -280,13 +327,13 @@
   <img src="/seniors-hero.jpg" alt="Austin senior portraits by Nydam Photography" loading="eager">
   <div class="s-hero-inner">
     <span class="eyebrow">Senior Portraits · Austin, Texas</span>
-    <h1>Senior Portraits That Feel Like Who They Are Right Now</h1>
-    <p class="s-hero-pillar">Nydam Photography creates senior portraits for Class of 2027 families throughout Austin, Westlake, Bee Cave, Lakeway, Round Rock, Georgetown, Cedar Park, Hutto and the surrounding Hill Country. Every session is thoughtfully planned, naturally directed and built around who your senior is—not just how they look.</p>
+    <h1>Senior Portraits That Feel Like Them</h1>
+    <p class="s-hero-sub">The images they'll want to share. The portraits your family will treasure for years.</p>
+    <p class="s-hero-pillar">We create senior portraits for Class of 2027 families throughout Austin and the Texas Hill Country. From modern city portraits and golden-hour fields to sports, dance and meaningful places, every session is thoughtfully planned and naturally directed to create extraordinary photographs your family will treasure for years.</p>
     <div class="s-hero-ctas">
-      <a href="/seniors/collections/" class="btn btn-gold">View Senior Collections</a>
-      <a href="/portfolio/stories/seniors/" class="btn btn-outline">See Senior Stories</a>
+      <a href="/seniors/collections/" class="btn btn-gold">Explore Senior Collections</a>
+      <a href="/portfolio/stories/seniors/" class="btn btn-outline">See Real Senior Stories</a>
     </div>
-    <p class="s-hero-micro"><a href="/senior-team/">Curious about Your Senior Year Story? →</a></p>
   </div>
 </section>
 
@@ -304,8 +351,28 @@
         <p>We guide the entire session from start to finish, so no one is left guessing what to do with their hands or how to stand. The result is portraits that feel confident and genuinely theirs — not a template, and not a performance.</p>
       </div>
     </div>
-    <div class="v-feature-full">
-      <p>We work with senior families throughout Austin and the surrounding area, including Round Rock, Georgetown, Cedar Park, Hutto, Pflugerville, Leander, Westlake, and Bee Cave.</p>
+  </div>
+</section>
+
+<!-- FACTUAL BLOCK -->
+<section class="section facts-band" aria-labelledby="facts-h2">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="facts-h2">Everything You Need for Senior Portraits</h2>
+    </div>
+    <div class="facts-grid">
+      <div class="facts-col">
+        <h3>Where We Photograph</h3>
+        <p>Austin and the Texas Hill Country.</p>
+      </div>
+      <div class="facts-col">
+        <h3>What We Create</h3>
+        <p>Modern city portraits, golden-hour Hill Country sunsets, sports, dance, farms with horses and baby goats, cars and trucks, and the timeless portraits families will cherish for decades.</p>
+      </div>
+      <div class="facts-col">
+        <h3>Why Families Choose Us</h3>
+        <p>18 years behind the lens, confident direction, refined natural light and flash, polished retouching that preserves natural skin texture, edited digital images included with no required image purchases afterward, and the ability to create extraordinary variety while ensuring your senior still looks unmistakably like themselves.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -320,6 +387,13 @@
     <h2 id="matters-h2">They Will Only Be This Version of Themselves Once</h2>
     <p>Senior year is a transition — the last stretch of being exactly this age, in exactly this place, before everything starts to shift. These portraits aren't just for graduation announcements. They become family keepsakes, the photographs you'll pull out years from now to remember who your senior was right at this moment.</p>
     <p>That's the goal behind every session: not just a flattering photo, but a real, lasting record of who your senior is right now.</p>
+  </div>
+</section>
+
+<!-- DUAL AUDIENCE PROMISE -->
+<section class="section dual-promise-band" aria-label="What every session includes">
+  <div class="wrap">
+    <p class="dual-promise">Every session includes both: the images that feel most like them today, and the portraits your family will still love years from now.</p>
   </div>
 </section>
 
@@ -389,6 +463,23 @@
   </div>
 </section>
 
+<!-- SCHOOL PORTRAITS CLARIFICATION -->
+<section class="section school-clarify" aria-labelledby="school-h2">
+  <div class="wrap">
+    <div class="section-narrow">
+      <h2 id="school-h2">School Portraits and Personal Senior Photos Serve Different Purposes</h2>
+      <p>A school portrait creates the standardized image needed for the yearbook and school system. A personal senior session is built around the person — their style, interests, locations, activities and the photographs their family will use for announcements, albums, gifts, wall art and graduation celebrations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STATEMENT -->
+<section class="section trust-band" aria-label="How pricing works">
+  <div class="wrap">
+    <p class="trust-line">The edited digital images included in your collection are yours to download and print. There are no required image purchases afterward. Fine art prints, albums, and wall art are available, but always optional.</p>
+  </div>
+</section>
+
 <!-- SENIOR COLLECTIONS PREVIEW -->
 <section class="section coll-preview" aria-labelledby="coll-h2">
   <div class="wrap">
@@ -396,73 +487,69 @@
       <span class="eyebrow">Investment</span>
       <h2 id="coll-h2">Senior Collections</h2>
     </div>
-    <div class="coll-preview-grid">
+    <div class="coll-preview-grid coll-preview-grid--four">
       <div class="coll-preview-card">
-        <h3>Essential</h3>
-        <p>A focused senior portrait session with polished, timeless images.</p>
+        <h3>The Post</h3>
+        <span class="coll-preview-price">$500 + tax</span>
+      </div>
+      <div class="coll-preview-card coll-preview-card--chosen">
+        <span class="coll-preview-badge">Most Chosen</span>
+        <h3>The Frame</h3>
+        <span class="coll-preview-price">$750 + tax</span>
       </div>
       <div class="coll-preview-card">
-        <h3>Signature</h3>
-        <p>More variety, more locations or looks, and a fuller portrait story.</p>
+        <h3>The Cover Story</h3>
+        <span class="coll-preview-price">$950 + tax</span>
       </div>
       <div class="coll-preview-card">
-        <h3>All-Inclusive</h3>
-        <p>A complete senior portrait experience with styling support and a fully guided session.</p>
+        <h3>The Senior Year Story</h3>
+        <span class="coll-preview-price">$1,650 + tax</span>
       </div>
     </div>
-    <div class="coll-preview-cta"><a href="/seniors/collections/" class="btn btn-outline">View Senior Collections →</a></div>
+    <div class="coll-preview-cta"><a href="/seniors/collections/" class="btn btn-outline">Compare Collections →</a></div>
   </div>
 </section>
 
 <!-- NP SENIORS PROGRAM -->
 <section class="np-band" aria-labelledby="np-h2">
   <div class="np-bg">
-    <img src="/seniors-np-bg.jpg" alt="NP Seniors program, Nydam Photography" loading="lazy">
+    <img src="/seniors-np-bg.jpg" alt="The Senior Year Story by Nydam Photography" loading="lazy">
   </div>
   <div class="wrap">
     <span class="eyebrow">A Separate, Featured Program</span>
-    <h2 id="np-h2">Your Senior Year Story</h2>
-    <p>Want more than one session? Your Senior Year Story documents three real moments across the year — fall, winter, and spring — plus a fully styled Signature Session.</p>
-    <a href="/senior-team/" class="btn btn-gold">Explore Your Senior Year Story →</a>
+    <h2 id="np-h2">The Senior Year Story</h2>
+    <p>Want more than one session? The Senior Year Story captures three real moments across the year — fall, winter, and spring — plus the complete Cover Story portrait session.</p>
+    <a href="/senior-team/" class="btn btn-gold">Learn About Senior Year Story →</a>
   </div>
 </section>
 
-<!-- SENIOR GUIDES PREVIEW -->
-<section class="section guide-cards" aria-labelledby="guides-h2">
+<!-- SENIOR GUYS -->
+<section class="section guys-band" aria-labelledby="guys-h2">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Client Resources</span>
-      <h2 id="guides-h2">Senior Portrait Resources</h2>
-      <p>A few complimentary guides, built from real senior sessions and real experience.</p>
+    <div class="v-feature v-feature--reverse">
+      <div class="v-feature-img"><img src="/story-zach-senior.jpg" alt="Zach's senior portraits, Class of 2027, Austin" loading="lazy"></div>
+      <div class="v-feature-text">
+        <span class="eyebrow">For the Guys</span>
+        <h2 id="guys-h2">He Doesn't Need to Love Photos.</h2>
+        <p>He needs a session built around something he does love. We don't start with portraits — we start with what's actually his: sports, scouting, a truck, music, a uniform, a job, family property, a dog, or wherever he's headed next.</p>
+        <p>The portraits come out of that, not the other way around.</p>
+        <a href="/portfolio/stories/zach-2027-diamond/" class="resource-chip">See Zach's Story →</a>
+        <a href="/guides/seniors/senior-style-guide-for-guys/" class="resource-chip">Senior Guys Guide →</a>
+      </div>
     </div>
-    <div class="guide-cards-grid">
-      <article class="guide-card">
-        <span class="guide-card-icon">Before Your Session</span>
-        <h4>What to Wear for Senior Pictures</h4>
-        <a href="/guides/seniors/what-to-wear-for-senior-pictures/" class="guide-card-link">Read the Guide →</a>
-      </article>
-      <article class="guide-card">
-        <span class="guide-card-icon">Getting Ready</span>
-        <h4>Makeup Guide for Senior Photos</h4>
-        <a href="/guides/seniors/makeup-guide-for-senior-photos/" class="guide-card-link">Read the Guide →</a>
-      </article>
-      <article class="guide-card">
-        <span class="guide-card-icon">During the Session</span>
-        <h4>How to Pose for Senior Pictures</h4>
-        <a href="/guides/seniors/how-to-pose-for-senior-pictures/" class="guide-card-link">Read the Guide →</a>
-      </article>
-      <article class="guide-card">
-        <span class="guide-card-icon">For Guys</span>
-        <h4>Senior Style Guide for Guys</h4>
-        <a href="/guides/seniors/senior-style-guide-for-guys/" class="guide-card-link">Read the Guide →</a>
-      </article>
-      <article class="guide-card">
-        <span class="guide-card-icon">Before You Book</span>
-        <h4>How to Choose Your Senior Portrait Photographer</h4>
-        <a href="/guides/seniors/how-to-choose-your-senior-portrait-photographer/" class="guide-card-link">Read the Guide →</a>
-      </article>
+  </div>
+</section>
+
+<!-- Planning Resources Component (placeholder — will pull from Guide Hub data source once built) -->
+<!-- <planning-resources page="seniors" /> -->
+
+<!-- RETOUCHING -->
+<section class="section retouch-band" aria-label="Our approach to retouching">
+  <div class="wrap">
+    <div class="section-narrow" style="text-align:center">
+      <h2>Polished, Never Altered</h2>
+      <p>We refine temporary distractions while preserving natural features, skin texture and identity. Your senior should look like themselves — just photographed with thoughtful light, direction and care.</p>
     </div>
-    <div class="guide-cta"><a href="/guides/seniors/" class="btn btn-outline">View All Senior Guides →</a></div>
   </div>
 </section>
 
@@ -474,12 +561,22 @@
       <h2 id="why-h2">Why Choose Nydam for Senior Portraits</h2>
     </div>
     <div class="why-list">
-      <div class="why-item">Guided posing, so no one is left wondering what to do</div>
-      <div class="why-item">Beautifully photographed portraits with genuine personality</div>
+      <div class="why-item">18 years behind the lens, now serving senior families throughout Austin and the Texas Hill Country</div>
+      <div class="why-item">A parent-friendly process — wardrobe help, planning, and a private gallery</div>
       <div class="why-item">Natural light and refined lighting, used with intention</div>
-      <div class="why-item">A parent-friendly process from start to finish</div>
-      <div class="why-item">Austin-based, with experience across the area</div>
-      <div class="why-item">A personal session, never rushed and never a template</div>
+      <div class="why-item">Edited digital images included, always — prints and albums are optional</div>
+      <div class="why-item">Austin-based, with real experience across the Hill Country</div>
+    </div>
+  </div>
+</section>
+
+<!-- RIGHT NOW SEASONAL MODULE -->
+<section class="section seasonal-band" aria-labelledby="seasonal-h2">
+  <div class="wrap">
+    <div class="seasonal-card">
+      <span class="eyebrow">Right Now for Class of 2027</span>
+      <h2 id="seasonal-h2" class="sr-only-heading">Right Now for Class of 2027</h2>
+      <p>School portrait and yearbook information may already be arriving. Your school portrait serves the yearbook; a personal senior session creates the photographs your family will actually use for announcements, albums, gifts, and wall art. <a href="/guides/seniors/">See our Senior Guides →</a></p>
     </div>
   </div>
 </section>
@@ -494,6 +591,9 @@
     <div class="faq-list">
       <details class="faq-item"><summary>When should we book senior portraits?</summary><div class="faq-answer">Most families book in spring or summer of junior year through early senior year, which gives the most flexibility on dates and locations. Earlier is generally easier, but we work with families on whatever timeline fits.</div></details>
       <details class="faq-item"><summary>Do you photograph Class of 2027 seniors?</summary><div class="faq-answer">Yes. We're currently scheduling senior sessions for the Class of 2027 throughout Austin and the surrounding area.</div></details>
+      <details class="faq-item"><summary>Where are the best places for senior portraits in Austin?</summary><div class="faq-answer">The best location depends on the senior rather than one universal list. Some prefer modern architecture and The Domain, while others feel more at home in open Hill Country landscapes, on a sports field, or somewhere connected to their real life. We help plan a route around the look, season, light, and personality that fits.</div></details>
+      <details class="faq-item"><summary>What is the difference between school portraits and a personal senior session?</summary><div class="faq-answer">A school portrait is created for the yearbook. A personal senior session is built around your senior — their personality, interests, locations, and the photographs your family will actually use and keep. <a href="/guides/seniors/">More in our Senior Guides →</a></div></details>
+      <details class="faq-item"><summary>Do you photograph seniors outside central Austin?</summary><div class="faq-answer">Yes. Alongside Austin, we regularly photograph Class of 2027 seniors from Westlake, Bee Cave, Lakeway, Round Rock, Georgetown, Cedar Park, and Hutto.</div></details>
       <details class="faq-item"><summary>Do you help with posing?</summary><div class="faq-answer">Yes. We guide posture, movement, and expression throughout the session, so your senior is never left wondering what to do with their hands or how to stand.</div></details>
       <details class="faq-item"><summary>What should my senior wear?</summary><div class="faq-answer">We'll send a complimentary wardrobe guide before the session, but generally a mix of a few outfits that feel like your senior's everyday style works best.</div></details>
       <details class="faq-item"><summary>Can we include sports, dance, music, or hobbies?</summary><div class="faq-answer">Yes, and we encourage it. A senior's interests — sports, dance, music, art, anything that's genuinely theirs — make for some of the most personal portraits in the gallery.</div></details>
@@ -501,7 +601,7 @@
       <details class="faq-item"><summary>How long does a senior session take?</summary><div class="faq-answer">Most sessions run one to two hours depending on the collection and the number of locations or looks involved.</div></details>
       <details class="faq-item"><summary>When do we receive the gallery?</summary><div class="faq-answer">Senior galleries are typically delivered within two to three weeks, with a few favorites shared sooner.</div></details>
       <details class="faq-item"><summary>Do you offer prints?</summary><div class="faq-answer">Yes. Prints, albums, and wall art are available, and personal printing rights are included with every collection.</div></details>
-      <details class="faq-item"><summary>What is NP Seniors?</summary><div class="faq-answer">NP Seniors is a separate, limited program for the Class of 2027 — built for seniors who want a more connected experience with seasonal sessions, featured portraits, and early access.</div></details>
+      <details class="faq-item"><summary>What is the Senior Year Story?</summary><div class="faq-answer">The Senior Year Story is our year-long photography experience: three meaningful moments documented across fall, winter and spring, plus the complete Cover Story portrait session. <a href="/senior-team/">See how it works →</a></div></details>
     </div>
   </div>
 </section>
@@ -514,7 +614,7 @@
     <p>Whether your senior already knows exactly what they want or has no idea where to begin, we'll guide the entire experience.</p>
     <div class="s-cta-paths">
       <a href="/seniors/collections/" class="btn btn-gold">View Senior Collections</a>
-      <a href="/senior-team/" class="btn btn-outline">Learn About NP Seniors</a>
+      <a href="/senior-team/" class="btn btn-outline">Explore the Senior Year Story</a>
       <a href="/book/" class="btn btn-outline">Check Availability</a>
       <a href="/#contact" class="btn btn-outline">Send a Message</a>
     </div>
@@ -550,7 +650,7 @@
           <li><a href="/seniors/collections/">Collections</a></li>
           <li><a href="/portfolio/stories/seniors/">Senior Stories</a></li>
           <li><a href="/guides/seniors/">Senior Guides</a></li>
-          <li><a href="/senior-team/">Your Senior Year Story</a></li>
+          <li><a href="/senior-team/">The Senior Year Story</a></li>
         </ul>
       </div>
       <div>
