@@ -70,7 +70,7 @@
     { "@type": "Question", "name": "How many outfits should my senior bring?", "acceptedAnswer": { "@type": "Answer", "text": "The Cover Story allows time for multiple planned looks. We help prioritize outfits so the session remains relaxed and every look receives enough time." } },
     { "@type": "Question", "name": "Can we include dance, sports, music, or hobbies?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and we encourage it. A senior's interests can be woven into The Frame and The Cover Story sessions without making the day feel like a theme shoot." } },
     { "@type": "Question", "name": "Do parents help choose final images?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Parents are welcome in the gallery review process, and we're happy to talk through favorites together." } },
-    { "@type": "Question", "name": "When will we receive our images?", "acceptedAnswer": { "@type": "Answer", "text": "Your proof gallery is typically ready within 7–10 days. After you select the images included in your collection, the fully edited final gallery is usually delivered within another 10–14 days." } },
+    { "@type": "Question", "name": "When will we receive our images?", "acceptedAnswer": { "@type": "Answer", "text": "You'll receive a few sneak peek images within 24 hours. Your full proof gallery is typically ready within 7–10 business days, and after you select the images included in your collection, the fully edited final gallery is usually delivered within another 10–14 business days." } },
     { "@type": "Question", "name": "Do you offer prints or albums?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Personal printing rights are included with every collection, and albums or fine art prints can be added." } },
     { "@type": "Question", "name": "What is the difference between a senior collection and The Senior Year Story?", "acceptedAnswer": { "@type": "Answer", "text": "Senior portrait collections are our standard, single-session senior photography options. The Senior Year Story is a separate year-long experience consisting of three real senior-year moments plus the complete Cover Story portrait session." } },
     { "@type": "Question", "name": "Do you photograph senior sessions outside Austin?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We photograph seniors throughout the greater Austin area and the Texas Hill Country, including Westlake, Bee Cave, Lakeway, Round Rock, Georgetown, Cedar Park, Leander, Dripping Springs and Hutto. We recommend locations based on the look and experience your senior wants." } },
@@ -169,11 +169,15 @@
   .coll-disclosure{font-size:11.5px;padding:9px 10px;margin:8px 0}
   .coll-cta{margin-top:auto;width:100%;text-align:center}
   @media(max-width:1100px){.colls-grid{grid-template-columns:repeat(2,1fr)}}
+  .img-band{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+  .img-band img{width:100%;aspect-ratio:1;object-fit:cover;object-position:center 25%;color:transparent;font-size:0;display:block}
+  .img-band img.pos-top{object-position:center top}
+  .img-band img.pos-center{object-position:center center}
+  .img-band img.pos-bottom{object-position:center bottom}
   @media(max-width:640px){
     .colls-grid{grid-template-columns:1fr;max-width:440px}
     .coll-img{aspect-ratio:16/9}
-    .img-band{grid-template-columns:repeat(2,1fr);aspect-ratio:auto}
-    .img-band img{aspect-ratio:1}
+    .img-band{grid-template-columns:repeat(2,1fr)}
     body{font-size:18px}
     .section{padding:60px 0}
     .nav-links{position:fixed;inset:74px 0 auto 0;background:var(--ivory);flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid var(--line);display:none}
@@ -250,30 +254,6 @@
   </div>
 </section>
 
-<!-- BEFORE YOU CHOOSE -->
-<section class="section decide" aria-labelledby="decide-h2">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Before You Choose</span>
-      <h2 id="decide-h2">How Families Usually Decide</h2>
-    </div>
-    <div class="decide-grid">
-      <div class="decide-item">
-        <h3>Personality &amp; Comfort</h3>
-        <p>Some seniors love the camera. Others need time to warm up. The right collection gives them enough space to feel natural.</p>
-      </div>
-      <div class="decide-item">
-        <h3>Variety</h3>
-        <p>Outfits, locations, hobbies, sports, dance, instruments, or personal details can all shape the session.</p>
-      </div>
-      <div class="decide-item">
-        <h3>Final Use</h3>
-        <p>Announcements, albums, wall art, social media, graduation gifts, and family keepsakes all influence how much variety you may want.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- COLLECTIONS -->
 <section class="section" id="collections" aria-labelledby="coll-h2">
   <div class="wrap">
@@ -299,7 +279,7 @@
           </ul>
           <span class="coll-price">$500 + tax</span>
           <p class="coll-disclosure">The listed edited digital images are included. There are no required image purchases after your session. Albums, prints and wall art are optional.</p>
-          <a href="/book/" class="btn btn-outline coll-cta">Book The Post — $500</a>
+          <a href="https://calendly.com/nydamphotography/senior-session-essential-collection" target="_blank" rel="noopener" class="btn btn-outline coll-cta">Book The Post — $500</a>
         </div>
       </article>
 
@@ -317,11 +297,10 @@
             <li>Dance, sports, music, or hobbies welcome</li>
             <li>Zoom styling call — what to wear, planned ahead</li>
             <li>Private online gallery</li>
-            <li>$100 print credit included</li>
           </ul>
           <span class="coll-price">$750 + tax</span>
           <p class="coll-disclosure">The listed edited digital images are included. There are no required image purchases after your session. Albums, prints and wall art are optional.</p>
-          <a href="/book/" class="btn btn-outline coll-cta">Book The Frame — $750</a>
+          <a href="https://calendly.com/nydamphotography/senior-session-signature-collection" target="_blank" rel="noopener" class="btn btn-outline coll-cta">Book The Frame — $750</a>
         </div>
       </article>
 
@@ -343,7 +322,7 @@
           </ul>
           <span class="coll-price">$950 + tax</span>
           <p class="coll-disclosure">The listed edited digital images are included. There are no required image purchases after your session. Albums, prints and wall art are optional.</p>
-          <a href="/book/" class="btn btn-outline coll-cta">Book The Cover Story — $950</a>
+          <a href="https://calendly.com/nydamphotography/senior-session-all-inclusive-collection" target="_blank" rel="noopener" class="btn btn-outline coll-cta">Book The Cover Story — $950</a>
         </div>
       </article>
 
@@ -369,12 +348,36 @@
   </div>
 </section>
 
+<!-- BEFORE YOU CHOOSE -->
+<section class="section decide" aria-labelledby="decide-h2">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Before You Choose</span>
+      <h2 id="decide-h2">How Families Usually Decide</h2>
+    </div>
+    <div class="decide-grid">
+      <div class="decide-item">
+        <h3>Personality &amp; Comfort</h3>
+        <p>Some seniors love the camera. Others need time to warm up. The right collection gives them enough space to feel natural.</p>
+      </div>
+      <div class="decide-item">
+        <h3>Variety</h3>
+        <p>Outfits, locations, hobbies, sports, dance, instruments, or personal details can all shape the session.</p>
+      </div>
+      <div class="decide-item">
+        <h3>Final Use</h3>
+        <p>Announcements, albums, wall art, social media, graduation gifts, and family keepsakes all influence how much variety you may want.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- IMAGE BAND -->
 <div class="img-band">
-  <img src="/senior-collections-brynley-01.jpg" alt="Brynley's senior portrait session" loading="lazy">
-  <img src="/senior-collections-carley-01.jpg" alt="Carley's senior portrait session" loading="lazy">
-  <img src="/senior-collections-zach-01.jpg" alt="Zach's senior portrait session" loading="lazy">
-  <img src="/senior-collections-bella-01.jpg" alt="Bella's senior portrait session" loading="lazy">
+  <img class="pos-top" src="/senior-collections-brynley-01.jpg" alt="Brynley's senior portrait session" loading="lazy">
+  <img class="pos-top" src="/senior-collections-carley-01.jpg" alt="Carley's senior portrait session" loading="lazy">
+  <img class="pos-top" src="/senior-collections-zach-01.jpg" alt="Zach's senior portrait session" loading="lazy">
+  <img class="pos-top" src="/senior-collections-bella-01.jpg" alt="Bella's senior portrait session" loading="lazy">
 </div>
 
 <!-- COMPARISON TABLE -->
@@ -530,7 +533,7 @@
       <details class="faq-item"><summary>How many outfits should my senior bring?</summary><div class="faq-answer">The Cover Story allows time for multiple planned looks. We help prioritize outfits so the session remains relaxed and every look receives enough time.</div></details>
       <details class="faq-item"><summary>Can we include dance, sports, music, or hobbies?</summary><div class="faq-answer">Yes, and we encourage it. A senior's interests can be woven into The Frame and The Cover Story sessions without making the day feel like a theme shoot.</div></details>
       <details class="faq-item"><summary>Do parents help choose final images?</summary><div class="faq-answer">Yes. Parents are welcome in the gallery review process, and we're happy to talk through favorites together.</div></details>
-      <details class="faq-item"><summary>When will we receive our images?</summary><div class="faq-answer">Your proof gallery is typically ready within 7–10 days. After you select the images included in your collection, the fully edited final gallery is usually delivered within another 10–14 days.</div></details>
+      <details class="faq-item"><summary>When will we receive our images?</summary><div class="faq-answer">You'll receive a few sneak peek images within 24 hours. Your full proof gallery is typically ready within 7–10 business days, and after you select the images included in your collection, the fully edited final gallery is usually delivered within another 10–14 business days.</div></details>
       <details class="faq-item"><summary>Do you offer prints or albums?</summary><div class="faq-answer">Yes. Personal printing rights are included with every collection, and albums or fine art prints can be added.</div></details>
       <details class="faq-item"><summary>What is the difference between a senior collection and The Senior Year Story?</summary><div class="faq-answer">Senior portrait collections are our standard, single-session senior photography options. The Senior Year Story is a separate year-long experience consisting of three real senior-year moments plus the complete Cover Story portrait session.</div></details>
       <details class="faq-item"><summary>Do you photograph senior sessions outside Austin?</summary><div class="faq-answer">Yes. We photograph seniors throughout the greater Austin area and the Texas Hill Country, including Westlake, Bee Cave, Lakeway, Round Rock, Georgetown, Cedar Park, Leander, Dripping Springs and Hutto. We recommend locations based on the look and experience your senior wants.</div></details>
