@@ -226,10 +226,6 @@
   .seasonal-chip{font-family:var(--sans);font-size:14px;color:var(--dark);border:1px solid var(--line);background:#fff;padding:10px 20px}
 
   /* What makes it different — narrative, not checklist */
-  .difference-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;max-width:1000px;margin:0 auto}
-  .difference-item{text-align:center}
-  .difference-item h3{font-family:var(--display);font-weight:400;font-size:21px;color:var(--dark);margin-bottom:12px}
-  .difference-item p{color:var(--muted);font-size:17px;line-height:1.65}
 
   /* Included checklist — secondary, after the narrative */
   .included{background:var(--cream)}
@@ -300,7 +296,6 @@
     .split-body .section-head{text-align:center}
     .story-photos{grid-template-columns:1fr;gap:24px}
     .brynley-photos{grid-template-columns:1fr;gap:18px}
-    .difference-grid{grid-template-columns:1fr;gap:30px}
     .included-grid{grid-template-columns:repeat(2,1fr)}
     .credits-grid{grid-template-columns:repeat(2,1fr)}
     .feat-story-card{grid-template-columns:1fr;gap:30px}
@@ -330,6 +325,7 @@
     .footer-grid{grid-template-columns:1fr}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+  #inquire{scroll-margin-top:100px}
   .sticky-inquire{display:none}
   @media(max-width:760px){
     .sticky-inquire{display:block;position:fixed;left:16px;right:16px;bottom:16px;z-index:60;background:var(--gold);color:var(--dark);text-align:center;font-family:var(--sans);font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:16px;border-radius:2px;box-shadow:0 6px 24px rgba(0,0,0,.25);text-decoration:none}
@@ -343,6 +339,8 @@
   .s-hero-sub{font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.9vw,21px);color:#F3ECE0;margin-bottom:30px;text-shadow:0 1px 10px rgba(0,0,0,.4);max-width:640px}
   .not-four-band{background:var(--cream)}
   .lead-sub{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--muted);margin-top:10px}
+  .positioning-band{background:var(--dark);padding:72px 0}
+  .positioning-line{text-align:center;font-family:var(--display);font-weight:400;font-size:clamp(24px,3.4vw,38px);line-height:1.4;color:var(--ivory);max-width:760px;margin:0 auto}
 </style>
 </head>
 
@@ -520,12 +518,12 @@
     </div>
   </div>
   <div class="img-banner">
-    <img src="/senior-team-chapter-confidence-02.jpg" alt="Winter chapter of The Senior Year Story" loading="lazy">
+    <img class="pos-center" src="/senior-team-chapter-confidence-02.jpg" alt="Winter chapter of The Senior Year Story" loading="lazy">
   </div>
   <div class="wrap">
     <div class="img-pair">
-      <img src="/senior-team-chapter-confidence-01.jpg" alt="A real winter senior moment, Austin &amp; Hill Country" loading="lazy">
-      <img src="/senior-team-chapter-confidence-03.jpg" alt="A senior's real winter moment, The Senior Year Story" loading="lazy">
+      <img class="pos-center" src="/senior-team-chapter-confidence-01.jpg" alt="A real winter senior moment, Austin &amp; Hill Country" loading="lazy">
+      <img class="pos-center" src="/senior-team-chapter-confidence-03.jpg" alt="A senior's real winter moment, The Senior Year Story" loading="lazy">
     </div>
   </div>
 </section>
@@ -544,7 +542,7 @@
   <div class="wrap">
     <div class="img-pair">
       <img class="pos-top" src="/senior-team-chapter-together-01.jpg" alt="A real spring senior moment, Austin" loading="lazy">
-      <img src="/senior-team-chapter-together-03.jpg" alt="A senior's real spring moment, The Senior Year Story" loading="lazy">
+      <img class="pos-center" src="/senior-team-chapter-together-03.jpg" alt="A senior's real spring moment, The Senior Year Story" loading="lazy">
     </div>
   </div>
 </section>
@@ -558,12 +556,12 @@
     </div>
   </div>
   <div class="img-banner tall">
-    <img src="/senior-team-chapter-portrait-01.jpg" alt="The Cover Story portrait session, fully styled, The Senior Year Story" loading="lazy">
+    <img class="pos-center" src="/senior-team-chapter-portrait-01.jpg" alt="The Cover Story portrait session, fully styled, The Senior Year Story" loading="lazy">
   </div>
   <div class="wrap">
     <div class="img-pair">
-      <img src="/senior-team-chapter-portrait-02.jpg" alt="A senior's Cover Story session, hair and makeup styled" loading="lazy">
-      <img src="/senior-team-chapter-portrait-03.jpg" alt="A Cover Story senior portrait, Austin &amp; Hill Country" loading="lazy">
+      <img class="pos-center" src="/senior-team-chapter-portrait-02.jpg" alt="A senior's Cover Story session, hair and makeup styled" loading="lazy">
+      <img class="pos-center" src="/senior-team-chapter-portrait-03.jpg" alt="A Cover Story senior portrait, Austin &amp; Hill Country" loading="lazy">
     </div>
   </div>
 </section>
@@ -593,7 +591,7 @@
 
 <!-- INVESTMENT -->
 <section class="section photo-band" aria-labelledby="invest-h2">
-  <img src="/senior-team-chapter-portrait-01.jpg" alt="The Cover Story portrait session, Austin &amp; Hill Country" loading="lazy">
+  <img class="pos-center" src="/senior-team-chapter-portrait-01.jpg" alt="The Cover Story portrait session, Austin &amp; Hill Country" loading="lazy">
   <div class="photo-band-inner">
     <span class="eyebrow">Investment</span>
     <h2 id="invest-h2">The Senior Year Story</h2>
@@ -608,27 +606,10 @@
 <!-- Shared Planning Resources Component: Senior Year Story context -->
 <!-- <planning-resources page="senior-year-story" title="Plan the Year With Confidence" /> -->
 
-<!-- WHAT MAKES THE EXPERIENCE DIFFERENT -->
-<section class="section" aria-labelledby="diff-h2">
+<!-- POSITIONING STATEMENT -->
+<section class="section positioning-band" aria-label="What this experience is">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">What This Actually Feels Like</span>
-      <h2 id="diff-h2">More Than a Photograph</h2>
-    </div>
-    <div class="difference-grid">
-      <div class="difference-item">
-        <h3>A Mom Zipping a Dress</h3>
-        <p>The quiet, unposed moments — a parent fixing a strap, helping with shoes, standing just out of frame — end up becoming some of the most treasured images of the entire season.</p>
-      </div>
-      <div class="difference-item">
-        <h3>A Season, Not a Day</h3>
-        <p>By the time the Cover Story session arrives, your senior already knows how they move, what locations and wardrobe feel like them, and which version of themselves they want this photograph to hold onto — so it never feels like the first time, or like a performance.</p>
-      </div>
-      <div class="difference-item">
-        <h3>One Photo You'll Still Recognize Yourself In</h3>
-        <p>Not a generic senior portrait. A photograph that still feels like them twenty years from now, when this season is just a memory.</p>
-      </div>
-    </div>
+    <p class="positioning-line">This is not an ambassador program.<br>It's a private storytelling experience.</p>
   </div>
 </section>
 
@@ -838,5 +819,20 @@
   });
 </script>
 
+  <script>
+    // Hide the floating "Inquire" button once the real inquire section is on screen,
+    // so it never overlaps the actual form/CTA it scrolls you to.
+    (function(){
+      var target = document.getElementById('inquire');
+      var floatBtn = document.querySelector('.sticky-inquire');
+      if(!target || !floatBtn || !('IntersectionObserver' in window)) return;
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          floatBtn.style.display = entry.isIntersecting ? 'none' : '';
+        });
+      }, {threshold: 0.15});
+      io.observe(target);
+    })();
+  </script>
 </body>
 </html>
