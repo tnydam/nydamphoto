@@ -133,13 +133,13 @@
   .prose p{font-size:20px;margin-bottom:16px;color:var(--text)}
   .prose p:last-child{margin-bottom:0}
 
-  .v-feature{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center;max-width:1080px;margin:0 auto 40px}
+  .v-feature{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center;max-width:1080px;margin:0 auto}
   .v-feature.reverse{grid-template-columns:1.1fr .9fr}
   .v-feature.reverse .v-feature-img{order:2}
   .v-feature-img{aspect-ratio:3/4;background:var(--cream);overflow:hidden;max-width:380px}
   .v-feature.reverse .v-feature-img{margin-left:auto}
   .v-feature-img img{width:100%;height:100%;object-fit:cover;color:transparent;font-size:0}
-  .v-feature-text p{font-size:20px;margin-bottom:22px;color:var(--text)}
+  .v-feature-text p{font-size:19px;line-height:1.5;margin-bottom:12px;color:var(--text)}
   .v-feature-text p:last-child{margin-bottom:0}
   .v-feature-full{max-width:760px;margin:0 auto;text-align:center}
   .v-feature-full p{font-size:19px;color:var(--muted)}
@@ -184,7 +184,7 @@
   @media(max-width:900px){.coll-preview-grid--four{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:480px){.coll-preview-grid--four{grid-template-columns:1fr}}
   .coll-preview-card{background:#fff;border:1px solid var(--line);padding:38px 30px;text-align:center}
-  .coll-preview-card h3{font-family:var(--display);font-weight:400;font-size:24px;color:var(--dark);margin-bottom:14px}
+  .coll-preview-card h3{font-family:var(--display);font-weight:400;font-size:20px;color:var(--dark);margin-bottom:10px}
   .coll-preview-card p{color:var(--muted);font-size:18px}
   .coll-preview-cta{text-align:center;margin-top:40px}
 
@@ -267,7 +267,7 @@
     .footer-grid{grid-template-columns:1fr}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
-  .trust-band{background:var(--cream);padding:26px 0}
+  .trust-band{background:var(--cream);padding:20px 0}
   .trust-line{text-align:center;font-family:var(--serif);font-size:18px;font-style:italic;color:var(--dark);max-width:780px;margin:0 auto;line-height:1.55}
   .s-hero-sub{font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.9vw,21px);color:#F3ECE0;margin-bottom:14px;text-shadow:0 1px 10px rgba(0,0,0,.4)}
   .facts-band{background:var(--cream)}
@@ -295,7 +295,7 @@
   .coll-preview-card{position:relative}
   .coll-preview-card--chosen{border-color:var(--gold);box-shadow:0 12px 32px rgba(0,0,0,.08)}
   .coll-preview-badge{display:inline-block;font-family:var(--sans);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:5px 12px;margin-bottom:14px}
-  .coll-preview-price{display:block;font-family:var(--display);font-size:19px;color:var(--dark);margin:8px 0 12px}
+  .coll-preview-price{display:block;font-family:var(--display);font-size:16px;color:var(--dark);margin:6px 0 8px}
   .steps-grid--timeline{display:flex;align-items:stretch;gap:0}
   .steps-grid--timeline .step-card{flex:1;min-width:0}
   .step-arrow{display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:22px;padding:0 6px;flex-shrink:0}
@@ -311,6 +311,18 @@
   @media(max-width:560px){.reviews-proof-grid{grid-template-columns:1fr}}
   a.coll-preview-card{display:block;text-decoration:none;transition:transform .2s,box-shadow .2s}
   a.coll-preview-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.08)}
+  .story-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:0;align-items:stretch;border:1px solid var(--line);max-width:1050px;margin:0 auto}
+  .story-img{min-height:440px;background:var(--cream)}
+  .story-img img{color:transparent;font-size:0;width:100%;height:100%;object-fit:cover}
+  .story-text{background:#fff;padding:60px 56px;display:flex;flex-direction:column;justify-content:center}
+  .story-meta{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+  .story-text h3{font-family:var(--display);font-weight:400;font-size:clamp(24px,3.2vw,30px);color:var(--dark);margin-bottom:14px}
+  .story-text p{color:var(--muted);font-size:18px;margin-bottom:26px}
+  @media(max-width:760px){
+    .story-grid{grid-template-columns:1fr}
+    .story-img{min-height:320px}
+    .story-text{padding:42px 30px}
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -373,46 +385,10 @@
     <div class="v-feature">
       <div class="v-feature-img"><img src="/seniors-positioning.jpg" alt="Austin senior portrait by Nydam Photography" loading="lazy"></div>
       <div class="v-feature-text">
-        <p>We guide the entire session from start to finish — posture, movement, expression, all of it. No one is left guessing what to do with their hands or how to stand.</p>
-        <p>The result: portraits that feel confident and genuinely theirs — not a template, and not a performance.</p>
+        <p>A school portrait is one standardized pose, the same backdrop as everyone else, done for the yearbook.</p>
+        <p>A session with us is guided from start to finish — real posture, real expression, built around your senior. Not a template.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- FACTUAL BLOCK -->
-<section class="section facts-band" aria-labelledby="facts-h2">
-  <div class="wrap">
-    <div class="section-head">
-      <h2 id="facts-h2">Everything You Need for Senior Portraits</h2>
-    </div>
-    <div class="facts-grid">
-      <div class="facts-col">
-        <h3>Where We Photograph</h3>
-        <p>Austin and the Texas Hill Country.</p>
-      </div>
-      <div class="facts-col">
-        <h3>What We Create</h3>
-        <p>Modern city portraits, golden-hour Hill Country sunsets, sports, dance, farms with horses and baby goats, cars and trucks, and the timeless portraits families will cherish for decades.</p>
-      </div>
-      <div class="facts-col">
-        <h3>Why Families Choose Us</h3>
-        <p>18 years behind the lens, confident direction, refined natural light and flash, polished retouching that preserves natural skin texture, edited digital images included with no required image purchases afterward, and the ability to create extraordinary variety while ensuring your senior still looks unmistakably like themselves.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY SENIOR PORTRAITS MATTER -->
-<section class="matters" aria-labelledby="matters-h2">
-  <div class="matters-bg">
-    <img src="/seniors-matters-bg.jpg" alt="Senior portraits, Nydam Photography" loading="lazy">
-  </div>
-  <div class="wrap matters-prose">
-    <span class="eyebrow">Our Approach</span>
-    <h2 id="matters-h2">What Makes a Great Senior Session?</h2>
-    <p>Beautiful senior portraits aren't created by one location or one pose. They're created by thoughtful planning, confident direction, great light, and the flexibility to create a wide variety of images — all within one cohesive experience.</p>
-    <p>That's where 18 years behind the lens makes the difference.</p>
   </div>
 </section>
 
@@ -477,14 +453,16 @@
       <span class="eyebrow">See It In Practice</span>
       <h2 id="feat-story-h2">A Featured Senior Story</h2>
     </div>
-    <div class="feat-story-card">
-      <div class="feat-story-img"><img src="/story-brynley-senior.jpg" alt="Brynley's Class of 2027 senior portraits at The Domain" loading="lazy"></div>
-      <div class="feat-story-body">
-        <span class="feat-story-meta">Class of 2027 · The Domain</span>
-        <h3>Brynley</h3>
+    <div class="story-grid">
+      <div class="story-img">
+        <img src="/story-brynley-senior.jpg" alt="Brynley's Class of 2027 senior portraits at The Domain" loading="lazy">
+      </div>
+      <div class="story-text">
+        <span class="story-meta">Senior Portraits · The Domain · Austin, Texas</span>
+        <h3>Brynley, Class of 2027</h3>
         <p>A Vogue-style senior session at The Domain, built around movement, dance, confidence, and timeless portraits.</p>
         <div class="feat-story-ctas">
-          <a href="/portfolio/stories/brynley-2027-domain/" class="btn btn-gold">View the Story</a>
+          <a href="/portfolio/stories/brynley-2027-domain/" class="btn btn-outline">View the Story →</a>
           <a href="/portfolio/stories/seniors/" class="btn btn-outline">See More Senior Stories</a>
         </div>
       </div>
@@ -500,7 +478,7 @@
 </section>
 
 <!-- SENIOR COLLECTIONS PREVIEW -->
-<section class="section coll-preview" aria-labelledby="coll-h2">
+<section class="section coll-preview" aria-labelledby="coll-h2" style="padding-top:34px">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Investment</span>
@@ -562,16 +540,6 @@
 <!-- Planning Resources Component (placeholder — will pull from Guide Hub data source once built) -->
 <!-- <planning-resources page="seniors" /> -->
 
-<!-- RETOUCHING -->
-<section class="section retouch-band" aria-label="Our approach to retouching">
-  <div class="wrap">
-    <div class="section-narrow" style="text-align:center">
-      <h2>Polished, Never Altered</h2>
-      <p>We refine temporary distractions while preserving natural features, skin texture and identity. Your senior should look like themselves — just photographed with thoughtful light, direction and care.</p>
-    </div>
-  </div>
-</section>
-
 <!-- WHY CHOOSE NYDAM FOR SENIORS -->
 <section class="section reviews-proof" aria-labelledby="why-h2">
   <div class="wrap">
@@ -618,6 +586,43 @@
     </div>
   </div>
 </section>
+
+<!-- FACTUAL BLOCK -->
+<section class="section facts-band" aria-labelledby="facts-h2">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="facts-h2">Everything You Need for Senior Portraits</h2>
+    </div>
+    <div class="facts-grid">
+      <div class="facts-col">
+        <h3>Where We Photograph</h3>
+        <p>Austin and the Texas Hill Country.</p>
+      </div>
+      <div class="facts-col">
+        <h3>What We Create</h3>
+        <p>Modern city portraits, golden-hour Hill Country sunsets, sports, dance, farms with horses and baby goats, cars and trucks, and the timeless portraits families will cherish for decades.</p>
+      </div>
+      <div class="facts-col">
+        <h3>Why Families Choose Us</h3>
+        <p>18 years behind the lens, confident direction, refined natural light and flash, polished retouching that preserves natural skin texture, edited digital images included with no required image purchases afterward, and the ability to create extraordinary variety while ensuring your senior still looks unmistakably like themselves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SENIOR PORTRAITS MATTER -->
+<section class="matters" aria-labelledby="matters-h2">
+  <div class="matters-bg">
+    <img src="/seniors-matters-bg.jpg" alt="Senior portraits, Nydam Photography" loading="lazy">
+  </div>
+  <div class="wrap matters-prose">
+    <span class="eyebrow">Our Approach</span>
+    <h2 id="matters-h2">What Makes a Great Senior Session?</h2>
+    <p>Beautiful senior portraits aren't created by one location or one pose. They're created by thoughtful planning, confident direction, great light, and the flexibility to create a wide variety of images — all within one cohesive experience.</p>
+    <p>That's where 18 years behind the lens makes the difference.</p>
+  </div>
+</section>
+
 
 <!-- FAQ -->
 <section class="section" aria-labelledby="faq-h2">
