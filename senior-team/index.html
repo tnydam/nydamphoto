@@ -356,6 +356,10 @@
   .magazine-band h2{color:var(--ivory)}
   .magazine-band .prose p{color:#CFC4B2}
   .magazine-band .prose p.emphasis{color:var(--gold-light);font-style:italic;font-size:19px}
+  .magazine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:32px auto 0}
+  .magazine-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.15);padding:16px 18px;text-align:center;font-family:var(--sans);font-size:14px;color:#EFE7DA;letter-spacing:.01em}
+  @media(max-width:760px){.magazine-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.magazine-grid{grid-template-columns:1fr}}
 </style>
 </head>
 
@@ -408,10 +412,10 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">What It Is</span>
-      <h2 id="what-h2">Three Real Moments. One Complete Portrait Session. The Whole Year Preserved.</h2>
+      <h2 id="what-h2">Three Real Moments. One Complete Portrait Session. The Whole Year Preserved — Plus Your Personal Magazine to Keep.</h2>
     </div>
     <div class="section-narrow prose">
-      <p>The Senior Year Story is a year-long photography experience for Class of 2027 families in Austin and the Texas Hill Country. We capture three meaningful senior-year moments as they naturally happen — one in fall, winter and spring — then create the complete Cover Story portrait session with professional hair and makeup.</p>
+      <p>The Senior Year Story is a year-long photography experience for Class of 2027 families in Austin and the Texas Hill Country. We capture three meaningful senior-year moments as they naturally happen — one in fall, winter and spring — then create the complete Cover Story portrait session with professional hair and makeup, and bring it all together in a personalized magazine made just for them.</p>
       <p>Your senior year isn't one outfit in one field. It's a Friday night under the lights, a recital, a last homecoming, a quiet morning at the barn. <strong>You live it. We preserve it.</strong></p>
     </div>
   </div>
@@ -579,7 +583,19 @@
       <h2 id="magazine-h2">Your Story. Your Magazine.</h2>
     </div>
     <div class="section-narrow prose">
-      <p>Your year, beautifully bound. A personalized magazine with your senior's name and class year on the cover — Fall, Winter, and Spring as chapters, plus an "About You" page built around their hobbies, music, sports, and the things that make them them.</p>
+      <p>This is the part families fall in love with. A real magazine, made entirely about your senior — their name and class year right there on the cover.</p>
+      <p>Fall, Winter, and Spring as chapters. Every event we photograph throughout the year, woven into the story as it happens. Their milestones. Their hobbies and interests. The music they had on repeat. Their best moments, captured and kept. Even notes from their closest friends — the people who were there for this year with them.</p>
+      <p>Nothing generic. Nothing templated. It's their senior year, printed, bound, and unmistakably theirs.</p>
+    </div>
+    <div class="magazine-grid">
+      <div class="magazine-item">Name &amp; class year on the cover</div>
+      <div class="magazine-item">Fall, Winter &amp; Spring chapters</div>
+      <div class="magazine-item">Every event we photograph, included</div>
+      <div class="magazine-item">Milestones &amp; best moments</div>
+      <div class="magazine-item">Hobbies, interests &amp; the music they loved</div>
+      <div class="magazine-item">Notes from their closest friends</div>
+    </div>
+    <div class="section-narrow prose">
       <p class="emphasis">This is included, not extra.</p>
     </div>
   </div>
