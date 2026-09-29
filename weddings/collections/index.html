@@ -31,8 +31,8 @@
     "@type": "OfferCatalog",
     "name": "Wedding Collections",
     "itemListElement": [
-      { "@type": "Offer", "name": "Signature Collection", "price": "5000", "priceCurrency": "USD", "description": "6 to 8 hours of coverage, second photographer, and choice of a complimentary engagement or bridal session.", "url": "https://nydamphoto.com/weddings/collections/" },
-      { "@type": "Offer", "name": "Wedding Story Collection", "price": "6500", "priceCurrency": "USD", "description": "10+ hours across the wedding weekend, including rehearsal dinner and next-morning brunch, second photographer, choice of a complimentary engagement or bridal session, and album design consultation.", "url": "https://nydamphoto.com/weddings/collections/" },
+      { "@type": "Offer", "name": "Signature Collection", "price": "5000", "priceCurrency": "USD", "description": "6 to 8 hours of coverage, choice of two photographers or one photographer plus one videographer, and choice of a complimentary engagement or bridal session.", "url": "https://nydamphoto.com/weddings/collections/" },
+      { "@type": "Offer", "name": "Wedding Story Collection", "price": "6500", "priceCurrency": "USD", "description": "10+ hours across the wedding weekend, including rehearsal dinner and next-morning brunch, choice of two photographers or one photographer plus one videographer, choice of a complimentary engagement or bridal session, and album design consultation.", "url": "https://nydamphoto.com/weddings/collections/" },
       { "@type": "Offer", "name": "Essential Collection", "price": "2500", "priceCurrency": "USD", "description": "Designed for intimate weddings and elopements. Up to 4 hours of wedding-day coverage with one photographer. Second photographer, wedding videography, wedding content creation, and an engagement or bridal session available to add.", "url": "https://nydamphoto.com/weddings/collections/" }
     ]
   }
@@ -291,6 +291,16 @@
   .calc-result-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px}
   .calc-reset{background:none;border:none;font-family:var(--sans);font-size:13px;color:var(--muted);text-decoration:underline;cursor:pointer;padding:0}
   @media(max-width:640px){.calc-box{padding:32px 22px}.calc-nav{flex-direction:column-reverse}.calc-nav #calcNext{margin-left:0}}
+  #calculator, #complimentary-session{scroll-margin-top:95px}
+  .comp-session{background:var(--dark);padding:56px 0}
+  .comp-box{max-width:640px;margin:0 auto;text-align:center}
+  .comp-session .eyebrow{color:var(--gold-light)}
+  .comp-session h2{font-family:var(--display);font-weight:400;font-size:clamp(24px,3vw,32px);color:var(--ivory);margin:0 0 18px}
+  .comp-session p{color:#CFC4B2;font-size:17px;line-height:1.6;margin-bottom:26px}
+  .comp-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+  .comp-session .btn-outline{color:var(--ivory);border-color:rgba(255,255,255,.45)}
+  .comp-qualify{font-size:13px;color:#9A9086;margin-bottom:0}
+  @media(max-width:600px){.comp-session{padding:44px 0}}
 </style>
 </head>
 <body>
@@ -329,6 +339,22 @@
     <div class="c-hero-ctas">
       <a href="#collections" class="btn btn-gold">Explore Collections</a>
       <a href="#calculator" class="btn btn-outline">Find Your Coverage</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLIMENTARY SESSION OFFER -->
+<section class="section comp-session" id="complimentary-session" aria-labelledby="comp-h2">
+  <div class="wrap">
+    <div class="comp-box">
+      <span class="eyebrow">Included With Signature &amp; Wedding Story</span>
+      <h2 id="comp-h2">Claim Your Complimentary Engagement or Bridal Session</h2>
+      <p>Book the Signature or Wedding Story Collection and choose one complimentary Engagement or Bridal Session. After your wedding collection is booked, we'll email you with everything you need to choose your session and schedule your date.</p>
+      <div class="comp-ctas">
+        <a href="https://calendly.com/nydamphotography/wedding-photography-signature-collection" target="_blank" rel="noopener" class="btn btn-gold">Book Signature</a>
+        <a href="https://calendly.com/nydamphotography/wedding-photography-weddingstory-collection" target="_blank" rel="noopener" class="btn btn-outline">Book Wedding Story</a>
+      </div>
+      <p class="comp-qualify">Complimentary session is included after booking a Signature or Wedding Story wedding collection.</p>
     </div>
   </div>
 </section>
@@ -381,7 +407,7 @@
             <div class="coll-details-body">
               <ul>
                 <li>6–8 hours of wedding-day coverage — from getting ready through the reception</li>
-                <li>Second photographer</li>
+                <li>Your choice of two photographers OR one photographer + one videographer</li>
                 <li>Choice of a complimentary Engagement or Bridal Session</li>
                 <li>An on-site guest photo station — a styled backdrop where your guests are photographed, delivered with your gallery</li>
                 <li>Private online gallery</li>
@@ -413,7 +439,7 @@
                 <li>Rehearsal dinner coverage the evening before</li>
                 <li>10+ hours of wedding-day coverage — getting ready through the send-off</li>
                 <li>Next-morning farewell brunch coverage</li>
-                <li>Second photographer</li>
+                <li>Your choice of two photographers OR one photographer + one videographer</li>
                 <li>Choice of a complimentary Engagement or Bridal Session</li>
                 <li>Album design consultation</li>
                 <li>An on-site guest photo station — a styled backdrop where your guests are photographed, delivered with your gallery</li>
@@ -463,9 +489,9 @@
 <section class="section calc-section" id="calculator" aria-labelledby="calc-h2">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Not Sure Where to Start?</span>
+      <span class="eyebrow">Plan Your Coverage</span>
       <h2 id="calc-h2">Find Your Wedding Coverage</h2>
-      <p>Not sure how much coverage you need? Tell us how your wedding is structured and we'll show you the best starting point.</p>
+      <p>Tell us how your wedding is structured and we'll show you which collection is the best starting point.</p>
     </div>
 
     <div class="calc-box" id="calcBox">
@@ -558,7 +584,7 @@
       complimentary: true,
       addons: "",
       cta: "https://calendly.com/nydamphotography/wedding-photography-signature-collection",
-      includes: ["6–8 hours of wedding-day photography coverage — getting ready through the main reception events","Second photographer","Choice of a complimentary Engagement or Bridal Session","Wedding sneak peeks delivered within 24–48 hours","Your complete gallery, delivered within 21 days"]
+      includes: ["6–8 hours of wedding-day photography coverage — getting ready through the main reception events","Your choice of two photographers OR one photographer + one videographer","Choice of a complimentary Engagement or Bridal Session","Wedding sneak peeks delivered within 24–48 hours","Your complete gallery, delivered within 21 days"]
     },
     weddingstory: {
       name: "Wedding Story Collection",
@@ -567,7 +593,7 @@
       complimentary: true,
       addons: "",
       cta: "https://calendly.com/nydamphotography/wedding-photography-weddingstory-collection",
-      includes: ["Rehearsal dinner coverage the evening before","10+ hours of wedding-day coverage","Next-morning farewell brunch coverage","Second photographer","Choice of a complimentary Engagement or Bridal Session","Wedding sneak peeks delivered within 24–48 hours","Your complete gallery, delivered within 21 days"]
+      includes: ["Rehearsal dinner coverage the evening before","10+ hours of wedding-day coverage","Next-morning farewell brunch coverage","Your choice of two photographers OR one photographer + one videographer","Choice of a complimentary Engagement or Bridal Session","Wedding sneak peeks delivered within 24–48 hours","Your complete gallery, delivered within 21 days"]
     }
   };
 
@@ -699,7 +725,7 @@
     <div class="added-grid">
       <div class="added-card">
         <h3>Wedding Videography</h3>
-        <p>A wedding videographer can be added so photography and video coverage are coordinated around one wedding-day timeline.</p>
+        <p>Choose one photographer + one videographer instead of two photographers with Signature or Wedding Story, so photography and video coverage are coordinated around one wedding-day timeline. A wedding videographer can also be added to Essential.</p>
       </div>
       <div class="added-card">
         <h3>Wedding Content Creation</h3>
@@ -707,7 +733,7 @@
       </div>
       <div class="added-card">
         <h3>Second Photographer</h3>
-        <p>Included with Signature and Wedding Story, and available to add to Essential — a second perspective so separate getting-ready spaces, the ceremony, and the reception are all covered at once.</p>
+        <p>Choose two photographers with Signature or Wedding Story, or choose one photographer + one videographer instead. A second photographer is also available to add to Essential.</p>
       </div>
       <div class="added-card">
         <h3>Engagement or Bridal Session</h3>
@@ -718,8 +744,8 @@
         <p>Already included with Wedding Story. For other collections, the toasts and gathering the night before can be added.</p>
       </div>
       <div class="added-card">
-        <h3>Wedding Albums</h3>
-        <p>A printed, heirloom-quality album designed from your gallery — something to hold, not just scroll through.</p>
+        <h3>Wedding Albums &amp; Fine-Art Prints</h3>
+        <p>Turn your wedding photographs into heirloom albums and fine-art prints, professionally produced to be held, displayed, and kept for generations.</p>
       </div>
     </div>
   </div>
