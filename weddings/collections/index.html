@@ -3,6 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1967863120494016');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1967863120494016&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
 <title>Austin Wedding Photography Packages | Nydam Photography</title>
 <meta name="description" content="Wedding photography collections for Austin weddings, Hill Country celebrations, Catholic weddings, and destination events. Explore Essential, Signature, and Wedding Story collections.">
 <link rel="canonical" href="https://nydamphoto.com/weddings/collections/">
@@ -25,7 +43,12 @@
   "name": "Austin Wedding Photography Packages",
   "description": "Wedding photography collections for Austin weddings, Texas Hill Country celebrations, Catholic weddings, and destination events.",
   "provider": {
-    "@id": "https://nydamphoto.com/#organization"
+    "@id": "https://nydamphoto.com/#organization",
+    "@type": "ProfessionalService",
+    "name": "Nydam Photography",
+    "foundingDate": "2008",
+    "founder": { "@id": "https://nydamphoto.com/#arlen" },
+    "employee": { "@id": "https://nydamphoto.com/#tanya" }
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -54,7 +77,7 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "How much coverage do we need?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your day. Essential includes up to 4 hours and suits intimate weddings and elopements; Signature includes 6 to 8 hours for a full traditional wedding day; and Wedding Story spans 10+ hours across the weekend, including the rehearsal dinner and a next-morning farewell brunch. Use our coverage calculator above for a personalized starting point." } },
+    { "@type": "Question", "name": "How much coverage do we need?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your day. Essential includes up to 4 hours and suits intimate weddings and elopements; Signature includes 6 to 8 hours for a full traditional wedding day; and Wedding Story spans 10+ hours across the weekend, including the rehearsal dinner and a next-morning farewell brunch. Use our Find Your Wedding Coverage tool above for a personalized starting point." } },
     { "@type": "Question", "name": "Do you require a retainer?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A 30% retainer secures your date and collection, with the remaining balance due before the wedding." } },
     { "@type": "Question", "name": "Can we customize a collection?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each collection is a starting point. We can add a second photographer, wedding videographer, or wedding content creator, add an engagement session or bridal session to Essential, or include additional events to fit your day." } },
     { "@type": "Question", "name": "Is travel included?", "acceptedAnswer": { "@type": "Answer", "text": "Travel within Central Texas is included. Destination weddings and travel beyond the area are quoted individually." } },
@@ -79,7 +102,11 @@
   .btn-outline{background:transparent;color:var(--dark);border:1px solid var(--dark)}
   .btn-outline:hover{background:var(--dark);color:var(--ivory)}
 
-  .site-header{position:sticky;top:0;z-index:50;background:rgba(250,247,242,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .promo-bar{display:block;background:var(--dark);color:var(--ivory);text-align:center;font-family:var(--sans);font-size:13px;letter-spacing:.02em;padding:12px 16px;text-decoration:none;position:sticky;top:0;z-index:51;border-bottom:1px solid rgba(255,255,255,.1)}
+  .promo-bar:hover{background:#2A2521}
+  .promo-bar strong{color:var(--gold-light);font-weight:500}
+  .promo-bar-cta{text-decoration:underline;margin-left:4px;white-space:nowrap}
+  .site-header{position:sticky;top:46px;z-index:50;background:rgba(250,247,242,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
   .nav-logo{font-family:var(--display);font-size:21px;letter-spacing:.14em;color:var(--dark)}
   .nav-links{display:flex;gap:30px;align-items:center;font-family:var(--sans);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
@@ -252,7 +279,7 @@
   @media(max-width:640px){
     body{font-size:18px}
     .section{padding:60px 0}
-    .nav-links{position:fixed;inset:74px 0 auto 0;background:var(--ivory);flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid var(--line);display:none}
+    .nav-links{position:fixed;inset:120px 0 auto 0;background:var(--ivory);flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid var(--line);display:none}
     .nav-links.open{display:flex}
     .nav-links a{padding:15px 28px;width:100%}
     .nav-book{margin:10px 28px;text-align:center}
@@ -291,7 +318,7 @@
   .calc-result-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px}
   .calc-reset{background:none;border:none;font-family:var(--sans);font-size:13px;color:var(--muted);text-decoration:underline;cursor:pointer;padding:0}
   @media(max-width:640px){.calc-box{padding:32px 22px}.calc-nav{flex-direction:column-reverse}.calc-nav #calcNext{margin-left:0}}
-  #calculator, #complimentary-session{scroll-margin-top:95px}
+  #calculator, #complimentary-session, #signature, #wedding-story, #essential{scroll-margin-top:135px}
   .comp-session{background:var(--dark);padding:56px 0}
   .comp-box{max-width:640px;margin:0 auto;text-align:center}
   .comp-session .eyebrow{color:var(--gold-light)}
@@ -304,6 +331,11 @@
 </style>
 </head>
 <body>
+
+<!-- COMPLIMENTARY SESSION PROMO BAR -->
+<a href="#complimentary-session" class="promo-bar">
+  <strong>Complimentary Engagement or Bridal Session</strong> included with Signature &amp; Wedding Story <span class="promo-bar-cta">Learn More →</span>
+</a>
 
 <header class="site-header">
   <div class="wrap nav">
@@ -334,27 +366,11 @@
   <img src="/weddings-collections-hero.jpg" alt="Austin wedding photography by Nydam Photography" loading="eager">
   <div class="wrap">
     <span class="eyebrow">Wedding Collections</span>
-    <h1>Choose the Coverage That Fits Your Wedding</h1>
-    <p>Every Austin wedding is different. Whether you're planning an intimate ceremony, a full wedding day, or a multi-event celebration across Central Texas or the Texas Hill Country, we'll help you choose the coverage that fits naturally.</p>
+    <h1>Austin Wedding Photography Packages</h1>
+    <p>Choose the coverage that fits your wedding. Whether you're planning an intimate ceremony, a full wedding day, or a multi-event celebration across Central Texas or the Texas Hill Country, we'll help you find the right starting point.</p>
     <div class="c-hero-ctas">
       <a href="#collections" class="btn btn-gold">Explore Collections</a>
       <a href="#calculator" class="btn btn-outline">Find Your Coverage</a>
-    </div>
-  </div>
-</section>
-
-<!-- COMPLIMENTARY SESSION OFFER -->
-<section class="section comp-session" id="complimentary-session" aria-labelledby="comp-h2">
-  <div class="wrap">
-    <div class="comp-box">
-      <span class="eyebrow">Included With Signature &amp; Wedding Story</span>
-      <h2 id="comp-h2">Claim Your Complimentary Engagement or Bridal Session</h2>
-      <p>Book the Signature or Wedding Story Collection and choose one complimentary Engagement or Bridal Session. After your wedding collection is booked, we'll email you with everything you need to choose your session and schedule your date.</p>
-      <div class="comp-ctas">
-        <a href="https://calendly.com/nydamphotography/wedding-photography-signature-collection" target="_blank" rel="noopener" class="btn btn-gold">Book Signature</a>
-        <a href="https://calendly.com/nydamphotography/wedding-photography-weddingstory-collection" target="_blank" rel="noopener" class="btn btn-outline">Book Wedding Story</a>
-      </div>
-      <p class="comp-qualify">Complimentary session is included after booking a Signature or Wedding Story wedding collection.</p>
     </div>
   </div>
 </section>
@@ -392,7 +408,7 @@
     </div>
     <div class="colls-grid">
 
-      <article class="coll-block">
+      <article class="coll-block" id="signature">
         <div class="coll-img"><img src="/coll-signature.jpg" alt="Full wedding day photography by Nydam Photography" loading="lazy"></div>
         <div class="coll-text">
           <span class="coll-block-badge">Most Popular</span>
@@ -422,7 +438,7 @@
         </div>
       </article>
 
-      <article class="coll-block">
+      <article class="coll-block" id="wedding-story">
         <div class="coll-img"><img src="/coll-wedding-story.jpg" alt="Comprehensive wedding celebration photography by Nydam Photography" loading="lazy"></div>
         <div class="coll-text">
           <div class="coll-block-kicker">For weddings that extend beyond a single day.</div>
@@ -454,7 +470,7 @@
         </div>
       </article>
 
-      <article class="coll-block">
+      <article class="coll-block" id="essential">
         <div class="coll-img"><img src="/coll-essential.jpg" alt="Intimate wedding photography by Nydam Photography" loading="lazy"></div>
         <div class="coll-text">
           <div class="coll-block-kicker">For intimate weddings, elopements, and celebrations centered around a few meaningful hours.</div>
@@ -481,6 +497,22 @@
         </div>
       </article>
 
+    </div>
+  </div>
+</section>
+
+<!-- COMPLIMENTARY SESSION OFFER -->
+<section class="section comp-session" id="complimentary-session" aria-labelledby="comp-h2">
+  <div class="wrap">
+    <div class="comp-box">
+      <span class="eyebrow">Included With Signature &amp; Wedding Story</span>
+      <h2 id="comp-h2">Claim Your Complimentary Engagement or Bridal Session</h2>
+      <p>Choose Signature or Wedding Story and your choice of an Engagement or Bridal Session is included. After your wedding collection is booked, we'll email you with everything you need to choose your session and schedule your date.</p>
+      <div class="comp-ctas">
+        <a href="#signature" class="btn btn-gold">Explore the Signature Collection</a>
+        <a href="#wedding-story" class="btn btn-outline">Explore the Wedding Story Collection</a>
+      </div>
+      <p class="comp-qualify">Complimentary session is included after booking a Signature or Wedding Story wedding collection.</p>
     </div>
   </div>
 </section>
@@ -861,7 +893,7 @@
       <h2 id="faq-h2">Questions About Collections</h2>
     </div>
     <div class="faq-list">
-      <details class="faq-item"><summary>How much coverage do we need?</summary><div class="faq-answer">It depends on your day. Essential includes up to 4 hours and suits intimate weddings and elopements; Signature includes 6 to 8 hours for a full traditional wedding day; and Wedding Story spans 10+ hours across the weekend, including the rehearsal dinner and a next-morning farewell brunch. Use our coverage calculator above for a personalized starting point.</div></details>
+      <details class="faq-item"><summary>How much coverage do we need?</summary><div class="faq-answer">It depends on your day. Essential includes up to 4 hours and suits intimate weddings and elopements; Signature includes 6 to 8 hours for a full traditional wedding day; and Wedding Story spans 10+ hours across the weekend, including the rehearsal dinner and a next-morning farewell brunch. Use our Find Your Wedding Coverage tool above for a personalized starting point.</div></details>
       <details class="faq-item"><summary>Do you require a retainer?</summary><div class="faq-answer">Yes. A 30% retainer secures your date and collection, with the remaining balance due before the wedding.</div></details>
       <details class="faq-item"><summary>Can we customize a collection?</summary><div class="faq-answer">Yes. Each collection is a starting point. We can add a second photographer, wedding videographer, or wedding content creator, add an engagement session or bridal session to Essential, or include additional events to fit your day.</div></details>
       <details class="faq-item"><summary>Is travel included?</summary><div class="faq-answer">Travel within Central Texas is included. Destination weddings and travel beyond the area are quoted individually.</div></details>
