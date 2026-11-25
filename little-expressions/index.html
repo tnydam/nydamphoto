@@ -464,7 +464,7 @@ main h2{font-size:clamp(26px,3.4vw,38px)}
 @media(max-width:1100px){.site-header .nav-links,.site-header .nav-links.open{width:100%;border-top:1px solid var(--line)!important;padding:4px 0!important}}
 .family-inline-link{color:#94651f;text-decoration:underline;text-underline-offset:3px;font-weight:500}
 .family-inline-link:hover{color:#614012}
-</style>
+#gift-delivery-form{margin:24px 0}#gift-buyer,#gift-email{box-sizing:border-box;width:100%;padding:10px;border:1px solid var(--line);background:#fffdfa;font:16px var(--sans)}#gift-delivery-form>label:not(.gift-check){display:block;margin:12px 0 5px}#gift-submit:disabled{opacity:.65;cursor:default}#gift-payment>.gift-check{display:flex;gap:10px;align-items:flex-start;margin:16px 0}#gift-payment [hidden]{display:none!important}#gift-delivery-form .gift-check{display:flex;align-items:flex-start;gap:10px;margin:16px 0;cursor:pointer}#gift-printed{accent-color:#865a20;margin-top:5px}#gift-address{border:1px solid var(--line);padding:16px;margin:12px 0;min-width:0}#gift-address[hidden]{display:none!important}#gift-address label{display:block;margin:12px 0 5px}#gift-address input{box-sizing:border-box;width:100%;padding:10px;border:1px solid var(--line);background:#fffdfa;font:16px var(--sans)}#gift-address .btn{margin-top:12px}#gift-address p{margin-top:12px}</style>
 </head><body>
 <header class="site-header">
 <div class="wrap nav">
@@ -504,8 +504,8 @@ main h2{font-size:clamp(26px,3.4vw,38px)}
 <h3>A thoughtful gift, made simple</h3>
 <ol>
 <li><strong>You choose the collection.</strong><p>Choose the portraits they’ll love, then select individual portraits or siblings together.</p></li>
-<li><strong>We deliver the gift.</strong><p>After payment, we send the digital certificate by email and text. You can also ask us to send it to you if you’d like to give it yourself.</p></li>
-<li><strong>They choose when to come.</strong><p>January dates are available now. The family can use the certificate for any available Little Expressions session within 12 months of the purchase date.</p></li>
+<li><strong>We deliver the gift.</strong><p>Choose a digital certificate or a beautifully printed version. Printing and mailing within the United States are included at no extra charge.</p></li>
+<li><strong>They choose when to come.</strong><p>Gift certificates never expire. The recipient chooses any available session date, with new appointments released each month.</p></li>
 </ol>
 </div>
 <div class="gift-sibling-intro"><h3>Giving to brothers and sisters?</h3><p>There are two beautiful ways to give:</p><div class="gift-sibling-options"><p><strong>Individual portraits + siblings together.</strong> Give one collection to each child. Every child receives their own portraits and collage, and their sibling portraits together are included.</p><p><strong>Siblings together only.</strong> Give one collection for the whole group, with portraits of the children together instead of individual portraits.</p></div></div><div class="gift-order">
@@ -523,19 +523,37 @@ main h2{font-size:clamp(26px,3.4vw,38px)}
 <div hidden="" id="gift-experience-wrap"><label for="gift-experience">PORTRAIT EXPERIENCE</label><select id="gift-experience"><option value="individual">Individual portraits + siblings together</option><option value="together">Siblings together only</option></select></div>
 <p class="small" id="gift-experience-note"></p>
 </div>
-<div class="gift-total"><span>Your gift total</span><strong id="gift-total">$269.54</strong><small id="gift-total-note">Including applicable sales tax</small></div>
+<form id="gift-delivery-form" action="https://formspree.io/f/xvkadyln" method="post">
+<h4>Your contact details</h4><label for="gift-buyer">Full name</label><input id="gift-buyer" name="name" autocomplete="name" required maxlength="150"/>
+<label for="gift-email">Email address</label><input id="gift-email" name="email" type="email" autocomplete="email" required maxlength="254"/>
+<p class="small">We’ll use this email to deliver your certificate and contact you about your order.</p>
+<h4>Gift certificate delivery</h4><p>Digital delivery is included. Prefer something to unwrap?</p>
+<label class="gift-check"><input type="checkbox" id="gift-printed"/> I'd like a printed gift certificate mailed to me.</label>
+<fieldset id="gift-address" hidden disabled><legend>Mailing address (United States)</legend>
+<label for="ship-name">Full name</label><input id="ship-name" autocomplete="shipping name" required/>
+<label for="ship-street">Street address</label><input id="ship-street" autocomplete="shipping address-line1" required/>
+<label for="ship-unit">Apartment or suite (optional)</label><input id="ship-unit" autocomplete="shipping address-line2"/>
+<label for="ship-city">City</label><input id="ship-city" autocomplete="shipping address-level2" required/>
+<label for="ship-state">State</label><input id="ship-state" autocomplete="shipping address-level1" required/>
+<label for="ship-zip">ZIP code</label><input id="ship-zip" autocomplete="shipping postal-code" pattern="[0-9]{5}(-[0-9]{4})?" required/>
+<p class="small">Printing and US shipping are included.</p>
+</fieldset></form>
+<p class="small">Gift certificates never expire. The recipient may choose any available Little Expressions session date, with new appointments released monthly. Gift certificates are non-refundable and cannot be redeemed for cash, except where required by law. Once a session is booked, the cancellation and rescheduling policy applies.</p><div class="gift-total"><span>Your gift total</span><strong id="gift-total">$269.54</strong><small id="gift-total-note">Including applicable sales tax</small></div>
 <div aria-label="Choose payment method" class="gift-method-tabs" role="group">
 <button aria-pressed="true" class="gift-method active" data-gift-method="zelle" type="button">Zelle</button>
 <button aria-pressed="false" class="gift-method" data-gift-method="venmo" type="button">Venmo</button>
 <button aria-pressed="false" class="gift-method" data-gift-method="card" type="button">Credit card</button>
 </div>
+<label class="gift-check"><input type="checkbox" id="gift-accept" form="gift-delivery-form" required/> I agree to the gift certificate terms above.</label>
+<button class="btn" id="gift-submit" form="gift-delivery-form" type="submit">Submit order &amp; continue to payment ↗</button>
+<p class="small" id="gift-delivery-status" role="status" aria-live="polite"></p>
 <div aria-live="polite" class="gift-method-panel" id="gift-method-panel"></div>
 <a class="btn" hidden="" id="gift-card">Continue to secure card payment ↗</a>
 <a class="btn" hidden="" id="gift-venmo">Open Venmo ↗</a>
 <p hidden="" id="gift-payment-status">This payment method is currently unavailable. Please contact us.</p>
 </div>
 <p class="gift-footnote">Every session includes two sneak peeks within 24 hours, a private gallery within five business days, and a print release.</p>
-<div class="gift-terms"><details><summary>PAYMENT TERMS</summary><p>Little Expressions sessions are paid in full at booking—nothing is due on the session day. Card payments include applicable Texas sales tax and processing fees; the exact total is shown in Calendly before payment. For Venmo and Zelle amounts, compare payment methods in the gift certificate section above.</p><p>Gift certificates are paid in full at purchase. The totals above show the applicable tax and processing amount for each payment method.</p><p>Optional extras chosen after your session (extra digital files, upgrades) are invoiced separately—they are never charged automatically.</p></details><details><summary>CANCELLATION &amp; RESCHEDULING POLICY</summary><p>One free reschedule, up to 72 hours before your session: use the reschedule link in your confirmation email, or reply to that email and we will move you.</p><p>Inside 72 hours before your session, payments are non-refundable—but you can transfer your booking to another family. Email us the new family's name before your session time, and we will update the booking.</p><p>Please arrive on time: sessions run back to back, and a late arrival shortens your child's 15 minutes.</p></details></div>
+<div class="gift-terms"><details><summary>GIFT CERTIFICATE TERMS</summary><p>Gift certificates never expire. The recipient may choose any available Little Expressions session date, with new appointments released monthly. Gift certificates are non-refundable and cannot be redeemed for cash, except where required by law. Once a session is booked, the cancellation and rescheduling policy applies.</p></details><details><summary>PAYMENT TERMS</summary><p>Little Expressions sessions are paid in full at booking—nothing is due on the session day. Card payments include applicable Texas sales tax and processing fees; the exact total is shown in Calendly before payment. For Venmo and Zelle amounts, compare payment methods in the gift certificate section above.</p><p>Gift certificates are paid in full at purchase. The totals above show the applicable tax and processing amount for each payment method.</p><p>Optional extras chosen after your session (extra digital files, upgrades) are invoiced separately—they are never charged automatically.</p></details><details><summary>CANCELLATION &amp; RESCHEDULING POLICY</summary><p>One free reschedule, up to 72 hours before your session: use the reschedule link in your confirmation email, or reply to that email and we will move you.</p><p>Inside 72 hours before your session, payments are non-refundable—but you can transfer your booking to another family. Email us the new family's name before your session time, and we will update the booking.</p><p>Please arrive on time: sessions run back to back, and a late arrival shortens your child's 15 minutes.</p></details></div>
 </div>
 </section>
 <section class="section faq" id="questions"><div><p class="eyebrow">Good to know before you come</p><h2>A few things<br/><em>you might wonder.</em></h2></div><div><details><summary>What is a Little Expressions session?</summary><p><strong>Little Expressions</strong> is a playful 15-minute portrait session for ages 3–10, with individual portraits, a digital collage, two sneak peeks within 24 hours, and a private gallery within five business days. The Mini collection includes 3 expression portraits; other collections include more.</p></details><details><summary>What if my child needs a little time?</summary><p>That’s okay. We set aside 25 minutes for the visit so your child has time to get comfortable before we take their portraits.</p></details><details><summary>What should my child wear for their photos?</summary><p>Simple, comfortable clothes keep the attention on their face. Soft neutrals and subtle textures work beautifully; avoid large logos or busy patterns.</p></details><details><summary>Can I book for siblings?</summary><p>Yes! Choose two or three children in the booking form and one collection per child. We photograph each child individually, then take sibling portraits together at no extra charge. Each child receives their own digital collage. For sibling portraits together only, choose a one-child appointment and select the siblings-together option.</p></details><details><summary>Is a framed print included?</summary><p>Every collection includes a digital collage, ready for printing. Printed and framed artwork is separate, with pricing shared before purchase. All Expressions includes a $50 print credit.</p></details><details><summary>When will I get my child’s photos?</summary><p>We’ll send two sneak peeks within 24 hours. You’ll get your full private gallery and digital collage within five business days.</p></details><details><summary>Where is the session?</summary><p>Sessions take place at 124 Blanco Drive, Hutto, TX—a short drive from Austin. Your confirmation email includes directions and what to bring.</p></details><details><summary>How do booking and payment work?</summary><p>Little Expressions is paid in full at booking—nothing is due on the session day. Card payments include applicable Texas sales tax and processing fees; the exact total is shown in Calendly before payment. For Venmo and Zelle totals, see the <a href="#gift-payment">gift certificate payment comparison</a> (choose a collection to compare payment methods). January sessions are open for booking, with more dates added throughout the year.</p></details></div></section>
@@ -700,6 +718,31 @@ menuToggle.addEventListener('click', () => {
   const experience = get('gift-experience');
   let selected = 'signature';
   let method = 'zelle';
+  const printed=get('gift-printed'), address=get('gift-address'), delivery=get('gift-delivery-form');
+  let orderSubmitted=false, sending=false, orderId='';
+  const submit=get('gift-submit'), status=get('gift-delivery-status');
+  const controls=[...delivery.querySelectorAll('input'),giftChildren,experience,get('gift-accept'),...document.querySelectorAll('[data-gift-method]')];
+  function resetDelivery(){if(sending)return;orderSubmitted=false;orderId='';status.textContent='';update();}
+  printed.addEventListener('change',()=>{address.hidden=!printed.checked;address.disabled=!printed.checked;resetDelivery();});
+  delivery.addEventListener('input',resetDelivery);
+  get('gift-accept').addEventListener('change',resetDelivery);
+  delivery.addEventListener('submit',async event=>{
+    event.preventDefault();if(sending||orderSubmitted||!delivery.reportValidity())return;
+    if(!get('gift-buyer').value.trim()){get('gift-buyer').focus();status.textContent='Please enter your full name.';return;}
+    if(printed.checked && [...address.querySelectorAll('[required]')].some(el=>!el.value.trim())){status.textContent='Please complete your mailing address.';return;}
+    const count=Number(giftChildren.value), together=count>1&&experience.value==='together', quantity=together?1:count;
+    orderId='LE-'+(globalThis.crypto?.randomUUID?.()||Date.now().toString(36)).slice(0,8).toUpperCase();
+    const data={_subject:'Little Expressions gift certificate order '+orderId,order_id:orderId,name:get('gift-buyer').value.trim(),email:get('gift-email').value.trim(),collection:collections[selected][0],children:count,quantity,portrait_experience:count===1?'Individual':together?'Siblings together only':'Individual + siblings together',delivery:printed.checked?'Printed + digital':'Digital',payment_method:method,total:get('gift-total').textContent,payment_status:'Pending — verify payment before issuing certificate',terms_accepted:'Yes'};
+    if(printed.checked)Object.assign(data,{shipping_name:get('ship-name').value.trim(),shipping_street:get('ship-street').value.trim(),shipping_unit:get('ship-unit').value.trim(),shipping_city:get('ship-city').value.trim(),shipping_state:get('ship-state').value.trim(),shipping_zip:get('ship-zip').value.trim(),shipping_country:'United States'});
+    sending=true;submit.disabled=true;controls.forEach(el=>el.disabled=true);status.textContent='Submitting your order…';
+    try{
+      const response=await fetch(delivery.action,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(data)});
+      if(!response.ok)throw new Error('Submission failed');
+      orderSubmitted=true;status.textContent='Order '+orderId+' received. Please complete payment below. Your certificate will be issued after payment is verified.';
+    }catch(error){status.textContent='We couldn’t confirm receipt of your order. Please try again. No payment has been taken on this page.';}
+    finally{sending=false;controls.forEach(el=>el.disabled=false);address.disabled=!printed.checked;update();}
+  });
+
   function verifiedUrl(value, allowedHosts) {
     try { const u = new URL(value); if(u.protocol === 'https:' && allowedHosts.includes(u.hostname) && !u.username && !u.password) return u.href; } catch {} return '';
   }
@@ -723,7 +766,9 @@ menuToggle.addEventListener('click', () => {
     const card = get('gift-card'), venmoLink = get('gift-venmo');
     card.hidden = true; venmoLink.hidden = true;
     const panel = get('gift-method-panel');
-    const note = 'Little Expressions Gift—' + name + '—' + quantity + ' collection(s)—[your name]';
+    submit.disabled=sending||orderSubmitted;submit.hidden=orderSubmitted;
+    if(!orderSubmitted){panel.textContent='Submit your order to view payment instructions.';return;}
+    const note = orderId + '—Little Expressions Gift';
     if(method === 'zelle') {
       panel.textContent = 'Send ' + money(amount) + ' via Zelle to ' + payment.zelle.recipient + '. Confirm the recipient is Nydam Photography before sending. Payment note: ' + note;
     } else if(method === 'venmo') {
@@ -733,20 +778,21 @@ menuToggle.addEventListener('click', () => {
     } else if(quantity === 1) {
       panel.textContent = 'Complete your gift securely by card. The payment provider confirms the final total.';
       const url = verifiedUrl(payment.stripe[selected],['buy.stripe.com']);
-      if(url) {card.href=url;card.hidden=false;}
+      if(url) {const checkoutUrl=new URL(url);checkoutUrl.searchParams.set('client_reference_id',orderId);checkoutUrl.searchParams.set('prefilled_email',get('gift-email').value.trim());card.href=checkoutUrl.href;card.hidden=false;}
     } else {
       panel.textContent = 'For ' + quantity + ' individual collections, please contact us for a secure card payment link. The single-collection checkout does not automatically include multiple children.';
-      const a = document.createElement('a');a.className='btn outline';a.textContent='Request a card payment link ↗';a.href='mailto:arlen.nydam@gmail.com?subject='+encodeURIComponent('Little Expressions gift certificate—'+quantity+' '+name+' collections');panel.appendChild(document.createElement('br'));panel.appendChild(a);
+      const a = document.createElement('a');a.className='btn outline';a.textContent='Request a card payment link ↗';a.href='mailto:arlen.nydam@gmail.com?subject='+encodeURIComponent('Little Expressions gift certificate—'+orderId+'—'+quantity+' '+name+' collections');panel.appendChild(document.createElement('br'));panel.appendChild(a);
     }
     get('gift-payment-status').hidden = true;
   }
-  choices.forEach(choice => choice.addEventListener('click', () => {
+  choices.forEach(choice => choice.addEventListener('click', event => {
+    if(sending){event.preventDefault();return;}
     choices.forEach(item => item.removeAttribute('aria-current'));
-    choice.setAttribute('aria-current','true'); selected=choice.dataset.giftCollection;update();
+    choice.setAttribute('aria-current','true'); selected=choice.dataset.giftCollection;resetDelivery();
   }));
-  giftChildren.addEventListener('change',update);
-  experience.addEventListener('change',update);
-  document.querySelectorAll('[data-gift-method]').forEach(button=>button.addEventListener('click',()=>{method=button.dataset.giftMethod;update();}));
+  giftChildren.addEventListener('change',resetDelivery);
+  experience.addEventListener('change',resetDelivery);
+  document.querySelectorAll('[data-gift-method]').forEach(button=>button.addEventListener('click',()=>{method=button.dataset.giftMethod;resetDelivery();}));
   update();
 })();
 </script>
