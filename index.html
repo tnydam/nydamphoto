@@ -866,17 +866,27 @@ html{scroll-padding-top:90px}#contact{scroll-margin-top:12px}.nav-logo{white-spa
 <div>
 <label for="svc">What are you planning?</label>
 <select id="svc" name="service">
-<option value="">Select a session…</option>
-<option>Wedding</option>
-<option>Senior Portraits</option>
+<option value="">Select a service…</option>
+<option>Wedding Photography</option>
+<option>Wedding Videography</option>
+<option>Wedding Photography &amp; Videography</option>
 <option>Engagement Session</option>
+<option>Bridal Portraits</option>
 <option>Family Portraits</option>
-<option>Quinceañera</option>
+<option>Senior Portraits</option>
+<option>Little Expressions</option>
+<option>Senior Year Story</option>
+<option>Professional Headshots</option>
+<option>Branding Photography</option>
+<option>Corporate Photography</option>
+<option>Event Photography</option>
+<option>Event Videography</option>
+<option>Event Photography &amp; Videography</option>
 <option>Catholic Photography</option>
-<option>Corporate &amp; Branding</option>
-<option>Sports</option>
-<option>Event</option>
-<option>Little Expressions</option><option>Senior Year Story</option><option>Event Videography</option><option>Event Photography &amp; Videography</option></select>
+<option>Quinceañera</option>
+<option>Sports &amp; Team Photography</option>
+<option>Other / Not sure yet</option>
+</select>
 </div>
 <div><label for="dt">Date (if known)</label><input id="dt" name="event_date" type="date"/></div>
 <div><label for="msg">Tell us about it</label><textarea id="msg" name="message" placeholder="Your vision, venue, guest count, anything you'd like us to know…"></textarea></div>
@@ -956,5 +966,7 @@ html{scroll-padding-top:90px}#contact{scroll-margin-top:12px}.nav-logo{white-spa
     return false;
   }
 </script>
-<script>function alignContact(){if(location.hash==='#contact'){document.getElementById('contact').scrollIntoView({block:'start',behavior:'instant'});}}window.addEventListener('load',alignContact);window.addEventListener('hashchange',alignContact);window.addEventListener('pageshow',alignContact);</script></body>
+<script>function alignContact(){if(location.hash==='#contact'){document.getElementById('contact').scrollIntoView({block:'start',behavior:'instant'});}}window.addEventListener('load',alignContact);window.addEventListener('hashchange',alignContact);window.addEventListener('pageshow',alignContact);</script><script>
+(function(){const service=new URLSearchParams(location.search).get("service");const select=document.getElementById("svc");if(service && select && Array.from(select.options).some(o=>o.value===service)){select.value=service;}})();
+</script></body>
 </html>
