@@ -465,7 +465,11 @@ main h2{font-size:clamp(26px,3.4vw,38px)}
 .family-inline-link{color:#94651f;text-decoration:underline;text-underline-offset:3px;font-weight:500}
 .family-inline-link:hover{color:#614012}
 #gift-delivery-form{margin:24px 0}#gift-buyer,#gift-email{box-sizing:border-box;width:100%;padding:10px;border:1px solid var(--line);background:#fffdfa;font:16px var(--sans)}#gift-delivery-form>label:not(.gift-check){display:block;margin:12px 0 5px}#gift-submit:disabled{opacity:.65;cursor:default}#gift-payment>.gift-check{display:flex;gap:10px;align-items:flex-start;margin:16px 0}#gift-payment [hidden]{display:none!important}#gift-delivery-form .gift-check{display:flex;align-items:flex-start;gap:10px;margin:16px 0;cursor:pointer}#gift-printed{accent-color:#865a20;margin-top:5px}#gift-address{border:1px solid var(--line);padding:16px;margin:12px 0;min-width:0}#gift-address[hidden]{display:none!important}#gift-address label{display:block;margin:12px 0 5px}#gift-address input{box-sizing:border-box;width:100%;padding:10px;border:1px solid var(--line);background:#fffdfa;font:16px var(--sans)}#gift-address .btn{margin-top:12px}#gift-address p{margin-top:12px}</style>
-</head><body>
+<style>
+.site-header .nav-links a.nav-highlight{color:#C9943A!important;font-weight:500}
+@media(min-width:1101px){.site-header .nav-links{gap:clamp(10px,1.25vw,22px);font-size:12px}}
+@media(max-width:1100px){.site-header .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ivory,#FAF7F2);flex-direction:column;gap:0;max-height:80vh;overflow:auto}.site-header .nav-links.open{display:flex}.site-header .nav-links a{padding:12px 28px;width:100%}.site-header .nav-toggle{display:block}}
+</style></head><body>
 <header class="site-header">
 <div class="wrap nav">
 <a class="nav-logo" href="https://nydamphoto.com/">NYDAM PHOTOGRAPHY</a>
@@ -474,11 +478,11 @@ main h2{font-size:clamp(26px,3.4vw,38px)}
 <a href="https://nydamphoto.com/#services">Services</a>
 <a href="https://nydamphoto.com/portfolio/">Portfolio</a>
 <a href="https://nydamphoto.com/venues/">Venues</a>
-<a class="nav-highlight" href="https://nydamphoto.com/little-expressions/">Little Expressions</a>
-<a class="nav-highlight" href="https://nydamphoto.com/senior-team/">Senior Year Story</a>
+
+<a class="nav-highlight" href="https://nydamphoto.com/little-expressions/">Little Expressions</a><a class="nav-highlight" href="https://nydamphoto.com/senior-team/">Senior Year Story</a>
 <a href="https://nydamphoto.com/guides/">GuideHub</a>
 <a href="https://nydamphoto.com/about/">About</a>
-<a class="nav-book" href="https://nydamphoto.com/book/">Book a session</a>
+<a class="nav-book" href="https://nydamphoto.com/book/">Check Availability</a>
 </nav>
 </div>
 </header>
@@ -523,19 +527,19 @@ main h2{font-size:clamp(26px,3.4vw,38px)}
 <div hidden="" id="gift-experience-wrap"><label for="gift-experience">PORTRAIT EXPERIENCE</label><select id="gift-experience"><option value="individual">Individual portraits + siblings together</option><option value="together">Siblings together only</option></select></div>
 <p class="small" id="gift-experience-note"></p>
 </div>
-<form id="gift-delivery-form" action="https://formspree.io/f/xvkadyln" method="post">
-<h4>Your contact details</h4><label for="gift-buyer">Full name</label><input id="gift-buyer" name="name" autocomplete="name" required maxlength="150"/>
-<label for="gift-email">Email address</label><input id="gift-email" name="email" type="email" autocomplete="email" required maxlength="254"/>
+<form action="https://formspree.io/f/xvkadyln" id="gift-delivery-form" method="post">
+<h4>Your contact details</h4><label for="gift-buyer">Full name</label><input autocomplete="name" id="gift-buyer" maxlength="150" name="name" required=""/>
+<label for="gift-email">Email address</label><input autocomplete="email" id="gift-email" maxlength="254" name="email" required="" type="email"/>
 <p class="small">We’ll use this email to deliver your certificate and contact you about your order.</p>
 <h4>Gift certificate delivery</h4><p>Digital delivery is included. Prefer something to unwrap?</p>
-<label class="gift-check"><input type="checkbox" id="gift-printed"/> I'd like a printed gift certificate mailed to me.</label>
-<fieldset id="gift-address" hidden disabled><legend>Mailing address (United States)</legend>
-<label for="ship-name">Full name</label><input id="ship-name" autocomplete="shipping name" required/>
-<label for="ship-street">Street address</label><input id="ship-street" autocomplete="shipping address-line1" required/>
-<label for="ship-unit">Apartment or suite (optional)</label><input id="ship-unit" autocomplete="shipping address-line2"/>
-<label for="ship-city">City</label><input id="ship-city" autocomplete="shipping address-level2" required/>
-<label for="ship-state">State</label><input id="ship-state" autocomplete="shipping address-level1" required/>
-<label for="ship-zip">ZIP code</label><input id="ship-zip" autocomplete="shipping postal-code" pattern="[0-9]{5}(-[0-9]{4})?" required/>
+<label class="gift-check"><input id="gift-printed" type="checkbox"/> I'd like a printed gift certificate mailed to me.</label>
+<fieldset disabled="" hidden="" id="gift-address"><legend>Mailing address (United States)</legend>
+<label for="ship-name">Full name</label><input autocomplete="shipping name" id="ship-name" required=""/>
+<label for="ship-street">Street address</label><input autocomplete="shipping address-line1" id="ship-street" required=""/>
+<label for="ship-unit">Apartment or suite (optional)</label><input autocomplete="shipping address-line2" id="ship-unit"/>
+<label for="ship-city">City</label><input autocomplete="shipping address-level2" id="ship-city" required=""/>
+<label for="ship-state">State</label><input autocomplete="shipping address-level1" id="ship-state" required=""/>
+<label for="ship-zip">ZIP code</label><input autocomplete="shipping postal-code" id="ship-zip" pattern="[0-9]{5}(-[0-9]{4})?" required=""/>
 <p class="small">Printing and US shipping are included.</p>
 </fieldset></form>
 <p class="small">Gift certificates never expire. The recipient may choose any available Little Expressions session date, with new appointments released monthly. Gift certificates are non-refundable and cannot be redeemed for cash, except where required by law. Once a session is booked, the cancellation and rescheduling policy applies.</p><div class="gift-total"><span>Your gift total</span><strong id="gift-total">$269.54</strong><small id="gift-total-note">Including applicable sales tax</small></div>
@@ -544,9 +548,9 @@ main h2{font-size:clamp(26px,3.4vw,38px)}
 <button aria-pressed="false" class="gift-method" data-gift-method="venmo" type="button">Venmo</button>
 <button aria-pressed="false" class="gift-method" data-gift-method="card" type="button">Credit card</button>
 </div>
-<label class="gift-check"><input type="checkbox" id="gift-accept" form="gift-delivery-form" required/> I agree to the gift certificate terms above.</label>
-<button class="btn" id="gift-submit" form="gift-delivery-form" type="submit">Submit order &amp; continue to payment ↗</button>
-<p class="small" id="gift-delivery-status" role="status" aria-live="polite"></p>
+<label class="gift-check"><input form="gift-delivery-form" id="gift-accept" required="" type="checkbox"/> I agree to the gift certificate terms above.</label>
+<button class="btn" form="gift-delivery-form" id="gift-submit" type="submit">Submit order &amp; continue to payment ↗</button>
+<p aria-live="polite" class="small" id="gift-delivery-status" role="status"></p>
 <div aria-live="polite" class="gift-method-panel" id="gift-method-panel"></div>
 <a class="btn" hidden="" id="gift-card">Continue to secure card payment ↗</a>
 <a class="btn" hidden="" id="gift-venmo">Open Venmo ↗</a>
@@ -576,7 +580,7 @@ main h2{font-size:clamp(26px,3.4vw,38px)}
 <li><a href="https://nydamphoto.com/corporate/">Corporate &amp; Branding</a></li>
 <li><a href="https://nydamphoto.com/sports/">Sports</a></li>
 <li><a href="https://nydamphoto.com/events/">Events</a></li>
-</ul>
+<li><a href="/little-expressions/">Little Expressions</a></li></ul>
 </div>
 <div>
 <h4>Explore</h4>
