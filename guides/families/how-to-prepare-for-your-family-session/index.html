@@ -301,7 +301,12 @@
 <style>
 .article-photo{margin:32px 0 38px}.article-photo img{width:100%;max-height:570px;object-fit:cover;object-position:center;border-radius:2px}
 @media(max-width:640px){.article-photo img{max-height:420px}}
-</style></head>
+</style><style>
+/* Editorial photographs: show every person, including heads and feet */
+.article-photo{height:auto!important;overflow:visible!important}
+.article-photo img{display:block!important;width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important}
+</style>
+</head>
 <body>
 <header class="site-header">
 <nav aria-label="Primary" class="nav">
@@ -312,7 +317,6 @@
 <a href="/portfolio/">Portfolio</a>
 <a href="/venues/">Venues</a>
 <a class="nav-highlight" href="/senior-team/">NP Seniors</a>
-<a href="/little-expressions/">Little Expressions</a>
 <a href="/guides/">Guides</a>
 <a href="/about/">About</a>
 <a class="nav-book" href="/book/">Check Availability</a>
@@ -354,7 +358,6 @@
 <li><a href="#day-of">The Day Itself</a></li>
 <li><a href="#bring">What to Bring</a></li>
 </ol>
-<p style="margin-top:18px"><a href="/little-expressions/">Little Expressions — Children’s Portraits ↗</a></p>
 </nav>
 <!-- ARTICLE BODY -->
 <div class="article-body">
@@ -428,7 +431,6 @@
 <a class="related-chip" href="/guides/">All Guides</a>
 <a class="related-chip" href="/guides/how-to-prepare-for-your-photo-session/">How to Prepare for Your Photo Session</a>
 <a class="related-chip" href="/families/">Family Portraits</a>
-<a class="related-chip" href="/little-expressions/">Little Expressions</a>
 <a class="related-chip" href="/book/">Check Availability</a>
 </div>
 </div>
