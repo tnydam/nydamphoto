@@ -139,23 +139,42 @@
   .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:#8A8073}
   @media(max-width:760px){.footer-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}.nav-toggle{display:block}}
 </style>
+
+<style>
+.site-header .guide-navigation{box-sizing:border-box;max-width:1200px;margin:auto;padding:0 28px;height:74px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.site-header .nav-logo{font-size:18px;letter-spacing:.14em;white-space:nowrap;flex-shrink:0}
+.site-header .nav-links{display:flex;align-items:center;gap:16px;font:400 12px var(--sans);letter-spacing:.1em;text-transform:uppercase}
+.site-header .nav-links a{white-space:nowrap}
+.site-header .nav-highlight{color:var(--gold)!important;font-weight:500}
+.site-header .nav-book{padding:11px 22px;color:var(--ivory)!important}
+.site-header .nav-toggle{display:none}
+@media(max-width:1250px){
+  .site-header .nav-toggle{display:block}
+  .site-header .nav-links{display:none;position:absolute;inset:100% 0 auto;background:var(--ivory);align-items:stretch;flex-direction:column;gap:0;padding:12px 28px;max-height:calc(100dvh - 74px);overflow:auto;border-bottom:1px solid var(--line)}
+  .site-header .nav-links.open{display:flex}
+  .site-header .nav-links a{width:auto;padding:12px}
+  .site-header .nav-book{margin:0;text-align:center}
+}
+@media(max-width:640px){.site-header .nav-logo{font-size:16px}}
+</style>
 </head>
 <body>
 
 <header class="site-header">
-  <div class="wrap nav">
-    <a href="/" class="nav-logo">NYDAM PHOTOGRAPHY</a>
-    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
-    <nav class="nav-links" id="navlinks" aria-label="Primary">
-      <a href="/#services">Services</a>
-      <a href="/portfolio/">Portfolio</a>
-      <a href="/venues/">Venues</a>
-      <a href="/senior-team/" class="nav-highlight">Senior Year Story</a>
-      <a href="/guides/">GuideHub</a>
-      <a href="/about/">About</a>
-      <a href="/book/" class="nav-book">Check Availability</a>
-    </nav>
-  </div>
+<div class="guide-navigation nav">
+<a class="nav-logo" href="/">NYDAM PHOTOGRAPHY</a>
+<button aria-controls="navlinks" aria-expanded="false" aria-label="Menu" class="nav-toggle" type="button">☰</button>
+<nav aria-label="Primary" class="nav-links" id="navlinks">
+<a href="/#services">Services</a>
+<a href="/portfolio/">Portfolio</a>
+<a href="/venues/">Venues</a>
+<a class="nav-highlight" href="/little-expressions/">Little Expressions</a>
+<a class="nav-highlight" href="/senior-team/">Senior Year Story</a>
+<a href="/guides/">GuideHub</a>
+<a href="/about/">About</a>
+<a class="nav-book" href="/book/">Check Availability</a>
+</nav>
+</div>
 </header>
 
 <div class="wrap crumb"><a href="/">Home</a> / <a href="/guides/">Guides</a> / Senior Portrait Guides</div>
@@ -391,5 +410,26 @@
   </div>
 </footer>
 
+
+<script>
+(() => {
+  const button = document.querySelector('.site-header .nav-toggle');
+  const menu = document.getElementById('navlinks');
+  const setOpen = (open) => {
+    menu.classList.toggle('open', open);
+    button.setAttribute('aria-expanded', String(open));
+  };
+  button.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+  menu.addEventListener('click', (event) => {
+    if (event.target.closest('a')) setOpen(false);
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menu.classList.contains('open')) {
+      setOpen(false);
+      button.focus();
+    }
+  });
+})();
+</script>
 </body>
 </html>
